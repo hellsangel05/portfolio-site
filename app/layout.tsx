@@ -1,3 +1,4 @@
+import ChatBot from "./components/ChatBot";
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
@@ -25,6 +26,7 @@ export default function RootLayout({
         <main className="max-w-4xl mx-auto px-6 py-12">
           {children}
         </main>
+        <ChatBot />
       </body>
     </html>
   );
