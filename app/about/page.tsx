@@ -5,13 +5,13 @@ export default function About() {
       
       <div className="space-y-6">
         <p>
-          I'm a junior software engineer learning full-stack development, systems programming, 
+          I'm a junior software engineer learning full-stack development, systems automation programming, 
           and AI integration.
         </p>
         
         <div>
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <ul className="list-disc list-inside space-y-2 text-white-700">
             <li>JavaScript / TypeScript</li>
             <li>React / Next.js</li>
             <li>Git & GitHub</li>

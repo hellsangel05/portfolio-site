@@ -2,8 +2,8 @@ export default function Home() {
   return (
     <div>
       <h1 className="text-4xl font-bold mb-4">Angel Gonzalez</h1>
-      <p className="text-xl text-gray-600 mb-8">
-        Junior Software Engineer focused on systems and AI-powered tools.
+      <p className="text-xl text-green-600 mb-8">
+        Junior Software Engineer focused on system automations and AI-powered tools.
       </p>
       
       <div className="space-y-4">
