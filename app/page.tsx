@@ -1,15 +1,21 @@
 export default function Home() {
   return (
-    <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>Angel Gonzalez</h1>
-      <p>Junior Software Engineer focused on systems and AI-powered tools.</p>
-
-      <h2>Projects</h2>
-      <ul>
-        <li>Portfolio Website (this site)</li>
-        <li>Full-Stack App (coming soon)</li>
-        <li>AI Tool (coming soon)</li>
-      </ul>
-    </main>
+    <div>
+      <h1 className="text-4xl font-bold mb-4">Angel Gonzalez</h1>
+      <p className="text-xl text-gray-600 mb-8">
+        Junior Software Engineer focused on systems and AI-powered tools.
+      </p>
+      
+      <div className="space-y-4">
+        <p>
+          I build practical tools and full-stack applications. Currently learning modern web development 
+          and exploring AI integration.
+        </p>
+        <p>
+          Check out my <a href="/projects" className="text-blue-600 hover:underline">projects</a> or 
+          learn more <a href="/about" className="text-blue-600 hover:underline">about me</a>.
+        </p>
+      </div>
+    </div>
   );
 }
