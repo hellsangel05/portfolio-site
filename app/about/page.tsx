@@ -25,6 +25,13 @@ export default function About() {
             <a href="https://github.com/hellsangel05" 
                className="text-blue-600 hover:underline">GitHub</a>
           </p>
+          <p>
+  <a href="/resume.pdf" 
+     className="text-blue-600 hover:underline"
+     download>
+    Download Resume (PDF)
+  </a>
+</p>
         </div>
       </div>
     </div>
