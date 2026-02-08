@@ -16,7 +16,18 @@ export default function Projects() {
                className="text-blue-600 hover:underline">GitHub</a>
           </div>
         </div>
-
+      <div className="border p-6 rounded-lg bg-black shadow-sm">
+          <h2 className="text-2xl font-semibold mb-2">Task Notification Automation With n8n Cloud</h2>
+          <p className="text-white-600 mb-4">
+            Automated task reminder system using n8n, Google Sheets, and email notifications — helps keep teams on track with pending tasks.
+          </p>
+          <div className="flex gap-4">
+            <a href="/project-docs" 
+               className="text-blue-600 hover:underline">Documentation</a>
+            <a href="https://github.com/hellsangel05/task-notification-automation" 
+               className="text-blue-600 hover:underline">GitHub</a>
+          </div>
+        </div>
         <div className="border p-6 rounded-lg bg-black shadow-sm">
           <h2 className="text-2xl font-semibold mb-2">Full-Stack App</h2>
           <p className="text-gray-600">Coming soon — building next.</p>
