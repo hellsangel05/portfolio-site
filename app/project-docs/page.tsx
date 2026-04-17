@@ -1,55 +1,88 @@
+const features = [
+  "Reads task data from Google Sheets",
+  "Filters tasks by status, due date, and notification history",
+  "Groups tasks by owner so each person receives one digest email",
+  "Writes notification timestamps back to the sheet after delivery",
+  "Keeps the workflow understandable for non-developers reviewing it later",
+];
+
+const setupSteps = [
+  "Connect Google Sheets and point the workflow to the task tracker sheet.",
+  "Connect an email provider in n8n Cloud.",
+  "Import the workflow JSON into n8n and confirm field names match the sheet.",
+  "Set the sender details and schedule or manual trigger.",
+  "Run a test with sample tasks and verify that timestamps update correctly.",
+];
+
+const workflowSteps = [
+  "Fetch task rows from Google Sheets.",
+  "Use JavaScript logic to filter pending and due tasks.",
+  "Group eligible tasks by email owner.",
+  "Generate one summary message per owner.",
+  "Send emails and record the notification time for the related rows.",
+];
+
 export default function ProjectDocs() {
   return (
-    <div className="min-h-screen px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Documentation</h1>
-        
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Task Notification Automation With n8n Cloud Overview</h2>
-          <p className="text-gray-300 leading-relaxed">
-            This project automates sending reminder emails to task owners based on data stored in a Google Sheet. 
-            It filters tasks that are pending, due, and not yet notified for the day, then emails each owner a 
-            summary of their tasks. After sending, it updates the Google Sheet with the notification timestamp.
+    <div className="space-y-16 pb-16">
+      <section className="section-grid">
+        <div>
+          <p className="section-kicker">Project documentation</p>
+          <h1 className="section-title">
+            Task notification automation with n8n Cloud
+          </h1>
+        </div>
+        <div className="space-y-5">
+          <p className="section-copy">
+            This workflow automates reminder emails for pending tasks stored in
+            Google Sheets. It identifies which tasks are due, groups them by
+            owner, sends a single email per person, and updates the source sheet
+            so the same task is not repeatedly notified on the same day.
           </p>
-        </section>
+          <p className="section-copy">
+            I included this writeup because documentation matters. A good
+            project is not just something that runs once. It should also be
+            understandable to the next person looking at it.
+          </p>
+        </div>
+      </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Features</h2>
-          <ul className="list-disc list-inside text-gray-300 space-y-2">
-            <li>Reads task data from Google Sheets</li>
-            <li>Filters tasks by status, due date, and notification status</li>
-            <li>Sends personalized email reminders per user</li>
-            <li>Updates Google Sheet to record notification timestamps</li>
-            <li>Handles multiple tasks per user in a single email</li>
+      <section className="feature-grid">
+        <article className="feature-panel">
+          <p className="panel-label">Features</p>
+          <ul className="stack-list">
+            {features.map((item) => (
+              <li key={item} className="proof-item">
+                <span className="proof-dot" aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
-        </section>
+        </article>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Setup Instructions</h2>
-          <ol className="list-decimal list-inside text-gray-300 space-y-2">
-            <li>Connect your Google Sheets account and point to your task tracker sheet.</li>
-            <li>Connect your email provider credentials to n8n.</li>
-            <li>Import the workflow JSON file into your n8n Cloud instance.</li>
-            <li>Adjust sheet names, column names, and email sender details as needed.</li>
-            <li>Activate the workflow to run on schedule or trigger manually.</li>
+        <article className="feature-panel">
+          <p className="panel-label">Setup</p>
+          <ol className="number-list">
+            {setupSteps.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ol>
-        </section>
+        </article>
+      </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
-          <ul className="list-disc list-inside text-gray-300 space-y-2">
-            <li>The workflow fetches tasks from Google Sheets.</li>
-            <li>The JavaScript code node filters and groups tasks needing reminders.</li>
-            <li>Each user receives one email listing their pending tasks.</li>
-            <li>After sending emails, the workflow updates the Google Sheet rows with the current notification timestamp.</li>
-            <li>The workflow supports multiple users and multiple tasks per user.</li>
-          </ul>
-        </section>
+      <section className="feature-panel">
+        <p className="panel-label">Workflow outline</p>
+        <ol className="number-list">
+          {workflowSteps.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ol>
+      </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Code Snippet Example</h2>
-          <pre className="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto">
-            <code className="text-sm text-gray-300">{`const today = new Date();
+      <section className="feature-panel">
+        <p className="panel-label">JavaScript example from the workflow</p>
+        <pre className="code-block">
+          <code>{`const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 function parseDate(str) {
@@ -62,49 +95,38 @@ for (const item of items) {
   const status = item.json.Status?.toLowerCase() || "";
   const dueDate = parseDate(item.json["Due Date"]);
   const lastNotified = item.json["Last Notified"] ? new Date(item.json["Last Notified"]) : null;
-  if (lastNotified) lastNotified.setHours(0, 0, 0, 0);
-  
-  if (
-    status === "pending" &&
-    dueDate <= today &&
-    (!lastNotified || lastNotified < today)
-  ) {
+
+  if (lastNotified) {
+    lastNotified.setHours(0, 0, 0, 0);
+  }
+
+  if (status === "pending" && dueDate <= today && (!lastNotified || lastNotified < today)) {
     const email = item.json.Email;
+
     if (!filteredTasks[email]) {
       filteredTasks[email] = {
         owner: item.json.Owner,
-        email: email,
-        tasks: []
+        email,
+        tasks: [],
       };
     }
+
     filteredTasks[email].tasks.push({
       task: item.json.Task,
       dueDate: item.json["Due Date"],
-      rowNumber: item.json.row_number
+      rowNumber: item.json.row_number,
     });
   }
 }
 
-const output = Object.values(filteredTasks).map(user => {
-  let message = \`Hi \${user.owner},\\n\\nYou have \${user.tasks.length} pending task(s):\\n\\n\`;
-  user.tasks.forEach((t, i) => {
-    message += \`\${i + 1}. \${t.task}\\n   📅 Due: \${t.dueDate}\\n\\n\`;
-  });
-  message += "Please update your progress in the tracker.\\n\\nThank you! 🙏";
-  
-  return {
-    json: {
-      email: user.email,
-      message,
-      taskRows: user.tasks.map(t => t.rowNumber)
-    }
-  };
-});
-
-return output;`}</code>
-          </pre>
-        </section>
-      </div>
+return Object.values(filteredTasks).map((user) => ({
+  json: {
+    email: user.email,
+    taskRows: user.tasks.map((task) => task.rowNumber),
+  },
+}));`}</code>
+        </pre>
+      </section>
     </div>
   );
 }

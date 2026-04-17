@@ -1,12 +1,30 @@
-import ChatBot from "./components/ChatBot";
 import type { Metadata } from "next";
-import "./globals.css";
 import Link from "next/link";
+import { Geist, Geist_Mono } from "next/font/google";
+import ChatBot from "./components/ChatBot";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Angel Gonzalez | Software Engineer",
-  description: "Portfolio of Angel Gonzalez - Junior Software Engineer",
+  title: "Angel Gonzalez | Automation and Junior Tech Portfolio",
+  description:
+    "Portfolio of Angel Gonzalez, a retail-to-tech career changer focused on automation, support-minded software, and practical web projects.",
 };
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+];
 
 export default function RootLayout({
   children,
@@ -15,17 +33,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white-50 text-white-900">
-        <nav className="bg-black shadow-sm border-b">
-          <div className="max-w-4xl mx-auto px-6 py-4 flex gap-6">
-            <Link href="/" className="font-semibold hover:text-blue-600">Home</Link>
-            <Link href="/projects" className="hover:text-blue-600">Projects</Link>
-            <Link href="/about" className="hover:text-blue-600">About</Link>
-          </div>
-        </nav>
-        <main className="max-w-4xl mx-auto px-6 py-12">
-          {children}
-        </main>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className="site-shell">
+          <header className="site-header">
+            <div className="site-header-inner">
+              <Link href="/" className="site-mark">
+                Angel Gonzalez
+              </Link>
+              <nav className="site-nav" aria-label="Primary navigation">
+                {navLinks.map((link) => (
+                  <Link key={link.href} href={link.href} className="site-nav-link">
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </header>
+          <main className="site-main">{children}</main>
+        </div>
         <ChatBot />
       </body>
     </html>

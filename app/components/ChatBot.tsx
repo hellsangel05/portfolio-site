@@ -2,114 +2,138 @@
 
 import { useState } from "react";
 
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<{ role: string; content: string }[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-const sendMessage = async () => {
-  if (!input.trim()) return;
-
-  const userMessage = { role: "user", content: input };
-  setMessages((prev) => [...prev, userMessage]);
-  setInput("");
-  setLoading(true);
-
-  try {
-    const response = await fetch("https://aichatbot27.app.n8n.cloud/webhook/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: input }),
-    });
-
-    const data = await response.json();
-    console.log("Response from n8n:", data);
-
-    // Handle array response from n8n
-    let botResponse = "";
-
-    if (Array.isArray(data) && data.length > 0 && data[0].output) {
-      botResponse = data[0].output;
-    } else if (data?.answer) {
-      botResponse = data.answer;
-    } else {
-      console.error("Unexpected response format:", data);
-      botResponse = "Sorry, I received an unexpected response format.";
+  const sendMessage = async () => {
+    if (!input.trim()) {
+      return;
     }
 
-    const botMessage = { role: "assistant", content: botResponse };
-    setMessages((prev) => [...prev, botMessage]);
+    const currentInput = input;
+    const userMessage: Message = { role: "user", content: currentInput };
 
-  } catch (error) {
-    console.error("Error:", error);
-    setMessages((prev) => [
-      ...prev,
-      { role: "assistant", content: "Sorry, something went wrong. Check the console for details." },
-    ]);
-  } finally {
-    setLoading(false);
-  }
-};
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://aichatbot27.app.n8n.cloud/webhook/chat",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: currentInput }),
+        }
+      );
+
+      const data = await response.json();
+
+      let botResponse = "";
+
+      if (Array.isArray(data) && data.length > 0 && data[0]?.output) {
+        botResponse = data[0].output;
+      } else if (data?.answer) {
+        botResponse = data.answer;
+      } else {
+        botResponse =
+          "I received an unexpected response format. Please try another question.";
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: botResponse },
+      ]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            "The assistant is unavailable right now. You can still use the project and about pages to review my work.",
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="chatbot-shell">
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700"
-        >
-          💬 Ask me anything
+        <button onClick={() => setIsOpen(true)} className="chatbot-trigger">
+          Experimental portfolio assistant
         </button>
       )}
 
       {isOpen && (
-        <div className="bg-white border rounded-lg shadow-xl w-96 h-[500px] flex flex-col text-gray-900">
-          {/* Header */}
-          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
-            <h3 className="font-semibold">Ask about Angel</h3>
-            <button onClick={() => setIsOpen(false)} className="text-xl">×</button>
+        <div className="chatbot-panel">
+          <div className="chatbot-header">
+            <div>
+              <p className="chatbot-title">Ask about my work</p>
+              <p className="chatbot-subtitle">
+                Experimental assistant connected to my portfolio notes
+              </p>
+            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="chatbot-close"
+              aria-label="Close assistant"
+            >
+              x
+            </button>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="chatbot-messages">
             {messages.length === 0 && (
-              <p className="text-black-500 text-sm">Ask me anything about Angel's work, skills, or projects!</p>
+              <p className="chatbot-empty">
+                Try asking what I build, what roles I am targeting, or which
+                tools I have used so far.
+              </p>
             )}
-            {messages.map((msg, i) => (
+            {messages.map((message, index) => (
               <div
-                key={i}
-                className={`p-3 rounded-lg ${
-                  msg.role === "user"
-                    ? "bg-blue-100 ml-auto max-w-[80%]"
-                    : "bg-black-100 mr-auto max-w-[80%]"
-                }`}
+                key={`${message.role}-${index}`}
+                className={
+                  message.role === "user"
+                    ? "chatbot-bubble chatbot-bubble-user"
+                    : "chatbot-bubble chatbot-bubble-assistant"
+                }
               >
-                <p className="text-sm">{msg.content}</p>
+                {message.content}
               </div>
             ))}
-            {loading && <p className="text-black-400 text-sm">Thinking...</p>}
+            {loading && <p className="chatbot-empty">Thinking...</p>}
           </div>
 
-          {/* Input */}
-          <div className="p-4 border-t">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-                placeholder="Ask a question..."
-                className="flex-1 border rounded-lg px-3 py-2 text-sm"
-              />
-              <button
-                onClick={sendMessage}
-                disabled={loading}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
-              >
-                Send
-              </button>
-            </div>
+          <div className="chatbot-input-row">
+            <input
+              type="text"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  void sendMessage();
+                }
+              }}
+              placeholder="Ask a question"
+              className="chatbot-input"
+            />
+            <button
+              onClick={() => void sendMessage()}
+              disabled={loading}
+              className="chatbot-send"
+            >
+              Send
+            </button>
           </div>
         </div>
       )}

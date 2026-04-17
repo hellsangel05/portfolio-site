@@ -1,82 +1,146 @@
+const targetRoles = [
+  "Junior developer",
+  "Automation specialist",
+  "Technical support engineer",
+  "Implementation specialist",
+];
+
+const strengths = [
+  {
+    title: "Business context first",
+    body: "My retail background taught me how work actually breaks in the real world: unclear handoffs, repeated follow-up, and manual tracking that steals time.",
+  },
+  {
+    title: "AI-assisted, outcome-owned",
+    body: "I use tools like Codex and Claude Code to move faster, but I still own the debugging, deployment, testing, and iteration that make projects usable.",
+  },
+  {
+    title: "Comfortable with messy workflows",
+    body: "I enjoy turning repetitive processes into something simpler, whether that means connecting tools, writing frontend code, or documenting how the system works.",
+  },
+];
+
+const proofPoints = [
+  "Built and deployed a Next.js portfolio on Vercel",
+  "Created workflow automations using n8n, webhooks, and AI APIs",
+  "Documented project setup and system behavior for non-technical users",
+];
+
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto">
-      {/* Hero Section */}
-      <div className="mb-12">
-        <h1 className="text-5xl font-bold mb-4">Angel Gonzalez</h1>
-        <p className="text-2xl text-white-700 mb-2">
-          Automation Specialist & Aspiring Developer
-        </p>
-        <p className="text-lg text-white-600">
-          Building AI-powered automations and workflow solutions for businesses
-        </p>
-      </div>
+    <div className="space-y-24 pb-16">
+      <section className="hero-shell">
+        <div className="hero-grid">
+          <div className="space-y-8">
+            <p className="eyebrow">Angel Gonzalez</p>
+            <div className="space-y-5">
+              <h1 className="hero-title">
+                Transitioning from retail operations into tech through practical
+                automation work.
+              </h1>
+              <p className="hero-copy">
+                I build small, useful systems with Next.js, n8n, APIs, and
+                AI-assisted development. I am looking for an entry-level role
+                where I can keep learning, contribute quickly, and grow into a
+                stronger engineer.
+              </p>
+            </div>
 
-      {/* What I Do Section */}
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">What I Do</h2>
-        <p className="text-lg text-white-700 mb-6">
-          I help small businesses eliminate repetitive tasks by building custom workflow automations using n8n, AI tools, and modern no-code platforms.
-        </p>
-        
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">🔄 Workflow Automation</h3>
-            <p className="text-gray-600">Custom n8n workflows that connect your apps and automate processes</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="/projects" className="button-primary">
+                View projects
+              </a>
+              <a href="/about" className="button-secondary">
+                Read my story
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              {targetRoles.map((role) => (
+                <span key={role} className="role-pill">
+                  {role}
+                </span>
+              ))}
+            </div>
           </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">🤖 AI Integration</h3>
-            <p className="text-gray-600">Chatbots and AI-powered tools using ChatGPT and Claude APIs</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">🔗 App Connectivity</h3>
-            <p className="text-gray-600">Connect Google Sheets, Slack, CRMs, and other business tools</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">💡 Consulting</h3>
-            <p className="text-gray-600">Process automation strategy and implementation guidance</p>
+
+          <div className="proof-panel">
+            <p className="panel-label">What I can already point to</p>
+            <ul className="space-y-4">
+              {proofPoints.map((point) => (
+                <li key={point} className="proof-item">
+                  <span className="proof-dot" aria-hidden="true" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="panel-note">
+              My edge is not a traditional CS path. It is being close to the
+              operational problems and building tools that reduce friction.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Tools Section */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">Tools & Technologies</h2>
-        <div className="flex flex-wrap gap-3">
-          <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">n8n</span>
-          <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">ChatGPT API</span>
-          <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Claude API</span>
-          <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium">Webhooks</span>
-          <span className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
-          <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Next.js</span>
+      <section className="section-grid">
+        <div>
+          <p className="section-kicker">Why this portfolio is different</p>
+          <h2 className="section-title">
+            I am not trying to look senior. I am trying to look dependable.
+          </h2>
         </div>
-      </div>
+        <div className="space-y-6">
+          <p className="section-copy">
+            The goal of this site is to show how I think, what I have built so
+            far, and how I approach learning. I would rather be specific about
+            what I know than make big claims that are hard to back up.
+          </p>
+          <p className="section-copy">
+            I work best on problems involving process improvement, automation,
+            support, implementation, and the kind of frontend or integration
+            work that helps a team move faster.
+          </p>
+        </div>
+      </section>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Ready to automate your workflow?</h2>
-        <p className="text-lg mb-6">
-          Let's eliminate your repetitive tasks so you can focus on what matters.
-        </p>
-        <div className="flex gap-4">
-          <a 
-            href="/projects" 
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
-          >
-            View Projects
-          </a>
-          <a 
-            href="/about" 
-            className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition"
-          >
-            Contact
-          </a>
+      <section className="space-y-8">
+        <div className="section-grid">
+          <div>
+            <p className="section-kicker">Working style</p>
+            <h2 className="section-title">What I bring to a team</h2>
+          </div>
         </div>
-      </div>
+        <div className="feature-grid">
+          {strengths.map((strength) => (
+            <article key={strength.title} className="feature-panel">
+              <p className="panel-label">{strength.title}</p>
+              <p className="feature-copy">{strength.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-grid">
+        <div>
+          <p className="section-kicker">Next step</p>
+          <h2 className="section-title">See the projects and the reasoning.</h2>
+        </div>
+        <div className="cta-panel">
+          <p className="section-copy">
+            The strongest proof on this site is in the project writeups. I break
+            down the problem, the tools, the tradeoffs, and what I would improve
+            next.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/projects" className="button-primary">
+              Go to projects
+            </a>
+            <a href="/project-docs" className="button-secondary">
+              Read documentation
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
