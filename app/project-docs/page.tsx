@@ -1,132 +1,64 @@
-const features = [
-  "Reads task data from Google Sheets",
-  "Filters tasks by status, due date, and notification history",
-  "Groups tasks by owner so each person receives one digest email",
-  "Writes notification timestamps back to the sheet after delivery",
-  "Keeps the workflow understandable for non-developers reviewing it later",
-];
-
-const setupSteps = [
-  "Connect Google Sheets and point the workflow to the task tracker sheet.",
-  "Connect an email provider in n8n Cloud.",
-  "Import the workflow JSON into n8n and confirm field names match the sheet.",
-  "Set the sender details and schedule or manual trigger.",
-  "Run a test with sample tasks and verify that timestamps update correctly.",
-];
-
-const workflowSteps = [
-  "Fetch task rows from Google Sheets.",
-  "Use JavaScript logic to filter pending and due tasks.",
-  "Group eligible tasks by email owner.",
-  "Generate one summary message per owner.",
-  "Send emails and record the notification time for the related rows.",
-];
-
 export default function ProjectDocs() {
   return (
-    <div className="space-y-16 pb-16">
-      <section className="section-grid">
-        <div>
-          <p className="section-kicker">Project documentation</p>
-          <h1 className="section-title">
-            Task notification automation with n8n Cloud
-          </h1>
-        </div>
-        <div className="space-y-5">
-          <p className="section-copy">
-            This workflow automates reminder emails for pending tasks stored in
-            Google Sheets. It identifies which tasks are due, groups them by
-            owner, sends a single email per person, and updates the source sheet
-            so the same task is not repeatedly notified on the same day.
-          </p>
-          <p className="section-copy">
-            I included this writeup because documentation matters. A good
-            project is not just something that runs once. It should also be
-            understandable to the next person looking at it.
-          </p>
-        </div>
-      </section>
+    <>
+      <header className="hero" style={{ paddingBottom: 40 }}>
+        <div className="hero-label">Docs / Task Notify — 2026</div>
+        <h1 style={{ fontSize: "clamp(52px, 8vw, 128px)" }}>
+          Task <em>Notify</em>.
+        </h1>
+        <p style={{ maxWidth: "64ch", opacity: .8, marginTop: 32, borderTop: "1px solid var(--border)", paddingTop: 24, fontSize: 18 }}>
+          An n8n workflow that reads pending tasks from Google Sheets, groups them by owner, emails each person a personalized digest, then writes the timestamp back. Small surface, real utility.
+        </p>
+      </header>
 
-      <section className="feature-grid">
-        <article className="feature-panel">
-          <p className="panel-label">Features</p>
-          <ul className="stack-list">
-            {features.map((item) => (
-              <li key={item} className="proof-item">
-                <span className="proof-dot" aria-hidden="true" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
+      <div className="doc-wrap">
+        <h2>The <em>problem</em></h2>
+        <p>Every small team has the same Sheet: a list of tasks with owner, status and due date. And every small team has the same ritual: someone on Monday morning eyeballs the Sheet, copies due rows, and emails people. Thirty minutes a week, every week, forever.</p>
+        <p>I built this to prove that writing the glue is a one-time cost — the rest is free.</p>
 
-        <article className="feature-panel">
-          <p className="panel-label">Setup</p>
-          <ol className="number-list">
-            {setupSteps.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ol>
-        </article>
-      </section>
+        <h2>The <em>workflow</em></h2>
+        <p>Four nodes in n8n. Cron trigger, Sheets read, JavaScript transform, Gmail send. A final Sheets-update node stamps the row as notified.</p>
+        <pre><code>{`Cron (Mon 9am PT)
+  → Google Sheets · Read (Tasks sheet, all rows)
+  → Code (Group by owner, filter status != "done", format digest)
+  → Gmail · Send (per owner, HTML digest)
+  → Google Sheets · Update (notified_at = now)`}</code></pre>
 
-      <section className="feature-panel">
-        <p className="panel-label">Workflow outline</p>
-        <ol className="number-list">
-          {workflowSteps.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ol>
-      </section>
+        <h3>The JavaScript node</h3>
+        <p>The transform node is the only interesting part. It dedupes, groups, and generates the email bodies in one pass.</p>
+        <pre><code>{`const tasks = items[0].json.rows;
+const byOwner = {};
 
-      <section className="feature-panel">
-        <p className="panel-label">JavaScript example from the workflow</p>
-        <pre className="code-block">
-          <code>{`const today = new Date();
-today.setHours(0, 0, 0, 0);
-
-function parseDate(str) {
-  return new Date(str);
+for (const t of tasks) {
+  if (t.status === "done") continue;
+  if (!byOwner[t.owner]) byOwner[t.owner] = [];
+  byOwner[t.owner].push(t);
 }
 
-const filteredTasks = {};
-
-for (const item of items) {
-  const status = item.json.Status?.toLowerCase() || "";
-  const dueDate = parseDate(item.json["Due Date"]);
-  const lastNotified = item.json["Last Notified"] ? new Date(item.json["Last Notified"]) : null;
-
-  if (lastNotified) {
-    lastNotified.setHours(0, 0, 0, 0);
-  }
-
-  if (status === "pending" && dueDate <= today && (!lastNotified || lastNotified < today)) {
-    const email = item.json.Email;
-
-    if (!filteredTasks[email]) {
-      filteredTasks[email] = {
-        owner: item.json.Owner,
-        email,
-        tasks: [],
-      };
-    }
-
-    filteredTasks[email].tasks.push({
-      task: item.json.Task,
-      dueDate: item.json["Due Date"],
-      rowNumber: item.json.row_number,
-    });
-  }
-}
-
-return Object.values(filteredTasks).map((user) => ({
+return Object.entries(byOwner).map(([owner, list]) => ({
   json: {
-    email: user.email,
-    taskRows: user.tasks.map((task) => task.rowNumber),
-  },
-}));`}</code>
-        </pre>
-      </section>
-    </div>
+    to: list[0].email,
+    subject: \`You have \${list.length} open task\${list.length > 1 ? "s" : ""}\`,
+    body: list.map(t => \`• \${t.title} (due \${t.due})\`).join("\\n")
+  }
+}));`}</code></pre>
+
+        <h2>What I <em>learned</em></h2>
+        <ul>
+          <li>n8n&apos;s <code>items</code> shape is easier to reason about once you stop treating each node as a function and start thinking in batches.</li>
+          <li>Putting the transform in a Code node (vs. 6 chained Set/IF nodes) made the workflow 10× easier to debug.</li>
+          <li>Writing timestamps back to the Sheet is the single highest-leverage detail — it makes the workflow idempotent and self-auditing.</li>
+        </ul>
+
+        <blockquote>The best automation is one you can forget exists and still trust.</blockquote>
+
+        <h2>Where it&apos;s going</h2>
+        <p>Next version: swap the Gmail node for a Slack DM path, add a weekly summary to whoever owns the Sheet, and route overdue tasks to a separate &ldquo;nag&rdquo; flow with escalating tone. (The tone escalation is a prompt-template bit — Claude writes a progressively more concerned email.)</p>
+        <div className="links" style={{ marginTop: 32 }}>
+          <a href="https://github.com/hellsangel05/task-notification-automation" target="_blank" rel="noopener noreferrer" className="primary">View on GitHub →</a>
+          <a href="/projects">Back to projects ←</a>
+        </div>
+      </div>
+    </>
   );
 }
