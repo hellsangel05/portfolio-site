@@ -44,7 +44,7 @@ const roles = [
 const selectedProducts = [
   ["Raidio", "AI radio network with shared playback, station studios, generated music, voice hosts, and resilient publishing workflows."],
   ["Snapdex", "Photo trading-card economy with rarity, packs, trades, listings, creator royalties, supply burns, and arena battles."],
-  ["Apogee", "Expo and Python product that measures vertical jump from video, reports confidence, and generates a training plan."],
+  ["Jump Trainer", "Expo and Python product that measures vertical jump from video, reports confidence, and generates a training plan."],
   ["Co-Lab", "Anonymous collaborative idea graph using classification, embeddings, AI replies, discovery, rooms, and scheduled evolution."],
 ];
 

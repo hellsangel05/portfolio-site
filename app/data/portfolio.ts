@@ -89,12 +89,12 @@ export const projects: PortfolioProject[] = [
     live: "https://trading-card-app-two.vercel.app",
   },
   {
-    slug: "apogee",
-    name: "Apogee",
+    slug: "jump-trainer",
+    name: "Jump Trainer",
     category: "AI coaching + computer vision",
     status: "Functional prototype · Validation phase",
     positioning: "A mobile vertical-jump coach that turns ordinary phone video into an honest measurement and training plan.",
-    summary: "Apogee measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, identifies the largest technique limiter, and produces a four-week plan.",
+    summary: "Jump Trainer measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, identifies the largest technique limiter, and produces a four-week plan.",
     problem: "Athletes can film themselves easily, but credible jump measurement usually requires specialized equipment or a trained coach. Low-quality video can also create a precise-looking number that is simply wrong.",
     built: "An Expo mobile application, a Python analysis engine and service, a rule-based training-plan engine, a Supabase-backed analysis queue, progress tracking, and a validation harness for event timing and measurement quality.",
     challenge: "The product needs reliable event times, not impressive-looking pose overlays. The engine detects per-foot takeoff and landing, checks whether the hip path is physically plausible, reports uncertainty, and rejects clips it cannot measure responsibly.",
@@ -116,9 +116,9 @@ export const projects: PortfolioProject[] = [
     ],
     role: "Co-founder · Product strategy, mobile UX, analysis-system design, full-stack build",
     tech: ["Expo", "React Native", "TypeScript", "Python", "NumPy", "MediaPipe", "FastAPI", "Supabase"],
-    image: { src: "/projects/apogee-result.png", alt: "Apogee jump result showing measured height, confidence, technique scores, and coaching feedback" },
+    image: { src: "/projects/jump-trainer-result.png", alt: "Jump Trainer result showing measured height, confidence, technique scores, and coaching feedback" },
     gallery: [
-      { src: "/projects/apogee-analyze.png", alt: "Apogee jump recording setup and sample analysis options" },
+      { src: "/projects/jump-trainer-analyze.png", alt: "Jump Trainer recording setup and sample analysis options" },
     ],
   },
   {

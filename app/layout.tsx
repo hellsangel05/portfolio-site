@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     siteName: "Angel Gonzalez",
     title: "Angel Gonzalez — AI Product Builder",
     description: "Ambitious product ideas turned into functional, deployed applications.",
-    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Angel Gonzalez — AI Product Builder" }],
+    images: [{ url: "/og-v2.png", width: 1662, height: 946, alt: "Angel Gonzalez — AI Product Builder" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Angel Gonzalez — AI Product Builder",
     description: "Ambitious product ideas turned into functional, deployed applications.",
-    images: ["/og.png"],
+    images: ["/og-v2.png"],
   },
 };
 
@@ -51,6 +51,10 @@ const personSchema = {
   jobTitle: "AI Product Builder",
   address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
   sameAs: ["https://github.com/hellsangel05"],
+  worksFor: [
+    { "@type": "Organization", name: "ADGO Ventures" },
+    { "@type": "Organization", name: "ADGO Studios", url: "https://adgostudios.com/" },
+  ],
   knowsAbout: [
     "AI-assisted development",
     "Full-stack product development",

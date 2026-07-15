@@ -1,241 +1,207 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./components/Reveal";
+import { ScrollSceneStage } from "./components/ScrollSceneStage";
 import { experiments, projects } from "./data/portfolio";
 
 const capabilities = [
-  {
-    label: "Product",
-    items: ["Product framing", "Feature design", "Rapid prototyping", "Product iteration"],
-  },
-  {
-    label: "Build",
-    items: ["Full-stack applications", "Responsive interfaces", "Data-backed products", "Deployment"],
-  },
-  {
-    label: "AI workflows",
-    items: ["Agentic development", "LLM integrations", "Image + video generation", "Automation"],
-  },
+  ["Product", "Framing, flows, feature systems, iteration"],
+  ["Build", "Full-stack web, mobile prototypes, deployment"],
+  ["AI", "Agentic workflows, model integrations, automation"],
 ];
 
 export default function Home() {
   return (
-    <main>
-      <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow hero-kicker">Angel Gonzalez · Los Angeles</p>
-          <h1 id="hero-title">
-            <span>{"AI Product "}</span>
-            <span className="hero-accent">Builder.</span>
-          </h1>
-          <p className="hero-dek">
-            I turn ambitious product ideas into functional, deployed applications across AI,
-            media, community, and creative technology.
-          </p>
-          <div className="hero-actions" aria-label="Primary actions">
-            <Link href="#work" className="button button-primary">Explore the work</Link>
-            <a href="mailto:adgpublishings@gmail.com" className="text-link">Start a conversation <span>↗</span></a>
+    <main className="home-main">
+      <ScrollSceneStage />
+      <div className="home-content">
+        <section className="home-hero scroll-scene-section" data-scene="hero" aria-labelledby="hero-title">
+          <div className="home-hero-media" aria-hidden="true">
+            <Image
+              src="/projects/raidio-home.png"
+              alt=""
+              fill
+              priority
+              loading="eager"
+              sizes="100vw"
+            />
           </div>
-        </div>
-
-        <div className="hero-media" aria-label="Raidio product preview">
-          <Image
-            src="/projects/raidio-home.png"
-            alt="Raidio homepage showing AI radio stations and station creation"
-            fill
-            priority
-            loading="eager"
-            sizes="(max-width: 800px) 100vw, 58vw"
-          />
-          <div className="hero-media-label">
-            <span>Featured build</span>
-            <strong>Raidio · AI radio network</strong>
+          <div className="home-hero-scrim" />
+          <div className="home-hero-content">
+            <p className="eyebrow home-hero-kicker">Angel Gonzalez / AI Product Builder / Los Angeles</p>
+            <h1 id="hero-title">
+              <span>{"I turn ideas into "}</span>
+              <span className="hero-accent">working products.</span>
+            </h1>
+            <p className="home-hero-dek">
+              I use AI-assisted development to design, build, and deploy full-stack products across
+              media, creator tools, sports technology, community, and automation.
+            </p>
+            <div className="home-hero-actions" aria-label="Primary actions">
+              <Link href="#work" className="button button-primary">See selected work</Link>
+              <Link href="/resume" className="button button-ghost">View resume</Link>
+            </div>
           </div>
-        </div>
-
-        <dl className="proof-strip">
-          <div><dt>Practice</dt><dd>AI-native product building</dd></div>
-          <div><dt>Range</dt><dd>Web, mobile, creative systems</dd></div>
-          <div><dt>Workflow</dt><dd>Concept → product → deployment</dd></div>
-          <div><dt>Seeking</dt><dd>AI product + prototyping roles</dd></div>
-        </dl>
-      </section>
-
-      <section className="intro section-shell" aria-labelledby="intro-title">
-        <Reveal className="section-label"><span>01</span> The proposition</Reveal>
-        <Reveal className="intro-copy">
-          <h2 id="intro-title">The proof is in the products.</h2>
-          <p>
-            I use AI-assisted development as leverage: to explore more directions, close skill
-            gaps quickly, and move from product logic to working software. The result is a growing
-            portfolio of real systems—not pitch decks or speculative mockups.
-          </p>
-        </Reveal>
-      </section>
-
-      <section id="work" className="work-section" aria-labelledby="work-title">
-        <div className="section-shell section-heading">
-          <div className="section-label"><span>02</span> Featured work</div>
-          <div>
-            <h2 id="work-title">Products with a point of view.</h2>
-            <p>Six builds selected for product range, technical depth, and visible execution.</p>
+          <div className="home-hero-footer">
+            <p><span>Featured build</span> Raidio — shared AI radio, programmed as a real broadcast.</p>
+            <p>Open to AI product, prototyping, and product engineering opportunities.</p>
           </div>
-        </div>
+        </section>
 
-        <div className="project-list">
-          {projects.map((project, index) => (
-            <Reveal as="article" className="project-feature" key={project.slug}>
-              <Link href={`/work/${project.slug}`} className="project-media" aria-label={`Read the ${project.name} case study`}>
-                <Image
-                  src={project.image.src}
-                  alt={project.image.alt}
-                  fill
-                  loading={index === 0 ? "eager" : "lazy"}
-                  sizes="(max-width: 900px) 100vw, 58vw"
-                />
-                <span className="project-index">0{index + 1}</span>
-              </Link>
-              <div className="project-copy">
-                <div className="project-meta">
-                  <span>{project.status}</span>
-                  <span>{project.category}</span>
-                </div>
-                <h3><Link href={`/work/${project.slug}`}>{project.name}</Link></h3>
-                <p className="project-positioning">{project.positioning}</p>
-                <p className="project-summary">{project.summary}</p>
-                <ul className="tag-list" aria-label={`${project.name} technologies`}>
-                  {project.tech.slice(0, 5).map((item) => <li key={item}>{item}</li>)}
-                </ul>
-                <div className="project-actions">
-                  <Link href={`/work/${project.slug}`} className="text-link">Read case study <span>→</span></Link>
-                  {project.live ? (
-                    <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a>
-                  ) : null}
-                </div>
-              </div>
+        <section className="home-method scroll-scene-section section-shell" data-scene="method" aria-labelledby="method-title">
+          <Reveal className="section-label"><span>01</span> How I work</Reveal>
+          <div className="home-method-copy">
+            <Reveal>
+              <h2 id="method-title">The point is not to generate more ideas. It is to make one real.</h2>
             </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section id="about" className="about-section section-shell" aria-labelledby="about-title">
-        <Reveal className="section-label"><span>03</span> About</Reveal>
-        <div className="about-grid">
-          <Reveal>
-            <h2 id="about-title">An unconventional route. A practical advantage.</h2>
-          </Reveal>
-          <Reveal className="about-copy">
-            <p className="lede">
-              I currently work at Home Depot. Outside those hours, I co-founded ADGO Ventures and
-              have been designing, building, and deploying products across multiple categories.
-            </p>
-            <p>
-              Retail taught me to listen closely, explain clearly, work inside constraints, and
-              notice where real people get stuck. Product building gives me a way to act on those
-              instincts. I learn fast, use modern AI tools deliberately, and keep pushing until the
-              idea becomes something another person can use.
-            </p>
-            <p>
-              I am not positioning myself as a senior traditional engineer. I am a product-minded
-              builder with substantial independent shipping experience, looking for an AI-forward
-              team where initiative, range, and execution matter.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="capabilities-section section-shell" aria-labelledby="capabilities-title">
-        <div className="section-label"><span>04</span> Capabilities</div>
-        <div className="capabilities-heading">
-          <h2 id="capabilities-title">From blank page to working system.</h2>
-          <p>Skills inferred from the products and their architecture—not a wall of logos.</p>
-        </div>
-        <div className="capability-grid">
-          {capabilities.map((capability) => (
-            <Reveal className="capability-column" key={capability.label}>
-              <h3>{capability.label}</h3>
-              <ul>{capability.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            <Reveal>
+              <p>
+                I move between product strategy, interaction design, implementation, and deployment.
+                AI accelerates the work; judgment holds the product together.
+              </p>
             </Reveal>
-          ))}
-        </div>
-        <div className="technology-line" aria-label="Technologies used across the portfolio">
-          TypeScript · JavaScript · React · Next.js · Expo · React Native · Python · Supabase ·
-          PostgreSQL · Tailwind CSS · Vercel · OpenAI APIs · MediaPipe · PixiJS · Leaflet
-        </div>
-      </section>
-
-      <section id="ventures" className="ventures-section" aria-labelledby="ventures-title">
-        <div className="section-shell section-heading ventures-heading">
-          <div className="section-label"><span>05</span> Ventures</div>
-          <h2 id="ventures-title">Two vehicles for building.</h2>
-        </div>
-        <div className="venture-row">
-          <div className="venture-number">A</div>
-          <div>
-            <p className="eyebrow">Product venture studio</p>
-            <h3>ADGO Ventures</h3>
+            <div className="method-steps" aria-label="Product-building process">
+              <div><span>01</span><strong>Frame</strong><p>Find the sharpest user problem and define the smallest credible product.</p></div>
+              <div><span>02</span><strong>Build</strong><p>Turn flows and systems into a working web or mobile experience.</p></div>
+              <div><span>03</span><strong>Learn</strong><p>Use the functional product to expose the next decision, risk, or opportunity.</p></div>
+            </div>
           </div>
-          <p>
-            The umbrella Angel co-founded with his partner to develop experimental software
-            products—from AI radio and creator economies to sports analysis and collaborative
-            networks.
-          </p>
-        </div>
-        <div className="venture-row">
-          <div className="venture-number">B</div>
-          <div>
-            <p className="eyebrow">Creative + automation business</p>
-            <h3>ADGO Studios</h3>
-          </div>
-          <p>
-            An AI-powered creative-services business exploring image and video generation,
-            advertising systems, social content, lead capture, CRM infrastructure, and workflow
-            automation.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <section id="experiments" className="experiments-section section-shell" aria-labelledby="experiments-title">
-        <div className="section-label"><span>06</span> Additional experiments</div>
-        <div className="experiments-wrap">
-          <h2 id="experiments-title">Smaller builds, useful signals.</h2>
-          <div className="experiment-list">
-            {experiments.map((experiment) => (
-              <Reveal className="experiment-row" key={experiment.name}>
-                <div>
-                  <span>{experiment.status}</span>
-                  <h3>{experiment.name}</h3>
+        <section id="work" className="home-work scroll-scene-section" data-scene="work" aria-labelledby="work-title">
+          <div className="home-work-heading section-shell">
+            <div className="section-label"><span>02</span> Selected work</div>
+            <div>
+              <h2 id="work-title">Products, not pitch decks.</h2>
+              <p>Six functional builds selected for range, technical depth, and product judgment.</p>
+            </div>
+          </div>
+
+          <div className="work-stories">
+            {projects.map((project, index) => (
+              <article className="work-story" key={project.slug}>
+                <Link href={`/work/${project.slug}`} className="work-story-media" aria-label={`Read the ${project.name} case study`}>
+                  <Image
+                    src={project.image.src}
+                    alt={project.image.alt}
+                    fill
+                    loading={index === 0 ? "eager" : "lazy"}
+                    sizes="100vw"
+                  />
+                  <div className="work-story-shade" />
+                  <span className="work-story-number">0{index + 1}</span>
+                  <div className="work-story-title">
+                    <p>{project.category}</p>
+                    <h3>{project.name}</h3>
+                  </div>
+                </Link>
+                <div className="work-story-caption section-shell">
+                  <div className="work-story-status">{project.status}</div>
+                  <p className="work-story-positioning">{project.positioning}</p>
+                  <div className="work-story-detail">
+                    <p>{project.summary}</p>
+                    <div>
+                      <Link href={`/work/${project.slug}`} className="text-link">Case study <span>→</span></Link>
+                      {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a> : null}
+                    </div>
+                  </div>
                 </div>
-                <p>{experiment.description}</p>
-                {experiment.github ? (
-                  <a href={experiment.github} target="_blank" rel="noreferrer" aria-label={`${experiment.name} on GitHub`}>↗</a>
-                ) : <span aria-hidden="true">—</span>}
-              </Reveal>
+              </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="focus-section section-shell" aria-labelledby="focus-title">
-        <div className="section-label"><span>07</span> Current focus</div>
-        <Reveal className="focus-copy">
-          <h2 id="focus-title">Ready to build inside a strong team.</h2>
-          <p>
-            I am pursuing AI product, product engineering, prototyping, and creative-technology
-            roles where I can contribute quickly and keep growing alongside experienced builders.
-          </p>
-          <div className="focus-actions">
-            <Link href="/resume" className="button button-primary">View resume</Link>
-            <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer" className="button button-secondary">GitHub ↗</a>
+        <section id="about" className="builder-story scroll-scene-section" data-scene="story" aria-labelledby="about-title">
+          <div className="builder-story-inner section-shell">
+            <Reveal className="section-label"><span>03</span> The builder</Reveal>
+            <div className="builder-story-grid">
+              <Reveal>
+                <h2 id="about-title">Retail is the day job. Product building is the trajectory.</h2>
+              </Reveal>
+              <Reveal className="builder-story-copy">
+                <p className="lede">
+                  Outside Home Depot, I co-founded ADGO Ventures and ADGO Studios and built a
+                  portfolio of real software products with my partner.
+                </p>
+                <p>
+                  The unconventional path is useful. Retail keeps me close to real customer
+                  questions, unclear instructions, operational friction, and the difference between
+                  a clever feature and something a person can actually use.
+                </p>
+                <p>
+                  I am looking for a strong AI-forward team where range, initiative, product sense,
+                  and the ability to ship are meaningful advantages.
+                </p>
+              </Reveal>
+            </div>
+            <div className="builder-capabilities">
+              {capabilities.map(([label, description]) => (
+                <div key={label}><span>{label}</span><p>{description}</p></div>
+              ))}
+            </div>
           </div>
-        </Reveal>
-      </section>
+        </section>
 
-      <section id="contact" className="contact-section" aria-labelledby="contact-title">
-        <p className="eyebrow">Have a role, product, or prototype in mind?</p>
-        <h2 id="contact-title">Let’s make it real.</h2>
-        <a className="contact-email" href="mailto:adgpublishings@gmail.com">adgpublishings@gmail.com <span>↗</span></a>
-      </section>
+        <section id="ventures" className="home-ventures scroll-scene-section" data-scene="ventures" aria-labelledby="ventures-title">
+          <div className="home-ventures-heading section-shell">
+            <div className="section-label"><span>04</span> Ventures</div>
+            <h2 id="ventures-title">Two ways of taking ideas seriously.</h2>
+          </div>
+          <article className="venture-story">
+            <div className="venture-story-index">A</div>
+            <div>
+              <p className="eyebrow">Product venture studio</p>
+              <h3>ADGO Ventures</h3>
+            </div>
+            <p>
+              The venture umbrella Angel co-founded with his partner to develop experimental
+              software—from AI radio and creator economies to sports analysis and collaborative networks.
+            </p>
+          </article>
+          <article className="venture-story venture-story-linked">
+            <div className="venture-story-index">B</div>
+            <div>
+              <p className="eyebrow">AI-native creative + growth systems</p>
+              <h3>ADGO Studios</h3>
+            </div>
+            <div className="venture-story-copy">
+              <p>
+                A business Angel co-founded to help local service brands connect conversion-focused
+                websites, advertising creative, campaigns, and AI-powered lead handling into one system.
+              </p>
+              <a href="https://adgostudios.com/" target="_blank" rel="noreferrer" className="text-link">
+                Visit ADGO Studios <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </section>
+
+        <section id="experiments" className="home-experiments section-shell" aria-labelledby="experiments-title">
+          <div className="section-label"><span>05</span> Additional experiments</div>
+          <div className="home-experiments-content">
+            <h2 id="experiments-title">Smaller builds. Useful signals.</h2>
+            <div className="home-experiment-list">
+              {experiments.map((experiment) => (
+                <Reveal className="home-experiment-row" key={experiment.name}>
+                  <div><span>{experiment.status}</span><h3>{experiment.name}</h3></div>
+                  <p>{experiment.description}</p>
+                  {experiment.github ? <a href={experiment.github} target="_blank" rel="noreferrer" aria-label={`${experiment.name} on GitHub`}>↗</a> : <span aria-hidden="true">—</span>}
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="home-contact scroll-scene-section" data-scene="contact" aria-labelledby="contact-title">
+          <p className="eyebrow">Have a role, product, or prototype in mind?</p>
+          <h2 id="contact-title">Let&apos;s build what comes next.</h2>
+          <div className="home-contact-actions">
+            <a className="button button-primary" href="mailto:adgpublishings@gmail.com">Start a conversation</a>
+            <Link href="/resume" className="button button-ghost">View resume</Link>
+            <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
