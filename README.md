@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Angel Gonzalez — AI Product Builder
 
-## Getting Started
+Portfolio for Angel Gonzalez: an AI product builder who turns ambitious ideas into
+functional, deployed applications across AI, media, community, sports, and creative
+technology.
 
-First, run the development server:
+## Featured work
+
+- **Raidio** — shared-listening AI radio network and station studio
+- **Snapdex** — photo trading-card economy with packs, trading, burning, and arena play
+- **Apogee** — mobile vertical-jump measurement and coaching product
+- **Co-Lab** — anonymous collaborative idea graph with AI routing and evolution
+- **SkateView** — privacy-aware community map for street skate spots
+- **Living Window** — persistent ambient village and digital art experience
+
+Each project has a concise, evidence-based case study covering the product opportunity,
+what was built, the main product or technical challenge, current functionality, important
+decisions, and honest next steps.
+
+## Portfolio architecture
+
+- Next.js App Router with static generation
+- Project content stored in `app/data/portfolio.ts`
+- Responsive, accessible editorial layout
+- Local product captures optimized by `next/image`
+- Static project routes under `/work/[slug]`
+- Structured resume at `/resume` with print-to-PDF styling
+- Open Graph metadata, JSON-LD, sitemap, robots, and favicon
+- No runtime dependency on GitHub, Supabase, or a CMS
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production verification:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content principles
 
-## Learn More
+The portfolio intentionally avoids invented traction, users, revenue, testimonials,
+funding, or performance claims. Product status and unavailable demos are labeled directly.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is deployed through the existing Vercel project connected to this repository.

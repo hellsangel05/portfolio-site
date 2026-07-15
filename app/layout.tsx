@@ -1,45 +1,90 @@
-import ChatBot from "./components/ChatBot";
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
+import "./globals.css";
+
+const siteUrl = "https://portfolio-site-green-xi.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Angel Gonzalez — Junior Developer & Automation",
-  description: "Aspiring full-stack developer. AI-native builder. Co-founder at ADGo Studios.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Angel Gonzalez — AI Product Builder",
+    template: "%s — Angel Gonzalez",
+  },
+  description:
+    "Angel Gonzalez is an AI product builder who turns ambitious ideas into functional, deployed applications across AI, media, community, and creative technology.",
+  keywords: [
+    "Angel Gonzalez",
+    "AI product builder",
+    "AI applications developer",
+    "product-minded developer",
+    "rapid prototyping",
+    "full-stack developer",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Angel Gonzalez",
+    title: "Angel Gonzalez — AI Product Builder",
+    description: "Ambitious product ideas turned into functional, deployed applications.",
+    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Angel Gonzalez — AI Product Builder" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angel Gonzalez — AI Product Builder",
+    description: "Ambitious product ideas turned into functional, deployed applications.",
+    images: ["/og.png"],
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0b",
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Angel Gonzalez",
+  url: siteUrl,
+  jobTitle: "AI Product Builder",
+  address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
+  sameAs: ["https://github.com/hellsangel05"],
+  knowsAbout: [
+    "AI-assisted development",
+    "Full-stack product development",
+    "Rapid product prototyping",
+    "Product strategy",
+    "Workflow automation",
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
-        <nav className="nav">
-          <div className="nav-inner">
-            <Link href="/" className="nav-brand">
-              <span className="mark">A</span>
-              <span>Angel Gonzalez</span>
-            </Link>
-            <div className="nav-links">
-              <Link href="/">Home</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/project-docs">Docs</Link>
-              <Link href="/about">About</Link>
-            </div>
-            <div className="nav-meta">
-              <span>Los Angeles · PT</span>
-            </div>
-          </div>
-        </nav>
-        {children}
+        <a className="skip-link" href="#main-content">Skip to content</a>
+        <header className="site-header">
+          <Link href="/" className="site-brand" aria-label="Angel Gonzalez home">
+            <span>AG</span>
+            <strong>Angel Gonzalez</strong>
+          </Link>
+          <nav aria-label="Primary navigation">
+            <Link href="/#work">Work</Link>
+            <Link href="/#about" className="nav-optional">About</Link>
+            <Link href="/#ventures" className="nav-optional">Ventures</Link>
+            <Link href="/resume">Resume</Link>
+            <Link href="/#contact">Contact</Link>
+          </nav>
+        </header>
+        <div id="main-content">{children}</div>
         <footer className="site-footer">
           <span>© 2026 Angel Gonzalez</span>
-          <span>Built with Claude Code + Next.js</span>
+          <span>Designed and built with AI-assisted workflows.</span>
+          <a href="#main-content">Back to top ↑</a>
         </footer>
-        <ChatBot />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       </body>
     </html>
   );

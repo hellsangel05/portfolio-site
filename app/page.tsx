@@ -1,141 +1,241 @@
+import Image from "next/image";
+import Link from "next/link";
+import Reveal from "./components/Reveal";
+import { experiments, projects } from "./data/portfolio";
+
+const capabilities = [
+  {
+    label: "Product",
+    items: ["Product framing", "Feature design", "Rapid prototyping", "Product iteration"],
+  },
+  {
+    label: "Build",
+    items: ["Full-stack applications", "Responsive interfaces", "Data-backed products", "Deployment"],
+  },
+  {
+    label: "AI workflows",
+    items: ["Agentic development", "LLM integrations", "Image + video generation", "Automation"],
+  },
+];
+
 export default function Home() {
   return (
-    <>
-      <section className="hero">
-        <div className="hero-label">Portfolio / 2026 — Available for hire</div>
-        <h1>
-          Shipping with <em>AI</em>.<br />
-          Learning by <em>building</em>.
-        </h1>
-        <div className="hero-sub">
-          <p>
-            I&apos;m Angel — pivoting from a decade in retail, security and operations into
-            software that thinks. I prototype, automate and ship full-stack tools using
-            Claude Code, Codex and Cursor as daily drivers. Looking for an AI-forward team
-            where I can keep learning fast.
+    <main>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow hero-kicker">Angel Gonzalez · Los Angeles</p>
+          <h1 id="hero-title">
+            <span>{"AI Product "}</span>
+            <span className="hero-accent">Builder.</span>
+          </h1>
+          <p className="hero-dek">
+            I turn ambitious product ideas into functional, deployed applications across AI,
+            media, community, and creative technology.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-            <div className="meta-block"><span className="meta">Role</span><strong>Junior developer / automation</strong></div>
-            <div className="meta-block"><span className="meta">Based in</span><strong>Los Angeles, CA</strong></div>
-            <div className="meta-block"><span className="meta">Currently</span><strong>ADGo Studios — co-founder</strong></div>
-            <div className="meta-block"><span className="meta">Open to</span><strong>Jr roles, AI-native teams</strong></div>
+          <div className="hero-actions" aria-label="Primary actions">
+            <Link href="#work" className="button button-primary">Explore the work</Link>
+            <a href="mailto:adgpublishings@gmail.com" className="text-link">Start a conversation <span>↗</span></a>
           </div>
+        </div>
+
+        <div className="hero-media" aria-label="Raidio product preview">
+          <Image
+            src="/projects/raidio-home.png"
+            alt="Raidio homepage showing AI radio stations and station creation"
+            fill
+            priority
+            loading="eager"
+            sizes="(max-width: 800px) 100vw, 58vw"
+          />
+          <div className="hero-media-label">
+            <span>Featured build</span>
+            <strong>Raidio · AI radio network</strong>
+          </div>
+        </div>
+
+        <dl className="proof-strip">
+          <div><dt>Practice</dt><dd>AI-native product building</dd></div>
+          <div><dt>Range</dt><dd>Web, mobile, creative systems</dd></div>
+          <div><dt>Workflow</dt><dd>Concept → product → deployment</dd></div>
+          <div><dt>Seeking</dt><dd>AI product + prototyping roles</dd></div>
+        </dl>
+      </section>
+
+      <section className="intro section-shell" aria-labelledby="intro-title">
+        <Reveal className="section-label"><span>01</span> The proposition</Reveal>
+        <Reveal className="intro-copy">
+          <h2 id="intro-title">The proof is in the products.</h2>
+          <p>
+            I use AI-assisted development as leverage: to explore more directions, close skill
+            gaps quickly, and move from product logic to working software. The result is a growing
+            portfolio of real systems—not pitch decks or speculative mockups.
+          </p>
+        </Reveal>
+      </section>
+
+      <section id="work" className="work-section" aria-labelledby="work-title">
+        <div className="section-shell section-heading">
+          <div className="section-label"><span>02</span> Featured work</div>
+          <div>
+            <h2 id="work-title">Products with a point of view.</h2>
+            <p>Six builds selected for product range, technical depth, and visible execution.</p>
+          </div>
+        </div>
+
+        <div className="project-list">
+          {projects.map((project, index) => (
+            <Reveal as="article" className="project-feature" key={project.slug}>
+              <Link href={`/work/${project.slug}`} className="project-media" aria-label={`Read the ${project.name} case study`}>
+                <Image
+                  src={project.image.src}
+                  alt={project.image.alt}
+                  fill
+                  loading={index === 0 ? "eager" : "lazy"}
+                  sizes="(max-width: 900px) 100vw, 58vw"
+                />
+                <span className="project-index">0{index + 1}</span>
+              </Link>
+              <div className="project-copy">
+                <div className="project-meta">
+                  <span>{project.status}</span>
+                  <span>{project.category}</span>
+                </div>
+                <h3><Link href={`/work/${project.slug}`}>{project.name}</Link></h3>
+                <p className="project-positioning">{project.positioning}</p>
+                <p className="project-summary">{project.summary}</p>
+                <ul className="tag-list" aria-label={`${project.name} technologies`}>
+                  {project.tech.slice(0, 5).map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <div className="project-actions">
+                  <Link href={`/work/${project.slug}`} className="text-link">Read case study <span>→</span></Link>
+                  {project.live ? (
+                    <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a>
+                  ) : null}
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-head">
-          <div className="section-num">01 / Practice</div>
-          <div>
-            <h2 className="section-title">What I <em>do</em>.</h2>
-            <p style={{ maxWidth: "60ch", opacity: .7, marginTop: 16, fontSize: 16 }}>
-              Workflow automation and AI integrations for real businesses. Not decks. Working systems that save someone an hour a day.
+      <section id="about" className="about-section section-shell" aria-labelledby="about-title">
+        <Reveal className="section-label"><span>03</span> About</Reveal>
+        <div className="about-grid">
+          <Reveal>
+            <h2 id="about-title">An unconventional route. A practical advantage.</h2>
+          </Reveal>
+          <Reveal className="about-copy">
+            <p className="lede">
+              I currently work at Home Depot. Outside those hours, I co-founded ADGO Ventures and
+              have been designing, building, and deploying products across multiple categories.
             </p>
-          </div>
+            <p>
+              Retail taught me to listen closely, explain clearly, work inside constraints, and
+              notice where real people get stuck. Product building gives me a way to act on those
+              instincts. I learn fast, use modern AI tools deliberately, and keep pushing until the
+              idea becomes something another person can use.
+            </p>
+            <p>
+              I am not positioning myself as a senior traditional engineer. I am a product-minded
+              builder with substantial independent shipping experience, looking for an AI-forward
+              team where initiative, range, and execution matter.
+            </p>
+          </Reveal>
         </div>
-        <div className="services">
-          <div></div>
-          <div className="service-list">
-            {[
-              ["001", "Workflow automation", "Custom n8n flows stringing sheets, CRMs, inboxes and APIs together. Quiet infrastructure that removes repetitive work.", "n8n · Webhooks · Sheets API"],
-              ["002", "AI-native products", "Chat interfaces, content generators and internal tools built on Claude and OpenAI — with real retrieval and schema-validated outputs.", "Claude · OpenAI · Next.js"],
-              ["003", "Marketing infrastructure", "ADGo Studios: AI-generated ads, content pipelines, client portals. Higgsfield, CapCut, Blotato and GoHighLevel in one stack.", "Higgsfield · Blotato · GHL"],
-              ["004", "Sites that ship", "Next.js on Vercel, hand-tuned with Claude Code and Codex. Namecheap domains. Small surface, fast shipping.", "Next.js · Vercel · Tailwind"],
-            ].map(([n, h, p, t]) => (
-              <div className="service" key={n}>
-                <div className="service-num">{n}</div>
-                <div className="service-body"><h3>{h}</h3><p>{p}</p></div>
-                <div className="service-tools">{t}</div>
-              </div>
+      </section>
+
+      <section className="capabilities-section section-shell" aria-labelledby="capabilities-title">
+        <div className="section-label"><span>04</span> Capabilities</div>
+        <div className="capabilities-heading">
+          <h2 id="capabilities-title">From blank page to working system.</h2>
+          <p>Skills inferred from the products and their architecture—not a wall of logos.</p>
+        </div>
+        <div className="capability-grid">
+          {capabilities.map((capability) => (
+            <Reveal className="capability-column" key={capability.label}>
+              <h3>{capability.label}</h3>
+              <ul>{capability.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </Reveal>
+          ))}
+        </div>
+        <div className="technology-line" aria-label="Technologies used across the portfolio">
+          TypeScript · JavaScript · React · Next.js · Expo · React Native · Python · Supabase ·
+          PostgreSQL · Tailwind CSS · Vercel · OpenAI APIs · MediaPipe · PixiJS · Leaflet
+        </div>
+      </section>
+
+      <section id="ventures" className="ventures-section" aria-labelledby="ventures-title">
+        <div className="section-shell section-heading ventures-heading">
+          <div className="section-label"><span>05</span> Ventures</div>
+          <h2 id="ventures-title">Two vehicles for building.</h2>
+        </div>
+        <div className="venture-row">
+          <div className="venture-number">A</div>
+          <div>
+            <p className="eyebrow">Product venture studio</p>
+            <h3>ADGO Ventures</h3>
+          </div>
+          <p>
+            The umbrella Angel co-founded with his partner to develop experimental software
+            products—from AI radio and creator economies to sports analysis and collaborative
+            networks.
+          </p>
+        </div>
+        <div className="venture-row">
+          <div className="venture-number">B</div>
+          <div>
+            <p className="eyebrow">Creative + automation business</p>
+            <h3>ADGO Studios</h3>
+          </div>
+          <p>
+            An AI-powered creative-services business exploring image and video generation,
+            advertising systems, social content, lead capture, CRM infrastructure, and workflow
+            automation.
+          </p>
+        </div>
+      </section>
+
+      <section id="experiments" className="experiments-section section-shell" aria-labelledby="experiments-title">
+        <div className="section-label"><span>06</span> Additional experiments</div>
+        <div className="experiments-wrap">
+          <h2 id="experiments-title">Smaller builds, useful signals.</h2>
+          <div className="experiment-list">
+            {experiments.map((experiment) => (
+              <Reveal className="experiment-row" key={experiment.name}>
+                <div>
+                  <span>{experiment.status}</span>
+                  <h3>{experiment.name}</h3>
+                </div>
+                <p>{experiment.description}</p>
+                {experiment.github ? (
+                  <a href={experiment.github} target="_blank" rel="noreferrer" aria-label={`${experiment.name} on GitHub`}>↗</a>
+                ) : <span aria-hidden="true">—</span>}
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section" id="projects">
-        <div className="section-head">
-          <div className="section-num">02 / Selected work</div>
-          <h2 className="section-title">Projects, in <em>progress</em>.</h2>
-        </div>
-        <div className="projects">
-          <a className="project" href="https://adgostudio.com" target="_blank" rel="noopener noreferrer">
-            <div className="project-year">2025 —</div>
-            <div className="project-title">ADGo Studios</div>
-            <div className="project-desc">Co-founded AI-native marketing agency. Content pipelines, client sites, brand systems — all shipped with AI-first tooling.</div>
-            <div className="project-tag">Company</div>
-            <div className="project-arrow">→</div>
-          </a>
-          <a className="project" href="/project-docs">
-            <div className="project-year">2026</div>
-            <div className="project-title">Task Notify</div>
-            <div className="project-desc">n8n workflow that reads Google Sheets, filters pending tasks by owner, emails personalized digests, writes back timestamps.</div>
-            <div className="project-tag">Automation</div>
-            <div className="project-arrow">→</div>
-          </a>
-          <a className="project" href="#">
-            <div className="project-year">2026</div>
-            <div className="project-title">Angel&apos;s AI</div>
-            <div className="project-desc">Concierge chatbot on this site — answers visitor questions about my work, skills and availability. Try the bubble.</div>
-            <div className="project-tag">AI · RAG</div>
-            <div className="project-arrow">→</div>
-          </a>
-        </div>
-      </section>
-
-      <div className="tools">
-        <div className="tools-track">
-          {[...Array(2)].map((_, i) => (
-            <span key={i} style={{ display: "contents" }}>
-              <span>Claude Code</span><span className="accent">·</span>
-              <span><em>Codex</em></span><span className="accent">·</span>
-              <span>n8n</span><span className="accent">·</span>
-              <span><em>Next.js</em></span><span className="accent">·</span>
-              <span>Vercel</span><span className="accent">·</span>
-              <span><em>TypeScript</em></span><span className="accent">·</span>
-              <span>Tailwind</span><span className="accent">·</span>
-              <span><em>Cursor</em></span><span className="accent">·</span>
-              <span>OpenAI</span><span className="accent">·</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <section className="section" id="story">
-        <div className="section-head">
-          <div className="section-num">03 / Story</div>
-          <h2 className="section-title">A <em>practical</em> switch.</h2>
-        </div>
-        <div className="story">
-          <div></div>
-          <div className="story-body">
-            <p className="lede">For a decade I worked floors most people never see — retail, security, pest control. I got good at watching systems break and quietly fixing them before anyone noticed.</p>
-            <p>Around 2024 I realized the tools I was hacking together on weekends — n8n flows, chatbots, scrapers — had become my actual job description. I <em>wasn&apos;t</em> a retail manager who coded on the side. I was a builder who still had a day job.</p>
-            <p>So I leaned in. Every new project is a proof: I can ship something end-to-end, with AI as a collaborator, fast. I&apos;m not claiming to be a senior engineer. I&apos;m claiming I&apos;ll close tickets faster than my résumé suggests.</p>
+      <section className="focus-section section-shell" aria-labelledby="focus-title">
+        <div className="section-label"><span>07</span> Current focus</div>
+        <Reveal className="focus-copy">
+          <h2 id="focus-title">Ready to build inside a strong team.</h2>
+          <p>
+            I am pursuing AI product, product engineering, prototyping, and creative-technology
+            roles where I can contribute quickly and keep growing alongside experienced builders.
+          </p>
+          <div className="focus-actions">
+            <Link href="/resume" className="button button-primary">View resume</Link>
+            <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer" className="button button-secondary">GitHub ↗</a>
           </div>
-        </div>
+        </Reveal>
       </section>
 
-      <section className="contact" id="contact">
-        <h2>Let&apos;s <em>build</em> something.</h2>
-        <div className="contact-grid">
-          <a href="mailto:adgpublishings@gmail.com" className="contact-card">
-            <span className="cc-label">Email</span>
-            <span className="cc-value">adgpublishings<br />@gmail.com</span>
-          </a>
-          <a href="tel:+18184470902" className="contact-card">
-            <span className="cc-label">Phone</span>
-            <span className="cc-value">(818) 447<br />—0902</span>
-          </a>
-          <a href="https://github.com/hellsangel05" target="_blank" rel="noopener noreferrer" className="contact-card">
-            <span className="cc-label">GitHub</span>
-            <span className="cc-value">@hellsangel05</span>
-          </a>
-          <a href="/resume.pdf" className="contact-card">
-            <span className="cc-label">Résumé</span>
-            <span className="cc-value">Download<br />PDF</span>
-          </a>
-        </div>
+      <section id="contact" className="contact-section" aria-labelledby="contact-title">
+        <p className="eyebrow">Have a role, product, or prototype in mind?</p>
+        <h2 id="contact-title">Let’s make it real.</h2>
+        <a className="contact-email" href="mailto:adgpublishings@gmail.com">adgpublishings@gmail.com <span>↗</span></a>
       </section>
-    </>
+    </main>
   );
 }
