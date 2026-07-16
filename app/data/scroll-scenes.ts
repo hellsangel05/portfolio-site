@@ -2,6 +2,7 @@ export type ScrollScene = {
   id: string;
   tint: string;
   glow: string;
+  effect?: "streaks";
   media?: {
     poster?: string;
     videoMp4?: string;
@@ -14,7 +15,7 @@ export type ScrollScene = {
 // public/motion, set an optional poster, and the stage will crossfade them as
 // each matching data-scene section enters the reading position.
 export const scrollScenes: ScrollScene[] = [
-  { id: "hero", tint: "#1d1210", glow: "#ff6846" },
+  { id: "hero", tint: "#130f12", glow: "#ff6846", effect: "streaks" },
   { id: "work", tint: "#121316", glow: "#b7462f" },
   { id: "story", tint: "#18130f", glow: "#ff6846" },
   { id: "ventures", tint: "#101115", glow: "#d94f34" },

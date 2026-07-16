@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ProjectMedia } from "../../components/ProjectMedia";
 import { getProject, projects } from "../../data/portfolio";
 
 export function generateStaticParams() {
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${project.name} — Product case study`,
       description: project.positioning,
-      images: [{ url: project.image.src, alt: project.image.alt }],
+      ...(project.image ? { images: [{ url: project.image.src, alt: project.image.alt }] } : {}),
     },
   };
 }
@@ -42,7 +43,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           <p>{project.positioning}</p>
         </div>
         <div className="case-hero-media">
-          <Image src={project.image.src} alt={project.image.alt} fill priority loading="eager" sizes="100vw" />
+          <ProjectMedia project={project} priority sizes="100vw" variant="hero" />
         </div>
         {project.demoNote ? <p className="demo-note"><strong>Demo note:</strong> {project.demoNote}</p> : null}
       </header>
@@ -52,7 +53,9 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <div><span>Current status</span><p>{project.status}</p></div>
         <div><span>Technology</span><p>{project.tech.join(" · ")}</p></div>
         <div className="case-overview-actions">
-          {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Open live preview ↗</a> : <span>Demo available by walkthrough</span>}
+          {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Open live preview ↗</a> : null}
+          {!project.live && project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="button button-primary">View on GitHub ↗</a> : null}
+          {!project.live && !project.github ? <span>Demo available by walkthrough</span> : null}
         </div>
       </section>
 

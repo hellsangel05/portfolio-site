@@ -3,6 +3,7 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { scrollScenes } from "../data/scroll-scenes";
+import { HeroStreakField } from "./HeroStreakField";
 
 type SceneStyle = CSSProperties & {
   "--scene-tint": string;
@@ -81,6 +82,7 @@ export function ScrollSceneStage() {
             key={scene.id}
             style={style}
           >
+            {scene.effect === "streaks" && !scene.media ? <HeroStreakField /> : null}
             {scene.media?.poster ? (
               <Image
                 src={scene.media.poster}

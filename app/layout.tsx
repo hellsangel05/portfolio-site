@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez designs and builds software products across media, creator tools, sports technology, community platforms, and automation.",
+    "Angel Gonzalez designs and builds software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
   keywords: [
     "Angel Gonzalez",
     "AI product builder",
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Angel Gonzalez",
     title: "Angel Gonzalez — AI Product Builder",
-    description: "Software products across media, creator tools, sports technology, community platforms, and automation.",
+    description: "Software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
     images: [{ url: "/og-v2.png", width: 1662, height: 946, alt: "Angel Gonzalez — AI Product Builder" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Angel Gonzalez — AI Product Builder",
-    description: "Software products across media, creator tools, sports technology, community platforms, and automation.",
+    description: "Software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
     images: ["/og-v2.png"],
   },
 };

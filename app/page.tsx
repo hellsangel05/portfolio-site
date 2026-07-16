@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ProjectMedia } from "./components/ProjectMedia";
 import Reveal from "./components/Reveal";
 import { ScrollSceneStage } from "./components/ScrollSceneStage";
-import { experiments, projects } from "./data/portfolio";
+import { projects } from "./data/portfolio";
 
 const capabilities = [
   ["Product", "Framing, flows, feature systems, iteration"],
@@ -16,16 +16,6 @@ export default function Home() {
       <ScrollSceneStage />
       <div className="home-content">
         <section className="home-hero scroll-scene-section" data-scene="hero" aria-labelledby="hero-title">
-          <div className="home-hero-media" aria-hidden="true">
-            <Image
-              src="/projects/raidio-home.png"
-              alt=""
-              fill
-              priority
-              loading="eager"
-              sizes="100vw"
-            />
-          </div>
           <div className="home-hero-scrim" />
           <div className="home-hero-content">
             <p className="eyebrow home-hero-kicker">Angel Gonzalez / Product Builder / Los Angeles</p>
@@ -34,8 +24,8 @@ export default function Home() {
               <span className="hero-accent">software products.</span>
             </h1>
             <p className="home-hero-dek">
-              Selected work across media, creator tools, sports technology, community platforms,
-              and automation.
+              Selected work across media, creator tools, sports technology, civic technology,
+              community platforms, and automation.
             </p>
             <div className="home-hero-actions" aria-label="Primary actions">
               <Link href="#work" className="button button-primary">See selected work</Link>
@@ -49,7 +39,7 @@ export default function Home() {
             <div className="section-label"><span>01</span> Selected work</div>
             <div>
               <h2 id="work-title">Selected products.</h2>
-              <p>Six builds across media, creator tools, sports technology, community, and creative systems.</p>
+              <p>Eight builds across media, creator tools, sports technology, civic technology, community, and creative systems.</p>
             </div>
           </div>
 
@@ -57,13 +47,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <article className="work-story" key={project.slug}>
                 <Link href={`/work/${project.slug}`} className="work-story-media" aria-label={`Read the ${project.name} case study`}>
-                  <Image
-                    src={project.image.src}
-                    alt={project.image.alt}
-                    fill
-                    loading={index === 0 ? "eager" : "lazy"}
-                    sizes="100vw"
-                  />
+                  <ProjectMedia project={project} priority={index === 0} sizes="100vw" />
                   <div className="work-story-shade" />
                   <span className="work-story-number">0{index + 1}</span>
                   <div className="work-story-title">
@@ -79,6 +63,7 @@ export default function Home() {
                     <div>
                       <Link href={`/work/${project.slug}`} className="text-link">Case study <span>→</span></Link>
                       {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a> : null}
+                      {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="text-link muted-link">GitHub <span>↗</span></a> : null}
                     </div>
                   </div>
                 </div>
@@ -149,22 +134,6 @@ export default function Home() {
               </a>
             </div>
           </article>
-        </section>
-
-        <section id="experiments" className="home-experiments section-shell" aria-labelledby="experiments-title">
-          <div className="section-label"><span>04</span> Additional experiments</div>
-          <div className="home-experiments-content">
-            <h2 id="experiments-title">Other projects.</h2>
-            <div className="home-experiment-list">
-              {experiments.map((experiment) => (
-                <Reveal className="home-experiment-row" key={experiment.name}>
-                  <div><span>{experiment.status}</span><h3>{experiment.name}</h3></div>
-                  <p>{experiment.description}</p>
-                  {experiment.github ? <a href={experiment.github} target="_blank" rel="noreferrer" aria-label={`${experiment.name} on GitHub`}>↗</a> : <span aria-hidden="true">—</span>}
-                </Reveal>
-              ))}
-            </div>
-          </div>
         </section>
 
         <section id="contact" className="home-contact scroll-scene-section" data-scene="contact" aria-labelledby="contact-title">

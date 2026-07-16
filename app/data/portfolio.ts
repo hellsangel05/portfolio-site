@@ -13,9 +13,10 @@ export type PortfolioProject = {
   next: string[];
   role: string;
   tech: string[];
-  image: { src: string; alt: string };
+  image?: { src: string; alt: string };
   gallery: { src: string; alt: string }[];
   live?: string;
+  github?: string;
   demoNote?: string;
 };
 
@@ -122,10 +123,71 @@ export const projects: PortfolioProject[] = [
     ],
   },
   {
+    slug: "edit-battle",
+    name: "Edit Battle",
+    category: "Creator community",
+    status: "Pre-launch · Functional build",
+    positioning: "An asynchronous competition platform where editors answer challenges, earn votes, and compete for the crown.",
+    summary: "Editors respond to song-and-source challenges with YouTube or TikTok edits. The community votes, a reigning winner holds the crown, and profiles track each editor’s work and wins.",
+    problem: "Editing communities already create challenges and standout work, but the activity is scattered across feeds, comments, and short-lived posts. There is no durable place to organize demand, compare entries, or recognize the current champion.",
+    built: "A Next.js community platform with challenge feeds, daily battles, link-out submissions, voting, crown history, editor profiles, rankings, search, tag catalogs, moderation, and dynamic social cards.",
+    challenge: "The platform has to organize external media without becoming a video host. YouTube and TikTok submissions need durable metadata, safe lifecycle states, reliable vote counts, and a crown system that preserves the history of every reign.",
+    working: [
+      "Challenge creation, ranked feeds, submissions, voting, and king-of-the-hill crowns",
+      "Daily Battle rotation, editor leaderboard, profiles, search, and topic catalogs",
+      "YouTube and TikTok embed normalization with graceful link-card fallbacks",
+      "Admin moderation, reporting, optimistic voting, and shareable Open Graph cards",
+    ],
+    decisions: [
+      "Keep videos on their original platforms and make Edit Battle the challenge, voting, and ranking layer.",
+      "Model crowns as a reign history and route crowning through one atomic database function.",
+      "Leave monetization feature-flagged and dormant until the community loop is validated.",
+    ],
+    next: [
+      "Run a controlled launch with a small group of editors and challenge hosts.",
+      "Tune moderation and anti-brigading rules around real voting behavior.",
+      "Measure whether Daily Battle and crown progression create a repeatable return loop.",
+    ],
+    role: "Co-founder · Product systems, community UX, full-stack build, competition design",
+    tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
+    gallery: [],
+  },
+  {
+    slug: "civic-mirror",
+    name: "Civic Mirror",
+    category: "Civic technology",
+    status: "Functional prototype · Active development",
+    positioning: "A bilingual LA County ballot guide that connects voter priorities to plain-language measure explanations.",
+    summary: "A short priorities quiz organizes local measures around what a voter cares about, then explains the likely alignment, tradeoffs, and source-backed reasoning in English or Spanish.",
+    problem: "Local ballot measures are consequential but difficult to compare. Dense legal language, long pamphlets, and scattered arguments make it hard for voters to understand what a yes or no vote would actually do.",
+    built: "A bilingual Next.js voter experience with a priorities quiz, ballot overview, measure pages, shareable summaries, and an admin review surface, plus a separate Claude ingestion pipeline that produces structured, cited drafts from pamphlet text.",
+    challenge: "The difficult part is using model-generated extraction without presenting uncertain information as fact. English and Spanish need equal treatment, every material claim needs source support, and alignment scores need to explain their reasoning without telling someone how to vote.",
+    working: [
+      "English and Spanish voter routes, priority selection, ballot views, and measure detail pages",
+      "Confidence-weighted alignment scoring with the strongest contributing topics exposed",
+      "Schema-validated ingestion for summaries, fiscal impact, arguments, funding, and citations",
+      "Admin review and Supabase upsert flows for structured measure content",
+    ],
+    decisions: [
+      "Treat model output as a reviewable structured draft and require source citations for published claims.",
+      "Exclude vague supporter or opponent labels and preserve uncertainty in approximate funding figures.",
+      "Show qualitative alignment with an explanation instead of exposing a raw score as a recommendation.",
+    ],
+    next: [
+      "Validate extraction against verbatim LA County Registrar pamphlet content.",
+      "Complete native-speaker review and accessibility testing for both languages.",
+      "Tune alignment thresholds with real measures before preparing a public ballot dataset.",
+    ],
+    role: "Co-founder · Product strategy, civic UX, full-stack build, information-design system",
+    tech: ["Next.js", "React", "TypeScript", "next-intl", "Supabase", "PostgreSQL", "Claude", "Zod", "Vercel"],
+    gallery: [],
+    github: "https://github.com/hellsangel05/civic-mirror",
+  },
+  {
     slug: "co-lab",
     name: "Co-Lab",
     category: "AI collaboration network",
-    status: "Pre-launch · Supabase paused",
+    status: "Pre-launch · Functional build",
     positioning: "An anonymous idea network where AI routes, connects, and helps promising thoughts evolve.",
     summary: "A user drops one sharp thought. Co-Lab routes it to the right lab, embeds it into a semantic graph, opens a live thread, and lets people or the network’s AI Muse build on it.",
     problem: "Good ideas are often posted into feeds that reward immediacy, then disappear. Co-Lab is designed around relationships and evolution: what an idea connects to, how others extend it, and when it should resurface.",
@@ -145,13 +207,12 @@ export const projects: PortfolioProject[] = [
     next: [
       "Run a small controlled beta focused on idea quality and network behavior.",
       "Tune moderation, ranking, and Muse intervention thresholds.",
-      "Resume the database-backed demo when a free Supabase project slot is available.",
+      "Prepare the database-backed experience for a controlled beta.",
     ],
     role: "Co-founder · Product strategy, interaction design, full-stack build, AI system design",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "OpenAI", "Vector search", "React Flow"],
     image: { src: "/projects/colab-home.png", alt: "Co-Lab homepage with anonymous idea input, routing explanation, and live lab navigation" },
     gallery: [],
-    demoNote: "The product shell is deployed; its Supabase project is currently paused because the free tier permits only two active projects.",
   },
   {
     slug: "skateview",
@@ -214,26 +275,6 @@ export const projects: PortfolioProject[] = [
     tech: ["Next.js", "React", "TypeScript", "PixiJS", "Canvas2D", "Web Audio", "Local storage", "Vitest"],
     image: { src: "/projects/living-window-scene.png", alt: "Living Window paper-theatre village scene at dusk with villagers and animated atmosphere" },
     gallery: [],
-  },
-];
-
-export const experiments = [
-  {
-    name: "Edit Battle",
-    status: "Pre-launch · Supabase paused",
-    description: "An asynchronous editing-competition platform with challenges, link-out submissions, voting, crowns, rankings, profiles, discovery, and dynamic share cards.",
-  },
-  {
-    name: "Civic Mirror",
-    status: "Functional prototype",
-    description: "A bilingual Los Angeles County ballot explainer that uses a short values quiz to sort measures and explain the reasoning in plain language.",
-    github: "https://github.com/hellsangel05/civic-mirror",
-  },
-  {
-    name: "Task Notify",
-    status: "Internal build",
-    description: "An n8n workflow that groups open tasks from Google Sheets, sends owner-specific email digests, and writes notification timestamps back for auditability.",
-    github: "https://github.com/hellsangel05/task-notification-automation",
   },
 ];
 

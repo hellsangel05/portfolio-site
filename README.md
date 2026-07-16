@@ -1,13 +1,15 @@
 # Angel Gonzalez — AI Product Builder
 
 Portfolio for Angel Gonzalez, an AI product builder working across media, creator tools,
-sports technology, community platforms, and automation.
+sports technology, civic technology, community platforms, and automation.
 
 ## Selected work
 
 - **Raidio** — shared-listening AI radio network and station studio
 - **Snapdex** — photo trading-card economy with packs, trading, burning, and arena play
 - **Jump Trainer** — mobile vertical-jump measurement and coaching product
+- **Edit Battle** — asynchronous editing competitions, voting, rankings, and crowns
+- **Civic Mirror** — bilingual ballot explanations and voter-priority alignment
 - **Co-Lab** — anonymous collaborative idea graph with AI routing and evolution
 - **SkateView** — privacy-aware community map for street skate spots
 - **Living Window** — persistent ambient village and digital art experience
@@ -22,6 +24,7 @@ decisions, and honest next steps.
 - Project content stored in `app/data/portfolio.ts`
 - Scroll-scene media configuration stored in `app/data/scroll-scenes.ts`
 - Fixed, section-aware background stage in `app/components/ScrollSceneStage.tsx`
+- Lightweight streak-field fallback for the hero until motion footage is added
 - Responsive, accessible editorial layout
 - Local product captures optimized by `next/image`
 - Static project routes under `/work/[slug]`
