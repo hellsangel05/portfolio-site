@@ -15,7 +15,6 @@ export type ScrollScene = {
 // each matching data-scene section enters the reading position.
 export const scrollScenes: ScrollScene[] = [
   { id: "hero", tint: "#1d1210", glow: "#ff6846" },
-  { id: "method", tint: "#111114", glow: "#ff6846" },
   { id: "work", tint: "#121316", glow: "#b7462f" },
   { id: "story", tint: "#18130f", glow: "#ff6846" },
   { id: "ventures", tint: "#101115", glow: "#d94f34" },

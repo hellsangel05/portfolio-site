@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez is an AI product builder who turns ambitious ideas into functional, deployed applications across AI, media, community, and creative technology.",
+    "Angel Gonzalez designs and builds software products across media, creator tools, sports technology, community platforms, and automation.",
   keywords: [
     "Angel Gonzalez",
     "AI product builder",
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Angel Gonzalez",
     title: "Angel Gonzalez — AI Product Builder",
-    description: "Ambitious product ideas turned into functional, deployed applications.",
+    description: "Software products across media, creator tools, sports technology, community platforms, and automation.",
     images: [{ url: "/og-v2.png", width: 1662, height: 946, alt: "Angel Gonzalez — AI Product Builder" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Angel Gonzalez — AI Product Builder",
-    description: "Ambitious product ideas turned into functional, deployed applications.",
+    description: "Software products across media, creator tools, sports technology, community platforms, and automation.",
     images: ["/og-v2.png"],
   },
 };
@@ -56,7 +56,7 @@ const personSchema = {
     { "@type": "Organization", name: "ADGO Studios", url: "https://adgostudios.com/" },
   ],
   knowsAbout: [
-    "AI-assisted development",
+    "AI application development",
     "Full-stack product development",
     "Rapid product prototyping",
     "Product strategy",
@@ -85,7 +85,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div id="main-content">{children}</div>
         <footer className="site-footer">
           <span>© 2026 Angel Gonzalez</span>
-          <span>Designed and built with AI-assisted workflows.</span>
+          <span>Product design and development.</span>
           <a href="#main-content">Back to top ↑</a>
         </footer>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />

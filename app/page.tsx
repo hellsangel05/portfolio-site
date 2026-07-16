@@ -7,7 +7,7 @@ import { experiments, projects } from "./data/portfolio";
 const capabilities = [
   ["Product", "Framing, flows, feature systems, iteration"],
   ["Build", "Full-stack web, mobile prototypes, deployment"],
-  ["AI", "Agentic workflows, model integrations, automation"],
+  ["AI + automation", "Model integrations, image and video workflows, automation"],
 ];
 
 export default function Home() {
@@ -28,52 +28,28 @@ export default function Home() {
           </div>
           <div className="home-hero-scrim" />
           <div className="home-hero-content">
-            <p className="eyebrow home-hero-kicker">Angel Gonzalez / AI Product Builder / Los Angeles</p>
+            <p className="eyebrow home-hero-kicker">Angel Gonzalez / Product Builder / Los Angeles</p>
             <h1 id="hero-title">
-              <span>{"I turn ideas into "}</span>
-              <span className="hero-accent">working products.</span>
+              <span>{"I design and build "}</span>
+              <span className="hero-accent">software products.</span>
             </h1>
             <p className="home-hero-dek">
-              I use AI-assisted development to design, build, and deploy full-stack products across
-              media, creator tools, sports technology, community, and automation.
+              Selected work across media, creator tools, sports technology, community platforms,
+              and automation.
             </p>
             <div className="home-hero-actions" aria-label="Primary actions">
               <Link href="#work" className="button button-primary">See selected work</Link>
               <Link href="/resume" className="button button-ghost">View resume</Link>
             </div>
           </div>
-          <div className="home-hero-footer">
-            <p><span>Featured build</span> Raidio — shared AI radio, programmed as a real broadcast.</p>
-            <p>Open to AI product, prototyping, and product engineering opportunities.</p>
-          </div>
-        </section>
-
-        <section className="home-method scroll-scene-section section-shell" data-scene="method" aria-labelledby="method-title">
-          <Reveal className="section-label"><span>01</span> How I work</Reveal>
-          <div className="home-method-copy">
-            <Reveal>
-              <h2 id="method-title">The point is not to generate more ideas. It is to make one real.</h2>
-            </Reveal>
-            <Reveal>
-              <p>
-                I move between product strategy, interaction design, implementation, and deployment.
-                AI accelerates the work; judgment holds the product together.
-              </p>
-            </Reveal>
-            <div className="method-steps" aria-label="Product-building process">
-              <div><span>01</span><strong>Frame</strong><p>Find the sharpest user problem and define the smallest credible product.</p></div>
-              <div><span>02</span><strong>Build</strong><p>Turn flows and systems into a working web or mobile experience.</p></div>
-              <div><span>03</span><strong>Learn</strong><p>Use the functional product to expose the next decision, risk, or opportunity.</p></div>
-            </div>
-          </div>
         </section>
 
         <section id="work" className="home-work scroll-scene-section" data-scene="work" aria-labelledby="work-title">
           <div className="home-work-heading section-shell">
-            <div className="section-label"><span>02</span> Selected work</div>
+            <div className="section-label"><span>01</span> Selected work</div>
             <div>
-              <h2 id="work-title">Products, not pitch decks.</h2>
-              <p>Six functional builds selected for range, technical depth, and product judgment.</p>
+              <h2 id="work-title">Selected products.</h2>
+              <p>Six builds across media, creator tools, sports technology, community, and creative systems.</p>
             </div>
           </div>
 
@@ -113,24 +89,23 @@ export default function Home() {
 
         <section id="about" className="builder-story scroll-scene-section" data-scene="story" aria-labelledby="about-title">
           <div className="builder-story-inner section-shell">
-            <Reveal className="section-label"><span>03</span> The builder</Reveal>
+            <Reveal className="section-label"><span>02</span> About</Reveal>
             <div className="builder-story-grid">
               <Reveal>
-                <h2 id="about-title">Retail is the day job. Product building is the trajectory.</h2>
+                <h2 id="about-title">I build across product, design, and development.</h2>
               </Reveal>
               <Reveal className="builder-story-copy">
                 <p className="lede">
-                  Outside Home Depot, I co-founded ADGO Ventures and ADGO Studios and built a
-                  portfolio of real software products with my partner.
+                  I co-founded ADGO Ventures and ADGO Studios with my partner. Together we develop
+                  software products and creative systems across several categories.
                 </p>
                 <p>
-                  The unconventional path is useful. Retail keeps me close to real customer
-                  questions, unclear instructions, operational friction, and the difference between
-                  a clever feature and something a person can actually use.
+                  My work covers product framing, interaction design, full-stack development,
+                  deployment, and iteration.
                 </p>
                 <p>
-                  I am looking for a strong AI-forward team where range, initiative, product sense,
-                  and the ability to ship are meaningful advantages.
+                  I am looking for a product team where I can contribute across disciplines and
+                  continue growing as a builder.
                 </p>
               </Reveal>
             </div>
@@ -144,8 +119,8 @@ export default function Home() {
 
         <section id="ventures" className="home-ventures scroll-scene-section" data-scene="ventures" aria-labelledby="ventures-title">
           <div className="home-ventures-heading section-shell">
-            <div className="section-label"><span>04</span> Ventures</div>
-            <h2 id="ventures-title">Two ways of taking ideas seriously.</h2>
+            <div className="section-label"><span>03</span> Ventures</div>
+            <h2 id="ventures-title">ADGO Ventures and ADGO Studios.</h2>
           </div>
           <article className="venture-story">
             <div className="venture-story-index">A</div>
@@ -161,13 +136,13 @@ export default function Home() {
           <article className="venture-story venture-story-linked">
             <div className="venture-story-index">B</div>
             <div>
-              <p className="eyebrow">AI-native creative + growth systems</p>
+              <p className="eyebrow">Creative + automation systems</p>
               <h3>ADGO Studios</h3>
             </div>
             <div className="venture-story-copy">
               <p>
                 A business Angel co-founded to help local service brands connect conversion-focused
-                websites, advertising creative, campaigns, and AI-powered lead handling into one system.
+                websites, advertising creative, campaigns, and automated lead handling into one system.
               </p>
               <a href="https://adgostudios.com/" target="_blank" rel="noreferrer" className="text-link">
                 Visit ADGO Studios <span>↗</span>
@@ -177,9 +152,9 @@ export default function Home() {
         </section>
 
         <section id="experiments" className="home-experiments section-shell" aria-labelledby="experiments-title">
-          <div className="section-label"><span>05</span> Additional experiments</div>
+          <div className="section-label"><span>04</span> Additional experiments</div>
           <div className="home-experiments-content">
-            <h2 id="experiments-title">Smaller builds. Useful signals.</h2>
+            <h2 id="experiments-title">Other projects.</h2>
             <div className="home-experiment-list">
               {experiments.map((experiment) => (
                 <Reveal className="home-experiment-row" key={experiment.name}>
@@ -193,8 +168,8 @@ export default function Home() {
         </section>
 
         <section id="contact" className="home-contact scroll-scene-section" data-scene="contact" aria-labelledby="contact-title">
-          <p className="eyebrow">Have a role, product, or prototype in mind?</p>
-          <h2 id="contact-title">Let&apos;s build what comes next.</h2>
+          <p className="eyebrow">Roles, products, and collaborations</p>
+          <h2 id="contact-title">Let&apos;s talk.</h2>
           <div className="home-contact-actions">
             <a className="button button-primary" href="mailto:adgpublishings@gmail.com">Start a conversation</a>
             <Link href="/resume" className="button button-ghost">View resume</Link>

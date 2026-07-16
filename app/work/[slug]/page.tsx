@@ -90,17 +90,17 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
       <section className="case-details section-shell">
         <article>
           <p className="eyebrow">What works now</p>
-          <h2>A real product surface.</h2>
+          <h2>Current functionality.</h2>
           <ul>{project.working.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
         <article>
           <p className="eyebrow">Important decisions</p>
-          <h2>Designed around the risk.</h2>
+          <h2>Key decisions.</h2>
           <ul>{project.decisions.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
         <article>
           <p className="eyebrow">What comes next</p>
-          <h2>Honest next steps.</h2>
+          <h2>Next steps.</h2>
           <ul>{project.next.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
       </section>
@@ -109,7 +109,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <p className="eyebrow">More product work</p>
         <h2>Explore the full portfolio.</h2>
         <div>
-          <Link href="/#work" className="button button-primary">All featured work</Link>
+          <Link href="/#work" className="button button-primary">All work</Link>
           <a href="mailto:adgpublishings@gmail.com" className="button button-secondary">Contact Angel</a>
         </div>
       </section>

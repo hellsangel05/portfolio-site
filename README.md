@@ -1,10 +1,9 @@
 # Angel Gonzalez — AI Product Builder
 
-Portfolio for Angel Gonzalez: an AI product builder who turns ambitious ideas into
-functional, deployed applications across AI, media, community, sports, and creative
-technology.
+Portfolio for Angel Gonzalez, an AI product builder working across media, creator tools,
+sports technology, community platforms, and automation.
 
-## Featured work
+## Selected work
 
 - **Raidio** — shared-listening AI radio network and station studio
 - **Snapdex** — photo trading-card economy with packs, trading, burning, and arena play
