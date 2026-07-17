@@ -77,8 +77,8 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <div><span>Current status</span><p>{project.status}</p></div>
         <div><span>Technology</span><p>{project.tech.join(" · ")}</p></div>
         <div className="case-overview-actions">
-          {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Open live preview ↗</a> : null}
-          {!project.live && project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="button button-primary">View on GitHub ↗</a> : null}
+          {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Open product ↗</a> : null}
+          {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="button button-secondary">View GitHub ↗</a> : null}
           {!project.live && !project.github ? <span>Demo available by walkthrough</span> : null}
         </div>
       </section>

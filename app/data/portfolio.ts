@@ -132,6 +132,7 @@ export const projects: PortfolioProject[] = [
     gallery: [
       { src: "/projects/jump-trainer-analyze.png", alt: "Jump Trainer recording setup and sample analysis options" },
     ],
+    live: "https://apogee-web-three.vercel.app",
   },
   {
     slug: "edit-battle",
@@ -162,6 +163,7 @@ export const projects: PortfolioProject[] = [
     role: "Co-founder · Product systems, community UX, full-stack build, competition design",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
     gallery: [],
+    live: "https://edit-battle.vercel.app",
   },
   {
     slug: "civic-mirror",
@@ -192,6 +194,7 @@ export const projects: PortfolioProject[] = [
     role: "Co-founder · Product strategy, civic UX, full-stack build, information-design system",
     tech: ["Next.js", "React", "TypeScript", "next-intl", "Supabase", "PostgreSQL", "Claude", "Zod", "Vercel"],
     gallery: [],
+    live: "https://web-tau-drab-10.vercel.app",
     github: "https://github.com/hellsangel05/civic-mirror",
   },
   {
@@ -224,6 +227,7 @@ export const projects: PortfolioProject[] = [
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "OpenAI", "Vector search", "React Flow"],
     image: { src: "/projects/colab-home.png", alt: "Co-Lab homepage with anonymous idea input, routing explanation, and live lab navigation" },
     gallery: [],
+    live: "https://colab-orpin.vercel.app",
   },
   {
     slug: "skateview",
@@ -255,6 +259,7 @@ export const projects: PortfolioProject[] = [
     tech: ["Next.js", "React", "TypeScript", "Leaflet", "OpenStreetMap", "Supabase", "Vitest", "Playwright"],
     image: { src: "/projects/skateview.png", alt: "SkateView map of Los Angeles with condition pins, filters, and a scout line of skate spots" },
     gallery: [],
+    live: "https://skateview-app.vercel.app",
   },
   {
     slug: "living-window",
@@ -286,6 +291,7 @@ export const projects: PortfolioProject[] = [
     tech: ["Next.js", "React", "TypeScript", "PixiJS", "Canvas2D", "Web Audio", "Local storage", "Vitest"],
     image: { src: "/projects/living-window-scene.png", alt: "Living Window paper-theatre village scene at dusk with villagers and animated atmosphere" },
     gallery: [],
+    live: "https://living-window-app-orcin.vercel.app",
   },
 ];
 

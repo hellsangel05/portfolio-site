@@ -29,7 +29,7 @@ export default function Home() {
 
         <section id="work" className="home-work scroll-scene-section" data-scene="work" aria-labelledby="work-title">
           <div className="home-work-heading section-shell">
-            <div className="section-label"><span>01</span> Selected work</div>
+            <div className="section-label">Selected work</div>
             <div>
               <h2 id="work-title">Product case studies.</h2>
               <p>A closer look at the products that best show my product thinking, design decisions, and full-stack implementation.</p>
@@ -42,7 +42,6 @@ export default function Home() {
                 <Link href={`/work/${project.slug}`} className="work-story-media" aria-label={`Read the ${project.name} case study`}>
                   <ProjectMedia project={project} priority={index === 0} sizes="100vw" />
                   <div className="work-story-shade" />
-                  <span className="work-story-number">0{index + 1}</span>
                   <div className="work-story-title">
                     <p>{project.category}</p>
                     <h3>{project.name}</h3>
@@ -55,7 +54,7 @@ export default function Home() {
                     <p>{project.summary}</p>
                     <div>
                       <Link href={`/work/${project.slug}`} className="text-link">Case study <span>→</span></Link>
-                      {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a> : null}
+                      {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Open product <span>↗</span></a> : null}
                       {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="text-link muted-link">GitHub <span>↗</span></a> : null}
                     </div>
                   </div>
@@ -67,7 +66,7 @@ export default function Home() {
 
         <section id="more-work" className="home-more section-shell" aria-labelledby="more-work-title">
           <div className="home-more-heading">
-            <div className="section-label"><span>02</span> More products</div>
+            <div className="section-label">More products</div>
             <div>
               <h2 id="more-work-title">More product work.</h2>
               <p>Additional shipped product systems, each with its own case study.</p>
@@ -86,7 +85,7 @@ export default function Home() {
                 <p>{project.positioning}</p>
                 <div className="home-more-actions">
                   <Link href={`/work/${project.slug}`} className="text-link">Case study <span>→</span></Link>
-                  {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Live preview <span>↗</span></a> : null}
+                  {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="text-link muted-link">Open product <span>↗</span></a> : null}
                   {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="text-link muted-link">GitHub <span>↗</span></a> : null}
                 </div>
               </article>
@@ -96,7 +95,7 @@ export default function Home() {
 
         <section id="about" className="builder-story scroll-scene-section" data-scene="story" aria-labelledby="about-title">
           <div className="builder-story-inner section-shell">
-            <Reveal className="section-label"><span>03</span> About</Reveal>
+            <Reveal className="section-label">About</Reveal>
             <div className="builder-story-grid">
               <Reveal>
                 <h2 id="about-title">I build across product, design, and development.</h2>
@@ -121,12 +120,11 @@ export default function Home() {
 
         <section id="ventures" className="home-ventures scroll-scene-section" data-scene="ventures" aria-labelledby="ventures-title">
           <div className="home-ventures-heading section-shell">
-            <div className="section-label"><span>04</span> Ventures</div>
+            <div className="section-label">Ventures</div>
             <h2 id="ventures-title">ADGO Ventures and ADGO Studios.</h2>
           </div>
           <div className="home-ventures-grid">
             <article className="venture-story">
-              <div className="venture-story-index">A</div>
               <div>
                 <p className="eyebrow">Independent product studio</p>
                 <h3>ADGO Ventures</h3>
@@ -137,7 +135,6 @@ export default function Home() {
               </p>
             </article>
             <article className="venture-story venture-story-linked">
-              <div className="venture-story-index">B</div>
               <div>
                 <p className="eyebrow">Creative systems studio</p>
                 <h3>ADGO Studios</h3>
