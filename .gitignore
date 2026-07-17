@@ -14,6 +14,7 @@
 /coverage
 /output/
 /tmp/
+/.playwright-cli/
 
 # next.js
 /.next/
