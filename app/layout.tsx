@@ -7,16 +7,16 @@ const siteUrl = "https://portfolio-site-green-xi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Angel Gonzalez — AI Product Builder",
+    default: "Angel Gonzalez — Product-Minded Full-Stack Developer",
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez designs and builds software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
+    "Angel Gonzalez builds AI-enabled web and mobile products from concept through deployment.",
   keywords: [
     "Angel Gonzalez",
-    "AI product builder",
-    "AI applications developer",
-    "product-minded developer",
+    "product-minded full-stack developer",
+    "product engineer",
+    "AI-enabled applications",
     "rapid prototyping",
     "full-stack developer",
   ],
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Angel Gonzalez",
-    title: "Angel Gonzalez — AI Product Builder",
-    description: "Software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
-    images: [{ url: "/og-v2.png", width: 1662, height: 946, alt: "Angel Gonzalez — AI Product Builder" }],
+    title: "Angel Gonzalez — Product-Minded Full-Stack Developer",
+    description: "AI-enabled web and mobile products built from concept through deployment.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Product-Minded Full-Stack Developer" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Gonzalez — AI Product Builder",
-    description: "Software products across media, creator tools, sports technology, civic technology, community platforms, and automation.",
-    images: ["/og-v2.png"],
+    title: "Angel Gonzalez — Product-Minded Full-Stack Developer",
+    description: "AI-enabled web and mobile products built from concept through deployment.",
+    images: ["/opengraph-image"],
   },
 };
 
@@ -48,7 +48,8 @@ const personSchema = {
   "@type": "Person",
   name: "Angel Gonzalez",
   url: siteUrl,
-  jobTitle: "AI Product Builder",
+  jobTitle: "Product-Minded Full-Stack Developer",
+  email: "gonzalezangel0510@yahoo.com",
   address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
   sameAs: ["https://github.com/hellsangel05"],
   worksFor: [

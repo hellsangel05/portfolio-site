@@ -18,6 +18,14 @@ export type PortfolioProject = {
   live?: string;
   github?: string;
   demoNote?: string;
+  featured?: boolean;
+  demoVideo?: {
+    src: string;
+    poster?: string;
+    captions?: string;
+    caption?: string;
+    orientation?: "portrait" | "landscape";
+  };
 };
 
 export const projects: PortfolioProject[] = [
@@ -25,7 +33,8 @@ export const projects: PortfolioProject[] = [
     slug: "raidio",
     name: "Raidio",
     category: "AI media platform",
-    status: "Pre-launch · Active development",
+    status: "Built · Pre-launch",
+    featured: true,
     positioning: "A shared-listening radio network where AI makes the music and hosts the show.",
     summary: "Raidio combines generative music with programmed stations. Every listener joins the same wall-clock playhead while station owners shape the sound, host, and live rundown.",
     problem: "Most generative-music experiences end at the generated track. Raidio explores the product layer that makes music feel like a broadcast: continuity, programming, hosts, discovery, and a moment listeners can share.",
@@ -59,7 +68,8 @@ export const projects: PortfolioProject[] = [
     slug: "snapdex",
     name: "Snapdex",
     category: "Creator economy + game",
-    status: "Pre-launch · Functional prototype",
+    status: "Built · Pre-launch",
+    featured: true,
     positioning: "A photo trading-card economy built around scarcity, collecting, and play.",
     summary: "Users turn their own photos into cards, roll rarity, release copies into packs, trade or sell them, burn supply to promote a tier, and field three-card decks in an arena.",
     problem: "Photo platforms are built around posts and attention. Snapdex asks what happens when a photo becomes a scarce object with supply, ownership, creator royalties, and game mechanics.",
@@ -93,7 +103,8 @@ export const projects: PortfolioProject[] = [
     slug: "jump-trainer",
     name: "Jump Trainer",
     category: "AI coaching + computer vision",
-    status: "Functional prototype · Validation phase",
+    status: "Built · Pre-launch",
+    featured: true,
     positioning: "A mobile vertical-jump coach that turns ordinary phone video into an honest measurement and training plan.",
     summary: "Jump Trainer measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, identifies the largest technique limiter, and produces a four-week plan.",
     problem: "Athletes can film themselves easily, but credible jump measurement usually requires specialized equipment or a trained coach. Low-quality video can also create a precise-looking number that is simply wrong.",
@@ -126,7 +137,7 @@ export const projects: PortfolioProject[] = [
     slug: "edit-battle",
     name: "Edit Battle",
     category: "Creator community",
-    status: "Pre-launch · Functional build",
+    status: "Built · Pre-launch",
     positioning: "An asynchronous competition platform where editors answer challenges, earn votes, and compete for the crown.",
     summary: "Editors respond to song-and-source challenges with YouTube or TikTok edits. The community votes, a reigning winner holds the crown, and profiles track each editor’s work and wins.",
     problem: "Editing communities already create challenges and standout work, but the activity is scattered across feeds, comments, and short-lived posts. There is no durable place to organize demand, compare entries, or recognize the current champion.",
@@ -156,7 +167,7 @@ export const projects: PortfolioProject[] = [
     slug: "civic-mirror",
     name: "Civic Mirror",
     category: "Civic technology",
-    status: "Functional prototype · Active development",
+    status: "Built · Pre-launch",
     positioning: "A bilingual LA County ballot guide that connects voter priorities to plain-language measure explanations.",
     summary: "A short priorities quiz organizes local measures around what a voter cares about, then explains the likely alignment, tradeoffs, and source-backed reasoning in English or Spanish.",
     problem: "Local ballot measures are consequential but difficult to compare. Dense legal language, long pamphlets, and scattered arguments make it hard for voters to understand what a yes or no vote would actually do.",
@@ -187,7 +198,7 @@ export const projects: PortfolioProject[] = [
     slug: "co-lab",
     name: "Co-Lab",
     category: "AI collaboration network",
-    status: "Pre-launch · Functional build",
+    status: "Built · Pre-launch",
     positioning: "An anonymous idea network where AI routes, connects, and helps promising thoughts evolve.",
     summary: "A user drops one sharp thought. Co-Lab routes it to the right lab, embeds it into a semantic graph, opens a live thread, and lets people or the network’s AI Muse build on it.",
     problem: "Good ideas are often posted into feeds that reward immediacy, then disappear. Co-Lab is designed around relationships and evolution: what an idea connects to, how others extend it, and when it should resurface.",
@@ -218,7 +229,7 @@ export const projects: PortfolioProject[] = [
     slug: "skateview",
     name: "SkateView",
     category: "Community mapping",
-    status: "Functional prototype · Mock demo",
+    status: "Built · Pre-launch",
     positioning: "A privacy-aware street-spot map built around current conditions, risk, and freshness.",
     summary: "SkateView lets skaters scout a city, submit spots with photos, report security or surface changes, build a session line, and protect low-key locations with approximate public coordinates.",
     problem: "A skate spot can change overnight. Traditional maps do not capture whether a place still rolls, how risky it is, or whether sharing an exact pin could damage the spot.",
@@ -249,7 +260,7 @@ export const projects: PortfolioProject[] = [
     slug: "living-window",
     name: "Living Window",
     category: "Creative technology",
-    status: "Functional prototype · Active development",
+    status: "Built · Pre-launch",
     positioning: "A persistent ambient village that grows with room time, sound, and repeated visits.",
     summary: "Living Window turns a spare screen into slow digital art. A seeded village follows local light, responds to the room, remembers visits, and can unfold in real time or accelerated story modes.",
     problem: "Most screen experiences demand attention. Living Window explores the opposite: software that creates calm presence, rewards return visits, and can eventually live as a dedicated physical object.",
@@ -281,3 +292,6 @@ export const projects: PortfolioProject[] = [
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
+
+export const featuredProjects = projects.filter((project) => project.featured);
+export const moreProjects = projects.filter((project) => !project.featured);

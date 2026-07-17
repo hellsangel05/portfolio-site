@@ -42,11 +42,35 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           </div>
           <p>{project.positioning}</p>
         </div>
-        <div className="case-hero-media">
-          <ProjectMedia project={project} priority sizes="100vw" variant="hero" />
-        </div>
+        {project.image ? (
+          <div className="case-hero-media">
+            <ProjectMedia project={project} priority sizes="100vw" />
+          </div>
+        ) : null}
         {project.demoNote ? <p className="demo-note"><strong>Demo note:</strong> {project.demoNote}</p> : null}
       </header>
+
+      {project.demoVideo ? (
+        <section className="case-demo section-shell" aria-label={`${project.name} product demo`}>
+          <div className="case-demo-heading">
+            <p className="eyebrow">Product walkthrough</p>
+            <h2>See it in motion.</h2>
+          </div>
+          <div
+            className="case-demo-frame"
+            data-orientation={project.demoVideo.orientation ?? "portrait"}
+          >
+            <video controls playsInline preload="metadata" poster={project.demoVideo.poster}>
+              <source src={project.demoVideo.src} />
+              {project.demoVideo.captions ? (
+                <track kind="captions" src={project.demoVideo.captions} srcLang="en" label="English" default />
+              ) : null}
+              Your browser does not support embedded video.
+            </video>
+          </div>
+          {project.demoVideo.caption ? <p className="case-demo-caption">{project.demoVideo.caption}</p> : null}
+        </section>
+      ) : null}
 
       <section className="case-overview section-shell" aria-label="Project overview">
         <div><span>Role</span><p>{project.role}</p></div>
@@ -113,7 +137,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <h2>Explore the full portfolio.</h2>
         <div>
           <Link href="/#work" className="button button-primary">All work</Link>
-          <a href="mailto:adgpublishings@gmail.com" className="button button-secondary">Contact Angel</a>
+          <a href="mailto:gonzalezangel0510@yahoo.com" className="button button-secondary">Contact Angel</a>
         </div>
       </section>
     </main>
