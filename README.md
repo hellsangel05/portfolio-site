@@ -13,7 +13,7 @@ I'm a Los Angeles–area builder working across web development, AI-assisted sof
 
 ## PSYCH! animated episode
 
-The Creative AI portfolio features **PSYCH! Episode 1 — Eternity**, an original animated episode released on the creator's [YouTube](https://www.youtube.com/@thepsychuniverse/videos) and [TikTok](https://www.tiktok.com/@thepsychuniverse) channels. Its source text is also available on the [PSYCH! reading platform](https://psych-open-source.vercel.app/read/season-1/eternity). The page links to official channel profiles because the exact episode video ID has not yet been verified. Do not present channel links as deep links to an individual episode.
+The Creative AI portfolio features **PSYCH! Episode 1 — Eternity**, an original animated episode released on the creator's [YouTube](https://www.youtube.com/@thepsychuniverse/videos) and [TikTok](https://www.tiktok.com/@thepsychuniverse) channels. Its source text is also available on the [PSYCH! reading platform](https://psych-open-source.vercel.app/read/season-1/eternity). The Creative AI portfolio embeds the [official Episode 1 animation](https://www.youtube.com/watch?v=vXAPT-oGbkA) using YouTube's privacy-enhanced player and provides a direct video fallback.
 
 ## Featured creative examples
 
