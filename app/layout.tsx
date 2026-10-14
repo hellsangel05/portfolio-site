@@ -7,14 +7,16 @@ const siteUrl = "https://portfolio-site-green-xi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Angel Gonzalez — Product-Minded Full-Stack Developer",
+    default: "Angel Gonzalez — Web Developer & Automation Builder",
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez builds AI-enabled web and mobile products from concept through deployment.",
+    "Angel Gonzalez builds websites, applications, and business automations in Los Angeles.",
   keywords: [
     "Angel Gonzalez",
-    "product-minded full-stack developer",
+    "web developer",
+    "technical implementation",
+    "IT support",
     "product engineer",
     "AI-enabled applications",
     "rapid prototyping",
@@ -25,14 +27,14 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Angel Gonzalez",
-    title: "Angel Gonzalez — Product-Minded Full-Stack Developer",
-    description: "AI-enabled web and mobile products built from concept through deployment.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Product-Minded Full-Stack Developer" }],
+    title: "Angel Gonzalez — Web Developer & Automation Builder",
+    description: "Websites, client work, creative platforms, and software projects by Angel Gonzalez.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Web Developer & Automation Builder" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Gonzalez — Product-Minded Full-Stack Developer",
-    description: "AI-enabled web and mobile products built from concept through deployment.",
+    title: "Angel Gonzalez — Web Developer & Automation Builder",
+    description: "Websites, client work, creative platforms, and software projects by Angel Gonzalez.",
     images: ["/opengraph-image"],
   },
 };
@@ -48,7 +50,7 @@ const personSchema = {
   "@type": "Person",
   name: "Angel Gonzalez",
   url: siteUrl,
-  jobTitle: "Product-Minded Full-Stack Developer",
+  jobTitle: "Web Developer & Automation Builder",
   email: "gonzalezangel0510@yahoo.com",
   address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
   sameAs: ["https://github.com/hellsangel05"],
@@ -76,9 +78,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <strong>Angel Gonzalez</strong>
           </Link>
           <nav aria-label="Primary navigation">
-            <Link href="/#work">Work</Link>
+            <Link href="/#work">Projects</Link>
+            <Link href="/#experience" className="nav-optional">Experience</Link>
             <Link href="/#about" className="nav-optional">About</Link>
-            <Link href="/#ventures" className="nav-optional">Ventures</Link>
             <Link href="/resume">Resume</Link>
             <Link href="/#contact">Contact</Link>
           </nav>
@@ -86,7 +88,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div id="main-content">{children}</div>
         <footer className="site-footer">
           <span>© 2026 Angel Gonzalez</span>
-          <span>Product design and development.</span>
+          <span>Web development and practical technology.</span>
           <a href="#main-content">Back to top ↑</a>
         </footer>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
