@@ -33,11 +33,11 @@ export const projects: PortfolioProject[] = [
   {
     slug: "aurora-pool-spa",
     name: "Aurora Pool & Spa",
-    category: "Client website",
+    category: "Client website · ADGO Studios",
     status: "Client review",
     featured: true,
     positioning: "A service website for a Los Angeles pool company, built to make information and quote requests easier to find.",
-    summary: "Designed and developed a responsive site with dedicated service pages, coverage areas, real business details, optimized media, and contact options. The project is in client review.",
+    summary: "A custom website for a Los Angeles pool service company, with service-specific pages, local coverage information, optimized photography, and clear ways to request a quote.",
     problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
     built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and integration points for GoHighLevel forms.",
     challenge: "Turning real business requirements into a site that is quick to navigate and maintain, without overstating the client's services or publishing unapproved claims.",
@@ -67,6 +67,8 @@ export const projects: PortfolioProject[] = [
       "SEO"
     ],
     gallery: [],
+    live: "https://aurora-pool-spa.adgostudios.workers.dev",
+    demoAvailable: true,
     demoNote: "Client website in review; final launch and form verification are coordinated with the business.",
   },
   {

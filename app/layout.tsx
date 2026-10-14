@@ -89,7 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <span>© 2026 Angel Gonzalez</span>
           <span>Web development and practical technology.</span>
-          <a href="#main-content">Back to top ↑</a>
+          <a href="#main-content">Back to top</a>
         </footer>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       </body>

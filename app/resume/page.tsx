@@ -12,7 +12,7 @@ const builds = [
   { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
   { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, GoHighLevel workflows, intake forms, and AI receptionist configuration for a small creative studio." },
   { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Next.js publishing site with reading routes, timeline, searchable reference material, and spoiler-aware progress." },
-  { title: "Raidio", slug: "raidio", copy: "Full-stack radio prototype using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
+  { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
 
 const experience = [
@@ -50,7 +50,7 @@ export default function ResumePage() {
     <main className="resume-page">
       <header className="resume-hero section-shell">
         <div>
-          <Link href="/" className="back-link">← Portfolio</Link>
+          <Link href="/" className="back-link"> Portfolio</Link>
           <p className="eyebrow">Résumé</p>
           <h1>Angel Gonzalez</h1>
           <p className="resume-title">Web Development · Automation · Technical Support</p>
@@ -58,8 +58,8 @@ export default function ResumePage() {
         <div className="resume-contact">
           <p>San Fernando Valley · Los Angeles, CA</p>
           <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
-          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio ↗</a>
-          <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio </a>
+          <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>
           <div className="resume-downloads">
             <a className="button button-primary" href="/angel-gonzalez-resume.pdf" download>Download PDF</a>
             <PrintButton />
@@ -69,7 +69,7 @@ export default function ResumePage() {
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Hands-on experience building websites, full-stack prototypes, and business automations, combined with a background in customer service and practical troubleshooting. Looking for an opportunity to grow in web development, technical support, implementation, or technical operations.</p>
+        <p>Hands-on experience building websites, full-stack applications, and business automations, combined with a background in customer service and practical troubleshooting. Looking for an opportunity to grow in web development, technical support, implementation, or technical operations.</p>
       </section>
 
       <section className="resume-block section-shell">
