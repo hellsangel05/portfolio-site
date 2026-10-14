@@ -1048,7 +1048,16 @@ ul { margin: 0; padding: 0; }
   line-height: 1.5;
 }
 
-.home-hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 2.2rem; }
+.home-hero-availability {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: #f2ad94;
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.home-hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.65rem; }
 
 .home-work-heading h2,
 .home-more-heading h2,
