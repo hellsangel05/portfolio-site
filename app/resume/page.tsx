@@ -70,6 +70,7 @@ export default function ResumePage() {
           <p>Los Angeles, California</p>
           <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
           <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">github.com/hellsangel05 ↗</a>
+          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio website ↗</a>
           <div className="resume-downloads">
             <a href="/angel-gonzalez-resume.pdf" download className="button button-primary">Download PDF</a>
             <PrintButton />
