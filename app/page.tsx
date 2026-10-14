@@ -8,9 +8,9 @@ export default function Home() {
       <section className="job-hero section-shell" aria-labelledby="job-intro">
         <div>
           <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · Los Angeles, CA</p>
-          <h1 id="job-intro">I build <em>websites, applications, and automations.</em></h1>
-          <p className="job-lead">I work across the design, development, and deployment of software—from client websites and connected business systems to independent applications.</p>
-          <p className="job-sub">Recent work includes customer-facing sites, CRM integrations, data-backed apps, and an original interactive publishing platform.</p>
+          <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
+          <p className="job-lead">I use AI-assisted development to build useful software, design websites, and connect the tools businesses run on. From idea to implementation, I like working across the whole process.</p>
+          <p className="job-sub">My projects span full-stack applications, business automation, creative tools, and a story-driven publishing platform.</p>
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
@@ -83,7 +83,7 @@ export default function Home() {
         <div className="section-shell job-section">
           <header className="job-section-intro">
             <div><p className="job-small-label">What I can bring</p><h2>Skills & tools</h2></div>
-            <p>I've used these tools to build and connect websites, applications, and business services.</p>
+            <p>I work across code, creative AI tools, APIs, databases, and client-facing systems. I choose the tools that fit the problem, rather than treating any one stack as the answer.</p>
           </header>
           <div className="job-skills">
             <article><h3>Web development</h3><p>Responsive sites, React and Next.js applications, APIs, hosting, debugging, and deployment.</p></article>
@@ -111,7 +111,7 @@ export default function Home() {
           <div>
             <p>I'm based in the San Fernando Valley. I started building my own software projects, then began applying the same skills to local businesses through ADGO Studios.</p>
             <p>I enjoy learning a new framework, tracing a bug, connecting an API, or working through a customer's problem until there's a practical solution.</p>
-            <p>I'm interested in web development, implementation, support, and other technical roles where this mix of building and problem-solving is useful.</p>
+            <p>I'm especially interested in teams that embrace AI-assisted workflows and give people the freedom to build, experiment, and solve problems.</p>
           </div>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function Home() {
       <section id="contact" className="job-section job-contact section-shell">
         <p className="job-small-label">Contact</p>
         <h2>Let's talk.</h2>
-        <p>I'm open to web development, technical implementation, IT support, and related roles in Los Angeles or remote.</p>
+        <p>Open to web development, technical implementation, AI workflows, creative technology, and related roles in Los Angeles or remote.</p>
         <div className="job-actions">
           <a className="button button-primary" href="mailto:gonzalezangel0510@yahoo.com">Email me </a>
           <Link className="button button-secondary" href="/resume">View résumé</Link>

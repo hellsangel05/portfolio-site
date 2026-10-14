@@ -7,11 +7,11 @@ const siteUrl = "https://portfolio-site-green-xi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Angel Gonzalez — Web Developer & Automation Builder",
+    default: "Angel Gonzalez — Web Developer | AI & Automation",
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez builds websites, applications, and business automations in Los Angeles.",
+    "Angel Gonzalez builds software, websites, and AI-powered workflows in Los Angeles.",
   keywords: [
     "Angel Gonzalez",
     "web developer",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Angel Gonzalez",
-    title: "Angel Gonzalez — Web Developer & Automation Builder",
-    description: "Websites, client work, creative platforms, and software projects by Angel Gonzalez.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Web Developer & Automation Builder" }],
+    title: "Angel Gonzalez — Web Developer | AI & Automation",
+    description: "Web development, creative technology, AI workflows, and client work by Angel Gonzalez.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Web Developer | AI & Automation" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Gonzalez — Web Developer & Automation Builder",
+    title: "Angel Gonzalez — Web Developer | AI & Automation",
     description: "Websites, client work, creative platforms, and software projects by Angel Gonzalez.",
     images: ["/opengraph-image"],
   },
@@ -50,7 +50,7 @@ const personSchema = {
   "@type": "Person",
   name: "Angel Gonzalez",
   url: siteUrl,
-  jobTitle: "Web Developer & Automation Builder",
+  jobTitle: "Web Developer | AI & Automation",
   email: "gonzalezangel0510@yahoo.com",
   address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
   sameAs: ["https://github.com/hellsangel05"],
