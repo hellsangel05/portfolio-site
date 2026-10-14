@@ -34,10 +34,10 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
   return (
     <main className="case-page">
       <header className="case-hero section-shell">
-        <Link href="/#work" className="back-link">← All work</Link>
+        <Link href="/#work" className="back-link"> All work</Link>
         <div className="case-title-row">
           <div>
-            <p className="eyebrow">{project.category} · {project.status}</p>
+            <p className="eyebrow">{project.category}</p>
             <h1>{project.name}</h1>
           </div>
           <p>{project.positioning}</p>
@@ -47,7 +47,6 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             <ProjectMedia project={project} priority sizes="100vw" />
           </div>
         ) : null}
-        {project.demoNote ? <p className="demo-note"><strong>Demo note:</strong> {project.demoNote}</p> : null}
       </header>
 
       {project.demoVideo ? (
@@ -74,17 +73,15 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
 
       <section className="case-overview section-shell" aria-label="Project overview">
         <div><span>Role</span><p>{project.role}</p></div>
-        <div><span>Status</span><p>{project.status}</p></div>
         <div><span>Technology</span><p>{project.tech.join(" · ")}</p></div>
         <div className="case-overview-actions">
-          {project.live && project.demoAvailable !== false ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Visit site ↗</a> : null}
-          {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="button button-secondary">View GitHub ↗</a> : null}
-          {project.demoAvailable === false ? <span>Project walkthrough available on request</span> : null}
+          {project.live ? <a href={project.live} target="_blank" rel="noopener noreferrer" className="button button-primary">Visit website</a> : null}
+          {project.github ? <a href={project.github} target="_blank" rel="noopener noreferrer" className="button button-secondary">View source code</a> : null}
         </div>
       </section>
 
       <section className="case-story section-shell">
-        <div className="case-story-index">Product thinking</div>
+        <div className="case-story-index">About the project</div>
         <div className="case-story-content">
           <article>
             <span>01</span>
@@ -116,7 +113,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
 
       <section className="case-details section-shell">
         <article>
-          <p className="eyebrow">What works now</p>
+          <p className="eyebrow">Features</p>
           <h2>What I implemented</h2>
           <ul>{project.working.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
@@ -125,16 +122,11 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           <h2>Key decisions</h2>
           <ul>{project.decisions.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
-        <article>
-          <p className="eyebrow">What comes next</p>
-          <h2>Next steps</h2>
-          <ul>{project.next.map((item) => <li key={item}>{item}</li>)}</ul>
-        </article>
       </section>
 
       <section className="case-cta">
-        <p className="eyebrow">More product work</p>
-        <h2>Explore the full portfolio.</h2>
+        <p className="eyebrow">Selected work</p>
+        <h2>See more projects.</h2>
         <div>
           <Link href="/#work" className="button button-primary">All work</Link>
           <a href="mailto:gonzalezangel0510@yahoo.com" className="button button-secondary">Contact Angel</a>

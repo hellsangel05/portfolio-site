@@ -1359,3 +1359,10 @@ ul { margin: 0; padding: 0; }
   .job-hero .job-actions .button { width: 100%; }
   .job-simple-link { margin: .5rem 0; }
 }
+
+/* Project navigation: clear text links, no decorative arrows. */
+.job-other-projects article { grid-template-columns: minmax(200px,.75fr) 1fr minmax(145px,.32fr); }
+.job-more-links { display: flex; flex-direction: column; align-items: flex-start; gap: .5rem; }
+.job-more-links a { font-size: .87rem; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #8a8580; font-weight: 650; }
+.job-more-links a:hover, .job-project-links a:hover { color: var(--accent); }
+@media(max-width:700px){.job-other-projects article { grid-template-columns: 1fr; gap: .8rem; }.job-other-projects article > p { grid-column: 1; grid-row: auto; }.job-more-links { flex-direction: row; gap: 1.5rem; flex-wrap: wrap; }}
