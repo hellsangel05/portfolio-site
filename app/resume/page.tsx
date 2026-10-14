@@ -39,7 +39,7 @@ const experience = [
   {
     title: "Manufacturing Technician",
     company: "Chatsworth Products Incorporated",
-    dates: "Started November 2024",
+    dates: "Nov 2024 – Early 2025 (approx.)",
     bullets: [
       "Assembled cabinets for computer and networking hardware; measured, drilled, pressed, finished, and fitted metal components.",
       "Inspected products, repaired defects, and followed quality and safety procedures."
