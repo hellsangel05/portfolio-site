@@ -55,10 +55,10 @@ const experience = [
     ]
   },
   {
-    title: "Retail Sales Associate",
-    company: "Bouncing Fun Land",
+    title: "Solar Sales Canvasser",
+    company: "Green Power Network",
     dates: "February 2023 – April 2023",
-    bullets: ["Supervised indoor-play equipment, assisted visitors, handled transactions, and communicated promotions."]
+    bullets: ["Prospected door to door, introduced homeowners to solar energy options, qualified leads, handled initial questions, and scheduled sales appointments."]
   },
   {
     title: "Security Guard",

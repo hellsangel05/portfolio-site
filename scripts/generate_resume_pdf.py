@@ -45,8 +45,9 @@ blocks=[
  p('Mosquito Squad  |  Pest Control Technician  |  May 2023 - Oct 2024','role'),
  p('- Delivered residential field services, maintained equipment and service records, supported customers, upsold services, and trained new hires.','bullet'),
  p('ADDITIONAL EXPERIENCE','section'),
- p('<b>Bouncing Fun Land:</b> Retail Sales Associate (Feb-Apr 2023) &nbsp; | &nbsp; <b>City Private Security:</b> Security Guard (Oct 2018-Dec 2022)','small'),
- p('<b>Food4Less:</b> Customer Clerk (Oct 2017-Apr 2020) &nbsp; | &nbsp; <b>Sylmar Recreation Center:</b> Volunteer (2013-2016)','small'),
+ p('<b>Green Power Network:</b> Solar Canvasser (Feb-Apr 2023) - door-to-door homeowner outreach, qualifying solar prospects, generating leads, and setting sales appointments','small'),
+ p('<b>City Private Security:</b> Security Guard (Oct 2018-Dec 2022) &nbsp; | &nbsp; <b>Food4Less:</b> Customer Clerk (Oct 2017-Apr 2020)','small'),
+ p('<b>Sylmar Recreation Center:</b> Volunteer (2013-2016)','small'),
  p('EDUCATION','section'),p('Granada Hills Charter High School  |  High School Diploma, 2016','small')
 ]
 SimpleDocTemplate(str(out),pagesize=letter,leftMargin=43,rightMargin=43,topMargin=31,bottomMargin=28,title='Angel Gonzalez | Web Development, CRM & Creative Technology',author='Angel Gonzalez',pageCompression=1).build(blocks)
