@@ -105,27 +105,29 @@ export default function CreativePage() {
         </div>
         <div className="creative-video-grid">
           {[
-            { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
-            { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
-            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",label:"Social storytelling",title:"Mijo Chat",description:"A bilingual, text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
-            { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
+            { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",slug:"the-build",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
+            { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",slug:"handmade-clay",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
+            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",slug:"mijo-chat",label:"Social storytelling",title:"Mijo Chat",description:"A bilingual, text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
+            { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",slug:"the-infomercial",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
           ].map((clip) => (
             <article className="creative-video-card" key={clip.id}>
               <div className="creative-video-player">
-                <iframe
-                  title={clip.title + " — ADGO Studios video"}
-                  src={"https://drive.google.com/file/d/" + clip.id + "/preview"}
-                  loading="lazy"
-                  allow="autoplay; fullscreen"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster={"/media/adgo/" + clip.slug + ".jpg"}
+                  aria-label={clip.title + " — ADGO Studios video"}
+                >
+                  <source src={"/media/adgo/" + clip.slug + ".mp4"} type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
               </div>
               <div className="creative-video-caption">
                 <span>{clip.label}</span>
                 <h4>{clip.title}</h4>
                 <p>{clip.description}</p>
-                <a href={"https://drive.google.com/file/d/" + clip.id + "/view"} target="_blank" rel="noopener noreferrer">Open video in Google Drive</a>
+                <a href={"/media/adgo/" + clip.slug + ".mp4"} target="_blank" rel="noopener noreferrer">Open full video</a>
               </div>
             </article>
           ))}

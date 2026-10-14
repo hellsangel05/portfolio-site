@@ -1565,7 +1565,7 @@ body { font-family: var(--sans); }
 .creative-video-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem; }
 .creative-video-card { background:#101e33; border:1px solid #365071;min-width:0;display:flex;flex-direction:column; }
 .creative-video-player { aspect-ratio:9/16; position:relative; background:linear-gradient(155deg,#143057,#16263a);overflow:hidden; }
-.creative-video-player iframe { position:absolute;inset:0;width:100%;height:100%;border:0; }
+.creative-video-player video { position:absolute;inset:0;display:block;width:100%;height:100%;border:0;object-fit:contain;background:#080d16; }
 .creative-video-caption { padding:clamp(1rem,2vw,1.5rem);display:flex;flex-direction:column;flex:1; }
 .creative-video-caption span { color:#a2c3f9; font-size:.68rem; letter-spacing:.07em; font-weight:760; text-transform:uppercase; }
 .creative-video-caption h4 { color:#fff;font-size:clamp(1.3rem,1.8vw,1.9rem);letter-spacing:-.04em; margin:.45rem 0 .75rem; }
