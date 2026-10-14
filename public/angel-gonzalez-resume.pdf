@@ -1,71 +1,74 @@
 %PDF-1.4
-%Portfolio Resume
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Length 3159 >>
+<<
+/Author (Angel Gonzalez) /CreationDate (D:20261014043941+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261014043941+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Angel Gonzalez - AI and Technical Resume) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2584
+>>
 stream
-BT /F2 22 Tf 46 745 Td (Angel Gonzalez) Tj ET
-BT /F1 10 Tf 46 725 Td (Web Development | Automation | Technical Support) Tj ET
-BT /F1 8.4 Tf 46 707 Td (San Fernando Valley, Los Angeles, CA | gonzalezangel0510@yahoo.com) Tj ET
-BT /F1 8.4 Tf 46 693 Td (portfolio-site-green-xi.vercel.app | github.com/hellsangel05) Tj ET
-BT /F2 9.5 Tf 46 660 Td (SUMMARY) Tj ET
-BT /F1 9 Tf 46 645 Td (Hands-on website, application and automation projects paired with customer service and) Tj ET
-BT /F1 9 Tf 46 632 Td (practical troubleshooting experience. Seeking an entry point into a long-term tech career.) Tj ET
-BT /F2 9.5 Tf 46 608 Td (SELECTED PROJECTS) Tj ET
-BT /F2 9.2 Tf 46 592 Td (Aurora Pool & Spa  |  Client website) Tj ET
-BT /F1 8.8 Tf 46 578 Td (Astro site with responsive service pages, location details, contact flows, optimized media and SEO.) Tj ET
-BT /F2 9.2 Tf 46 558 Td (ADGO Studios  |  Web and automation work) Tj ET
-BT /F1 8.8 Tf 46 544 Td (Co-founded a small studio; worked on website development, GoHighLevel CRM setup, lead intake) Tj ET
-BT /F1 8.8 Tf 46 531 Td (and an AI voice receptionist offering information and consultation bookings.) Tj ET
-BT /F2 9.2 Tf 46 511 Td (PSYCH! Open Source  |  Publishing platform) Tj ET
-BT /F1 8.8 Tf 46 497 Td (Next.js reading experience with episodes, archive, timeline, progress tracking and spoiler controls.) Tj ET
-BT /F2 9.2 Tf 46 477 Td (Raidio  |  Full-stack music project) Tj ET
-BT /F1 8.8 Tf 46 463 Td (Next.js and Supabase radio prototype with synchronized playback, station programming and AI audio.) Tj ET
-BT /F2 9.5 Tf 46 439 Td (EXPERIENCE) Tj ET
-BT /F2 9 Tf 46 422 Td (ADGO Studios  |  Co-founder, web and automation projects  |  2026 - present) Tj ET
-BT /F1 8.8 Tf 46 408 Td (Built and configured business websites and workflows; coordinated project requirements with clients.) Tj ET
-BT /F1 8.8 Tf 46 395 Td (Tested web forms, automation flows and customer-facing tools with a collaborator.) Tj ET
-BT /F2 9 Tf 46 375 Td (The Home Depot  |  Hardware Sales Associate  |  2025 - present) Tj ET
-BT /F1 8.8 Tf 46 361 Td (Assist customers in hardware, plumbing and electrical; explain options in English and Spanish.) Tj ET
-BT /F1 8.8 Tf 46 348 Td (Troubleshoot practical problems and work across departments to find solutions.) Tj ET
-BT /F2 9 Tf 46 328 Td (Earlier work  |  Manufacturing, pest control and field service) Tj ET
-BT /F1 8.8 Tf 46 314 Td (Hands-on technical and customer-facing work, following processes and resolving on-site issues.) Tj ET
-BT /F2 9.5 Tf 46 290 Td (SKILLS) Tj ET
-BT /F1 8.8 Tf 46 276 Td (Web: JavaScript, TypeScript, React, Next.js, Astro, responsive design, APIs) Tj ET
-BT /F1 8.8 Tf 46 262 Td (Data & hosting: Supabase, PostgreSQL, GitHub, Vercel, Cloudflare) Tj ET
-BT /F1 8.8 Tf 46 248 Td (Business systems: GoHighLevel, CRM, forms, voice AI, workflow automation) Tj ET
-BT /F2 9.5 Tf 46 224 Td (EDUCATION) Tj ET
-BT /F1 8.8 Tf 46 210 Td (Granada Hills Charter High School  |  Diploma, 2016) Tj ET
-BT /F1 7.4 Tf 46 43 Td (Portfolio: portfolio-site-green-xi.vercel.app  |  Updated October 2026) Tj ET
-0.82 G 0.5 w 46 679 m 566 679 l S 0 G
-0.82 G 0.5 w 46 57 m 566 57 l S 0 G
-endstream
+Gau0DgK*?((4G?rcFh@T=gl\rfC[7r_%#h"L1$o8Gq;U"]=LWbV'Hr"b/_i2dKMQH"Zd'nKoK'3F3Zt9]h9EWq"="20ID+\Ulu<1Gs3h3jRo#a/a"rr*rUQK<@dr!%>,];j-o!<H[UqpY;^WQEr<ZMe=.\!j#&pq:-cu>qtfB#cHtqEgO5,1abEGL=32OXnj!+Jb:g7#_3k*;^YbLP]um,eQlg@#@-I@^j:'63T,Ja$7`WOJg;[Z>c=dukP/f],=Y<Z?J'oXl?[48e%8D^b`V&>"q23JmN_>Y+e[TY"3H"7E9kLNa\c\j;q&B*8IkZVlUL)mOaQX/YQNR6\8q/uB3M,oq`?*%Z"\\%]f*P(o7A$!4r16YsXtm<XnZ5*U'0*J#E+J+2g\9M'gp=+\:8m/1B*[J+F#?rY?RmR)2\S4?DD^NJpJ*\0Y!Xf^QDVYtO`-/CEU./YV9CE=>C@KNNK6l<%[#JnpEAAPf#K"J0HRb*Jf"uD8-:lI^,mC`c1t4G+,m1[6?#NEiddF_^Y/+1Flkih1U#$V0:/#hS)7DEncqogel<*g#'50P?#MiM$@UeLoH1l(?e/W<VT0LOOK=Agj``0*JgV]habhA!RaOs!M!1#bN*)=l/WrAX<^e>JSn5F4o7ZE>Xp>ou<g\#4QAI0U&`*#C8SCSt5ffZ6TktF,?Ds$pfG#6be?L'eWsc2cc;!WOl-6&Q$@TB^!Zl%so$feW.<hgR%Mi3s%I43k[>Kjg2PP=/)fDshi%f?:]oZ?&0M0`(,=T%(=emUbk;s;Jc8@OE2pR5tf]EKEPt_dUCEkhM[u$8_F5J\q;RG'B`]&5dTh5sTN!uUAX)>,dlCgg!b@@_^T!'t3?=$p^(\CL,r%snh(N!4MUX9+350CVsl83*CR+%nfB1gIp8/$H3duW(!=`WW1a)nn(q>'[rUB_MLn]kHm3jdioV%VdYLq)`;FN/#iW$0Ecgct/_TrA1cadfJ0:l?MpXcX))eKK;BBDap/4q)oSo<$GJf2CF:LOutj1I:b?Z@m'g[sVR,?Rb[@A<padgLq@hIE!Ii]Nh,?2P'EDCN7C+LE<imLEm*;CSbOi9,QPX`,nqiAo#"IdlfCSjB0PCU2%Xs(cm:.`+k>B&)m,BmFWW4,"7\Imo*PB^Yp`^a!Z>&4($qD,g/'&iqbjrRSm6%.9j'9T3SEJ#A5T:Sc^C'?PKONIC@X6l:_r?=u)(XR9\(B9@KF@>`7iH.iMa/7cSEJpRCDpqK_XG8^m]G:N'jo:T)Z"e%P:]@@#N&VK"KSK2TISSR9bg0-UDt!(EWn+&n@j>Z95[(0`8cO<;VkEK>A^S&N,-&$YC='+u1!oll3!Gm-'bNEC;sW%"[Eaf;N3(orr7*Q,q\Lo4c5OH#+d?Q#itKN??nDd"f)0fj-7R%A$GcURiZJf+=ZQL@Hl#U[Wk3o\k_a/UVtR'f]`?>nUi]=.t+4c$SCSXNH-`KP:=0sOlFUT'^(!A6!8-"rdI;%3iu_nrU6\s5D3`7=d9SU$>Oo5.:Jf']>IbWVt\$>;p5_W3RHk(TaU>qC#U#$p((LoTuTidl"sfY`gII[gp"oSo<<VtrLP%;9F/dR0o42]JJW/)*D(Fq(*%CW.\u[]qb9Ssc;TCc)^*EN7$Z.Hak`[DV+;Qn+6<nfB2:!&Ynr+LR/@FI*:e&kH7[mg6B58n$4C,dL6tOs"knr$eYb_GWDKTe.UpNRQIBXcAA+SRJ%qS//Q?hH>,kj-ZX-#,`mrNB0WKRJ8`&@,D3g`ogcV[fR5%##=W[NX72D$6&SJZ$9lHdd[_j0a3u6i"p.!hnh3TD%:O:>($EBAh'7h1\:46]W6.TLP,UoSN#AC7&[pc<g\8o#gOoA)ucr6FJ!#80!u5AFP=PN$tWkdr!c&N5Xd==Q:CeT<8M2SGKnhh$2[iC.4mDE<U9@C"bR%XI8`[Q2UKq)Mr.8_r]sUV-W4)4%f?Uif:kAJQq5Y7AW?fbPTs=K>M,McGUbH`@?@J*Q9!DR$Q6dKMjT-#\5fDf*9c0_@n>0+&1rJ:kf9WhWN2;#n*\!chh^Tb+L):hEt#c^RJ.4.9LlOS(X.up,g0.8!)gr+rKhMNi/V,(XQsB7?R4uibETjf__C6,!32+sNj/rK\!?+s!Zd',[\kUE4'BKP"8hNjc>D];q9GL;,q=t?,p.(i7'afp_klY:<u-+-l>n"XktoV'32d>sIkrHNGTngn:^0%gmuEQ?NHVZV@*DEi4k8mMGraL,5rL5ko7Ebi2u[dob&2N>DX)EJQ2j@Z;fZMIYLE1&nleU=V<oS2668FJA<o*Q-Ua78op^Jf=mi(j;3@q_%(XA7jXg:t]dPE0iL:/E"U+YcEdC3i?JYP/$?=Cm(#5:KQ1sqGTed:=2W.V_gV!)$6Hp'A$Qgo>Q]uf8#CEA<Jo&&%b+/DN9fCC7:;h@Y1&Jk$GkHF@&(HID_C0%`*Xr"NhZfZ+d='\>f#Nn1Ge47T?KBg:^=3$a@!7rOF5@j_Dt[LWHM5PHA3%9ue7rsT`rpY;S&K<cLgQ4*dcS)P$$mWW>0>(%qU%;ML,k[K,2=(Kpa;Vh<$IAD&<Snrj;T-<&,_QTZN~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000027 00000 n 
-0000000076 00000 n 
-0000000133 00000 n 
-0000000269 00000 n 
-0000000339 00000 n 
-0000000414 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000514 00000 n 
+0000000582 00000 n 
+0000000890 00000 n 
+0000000949 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<2100ef43eccabcde0e31e93b014cfc77><2100ef43eccabcde0e31e93b014cfc77>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
 3624
 %%EOF
