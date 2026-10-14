@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const builds = [
   { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
-  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, bilingual Meta advertising, Higgsfield video production, GoHighLevel lead workflows, and Luna AI phone receptionist." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, bilingual Meta advertising, Higgsfield video production, CRM automation, and Luna AI phone receptionist." },
   { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Original science-fiction universe with a published animated Episode 1 and a Next.js story platform, timeline, archives, and spoiler controls." },
   { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
@@ -22,7 +22,7 @@ const experience = [
     dates: "2026 – present",
     bullets: [
       "Design, develop, and deploy websites and digital workflows for local businesses, from requirements through launch.",
-      "Configured GoHighLevel CRM workflows, website lead forms, consultation scheduling, Luna AI voice reception and hosting.",
+      "Configured CRM lead capture, contact records, appointment scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
       "Launched bilingual Facebook and Instagram ads in Meta Ads Manager; produced short-form commercials using Higgsfield, ElevenLabs, and HyperFrames.",
       "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
     ],
@@ -37,12 +37,28 @@ const experience = [
     ],
   },
   {
-    title: "Field and technical service roles",
-    company: "Manufacturing, pest control, and construction support",
-    dates: "Prior experience",
-    bullets: [
-      "Worked in hands-on roles requiring reliable service, following procedures, and solving problems on site.",
-    ],
+    title: "Field Technician",
+    company: "Mosquito Squad",
+    dates: "Previous experience",
+    bullets: ["Delivered field services, followed treatment and equipment procedures, and communicated with customers at job sites."],
+  },
+  {
+    title: "Delivery Associate",
+    company: "Amazon Delivery Service Partner",
+    dates: "Previous experience",
+    bullets: ["Handled time-sensitive delivery routes, logistics, and customer service responsibilities."],
+  },
+  {
+    title: "Construction / HVAC Helper",
+    company: "Construction and HVAC",
+    dates: "Previous experience",
+    bullets: ["Supported installations and jobsite work with tools, materials, and coordination across tasks."],
+  },
+  {
+    title: "Production / Manufacturing",
+    company: "Manufacturing",
+    dates: "Previous experience",
+    bullets: ["Worked with production processes, equipment, and workplace safety procedures."],
   },
 ];
 
@@ -54,7 +70,7 @@ export default function ResumePage() {
           <Link href="/" className="back-link"> Portfolio</Link>
           <p className="eyebrow">Résumé</p>
           <h1>Angel Gonzalez</h1>
-          <p className="resume-title">Web Development · AI Automation · Creative Technology</p>
+          <p className="resume-title">Web Development · CRM &amp; AI Automation · Creative Technology</p>
         </div>
         <div className="resume-contact">
           <p>San Fernando Valley · Los Angeles, CA</p>
@@ -70,7 +86,7 @@ export default function ResumePage() {
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Web developer and creative technologist with hands-on experience in full-stack applications, client websites, Meta Ads Manager, GoHighLevel CRM automation, AI voice reception, and Higgsfield video production. Build and deploy practical digital products with Next.js, Astro, Supabase, Vercel, and Cloudflare.</p>
+        <p>Web developer and creative technologist experienced in full-stack applications, client websites, CRM automation, Meta Ads Manager, Voice AI, and Higgsfield-powered commercials. Build and deploy digital products using Next.js, Astro, Supabase, Vercel, and Cloudflare.</p>
       </section>
 
       <section className="resume-block section-shell">
@@ -106,7 +122,7 @@ export default function ResumePage() {
         <div>
           <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
           <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
-          <article><h3>Business technology</h3><p>GoHighLevel · CRM automation · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Bilingual campaigns</p></article>
+          <article><h3>Business technology</h3><p>CRM setup & lead management (GoHighLevel) · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Bilingual campaigns</p></article>
         </div>
       </section>
 
