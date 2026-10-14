@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Angel Gonzalez — Product-Minded Full-Stack Developer";
+export const alt = "Angel Gonzalez — Applied AI Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -50,10 +50,10 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <div style={{ display: "flex", maxWidth: 820, fontSize: 76, fontWeight: 800, lineHeight: .9, letterSpacing: -5 }}>
-            Product-Minded Full-Stack Developer
+            Applied AI Developer
           </div>
           <div style={{ display: "flex", marginTop: 22, color: "#ff8a70", fontSize: 22, letterSpacing: 5, textTransform: "uppercase" }}>
-            Ideas → working products
+            LLMs · Computer vision · Full-stack
           </div>
         </div>
       </div>
