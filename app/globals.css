@@ -1576,14 +1576,12 @@ body { font-family: var(--sans); }
 @media(max-width:700px) { .creative-showreel{grid-template-columns:1fr;} }
 @media(max-width:510px) { .creative-video-grid{grid-template-columns:1fr;} .creative-video-player{max-height:72vh;} }
 
-/* Original film feature: the creative counterpart to the ADGO commercial reel. */
-.psych-film-feature { padding-block: clamp(4rem,7vw,7.5rem); display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1fr); gap:clamp(2rem,5.5vw,6rem); align-items:center; }
-.psych-film-poster { aspect-ratio:4/5; display:flex; flex-direction:column; justify-content:space-between; min-width:0; padding:clamp(1.7rem,3.5vw,3.7rem); background:radial-gradient(circle at 38% 40%,#314a69 0,#172134 30%,#070b14 72%); border:1px solid #4a5873; position:relative; overflow:hidden; isolation:isolate; }
-.psych-film-poster:before { content:""; width:56%; aspect-ratio:1; position:absolute; inset:20% auto auto 22%; border:1px solid #99afd6; border-radius:50%; box-shadow:0 0 0 32px #34456720,0 0 0 65px #34456715,0 0 0 105px #34456713; opacity:.55; z-index:-1; }
-.psych-film-poster-kicker { font-size:.72rem; color:#b1bed1; text-transform:uppercase; letter-spacing:.13em; font-weight:800; }
-.psych-film-poster > strong { font-size:clamp(4rem,8.5vw,9rem); font-weight:900; letter-spacing:-.11em; line-height:1; text-shadow:0 3px 26px #030711; }
-.psych-film-poster > strong span { color:#b6daff; }
-.psych-film-poster > div { display:flex; justify-content:space-between; border-top:1px solid #7b88a3; padding-top:1rem; color:#cedaf0; letter-spacing:.15em; font-size:.74rem; font-weight:800; }
+/* PSYCH! original animation: a playable film, not a placeholder poster */
+.psych-film-feature { padding-block:clamp(4rem,7vw,7.5rem); display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:clamp(2rem,5vw,6rem); align-items:center; }
+.psych-film-media { min-width:0; }
+.psych-film-player { width:100%; aspect-ratio:16/9; background:#05080e; border:1px solid #526985; box-shadow:0 22px 48px rgba(0,0,0,.22); overflow:hidden; position:relative; }
+.psych-film-player iframe { position:absolute; inset:0; display:block; width:100%; height:100%; border:0; }
+.psych-film-media-label { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem 1rem; border-top:1px solid #465673; padding-top:1rem; margin-top:1rem; color:#a7bed9; font-size:.69rem; font-weight:800; letter-spacing:.10em; }
 .psych-film-copy .practice-kicker { margin-top:0; }
 .psych-film-copy h2 { font-size:clamp(3rem,5vw,5.6rem); letter-spacing:-.065em; line-height:1.03; margin:0 0 1.7rem; }
 .psych-film-copy > p:not(.practice-kicker) { line-height:1.78; color:#c5d0e3; }
@@ -1592,5 +1590,4 @@ body { font-family: var(--sans); }
 .psych-film-links a:first-child { background:#bef275; color:#0b1525; border-color:#bef275; }
 .psych-film-links a:hover { border-color:#bef275; }
 .psych-film-copy .psych-film-caption { font-size:.76rem; color:#8ea6c4; line-height:1.7; margin-top:1.5rem; }
-@media(max-width:900px){ .psych-film-feature{grid-template-columns:1fr;} .psych-film-poster{max-height:380px; aspect-ratio:16/10;} .psych-film-poster > strong {font-size:clamp(4rem,13vw,7rem);} }
-@media(max-width:480px){ .psych-film-poster{max-height:310px;} .psych-film-poster > strong {font-size:clamp(3.8rem,17vw,6rem);} .psych-film-poster-kicker{font-size:.62rem;} }
+@media(max-width:900px) { .psych-film-feature{grid-template-columns:1fr;} }
