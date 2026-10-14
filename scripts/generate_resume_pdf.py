@@ -40,7 +40,7 @@ blocks=[
  p('- Built application projects using Next.js and Supabase, including Raidio, Snapdex, and Jump Trainer. Created PSYCH!, an original fiction platform and released animated Episode 1.','bullet'),
  p('The Home Depot  |  Hardware Sales Associate  |  2025 - Present','role'),
  p('- Help customers troubleshoot hardware, plumbing, and electrical product questions; communicate technical solutions in English and Spanish.','bullet'),
- p('Chatsworth Products Inc.  |  Manufacturing Technician  |  Started Nov 2024','role'),
+ p('Chatsworth Products Inc.  |  Manufacturing Technician  |  Nov 2024 - Early 2025 (approx.)','role'),
  p('- Assembled cabinets for computer/network hardware; measured, drilled, pressed and finished metal components to specification. Inspected units, repaired defects, and followed quality and safety procedures.','bullet'),
  p('Mosquito Squad  |  Pest Control Technician  |  May 2023 - Oct 2024','role'),
  p('- Delivered residential field services, maintained equipment and service records, supported customers, upsold services, and trained new hires.','bullet'),
