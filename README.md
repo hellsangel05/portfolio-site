@@ -1,103 +1,44 @@
-# Angel Gonzalez — Product-Minded Full-Stack Developer
+# Angel Gonzalez — websites, applications & AI workflows
 
-Portfolio for Angel Gonzalez, a product-minded full-stack developer building AI-enabled
-web and mobile products from concept through deployment.
+[**Portfolio**](https://portfolio-site-green-xi.vercel.app) · [**Résumé**](https://portfolio-site-green-xi.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
 
-## Selected work
+I'm a Los Angeles–area builder working across web development, AI-assisted software, automation, and creative tools. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
 
-- **Raidio** — shared-listening AI radio network and station studio
-- **Snapdex** — photo trading-card economy with packs, trading, burning, and arena play
-- **Jump Trainer** — mobile vertical-jump measurement and coaching product
-- **Edit Battle** — asynchronous editing competitions, voting, rankings, and crowns
-- **Civic Mirror** — bilingual ballot explanations and voter-priority alignment
-- **Co-Lab** — anonymous collaborative idea graph with AI routing and evolution
-- **SkateView** — privacy-aware community map for street skate spots
-- **Living Window** — persistent ambient village and digital art experience
+## Selected projects
 
-Each project has a concise, evidence-based case study covering the product opportunity,
-what was built, the main product or technical challenge, current functionality, important
-decisions, and honest next steps.
+| Project | Live site | Case study | Notes |
+| --- | --- | --- | --- |
+| Aurora Pool & Spa | [Client site](https://aurora-pool-spa.adgostudios.workers.dev) | [View](https://portfolio-site-green-xi.vercel.app/work/aurora-pool-spa) | One example of our ADGO Studios client work; source is in the private ADGO Studios organization repo |
+| ADGO Studios | [Website](https://adgostudios.com) | [View](https://portfolio-site-green-xi.vercel.app/work/adgo-studios) | Web, CRM and voice-agent projects; code is held across collaborator repositories |
+| PSYCH! Open Source | [Website](https://psych-open-source.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/psych-open-source) | Original fiction world and spoiler-aware reading platform |
+| Raidio | [Website](https://raidio-ten.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/raidio) | AI-powered audio and shared playback |
+| Snapdex | [Website](https://trading-card-app-two.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/snapdex) | Photo trading-card application |
+| Jump Trainer | [Website](https://apogee-web-three.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/jump-trainer) | Video analysis and training |
+| Edit Battle | [Website](https://edit-battle.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/edit-battle) | Creative editing competitions |
+| Civic Mirror | [Website](https://web-tau-drab-10.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/civic-mirror) | [Public repository](https://github.com/hellsangel05/civic-mirror) |
+| Co-Lab | [Website](https://colab-orpin.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/co-lab) | Collaborative idea network |
+| SkateView | [Website](https://skateview-app.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/skateview) | Community skate spot mapping |
+| Living Window | [Website](https://living-window-app-orcin.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/living-window) | Persistent generative art |
 
-## Portfolio architecture
+**About the code:** Most app repositories already exist under my GitHub account, but they are private. Aurora is held in the ADGO Studios account, and some business work is in collaborator repositories. I don't publish client source code, unreleased IP, or credentials without review and permission. A website link is not a guarantee that its optional database-backed features are available at every moment.
 
-- Next.js App Router with static generation
-- Project content stored in `app/data/portfolio.ts`
-- Homepage hierarchy controlled by each project's `featured` flag
-- Optional project demo-video fields stored alongside each project
-- Scroll-scene media configuration stored in `app/data/scroll-scenes.ts`
-- Fixed, section-aware background stage in `app/components/ScrollSceneStage.tsx`
-- Lightweight streak-field fallback for the hero until motion footage is added
-- Responsive, accessible editorial layout
-- Local product captures optimized by `next/image`
-- Static project routes under `/work/[slug]`
-- Structured resume at `/resume` with a direct ATS-friendly PDF download
-- Open Graph metadata, JSON-LD, sitemap, robots, and favicon
-- No runtime dependency on GitHub, Supabase, or a CMS
+## This portfolio's source code
 
-## Adding Higgsfield motion
+This repository is public. It is a Next.js App Router project with static project routes, typed case-study content, responsive styling, metadata, a résumé page and a downloadable PDF.
 
-The homepage is ready for section-based motion backgrounds without a layout rewrite:
+- [Homepage](app/page.tsx)
+- [Case studies and project data](app/data/portfolio.ts)
+- [Case-study page](app/work/%5Bslug%5D/page.tsx)
+- [Site styles](app/globals.css)
+- [Résumé generator](scripts/generate_resume_pdf.py)
 
-1. Export a lightweight WebM and MP4 fallback from Higgsfield, plus a still poster.
-2. Place the files under `public/motion`.
-3. Add their paths to the matching scene in `app/data/scroll-scenes.ts`.
-
-The stage crossfades media as `data-scene` sections reach the reading position. It also
-tracks overall scroll progress for depth effects, avoids loading video for reduced-motion
-visitors, and keeps all text and product screenshots in the normal document flow.
-
-ADGO Studios is linked from the Ventures section at `https://adgostudios.com/`.
-
-## Adding product demo videos
-
-Product videos are optional and do not create empty public sections. To add a future TikTok
-or walkthrough clip:
-
-1. Export a web-ready MP4 or WebM, an optional poster image, and an optional WebVTT caption file.
-2. Place the files under `public/demos`.
-3. Add a `demoVideo` object to the matching project in `app/data/portfolio.ts`:
-
-```ts
-demoVideo: {
-  src: "/demos/raidio.mp4",
-  poster: "/demos/raidio-poster.jpg",
-  captions: "/demos/raidio-en.vtt",
-  caption: "A short guided walkthrough of Raidio's station and playback flow.",
-  orientation: "portrait",
-},
-```
-
-The case-study page renders the video only when this data exists. Set `featured: true` on
-the projects that should receive the large homepage treatment; the rest automatically remain
-in the compact product library.
-
-## Development
+### Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Production verification:
+For a production check, run `npm run build` and `npm run lint`.
 
-```bash
-npm run build
-npm run lint
-```
-
-Regenerate the downloadable resume after editing `scripts/generate_resume_pdf.py`:
-
-```bash
-python scripts/generate_resume_pdf.py public/angel-gonzalez-resume.pdf
-```
-
-The script uses ReportLab and keeps the PDF to one ATS-friendly letter-size page.
-
-## Content principles
-
-The portfolio intentionally avoids invented traction, users, revenue, testimonials,
-funding, or performance claims. Product status and unavailable demos are labeled directly.
-
-## Deployment
-
-The site is deployed through the existing Vercel project connected to this repository.
+This repository intentionally contains no private API keys or client credentials. Project descriptions distinguish what was built from traction or results; they do not invent user counts, revenue, or testimonials.
