@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const builds = [
   { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
-  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, bilingual Meta advertising, Higgsfield video production, CRM automation, and Luna AI phone receptionist." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, paid Meta advertising, Higgsfield video production, CRM automation, and Luna AI phone receptionist." },
   { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Original science-fiction universe with a published animated Episode 1 and a Next.js story platform, timeline, archives, and spoiler controls." },
   { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
@@ -23,7 +23,7 @@ const experience = [
     bullets: [
       "Design, develop, and deploy websites and digital workflows for local businesses, from requirements through launch.",
       "Configured CRM lead capture, contact records, appointment scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
-      "Launched bilingual Facebook and Instagram ads in Meta Ads Manager; produced short-form commercials using Higgsfield, ElevenLabs, and HyperFrames.",
+      "Launched Facebook and Instagram ads in Meta Ads Manager; produced short-form commercials using Higgsfield, ElevenLabs, and HyperFrames.",
       "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
     ],
   },
@@ -122,7 +122,7 @@ export default function ResumePage() {
         <div>
           <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
           <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
-          <article><h3>Business technology</h3><p>CRM setup & lead management (GoHighLevel) · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Bilingual campaigns</p></article>
+          <article><h3>Business technology</h3><p>CRM setup & lead management (GoHighLevel) · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Campaign creative</p></article>
         </div>
       </section>
 

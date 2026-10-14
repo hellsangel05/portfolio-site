@@ -78,9 +78,9 @@ export const projects: PortfolioProject[] = [
     status: "Active studio",
     featured: true,
     positioning: "Web design and connected customer-inquiry workflows for local businesses.",
-    summary: "Co-founded ADGO Studios and built its website, CRM workflows, Luna AI phone receptionist, bilingual Meta advertising, and short-form video creative.",
+    summary: "Co-founded ADGO Studios and built its website, CRM workflows, Luna AI phone receptionist, paid Meta advertising, and short-form video creative.",
     problem: "A small business can have a website, phone number, ads, and a CRM without having a clear path from the first inquiry to the next step.",
-    built: "A public studio website, CRM lead workflows, appointment booking, Luna AI voice reception, bilingual Meta Ads, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
+    built: "A public studio website, CRM lead workflows, appointment booking, Luna AI voice reception, Meta Ads campaign setup, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
     challenge: "Getting the pieces to work together in ways that are practical for business owners, from an inquiry form to a booked call or human follow-up.",
     working: [
       "Public business website and service pages",
