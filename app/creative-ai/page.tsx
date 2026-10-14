@@ -76,7 +76,7 @@ export default function CreativePage() {
         <header className="creative-reel-heading">
           <div>
             <p className="practice-kicker">Selected video work / ADGO Studios</p>
-            <h2 id="creative-reel-title">See the work, not just the tools.</h2>
+            <h2 id="creative-reel-title">Selected commercial work.</h2>
           </div>
           <p>Short-form ADGO Studios commercials spanning motion graphics, animation, comedy, product storytelling, and social advertising.</p>
         </header>
