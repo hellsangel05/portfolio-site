@@ -43,6 +43,67 @@ export default function CreativePage() {
         <div><strong>AI tools</strong><span>Voice, music &amp; editing</span></div>
       </section>
 
+      <section className="creative-reel-section section-shell" aria-labelledby="creative-reel-title">
+        <header className="creative-reel-heading">
+          <div>
+            <p className="practice-kicker">Selected video work / ADGO Studios</p>
+            <h2 id="creative-reel-title">See the work, not just the tools.</h2>
+          </div>
+          <p>Short-form experiments we made for our studio: motion graphics, animated product stories, comedy and social advertising. The businesses in the scripted ads are fictional.</p>
+        </header>
+
+        <div className="creative-showreel">
+          <div className="creative-showreel-player">
+            <video controls playsInline preload="metadata" poster="https://adgostudios.com/assets/posters/showreel.webp" aria-label="Play ADGO Studios video showreel">
+              <source src="https://adgostudios.com/assets/videos/adgo-showreel.mp4" type="video/mp4" />
+              Your browser does not support HTML video. <a href="https://adgostudios.com/#reel">Watch on ADGO Studios.</a>
+            </video>
+          </div>
+          <div className="creative-showreel-copy">
+            <p className="practice-kicker">Studio showreel</p>
+            <h3>A quick look at ADGO.</h3>
+            <p>Our public studio reel brings together selected creative work. It gives recruiters an immediate example before they explore the more recent, single-concept ads below.</p>
+            <a className="practice-text-link" href="https://adgostudios.com/#reel" target="_blank" rel="noopener noreferrer">Watch on the ADGO website</a>
+          </div>
+        </div>
+
+        <div className="creative-recent-heading">
+          <div>
+            <span>October 2026 / Website ad series</span>
+            <h3>Four ideas. Four different executions.</h3>
+          </div>
+          <p>Produced using a combination of Higgsfield image and video tools, ElevenLabs audio, and HyperFrames editing and compositing. These are our own studio campaign concepts, not client testimonials.</p>
+        </div>
+        <div className="creative-video-grid">
+          {[
+            { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
+            { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
+            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",label:"Social storytelling",title:"Mijo Chat",description:"A bilingual, text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
+            { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
+          ].map((clip) => (
+            <article className="creative-video-card" key={clip.id}>
+              <div className="creative-video-player">
+                <iframe
+                  title={clip.title + " — ADGO Studios video"}
+                  src={"https://drive.google.com/file/d/" + clip.id + "/preview"}
+                  loading="lazy"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+              <div className="creative-video-caption">
+                <span>{clip.label}</span>
+                <h4>{clip.title}</h4>
+                <p>{clip.description}</p>
+                <a href={"https://drive.google.com/file/d/" + clip.id + "/view"} target="_blank" rel="noopener noreferrer">Open video in Google Drive</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="creative-reel-footnote">October clips are hosted in ADGO's Google Drive. Playback outside the studio account depends on each file's sharing permissions. The older showreel above is served directly from our public website.</p>
+      </section>
+
       <section className="practice-section section-shell">
         <header className="practice-section-header"><p>Creative work</p><h2>Production, not just prompts</h2></header>
         <div className="practice-case-list">
