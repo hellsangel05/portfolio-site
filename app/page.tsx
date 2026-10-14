@@ -12,17 +12,19 @@ export default function Home() {
         <section className="home-hero scroll-scene-section" data-scene="hero" aria-labelledby="hero-title">
           <div className="home-hero-scrim" />
           <div className="home-hero-content">
-            <p className="eyebrow home-hero-kicker">Angel Gonzalez / Product-Minded Full-Stack Developer / Los Angeles</p>
+            <p className="eyebrow home-hero-kicker">Angel Gonzalez / Full-Stack Developer / Los Angeles</p>
             <h1 id="hero-title">
               <span>{"I design and build "}</span>
               <span className="hero-accent">software products.</span>
             </h1>
             <p className="home-hero-dek">
-              I build AI-enabled web and mobile products from concept through deployment.
+              I build AI-enabled web and mobile applications using React, Next.js, TypeScript, Python, and Supabase, from prototype through deployment.
             </p>
+            <p className="home-hero-availability">Open to junior full-stack, product engineering, and AI application roles.</p>
             <div className="home-hero-actions" aria-label="Primary actions">
               <Link href="#work" className="button button-primary">See selected work</Link>
-              <Link href="/resume" className="button button-ghost">View resume</Link>
+              <a href="/angel-gonzalez-resume.pdf" className="button button-ghost" download>Download resume</a>
+              <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer" className="button button-ghost">GitHub ↗</a>
             </div>
           </div>
         </section>
@@ -69,7 +71,7 @@ export default function Home() {
             <div className="section-label">More products</div>
             <div>
               <h2 id="more-work-title">More product work.</h2>
-              <p>Additional shipped product systems, each with its own case study.</p>
+              <p>Additional product builds, each with a case study explaining the problem, implementation, and current status.</p>
             </div>
           </div>
           <div className="home-more-list">
