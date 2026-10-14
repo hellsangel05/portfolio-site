@@ -6,7 +6,7 @@ I'm a Los Angeles–area builder working across web development, AI-assisted sof
 
 ## Specialized experience
 
-- **Paid media:** Launched a bilingual Meta Ads Manager campaign with my business partner for ADGO Studios (own-brand paid advertising; no invented ROAS or client results).
+- **Paid media:** Launched a Facebook and Instagram advertising campaign in Meta Ads Manager for ADGO Studios, including targeting, ad creative, and campaign setup.
 - **Marketing automation:** GoHighLevel CRM, website forms, automated acknowledgments, calendar bookings, AI receptionist Luna, Meta Pixel setup and landing pages.
 - **Creative AI:** Automated Higgsfield ad production workflow for ADGO, AI creative concepting, ad variations, ElevenLabs and Suno experiments, short-form videos and the PSYCH! project.
 - **Technical work:** Next.js, Astro, TypeScript, React, Cloudflare, Vercel, Supabase, GitHub, client-site delivery and debugging.
@@ -17,7 +17,7 @@ The Creative AI portfolio features **PSYCH! Episode 1 — Eternity**, an origina
 
 ## Featured creative examples
 
-The [Creative AI page](https://portfolio-site-green-xi.vercel.app/creative-ai) includes our public ADGO showreel and four October 2026 ADGO commercial concepts: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (bilingual social humor), and The Infomercial (retro commercial featuring the Luna AI receptionist). Portfolio-ready H.264/AAC exports and posters are hosted under `public/media/adgo/`, with native HTML video controls and direct MP4 links. Original high-resolution masters remain in the ADGO Google Drive. The commercials feature fictional businesses.
+The [Creative AI page](https://portfolio-site-green-xi.vercel.app/creative-ai) includes our public ADGO showreel and four October 2026 ADGO commercial concepts: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (text-message comedy), and The Infomercial (retro commercial featuring the Luna AI receptionist). Portfolio-ready H.264/AAC exports and posters are hosted under `public/media/adgo/`, with native HTML video controls and direct MP4 links. Original high-resolution masters remain in the ADGO Google Drive. The commercials feature fictional businesses.
 
 ## Selected projects
 
