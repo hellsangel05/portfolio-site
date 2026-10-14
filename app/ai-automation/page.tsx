@@ -3,20 +3,20 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI & Automation | Web, CRM, Paid Media",
-  description: "Hands-on work by Angel Gonzalez across Meta Ads Manager, GoHighLevel CRM, voice AI, AI-assisted development and business workflow automation.",
+  description: "Hands-on work by Angel Gonzalez across Meta Ads Manager, CRM implementation, Voice AI, web development and customer workflow automation.",
   alternates: { canonical: "/ai-automation" },
 };
 
 const systems = [
   { number: "01", area: "Paid media", title: "Meta Ads Manager & campaign execution", detail: "Launched an English- and Spanish-language Facebook and Instagram campaign for ADGO Studios targeting businesses in the San Fernando Valley. Developed ad messaging and creatives, configured audience targeting, set up the campaign in Meta Ads Manager, and reviewed delivery.", evidence: ["Meta Ads Manager", "Facebook & Instagram advertising", "English / Spanish creative", "Audience targeting", "Campaign setup & delivery"] },
-  { number: "02", area: "CRM and intake", title: "GoHighLevel CRM, forms & scheduling", detail: "Configured GoHighLevel to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently.", evidence: ["GoHighLevel (GHL)", "CRM configuration", "Lead capture forms", "Calendar / appointment booking", "Automated acknowledgments", "Client intake"] },
-  { number: "03", area: "Conversational AI", title: "Luna: an AI phone receptionist", detail: "Configured Luna, ADGO Studios' AI phone receptionist, with a business knowledge base and appointment calendar. Developed call-handling logic for service questions, lead qualification, booking options, and live follow-up, then tested conversations and responses.", evidence: ["GoHighLevel Voice AI", "AI agent configuration", "Knowledge bases", "Call routing", "Appointment scheduling", "Conversation testing"] },
+  { number: "02", area: "CRM and intake", title: "CRM implementation, lead capture & scheduling", detail: "Configured GoHighLevel to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently.", evidence: ["CRM configuration (GoHighLevel)", "Contact & lead management", "Lead capture forms", "Calendar / appointment booking", "Automated acknowledgments", "Client intake"] },
+  { number: "03", area: "Conversational AI", title: "Luna: an AI phone receptionist", detail: "Configured Luna, ADGO Studios' AI phone receptionist, with a business knowledge base and appointment calendar. Developed call-handling logic for service questions, lead qualification, booking options, and live follow-up, then tested conversations and responses.", evidence: ["Voice AI (GoHighLevel)", "AI agent configuration", "Knowledge bases", "Call routing", "Appointment scheduling", "Conversation testing"] },
   { number: "04", area: "Web and delivery", title: "Websites connected to business tools", detail: "Developed responsive websites and lead-capture experiences for ADGO Studios and Aurora Pool & Spa. Worked with Astro, Next.js, TypeScript, Cloudflare Workers, Vercel, form integration, technical SEO, Meta Pixel, and Google Search Console.", evidence: ["Next.js & Astro", "TypeScript / React", "Cloudflare Workers & Vercel", "Supabase / PostgreSQL", "Meta Pixel", "Search Console & SEO"] },
 ];
 
 const toolkit = [
   ["Campaigns & tracking", "Meta Ads Manager · Meta Business Portfolio · Meta Pixel · Facebook Ads · Instagram Ads · audience targeting · ad creative"],
-  ["Customer systems", "GoHighLevel · CRM · lead forms · contact pipelines · appointment calendars · Voice AI · notifications"],
+  ["Customer systems", "CRM implementation · lead forms · contact pipelines · appointment calendars · workflow automation · GoHighLevel"],
   ["AI & development", "Claude · ChatGPT · AI-assisted coding · prompt development · API integrations · JavaScript · TypeScript · Python"],
   ["Web & deployment", "Next.js · React · Astro · Supabase · PostgreSQL · Vercel · Cloudflare Workers · GitHub · technical SEO"],
 ];
