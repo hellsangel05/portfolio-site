@@ -30,7 +30,7 @@ const experience = [
   {
     title: "Hardware Sales Associate",
     company: "The Home Depot",
-    dates: "2025 – present",
+    dates: "May 2025 – present",
     bullets: [
       "Help customers identify products and troubleshoot practical hardware, plumbing, and electrical questions.",
       "Communicate technical options and product guidance in English and Spanish."
@@ -39,7 +39,7 @@ const experience = [
   {
     title: "Manufacturing Technician",
     company: "Chatsworth Products Incorporated",
-    dates: "Nov 2024 – Early 2025 (approx.)",
+    dates: "Nov 2024 – May 2025",
     bullets: [
       "Assembled cabinets for computer and networking hardware; measured, drilled, pressed, finished, and fitted metal components.",
       "Inspected products, repaired defects, and followed quality and safety procedures."
