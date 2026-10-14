@@ -19,6 +19,7 @@ export type PortfolioProject = {
   github?: string;
   demoNote?: string;
   featured?: boolean;
+  demoAvailable?: boolean;
   demoVideo?: {
     src: string;
     poster?: string;
@@ -30,7 +31,128 @@ export type PortfolioProject = {
 
 export const projects: PortfolioProject[] = [
   {
+    slug: "aurora-pool-spa",
+    name: "Aurora Pool & Spa",
+    category: "Client website",
+    status: "Client review",
+    featured: true,
+    positioning: "A service website for a Los Angeles pool company, built to make information and quote requests easier to find.",
+    summary: "Designed and developed a responsive site with dedicated service pages, coverage areas, real business details, optimized media, and contact options. The project is in client review.",
+    problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
+    built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and integration points for GoHighLevel forms.",
+    challenge: "Turning real business requirements into a site that is quick to navigate and maintain, without overstating the client's services or publishing unapproved claims.",
+    working: [
+      "Mobile-friendly pages for services and contact",
+      "Optimized media, descriptive metadata, and internal links",
+      "Call and text links with a contact workflow",
+      "Integration points for a GoHighLevel form and scheduling"
+    ],
+    decisions: [
+      "Used Astro and static hosting to keep running costs down.",
+      "Avoided invented reviews, guarantees, and other unverifiable business claims.",
+      "Separated website content from CRM setup to make future updates easier."
+    ],
+    next: [
+      "Complete client review and final content updates.",
+      "Verify the live contact workflow and production domain.",
+      "Set up search indexing and analytics after launch."
+    ],
+    role: "ADGO Studios co-founder · Client discovery, web implementation, deployment planning, and CRM coordination",
+    tech: [
+      "Astro",
+      "TypeScript",
+      "CSS",
+      "Cloudflare",
+      "GoHighLevel",
+      "SEO"
+    ],
+    gallery: [],
+    demoNote: "Client website in review; final launch and form verification are coordinated with the business.",
+  },
+  {
+    slug: "adgo-studios",
+    name: "ADGO Studios",
+    category: "Websites and automation",
+    status: "Active studio",
+    featured: true,
+    positioning: "Web design and connected customer-inquiry workflows for local businesses.",
+    summary: "Co-founded a small studio and helped build its website, CRM setup, inquiry workflows, and an AI phone receptionist that can answer questions and offer appointments.",
+    problem: "A small business can have a website, phone number, ads, and a CRM without having a clear path from the first inquiry to the next step.",
+    built: "The public studio website and hands-on work with GoHighLevel contact flows, an AI receptionist called Luna, client onboarding, creative production, and lead-capture workflows.",
+    challenge: "Getting the pieces to work together in ways that are practical for business owners, from an inquiry form to a booked call or human follow-up.",
+    working: [
+      "Public business website and service pages",
+      "CRM account configuration and lead intake workflows",
+      "AI voice receptionist that responds to questions and helps book calls",
+      "Business outreach and client discovery in English and Spanish"
+    ],
+    decisions: [
+      "Started with customer problems rather than selling AI as a feature by itself.",
+      "Used existing CRM and voice platforms rather than building that infrastructure from scratch.",
+      "Kept client-facing communication and judgment with a real person."
+    ],
+    next: [
+      "Keep refining the contact and follow-up experience.",
+      "Document results from client deployments.",
+      "Develop clearer onboarding and maintenance processes."
+    ],
+    role: "Co-founder · Web and workflow implementation, client discovery, testing, and operations alongside my partner",
+    tech: [
+      "Next.js",
+      "Vercel",
+      "Cloudflare",
+      "GoHighLevel",
+      "Voice AI",
+      "Web forms",
+      "Automation"
+    ],
+    gallery: [],
+    live: "https://adgostudios.com/",
+    demoAvailable: true,
+  },
+  {
+    slug: "psych-open-source",
+    name: "PSYCH! Open Source",
+    category: "Publishing platform",
+    status: "Ongoing build",
+    featured: true,
+    positioning: "A reading experience for an original fiction universe, with a timeline, reference archive, and spoiler controls.",
+    summary: "Created a Next.js reading platform for an ongoing original story, with episode routes, character and event archives, chronology, and reader-aware spoiler controls.",
+    problem: "An interconnected story becomes difficult to follow when the episodes, historical references, and timeline are scattered across documents.",
+    built: "A web platform with organized reading routes, an archive of story concepts and historical anchors, a timeline, reading progress, and a spoiler-control system backed by local state and Supabase.",
+    challenge: "Designing a system that can expose useful context without accidentally revealing later story developments—and clearly separating fiction from real historical sources.",
+    working: [
+      "Episode and season reading pages",
+      "Reference archive and timeline",
+      "Reader progress and spoiler-aware display",
+      "Supabase content tables and access rules"
+    ],
+    decisions: [
+      "Organized episodes and reference material as a consistent content structure.",
+      "Separated story canon from documented historical details.",
+      "Designed spoiler handling around reading progress rather than blanket warnings."
+    ],
+    next: [
+      "Expand reader features as the story grows.",
+      "Improve publishing and contributor workflows.",
+      "Continue testing the reader experience."
+    ],
+    role: "Creator · Writing, product design, content modeling, implementation, and testing",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Content systems"
+    ],
+    gallery: [],
+    live: "https://psych-open-source.vercel.app",
+    demoAvailable: false,
+  },
+  {
     slug: "raidio",
+    demoAvailable: false,
     name: "Raidio",
     category: "AI media platform",
     status: "Built · Pre-launch",
@@ -66,10 +188,11 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "snapdex",
+    demoAvailable: false,
     name: "Snapdex",
     category: "Creator economy + game",
     status: "Built · Pre-launch",
-    featured: true,
+    featured: false,
     positioning: "A photo trading-card economy built around scarcity, collecting, and play.",
     summary: "Users turn their own photos into cards, roll rarity, release copies into packs, trade or sell them, burn supply to promote a tier, and field three-card decks in an arena.",
     problem: "Photo platforms are built around posts and attention. Snapdex asks what happens when a photo becomes a scarce object with supply, ownership, creator royalties, and game mechanics.",
@@ -101,10 +224,11 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "jump-trainer",
+    demoAvailable: false,
     name: "Jump Trainer",
     category: "AI coaching + computer vision",
     status: "Built · Pre-launch",
-    featured: true,
+    featured: false,
     positioning: "A mobile vertical-jump coach that turns ordinary phone video into an honest measurement and training plan.",
     summary: "Jump Trainer measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, identifies the largest technique limiter, and produces a four-week plan.",
     problem: "Athletes can film themselves easily, but credible jump measurement usually requires specialized equipment or a trained coach. Low-quality video can also create a precise-looking number that is simply wrong.",
@@ -136,6 +260,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "edit-battle",
+    demoAvailable: false,
     name: "Edit Battle",
     category: "Creator community",
     status: "Built · Pre-launch",
@@ -167,6 +292,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "civic-mirror",
+    demoAvailable: false,
     name: "Civic Mirror",
     category: "Civic technology",
     status: "Built · Pre-launch",
@@ -199,6 +325,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "co-lab",
+    demoAvailable: false,
     name: "Co-Lab",
     category: "AI collaboration network",
     status: "Built · Pre-launch",
@@ -231,6 +358,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "skateview",
+    demoAvailable: false,
     name: "SkateView",
     category: "Community mapping",
     status: "Built · Pre-launch",
@@ -263,6 +391,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "living-window",
+    demoAvailable: false,
     name: "Living Window",
     category: "Creative technology",
     status: "Built · Pre-launch",
