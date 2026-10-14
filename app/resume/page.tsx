@@ -22,7 +22,8 @@ const experience = [
     dates: "2026 – present",
     bullets: [
       "Work with a partner to plan and build websites and digital services for local businesses.",
-      "Build and configure contact forms, service pages, CRM workflows, AI reception, and hosting.",
+      "Configured GoHighLevel CRM workflows, website lead forms, consultation scheduling, Luna AI voice reception and hosting.",
+      "Helped launch ADGO’s bilingual paid Meta Ads campaign and develop an automated Higgsfield creative production workflow.",
       "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
     ],
   },
@@ -69,7 +70,7 @@ export default function ResumePage() {
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Hands-on experience building websites, full-stack applications, and business automations, combined with a background in customer service and practical troubleshooting. Looking for an opportunity to grow in web development, technical support, implementation, or technical operations.</p>
+        <p>Build websites and full-stack applications, run paid Meta advertising with a business partner, configure GoHighLevel lead workflows and AI voice reception, and create ad assets with Higgsfield. Interested in AI implementation, creative technology, web development and technical operations.</p>
       </section>
 
       <section className="resume-block section-shell">
@@ -82,6 +83,12 @@ export default function ResumePage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="resume-block section-shell">
+        <h2>Specialized work</h2>
+        <p><Link href="/ai-automation">AI &amp; Automation</Link> — Meta campaigns, GoHighLevel CRM, lead capture, voice AI and technical implementation.</p>
+        <p><Link href="/creative-ai">Creative AI</Link> — Higgsfield ad production, bilingual social creative, AI video and original storytelling.</p>
       </section>
 
       <section className="resume-block section-shell">
@@ -99,7 +106,7 @@ export default function ResumePage() {
         <div>
           <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
           <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
-          <article><h3>Business technology</h3><p>GoHighLevel · CRM configuration · Website forms · Voice AI · Workflow automation · Bilingual customer support</p></article>
+          <article><h3>Business technology</h3><p>GoHighLevel · CRM workflows · Meta Ads Manager · Meta Pixel · AI voice receptionist · Higgsfield · Creative automation · Bilingual campaigns</p></article>
         </div>
       </section>
 

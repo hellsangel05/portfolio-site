@@ -6,6 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: baseUrl, changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/resume`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/ai-automation`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/creative-ai`, changeFrequency: "monthly", priority: 0.9 },
     ...projects.map((project) => ({
       url: `${baseUrl}/work/${project.slug}`,
       changeFrequency: "monthly" as const,

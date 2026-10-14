@@ -1,8 +1,15 @@
 # Angel Gonzalez — websites, applications & AI workflows
 
-[**Portfolio**](https://portfolio-site-green-xi.vercel.app) · [**Résumé**](https://portfolio-site-green-xi.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
+[**Portfolio**](https://portfolio-site-green-xi.vercel.app) · [**AI & Automation**](https://portfolio-site-green-xi.vercel.app/ai-automation) · [**Creative AI**](https://portfolio-site-green-xi.vercel.app/creative-ai) · [**Résumé**](https://portfolio-site-green-xi.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
 
 I'm a Los Angeles–area builder working across web development, AI-assisted software, automation, and creative tools. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
+
+## Specialized experience
+
+- **Paid media:** Launched a bilingual Meta Ads Manager campaign with my business partner for ADGO Studios (own-brand paid advertising; no invented ROAS or client results).
+- **Marketing automation:** GoHighLevel CRM, website forms, automated acknowledgments, calendar bookings, AI receptionist Luna, Meta Pixel setup and landing pages.
+- **Creative AI:** Automated Higgsfield ad production workflow for ADGO, AI creative concepting, ad variations, ElevenLabs and Suno experiments, short-form videos and the PSYCH! project.
+- **Technical work:** Next.js, Astro, TypeScript, React, Cloudflare, Vercel, Supabase, GitHub, client-site delivery and debugging.
 
 ## Selected projects
 
