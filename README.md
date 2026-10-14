@@ -11,6 +11,10 @@ I'm a Los Angeles–area builder working across web development, AI-assisted sof
 - **Creative AI:** Automated Higgsfield ad production workflow for ADGO, AI creative concepting, ad variations, ElevenLabs and Suno experiments, short-form videos and the PSYCH! project.
 - **Technical work:** Next.js, Astro, TypeScript, React, Cloudflare, Vercel, Supabase, GitHub, client-site delivery and debugging.
 
+## Featured creative examples
+
+The [Creative AI page](https://portfolio-site-green-xi.vercel.app/creative-ai) now includes our public ADGO showreel and four October 2026 ADGO commercial concepts hosted in Google Drive: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (bilingual social humor), and The Infomercial (retro commercial featuring the Luna AI receptionist). The Drive clips require appropriate link-sharing permissions for public playback; this repository does not duplicate or expose those media files. The commercials dramatize fictional businesses rather than representing client outcomes.
+
 ## Selected projects
 
 | Project | Live site | Case study | Notes |
