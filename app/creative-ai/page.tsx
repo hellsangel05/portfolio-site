@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const creativeWork = [
   { num: "01", category: "AI advertising", title: "Higgsfield video production for ADGO", copy: "Produced a series of short-form ADGO Studios commercials across cinematic, motion-graphics, animated, and comedy formats. Built repeatable workflows combining Higgsfield-generated visuals and motion, ElevenLabs voice and sound, and HyperFrames scene composition to deliver campaign-ready vertical videos.", tags: ["Higgsfield", "Kling image-to-video", "Generative video", "ElevenLabs", "HyperFrames", "Creative production"], links: [{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
-  { num: "02", category: "Paid social", title: "Bilingual Meta advertising", copy: "Developed English- and Spanish-language ad concepts and launched a paid Facebook and Instagram campaign for ADGO Studios in the Los Angeles and San Fernando Valley market. Worked across messaging, audience selection, creative assets, and Meta Ads Manager campaign setup.", tags: ["Meta Ads Manager", "Facebook & Instagram", "Bilingual copywriting", "Audience targeting", "Paid social"], links: [{text:"Campaign & automation experience",href:"/ai-automation"}] },
+  { num: "02", category: "Paid social", title: "Meta Ads creative & campaign execution", copy: "Developed ad concepts and launched paid Facebook and Instagram advertising for ADGO Studios in the Los Angeles and San Fernando Valley market. Worked across messaging, audience selection, creative assets, and Meta Ads Manager campaign setup.", tags: ["Meta Ads Manager", "Facebook & Instagram", "Ad copywriting", "Audience targeting", "Paid social"], links: [{text:"Campaign & automation experience",href:"/ai-automation"}] },
   { num: "03", category: "Animation & storytelling", title: "PSYCH! — original animated series", copy: "Created the PSYCH! science-fiction universe and released the animated first episode, Eternity, on YouTube. Developed the narrative world, characters, and episode scripts alongside a Next.js publishing platform with a reading archive, chronology, and spoiler-aware experience.", tags: ["Original writing", "AI-assisted animation", "Creative direction", "Worldbuilding", "Next.js", "Digital publishing"], links: [{text:"Watch Episode 1",href:"https://www.youtube.com/watch?v=vXAPT-oGbkA"},{text:"PSYCH! case study",href:"/work/psych-open-source"}] },
   { num: "04", category: "Web & brand experience", title: "Creative meets implementation", copy: "Designed responsive websites, brand presentations, landing pages, and inquiry flows for ADGO Studios and Aurora Pool & Spa. Connected creative direction to website performance, accessibility, search visibility, and customer contact paths.", tags: ["Landing pages", "Brand design", "Astro", "Next.js", "Conversion paths", "Technical SEO"], links: [{text:"Aurora Pool & Spa",href:"https://aurora-pool-spa.adgostudios.workers.dev"},{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
 ];
@@ -18,7 +18,7 @@ const abilities = [
   ["Concept and script","Finding a clear angle, drafting a hook or story idea, using ChatGPT and Claude to iterate on messaging and structure."],
   ["Visual production","Higgsfield image and video generation, scene development, art direction, motion, and selecting the strongest takes."],
   ["Audio and editing","ElevenLabs voice, music and effects, HyperFrames scene composition, video assembly, sound design, and finishing."],
-  ["Campaign creative","Short-form hooks, platform formats, audience targeting, bilingual messaging, and calls to action for Meta campaigns."],
+  ["Campaign creative","Short-form hooks, platform formats, audience targeting, campaign messaging, and calls to action for Meta campaigns."],
 ];
 
 export default function CreativePage() {
@@ -107,7 +107,7 @@ export default function CreativePage() {
           {[
             { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",slug:"the-build",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
             { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",slug:"handmade-clay",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
-            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",slug:"mijo-chat",label:"Social storytelling",title:"Mijo Chat",description:"A bilingual, text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
+            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",slug:"mijo-chat",label:"Social storytelling",title:"Mijo Chat",description:"A text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
             { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",slug:"the-infomercial",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
           ].map((clip) => (
             <article className="creative-video-card" key={clip.id}>
@@ -164,7 +164,7 @@ export default function CreativePage() {
         <header className="practice-section-header"><p>Tools & applications</p><h2>Creative production meets software</h2></header>
         <div className="practice-tool-grid">
           <article><h3>AI generation</h3><p>Higgsfield · Kling · Nano Banana Pro · ChatGPT · Claude · ElevenLabs · Suno · image & video generation</p></article>
-          <article><h3>Creative workflow</h3><p>Creative briefs · storyboards · HyperFrames · short-form commercials · bilingual copy · hooks &amp; pacing · editing · sound design</p></article>
+          <article><h3>Creative workflow</h3><p>Creative briefs · storyboards · HyperFrames · short-form commercials · ad copy · hooks &amp; pacing · editing · sound design</p></article>
           <article><h3>Publishing &amp; delivery</h3><p>Meta Ads Manager · Instagram · Facebook · Next.js · Astro · web design · landing pages · site deployment</p></article>
         </div>
         <div className="practice-linked-work"><h3>See the work</h3><div><Link href="/work/adgo-studios">ADGO Studios</Link><Link href="/work/psych-open-source">PSYCH! case study</Link><Link href="/work/aurora-pool-spa">Aurora website</Link></div></div>
