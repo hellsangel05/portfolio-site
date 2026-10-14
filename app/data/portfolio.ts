@@ -39,13 +39,13 @@ export const projects: PortfolioProject[] = [
     positioning: "A service website for a Los Angeles pool company, built to make information and quote requests easier to find.",
     summary: "A custom website for a Los Angeles pool service company, with service-specific pages, local coverage information, optimized photography, and clear ways to request a quote.",
     problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
-    built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and integration points for GoHighLevel forms.",
+    built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and CRM form integration.",
     challenge: "Organizing detailed services, service areas, photography, and contact options into a clear, fast-loading site for residential customers.",
     working: [
       "Mobile-friendly pages for services and contact",
       "Optimized media, descriptive metadata, and internal links",
       "Call and text links with a contact workflow",
-      "Integration points for a GoHighLevel form and scheduling"
+      "CRM form integration and scheduling"
     ],
     decisions: [
       "Used Astro and static hosting to keep running costs down.",
@@ -78,9 +78,9 @@ export const projects: PortfolioProject[] = [
     status: "Active studio",
     featured: true,
     positioning: "Web design and connected customer-inquiry workflows for local businesses.",
-    summary: "Co-founded ADGO Studios and built its website, GoHighLevel CRM workflows, Luna AI phone receptionist, bilingual Meta advertising, and short-form video creative.",
+    summary: "Co-founded ADGO Studios and built its website, CRM workflows, Luna AI phone receptionist, bilingual Meta advertising, and short-form video creative.",
     problem: "A small business can have a website, phone number, ads, and a CRM without having a clear path from the first inquiry to the next step.",
-    built: "A public studio website, GoHighLevel lead workflows, appointment booking, Luna AI voice reception, bilingual Meta Ads, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
+    built: "A public studio website, CRM lead workflows, appointment booking, Luna AI voice reception, bilingual Meta Ads, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
     challenge: "Getting the pieces to work together in ways that are practical for business owners, from an inquiry form to a booked call or human follow-up.",
     working: [
       "Public business website and service pages",
@@ -90,7 +90,7 @@ export const projects: PortfolioProject[] = [
     ],
     decisions: [
       "Structured digital services around lead capture, response time, and clear customer actions.",
-      "Configured GoHighLevel CRM and Voice AI around practical intake and scheduling requirements.",
+      "Configured CRM automation and Voice AI around practical lead intake and appointment scheduling requirements.",
       "Designed human follow-up options alongside automated response and scheduling."
     ],
     next: [

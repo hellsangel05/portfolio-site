@@ -46,7 +46,7 @@ export default function Home() {
         <div className="practice-pathways-grid">
           <Link href="/ai-automation" className="practice-pathway-link">
             <span>01 / AI &amp; Automation</span>
-            <h3>Meta Ads. GoHighLevel. AI reception. Websites.</h3>
+            <h3>Meta Ads. CRM workflows. AI reception. Websites.</h3>
             <p>Paid campaigns, lead intake, CRM setup, connected tools and implementation work.</p>
             <strong>Explore automation work</strong>
           </Link>
@@ -110,7 +110,7 @@ export default function Home() {
           </header>
           <div className="job-skills">
             <article><h3>Web development</h3><p>Responsive sites, React and Next.js applications, APIs, hosting, debugging, and deployment.</p></article>
-            <article><h3>Marketing &amp; business systems</h3><p>Meta Ads Manager, GoHighLevel CRM, landing pages, forms, AI phone reception, tracking and automation.</p></article>
+            <article><h3>Marketing &amp; business systems</h3><p>Meta Ads Manager, CRM implementation, lead capture, landing pages, AI phone reception, tracking and automation.</p></article>
             <article><h3>Creative AI</h3><p>Higgsfield video generation, ad production workflows, creative variations, copy, audio tools and technical troubleshooting.</p></article>
           </div>
           <p className="job-stack"><strong>Tools I've used:</strong> JavaScript, TypeScript, React, Next.js, Astro, Python, Supabase, PostgreSQL, GitHub, Vercel, Cloudflare, GoHighLevel, Meta Ads Manager, Higgsfield, ElevenLabs, and APIs.</p>
@@ -123,7 +123,7 @@ export default function Home() {
           <p>I build client websites and business systems through ADGO Studios and develop independent software products and digital experiences.</p>
         </header>
         <div className="job-experience-list">
-          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a bilingual Meta Ads campaign, developed Higgsfield-powered video commercials, configured GoHighLevel CRM workflows, and implemented the Luna AI phone receptionist.</p></article>
+          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a bilingual Meta Ads campaign, developed Higgsfield-powered video commercials, implemented CRM workflows, and configured the Luna AI phone receptionist.</p></article>
           <article><div><span>Software development</span><h3>Independent applications</h3></div><p>Designed and built web and mobile applications across music, sports, games, and publishing. I work with AI-assisted development tools, code, external APIs, testing, and deployment to turn ideas into working systems.</p></article>
         </div>
       </section>
