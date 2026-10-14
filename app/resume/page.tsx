@@ -17,15 +17,15 @@ const builds = [
 
 const experience = [
   {
-    title: "Co-founder · Web and automation projects",
+    title: "Co-founder · Web development & digital systems",
     company: "ADGO Studios",
     dates: "2026 – present",
     bullets: [
-      "Design, develop, and deploy websites and digital workflows for local businesses, from requirements through launch.",
-      "Configured CRM lead capture, contact records, appointment scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
-      "Launched Facebook and Instagram ads in Meta Ads Manager; produced short-form commercials using Higgsfield, ElevenLabs, and HyperFrames.",
-      "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
-    ],
+      "Build and deploy responsive business websites and lead-capture experiences for local clients.",
+      "Configure CRM lead management, forms, scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
+      "Launch paid social campaigns in Meta Ads Manager and produce short-form advertising with Higgsfield, ElevenLabs, and HyperFrames.",
+      "Manage client discovery, technical troubleshooting, testing, and implementation."
+    ]
   },
   {
     title: "Hardware Sales Associate",
@@ -33,33 +33,45 @@ const experience = [
     dates: "2025 – present",
     bullets: [
       "Help customers identify products and troubleshoot practical hardware, plumbing, and electrical questions.",
-      "Work across departments and explain unfamiliar product systems clearly in English and Spanish.",
-    ],
+      "Communicate technical options and product guidance in English and Spanish."
+    ]
   },
   {
-    title: "Field Technician",
+    title: "Manufacturing Technician",
+    company: "Chatsworth Products Incorporated",
+    dates: "Started November 2024",
+    bullets: [
+      "Assembled cabinets for computer and networking hardware; measured, drilled, pressed, finished, and fitted metal components.",
+      "Inspected products, repaired defects, and followed quality and safety procedures."
+    ]
+  },
+  {
+    title: "Pest Control Technician",
     company: "Mosquito Squad",
-    dates: "Previous experience",
-    bullets: ["Delivered field services, followed treatment and equipment procedures, and communicated with customers at job sites."],
+    dates: "May 2023 – October 2024",
+    bullets: [
+      "Delivered residential field services, maintained equipment and records, supported customers, and explained additional services.",
+      "Trained new hires on job procedures and customer service practices."
+    ]
   },
   {
-    title: "Delivery Associate",
-    company: "Amazon Delivery Service Partner",
-    dates: "Previous experience",
-    bullets: ["Handled time-sensitive delivery routes, logistics, and customer service responsibilities."],
+    title: "Retail Sales Associate",
+    company: "Bouncing Fun Land",
+    dates: "February 2023 – April 2023",
+    bullets: ["Supervised indoor-play equipment, assisted visitors, handled transactions, and communicated promotions."]
   },
   {
-    title: "Construction / HVAC Helper",
-    company: "Construction and HVAC",
-    dates: "Previous experience",
-    bullets: ["Supported installations and jobsite work with tools, materials, and coordination across tasks."],
+    title: "Security Guard",
+    company: "City Private Security",
+    dates: "October 2018 – December 2022",
+    bullets: ["Patrolled commercial property, monitored activity, addressed store concerns, and prepared incident observations."]
   },
   {
-    title: "Production / Manufacturing",
-    company: "Manufacturing",
-    dates: "Previous experience",
-    bullets: ["Worked with production processes, equipment, and workplace safety procedures."],
-  },
+    title: "Customer Clerk",
+    company: "Food4Less",
+    dates: "October 2017 – April 2020",
+    bullets: ["Supported customer service, store operations, inventory organization, and training of new employees."]
+  }
 ];
 
 export default function ResumePage() {
@@ -103,7 +115,7 @@ export default function ResumePage() {
 
       <section className="resume-block section-shell">
         <h2>Specialized work</h2>
-        <p><Link href="/ai-automation">AI &amp; Automation</Link> — Meta campaigns, GoHighLevel CRM, lead capture, voice AI and technical implementation.</p>
+        <p><Link href="/ai-automation">AI &amp; Automation</Link> — Paid social advertising, CRM administration, lead capture, voice AI and technical implementation.</p>
         <p><Link href="/creative-ai">Creative AI</Link> — Higgsfield commercials, ElevenLabs audio, short-form ad production, and published PSYCH! animation.</p>
       </section>
 
@@ -122,8 +134,14 @@ export default function ResumePage() {
         <div>
           <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
           <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
-          <article><h3>Business technology</h3><p>CRM setup & lead management (GoHighLevel) · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Campaign creative</p></article>
+          <article><h3>Business technology</h3><p>CRM implementation (GoHighLevel) · Lead management · Workflow automation · Paid social advertising (Meta Ads Manager) · Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames</p></article>
         </div>
+      </section>
+
+      <section className="resume-block section-shell">
+        <h2>Community experience</h2>
+        <p><strong>Sylmar Recreation Center</strong> · Volunteer · June 2013 – May 2016</p>
+        <p>Supported community events, park cleanups, and crowd coordination.</p>
       </section>
 
       <section className="resume-block section-shell">

@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 };
 
 const systems = [
-  { number: "01", area: "Paid media", title: "Meta Ads Manager & campaign execution", detail: "Launched paid Facebook and Instagram advertising for ADGO Studios targeting businesses in the San Fernando Valley. Developed ad messaging and creatives, configured audience targeting, set up the campaign in Meta Ads Manager, and reviewed delivery.", evidence: ["Meta Ads Manager", "Facebook & Instagram advertising", "Ad creative development", "Audience targeting", "Campaign setup & delivery"] },
+  { number: "01", area: "Paid media", title: "Paid social advertising & campaign execution", detail: "Launched paid Facebook and Instagram advertising for ADGO Studios targeting businesses in the San Fernando Valley. Developed ad messaging and creatives, configured audience targeting, set up the campaign in Meta Ads Manager, and reviewed delivery.", evidence: ["Meta Ads Manager", "Facebook & Instagram advertising", "Ad creative development", "Audience targeting", "Campaign setup & delivery"] },
   { number: "02", area: "CRM and intake", title: "CRM implementation, lead capture & scheduling", detail: "Configured GoHighLevel to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently.", evidence: ["CRM configuration (GoHighLevel)", "Contact & lead management", "Lead capture forms", "Calendar / appointment booking", "Automated acknowledgments", "Client intake"] },
   { number: "03", area: "Conversational AI", title: "Luna: an AI phone receptionist", detail: "Configured Luna, ADGO Studios' AI phone receptionist, with a business knowledge base and appointment calendar. Developed call-handling logic for service questions, lead qualification, booking options, and live follow-up, then tested conversations and responses.", evidence: ["Voice AI (GoHighLevel)", "AI agent configuration", "Knowledge bases", "Call routing", "Appointment scheduling", "Conversation testing"] },
   { number: "04", area: "Web and delivery", title: "Websites connected to business tools", detail: "Developed responsive websites and lead-capture experiences for ADGO Studios and Aurora Pool & Spa. Worked with Astro, Next.js, TypeScript, Cloudflare Workers, Vercel, form integration, technical SEO, Meta Pixel, and Google Search Console.", evidence: ["Next.js & Astro", "TypeScript / React", "Cloudflare Workers & Vercel", "Supabase / PostgreSQL", "Meta Pixel", "Search Console & SEO"] },
 ];
 
 const toolkit = [
-  ["Campaigns & tracking", "Meta Ads Manager · Meta Business Portfolio · Meta Pixel · Facebook Ads · Instagram Ads · audience targeting · ad creative"],
+  ["Campaigns & tracking", "Paid social advertising · Meta Ads Manager · Meta Pixel · audience targeting · campaign setup · ad creative"],
   ["Customer systems", "CRM implementation · lead forms · contact pipelines · appointment calendars · workflow automation · GoHighLevel"],
   ["AI & development", "Claude · ChatGPT · AI-assisted coding · prompt development · API integrations · JavaScript · TypeScript · Python"],
   ["Web & deployment", "Next.js · React · Astro · Supabase · PostgreSQL · Vercel · Cloudflare Workers · GitHub · technical SEO"],
@@ -37,7 +37,7 @@ export default function AutomationPage() {
       </div>
 
       <section className="practice-proof section-shell" aria-label="Areas of hands-on experience">
-        <div><strong>Meta</strong><span>Paid campaigns</span></div>
+        <div><strong>Paid social</strong><span>Campaign execution</span></div>
         <div><strong>GHL</strong><span>CRM &amp; intake</span></div>
         <div><strong>Voice AI</strong><span>Phone automation</span></div>
         <div><strong>Web</strong><span>Development &amp; hosting</span></div>
