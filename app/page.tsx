@@ -36,6 +36,29 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="practice-pathways section-shell" aria-labelledby="practice-pathways-title">
+        <div className="practice-pathways-heading">
+          <p className="job-small-label">Where my work connects</p>
+          <h2 id="practice-pathways-title">Software, marketing and creative production.</h2>
+          <p>I don't separate the code from the campaign or the creative from the customer journey. These two areas show the practical work behind my projects.</p>
+        </div>
+        <div className="practice-pathways-grid">
+          <Link href="/ai-automation" className="practice-pathway-link">
+            <span>01 / AI &amp; Automation</span>
+            <h3>Meta Ads. GoHighLevel. AI reception. Websites.</h3>
+            <p>Paid campaigns, lead intake, CRM setup, connected tools and implementation work.</p>
+            <strong>Explore automation work</strong>
+          </Link>
+          <Link href="/creative-ai" className="practice-pathway-link">
+            <span>02 / Creative AI</span>
+            <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
+            <p>Repeatable AI creative production, bilingual paid social and original projects like PSYCH!.</p>
+            <strong>Explore creative work</strong>
+          </Link>
+        </div>
+      </section>
+
       <section id="work" className="job-section section-shell">
         <header className="job-section-intro">
           <div><p className="job-small-label">Selected work</p><h2>Selected projects</h2></div>
@@ -87,10 +110,10 @@ export default function Home() {
           </header>
           <div className="job-skills">
             <article><h3>Web development</h3><p>Responsive sites, React and Next.js applications, APIs, hosting, debugging, and deployment.</p></article>
-            <article><h3>Business systems</h3><p>CRM setup, contact forms, automated follow-up, voice agents, and handoffs between services.</p></article>
-            <article><h3>Troubleshooting</h3><p>Working through unfamiliar systems, reproducing problems, testing fixes, and helping users find their next step.</p></article>
+            <article><h3>Marketing &amp; business systems</h3><p>Meta Ads Manager, GoHighLevel CRM, landing pages, forms, AI phone reception, tracking and automation.</p></article>
+            <article><h3>Creative AI</h3><p>Higgsfield video generation, ad production workflows, creative variations, copy, audio tools and technical troubleshooting.</p></article>
           </div>
-          <p className="job-stack"><strong>Tools I've used:</strong> JavaScript, TypeScript, React, Next.js, Astro, Python, Supabase, PostgreSQL, GitHub, Vercel, Cloudflare, GoHighLevel, and APIs.</p>
+          <p className="job-stack"><strong>Tools I've used:</strong> JavaScript, TypeScript, React, Next.js, Astro, Python, Supabase, PostgreSQL, GitHub, Vercel, Cloudflare, GoHighLevel, Meta Ads Manager, Higgsfield, ElevenLabs, and APIs.</p>
         </div>
       </section>
 
@@ -100,7 +123,7 @@ export default function Home() {
           <p>I work on client websites and business systems through ADGO Studios, alongside independent projects that explore different technical problems.</p>
         </header>
         <div className="job-experience-list">
-          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded a small web and creative studio. I work on business websites, client discovery, CRM workflows, AI reception, and the practical work of setting up and supporting services.</p></article>
+          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded a web and creative studio with my cousin. Our work includes client websites, a paid bilingual Meta advertising campaign, Higgsfield ad-creative automation, GoHighLevel CRM and the Luna AI phone receptionist.</p></article>
           <article><div><span>Software development</span><h3>Independent applications</h3></div><p>Designed and built web and mobile applications across music, sports, games, and publishing. I work with AI-assisted development tools, code, external APIs, testing, and deployment to turn ideas into working systems.</p></article>
         </div>
       </section>

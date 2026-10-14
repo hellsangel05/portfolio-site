@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "IT support",
     "product engineer",
     "AI-enabled applications",
+    "Meta Ads Manager",
+    "GoHighLevel",
+    "Higgsfield",
+    "AI creative production",
+    "marketing automation",
     "rapid prototyping",
     "full-stack developer",
   ],
@@ -79,8 +84,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav aria-label="Primary navigation">
             <Link href="/#work">Projects</Link>
-            <Link href="/#experience" className="nav-optional">Experience</Link>
-            <Link href="/#about" className="nav-optional">About</Link>
+            <Link href="/ai-automation" className="nav-optional">AI &amp; Automation</Link>
+            <Link href="/creative-ai" className="nav-optional">Creative AI</Link>
             <Link href="/resume">Resume</Link>
             <Link href="/#contact">Contact</Link>
           </nav>
