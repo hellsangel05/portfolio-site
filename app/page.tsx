@@ -10,7 +10,7 @@ export default function Home() {
           <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · Los Angeles, CA</p>
           <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
           <p className="job-lead">I develop web applications, create modern business websites, and implement AI-powered workflows from concept through deployment. My work spans front-end development, APIs, automation, and creative production.</p>
-          <p className="job-sub">My portfolio includes shipped websites, full-stack applications, bilingual advertising campaigns, and original animated storytelling.</p>
+          <p className="job-sub">My portfolio includes shipped websites, full-stack applications, paid social advertising, and original animated storytelling.</p>
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
@@ -53,7 +53,7 @@ export default function Home() {
           <Link href="/creative-ai" className="practice-pathway-link">
             <span>02 / Creative AI</span>
             <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
-            <p>Higgsfield-powered commercials, bilingual ad creative, motion graphics, and original animation for PSYCH!.</p>
+            <p>Higgsfield-powered commercials, ad creative, motion graphics, and original animation for PSYCH!.</p>
             <strong>Explore creative work</strong>
           </Link>
         </div>
@@ -123,7 +123,7 @@ export default function Home() {
           <p>I build client websites and business systems through ADGO Studios and develop independent software products and digital experiences.</p>
         </header>
         <div className="job-experience-list">
-          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a bilingual Meta Ads campaign, developed Higgsfield-powered video commercials, implemented CRM workflows, and configured the Luna AI phone receptionist.</p></article>
+          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a Meta Ads campaign, developed Higgsfield-powered video commercials, implemented CRM workflows, and configured the Luna AI phone receptionist.</p></article>
           <article><div><span>Software development</span><h3>Independent applications</h3></div><p>Designed and built web and mobile applications across music, sports, games, and publishing. I work with AI-assisted development tools, code, external APIs, testing, and deployment to turn ideas into working systems.</p></article>
         </div>
       </section>
