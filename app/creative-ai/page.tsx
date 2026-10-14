@@ -43,6 +43,27 @@ export default function CreativePage() {
         <div><strong>AI tools</strong><span>Voice, music &amp; editing</span></div>
       </section>
 
+      <section className="psych-film-feature section-shell" aria-labelledby="psych-film-title">
+        <div className="psych-film-poster" aria-hidden="true">
+          <span className="psych-film-poster-kicker">Original animated fiction / Season 01</span>
+          <strong>PSYCH<span>!</span></strong>
+          <div><span>FILE 01</span><span>ETERNITY</span></div>
+        </div>
+        <div className="psych-film-copy">
+          <p className="practice-kicker">Featured original film / PSYCH! Universe</p>
+          <h2 id="psych-film-title">Episode 1. Eternity.</h2>
+          <p>My original science-fiction story, brought beyond the page as a released animated episode. I developed the story, characters and world, experimenting with AI-assisted visual storytelling and animation to bring an original narrative to screen.</p>
+          <p>It's a different kind of creative work from our commercial spots: one focused on writing, visual direction, worldbuilding and adapting a longer story for video. The project also has its own Next.js publishing platform and reference archive.</p>
+          <div className="psych-film-links">
+            <a href="https://www.youtube.com/@thepsychuniverse/videos" target="_blank" rel="noopener noreferrer">PSYCH! on YouTube</a>
+            <a href="https://www.tiktok.com/@thepsychuniverse" target="_blank" rel="noopener noreferrer">PSYCH! on TikTok</a>
+            <Link href="/work/psych-open-source">Read the project case study</Link>
+            <a href="https://psych-open-source.vercel.app/read/season-1/eternity" target="_blank" rel="noopener noreferrer">Read Episode 1</a>
+          </div>
+          <p className="psych-film-caption">The full animation is published on @thepsychuniverse. These links open the official channels; a direct episode player will be added once its individual video URL is confirmed.</p>
+        </div>
+      </section>
+
       <section className="creative-reel-section section-shell" aria-labelledby="creative-reel-title">
         <header className="creative-reel-heading">
           <div>
