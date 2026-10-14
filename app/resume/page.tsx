@@ -3,57 +3,46 @@ import Link from "next/link";
 import PrintButton from "../components/PrintButton";
 
 export const metadata: Metadata = {
-  title: "Resume",
-  description: "Resume for Angel Gonzalez, a product-minded full-stack developer and co-founder of ADGO Ventures and ADGO Studios.",
+  title: "Résumé",
+  description: "Résumé and project experience for Angel Gonzalez in Los Angeles.",
   alternates: { canonical: "/resume" },
 };
 
-const productRoles = [
+const builds = [
+  { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, GoHighLevel workflows, intake forms, and AI receptionist configuration for a small creative studio." },
+  { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Next.js publishing site with reading routes, timeline, searchable reference material, and spoiler-aware progress." },
+  { title: "Raidio", slug: "raidio", copy: "Full-stack radio prototype using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
+];
+
+const experience = [
   {
-    company: "ADGO Ventures",
-    title: "Co-Founder / Full-Stack Product Developer",
-    date: "Present",
-    bullets: [
-      "Co-founded an independent product studio building pre-launch software across media, creator tools, sports analysis, civic technology, and community platforms.",
-      "Translate product concepts into user flows, technical plans, responsive interfaces, database-backed applications, and deployed builds.",
-      "Design and implement systems including shared media playback, creator economies, semantic idea graphs, video-analysis pipelines, privacy controls, moderation, and progression loops.",
-      "Build primarily with TypeScript, React, Next.js, Expo, Python, Supabase, PostgreSQL, and Vercel.",
-    ],
-  },
-  {
+    title: "Co-founder · Web and automation projects",
     company: "ADGO Studios",
-    title: "Co-Founder / Creative & Automation Developer",
-    date: "Present",
+    dates: "2026 – present",
     bullets: [
-      "Develop creative workflows for image and video generation, advertising assets, social content, lead capture, CRM operations, and automation.",
-      "Prototype websites, internal systems, and content pipelines that connect creative production with practical business operations.",
+      "Work with a partner to plan and build websites and digital services for local businesses.",
+      "Build and configure contact forms, service pages, CRM workflows, AI reception, and hosting.",
+      "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
     ],
   },
-];
-
-const selectedProducts = [
   {
-    name: "Raidio",
-    slug: "raidio",
-    description: "AI radio network with synchronized playback, station studios, generated music, voice hosts, and resilient publishing workflows.",
+    title: "Hardware Sales Associate",
+    company: "The Home Depot",
+    dates: "2025 – present",
+    bullets: [
+      "Help customers identify products and troubleshoot practical hardware, plumbing, and electrical questions.",
+      "Work across departments and explain unfamiliar product systems clearly in English and Spanish.",
+    ],
   },
   {
-    name: "Snapdex",
-    slug: "snapdex",
-    description: "Photo trading-card economy with rarity, packs, trades, listings, creator royalties, supply burns, and arena battles.",
+    title: "Field and technical service roles",
+    company: "Manufacturing, pest control, and construction support",
+    dates: "Prior experience",
+    bullets: [
+      "Worked in hands-on roles requiring reliable service, following procedures, and solving problems on site.",
+    ],
   },
-  {
-    name: "Jump Trainer",
-    slug: "jump-trainer",
-    description: "Expo and Python product that measures vertical jump from video, reports confidence, and generates a training plan.",
-  },
-];
-
-const additionalExperience = [
-  ["Hardware Sales Associate", "The Home Depot", "May 2025 — Present"],
-  ["Manufacturing Technician", "Chatsworth Products Incorporated", "Nov 2024 — May 2025"],
-  ["Pest Control Technician", "Mosquito Squad", "May 2023 — Oct 2024"],
-  ["Earlier roles", "Retail and security", "2017 — 2023"],
 ];
 
 export default function ResumePage() {
@@ -62,73 +51,61 @@ export default function ResumePage() {
       <header className="resume-hero section-shell">
         <div>
           <Link href="/" className="back-link">← Portfolio</Link>
-          <p className="eyebrow">Resume</p>
+          <p className="eyebrow">Résumé</p>
           <h1>Angel Gonzalez</h1>
-          <p className="resume-title">Product-Minded Full-Stack Developer</p>
+          <p className="resume-title">Web Development · Automation · Technical Support</p>
         </div>
         <div className="resume-contact">
-          <p>Los Angeles, California</p>
+          <p>San Fernando Valley · Los Angeles, CA</p>
           <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
-          <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">github.com/hellsangel05 ↗</a>
-          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio website ↗</a>
+          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio ↗</a>
+          <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub ↗</a>
           <div className="resume-downloads">
-            <a href="/angel-gonzalez-resume.pdf" download className="button button-primary">Download PDF</a>
+            <a className="button button-primary" href="/angel-gonzalez-resume.pdf" download>Download PDF</a>
             <PrintButton />
           </div>
         </div>
       </header>
 
       <section className="resume-summary section-shell">
-        <div className="resume-section-label">Profile</div>
-        <p>
-          Product-minded full-stack developer and co-founder with hands-on experience taking web
-          and mobile products from concept through interface design, implementation, database
-          architecture, AI integration, and deployment. Seeking a junior product engineering,
-          prototyping, or creative-technology role with room to contribute across disciplines.
-        </p>
+        <div className="resume-section-label">Summary</div>
+        <p>Hands-on experience building websites, full-stack prototypes, and business automations, combined with a background in customer service and practical troubleshooting. Looking for an opportunity to grow in web development, technical support, implementation, or technical operations.</p>
       </section>
 
       <section className="resume-block section-shell">
-        <h2>Selected engineering projects</h2>
+        <h2>Relevant projects</h2>
         <div className="resume-products">
-          {selectedProducts.map((product) => (
-            <article key={product.slug}>
-              <h3><Link href={`/work/${product.slug}`}>{product.name}</Link></h3>
-              <p>{product.description}</p>
+          {builds.map((project) => (
+            <article key={project.slug}>
+              <h3><Link href={"/work/" + project.slug}>{project.title}</Link></h3>
+              <p>{project.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
       <section className="resume-block section-shell">
-        <h2>Product-building experience</h2>
-        {productRoles.map((role) => (
-          <article className="resume-role" key={role.company}>
-            <div>
-              <h3>{role.company}</h3>
-              <p>{role.title}</p>
-              <span>{role.date}</span>
-            </div>
-            <ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
+        <h2>Experience</h2>
+        {experience.map((entry) => (
+          <article className="resume-role" key={entry.company}>
+            <div><h3>{entry.company}</h3><p>{entry.title}</p><span>{entry.dates}</span></div>
+            <ul>{entry.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
           </article>
         ))}
       </section>
 
       <section className="resume-block resume-skills section-shell">
-        <h2>Skills</h2>
+        <h2>Technical skills</h2>
         <div>
-          <article><h3>Product + development</h3><p>Product ideation · Rapid prototyping · Full-stack development · Responsive interfaces · Authentication · Database-backed applications · API integrations · Deployment · Debugging · Product iteration</p></article>
-          <article><h3>AI + automation</h3><p>LLM integration · Prompt design · Image generation · Video generation · Workflow automation · Computer vision workflows</p></article>
-          <article><h3>Technology</h3><p>TypeScript · JavaScript · React · Next.js · Expo · React Native · Python · Supabase · PostgreSQL · Vercel · GitHub · APIs</p></article>
+          <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
+          <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
+          <article><h3>Business technology</h3><p>GoHighLevel · CRM configuration · Website forms · Voice AI · Workflow automation · Bilingual customer support</p></article>
         </div>
       </section>
 
       <section className="resume-block section-shell">
-        <h2>Additional experience + education</h2>
+        <h2>Education</h2>
         <div className="earlier-grid">
-          {additionalExperience.map(([title, company, date]) => (
-            <article key={`${title}-${company}`}><h3>{title}</h3><p>{company}</p><span>{date}</span></article>
-          ))}
           <article><h3>Granada Hills Charter High School</h3><p>High school diploma</p><span>2016</span></article>
         </div>
       </section>
