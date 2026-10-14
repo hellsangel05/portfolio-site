@@ -74,12 +74,12 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
 
       <section className="case-overview section-shell" aria-label="Project overview">
         <div><span>Role</span><p>{project.role}</p></div>
-        <div><span>Current status</span><p>{project.status}</p></div>
+        <div><span>Status</span><p>{project.status}</p></div>
         <div><span>Technology</span><p>{project.tech.join(" · ")}</p></div>
         <div className="case-overview-actions">
-          {project.live ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Open product ↗</a> : null}
+          {project.live && project.demoAvailable !== false ? <a href={project.live} target="_blank" rel="noreferrer" className="button button-primary">Visit site ↗</a> : null}
           {project.github ? <a href={project.github} target="_blank" rel="noreferrer" className="button button-secondary">View GitHub ↗</a> : null}
-          {!project.live && !project.github ? <span>Demo available by walkthrough</span> : null}
+          {project.demoAvailable === false ? <span>Project walkthrough available on request</span> : null}
         </div>
       </section>
 
@@ -88,17 +88,17 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <div className="case-story-content">
           <article>
             <span>01</span>
-            <h2>The opportunity</h2>
+            <h2>The problem</h2>
             <p>{project.problem}</p>
           </article>
           <article>
             <span>02</span>
-            <h2>What I built</h2>
+            <h2>The build</h2>
             <p>{project.built}</p>
           </article>
           <article>
             <span>03</span>
-            <h2>The hard part</h2>
+            <h2>The challenge</h2>
             <p>{project.challenge}</p>
           </article>
         </div>
@@ -117,17 +117,17 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
       <section className="case-details section-shell">
         <article>
           <p className="eyebrow">What works now</p>
-          <h2>Current functionality.</h2>
+          <h2>What I implemented</h2>
           <ul>{project.working.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
         <article>
           <p className="eyebrow">Important decisions</p>
-          <h2>Key decisions.</h2>
+          <h2>Key decisions</h2>
           <ul>{project.decisions.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
         <article>
           <p className="eyebrow">What comes next</p>
-          <h2>Next steps.</h2>
+          <h2>Next steps</h2>
           <ul>{project.next.map((item) => <li key={item}>{item}</li>)}</ul>
         </article>
       </section>
