@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 };
 
 const systems = [
-  { number: "01", area: "Paid media", title: "Meta Ads Manager & campaign execution", detail: "At ADGO Studios, my cousin and I launched a paid, bilingual Facebook and Instagram campaign aimed at businesses in the San Fernando Valley. We worked with creative, messaging, audience selection and the path from an ad to a service inquiry.", evidence: ["Meta Ads Manager", "Facebook & Instagram advertising", "Bilingual English / Spanish creative", "Audience targeting", "Campaign setup & delivery"], note: "This is experience running our studio's own paid ads, not a claim of client campaign ROAS or an established agency track record." },
-  { number: "02", area: "CRM and intake", title: "GoHighLevel, forms & customer handoffs", detail: "We use GoHighLevel to connect website inquiries with contact records, consultation calendars and automated responses. I have worked through the business details behind those handoffs: which information to ask for, who gets notified and how a customer reaches a person.", evidence: ["GoHighLevel (GHL)", "CRM configuration", "Lead capture forms", "Calendar / appointment booking", "Automated acknowledgments", "Client intake"], note: "A real ADGO form has received an inquiry and sent an automated acknowledgment. Some client-specific integrations still require production verification." },
-  { number: "03", area: "Conversational AI", title: "Luna: an AI phone receptionist", detail: "Our studio's AI receptionist uses a configured knowledge base and appointment calendar to answer common questions and offer a booking. I worked on how the assistant should handle incoming calls, the information it gathers and the options callers need when a call is not their preferred next step.", evidence: ["GoHighLevel Voice AI", "AI agent configuration", "Knowledge bases", "Call routing", "Appointment scheduling", "Conversation testing"], note: "This is receptionist setup and testing, not a claim that it has independently closed sales or replaced staff." },
-  { number: "04", area: "Web and delivery", title: "Websites connected to business tools", detail: "From the ADGO Studios site to the Aurora Pool & Spa client website, I have worked on responsive pages, service information, lead forms, hosting decisions, and technical SEO. The Aurora build uses Astro with Cloudflare Workers; my independent applications use Next.js, TypeScript and Supabase.", evidence: ["Next.js & Astro", "TypeScript / React", "Cloudflare Workers & Vercel", "Supabase / PostgreSQL", "Meta Pixel", "Search Console & SEO"], note: "I distinguish site setup and tracking configuration from verified attribution or measured revenue growth." },
+  { number: "01", area: "Paid media", title: "Meta Ads Manager & campaign execution", detail: "Launched an English- and Spanish-language Facebook and Instagram campaign for ADGO Studios targeting businesses in the San Fernando Valley. Developed ad messaging and creatives, configured audience targeting, set up the campaign in Meta Ads Manager, and reviewed delivery.", evidence: ["Meta Ads Manager", "Facebook & Instagram advertising", "English / Spanish creative", "Audience targeting", "Campaign setup & delivery"] },
+  { number: "02", area: "CRM and intake", title: "GoHighLevel CRM, forms & scheduling", detail: "Configured GoHighLevel to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently.", evidence: ["GoHighLevel (GHL)", "CRM configuration", "Lead capture forms", "Calendar / appointment booking", "Automated acknowledgments", "Client intake"] },
+  { number: "03", area: "Conversational AI", title: "Luna: an AI phone receptionist", detail: "Configured Luna, ADGO Studios' AI phone receptionist, with a business knowledge base and appointment calendar. Developed call-handling logic for service questions, lead qualification, booking options, and live follow-up, then tested conversations and responses.", evidence: ["GoHighLevel Voice AI", "AI agent configuration", "Knowledge bases", "Call routing", "Appointment scheduling", "Conversation testing"] },
+  { number: "04", area: "Web and delivery", title: "Websites connected to business tools", detail: "Developed responsive websites and lead-capture experiences for ADGO Studios and Aurora Pool & Spa. Worked with Astro, Next.js, TypeScript, Cloudflare Workers, Vercel, form integration, technical SEO, Meta Pixel, and Google Search Console.", evidence: ["Next.js & Astro", "TypeScript / React", "Cloudflare Workers & Vercel", "Supabase / PostgreSQL", "Meta Pixel", "Search Console & SEO"] },
 ];
 
 const toolkit = [
@@ -28,7 +28,7 @@ export default function AutomationPage() {
         <Link className="practice-back" href="/">Portfolio</Link>
         <p className="practice-kicker">01 / AI & Automation</p>
         <h1>Business problems.<br/><span>Working systems.</span></h1>
-        <p className="practice-lead">I build and connect websites, advertising, AI tools and customer workflows. The work isn't just prompting a model. It's understanding the process, setting up the tools and checking what happens when people actually use them.</p>
+        <p className="practice-lead">I develop websites, launch digital campaigns, and connect CRM and AI tools into customer-facing workflows. My work covers the details from first inquiry to follow-up, booking, and technical delivery.</p>
         <div className="practice-hero-links">
           <a href="https://adgostudios.com/" target="_blank" rel="noopener noreferrer">ADGO Studios website</a>
           <Link href="/work/aurora-pool-spa">Aurora client site case study</Link>
@@ -53,7 +53,6 @@ export default function AutomationPage() {
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
                 <ul className="practice-chips">{item.evidence.map((tech)=><li key={tech}>{tech}</li>)}</ul>
-                <p className="practice-note">{item.note}</p>
               </div>
             </article>
           ))}
@@ -64,7 +63,7 @@ export default function AutomationPage() {
         <div className="section-shell practice-contrast-grid">
           <div><p className="practice-kicker">A practical example</p><h2>From a campaign to a conversation.</h2></div>
           <div>
-            <p>A business needs more than an ad or a website by itself. I think about the handoff between systems and the customer experience at each step.</p>
+            <p>I design the full customer journey: targeted creative, a clear landing page, lead capture, responsive follow-up, and conversion tracking.</p>
             <ol className="practice-steps">
               <li><strong>1. Reach someone.</strong><span>Build the message and creative in Meta Ads Manager, with a clear offer and relevant audience.</span></li>
               <li><strong>2. Give them somewhere to go.</strong><span>A mobile-friendly landing page explains the service and presents a straightforward action.</span></li>
@@ -72,7 +71,6 @@ export default function AutomationPage() {
               <li><strong>4. Respond and schedule.</strong><span>Use CRM workflows, a booking calendar or the AI receptionist to help route an inquiry.</span></li>
               <li><strong>5. Check the handoff.</strong><span>Test the experience, review tracking configuration and fix where customers get stuck.</span></li>
             </ol>
-            <p className="practice-note">This is the architecture I've built and worked toward across ADGO projects, not a claim that every step is live for every client or has generated measured results.</p>
           </div>
         </div>
       </section>
@@ -88,7 +86,7 @@ export default function AutomationPage() {
 
       <section className="practice-contact section-shell">
         <p>Web development / AI implementation / technical operations</p>
-        <h2>Need someone who can build and learn fast?</h2>
+        <h2>Let's build something useful.</h2>
         <div><a className="button button-primary" href="mailto:gonzalezangel0510@yahoo.com">Email me</a><Link className="button button-secondary" href="/resume">Résumé</Link></div>
       </section>
     </main>

@@ -8,17 +8,17 @@ export const metadata: Metadata = {
 };
 
 const creativeWork = [
-  { num: "01", category: "AI advertising", title: "Higgsfield creative production for ADGO", copy: "At ADGO Studios, my partner and I have built an automated, repeatable approach to making ad creative with Higgsfield. We use AI to explore a concept, develop variations, create visual assets and refine output for social placements. This is a production workflow, not a claim that Higgsfield is running our paid media campaigns or that we've built its underlying video model.", tags: ["Higgsfield", "Generative video", "Creative automation", "Concept variations", "AI production"], links: [{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
-  { num: "02", category: "Paid social", title: "Bilingual Meta ad creative", copy: "ADGO ran a paid Facebook and Instagram campaign targeting the Los Angeles / San Fernando Valley area. We developed English and Spanish messaging and creative for a local-business audience and worked through the process of getting the ads approved and delivered in Meta Ads Manager.", tags: ["Meta Ads Manager", "Instagram", "Facebook", "Bilingual creative", "Ad copy", "Campaign execution"], links: [{text:"AI & automation details",href:"/ai-automation"}] },
-  { num: "03", category: "Storytelling & digital publishing", title: "PSYCH! Open Source", copy: "I created an original science-fiction universe and developed it into a web publishing project, including episode writing, characters, timeline research, reader progress and spoiler-aware reference pages. The project also involves experimenting with AI-generated animation, visual sequences, soundtrack ideas and creative direction.", tags: ["Story development", "AI-assisted animation", "Worldbuilding", "Next.js", "Publishing", "Creative direction"], links: [{text:"Explore PSYCH!",href:"https://psych-open-source.vercel.app"},{text:"Technical case study",href:"/work/psych-open-source"}] },
-  { num: "04", category: "Web & visual presentation", title: "Creative that connects to an actual website", copy: "I also work on where the creative lands: responsive site layouts, brand presentation, calls to action, and contact flows. The ADGO and Aurora projects connect visual decisions to practical usability rather than stopping at a standalone image or video.", tags: ["Landing pages", "Web design", "Astro", "Next.js", "Conversion paths", "Technical SEO"], links: [{text:"Aurora Pool & Spa",href:"https://aurora-pool-spa.adgostudios.workers.dev"},{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
+  { num: "01", category: "AI advertising", title: "Higgsfield video production for ADGO", copy: "Produced a series of short-form ADGO Studios commercials across cinematic, motion-graphics, animated, and comedy formats. Built repeatable workflows combining Higgsfield-generated visuals and motion, ElevenLabs voice and sound, and HyperFrames scene composition to deliver campaign-ready vertical videos.", tags: ["Higgsfield", "Kling image-to-video", "Generative video", "ElevenLabs", "HyperFrames", "Creative production"], links: [{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
+  { num: "02", category: "Paid social", title: "Bilingual Meta advertising", copy: "Developed English- and Spanish-language ad concepts and launched a paid Facebook and Instagram campaign for ADGO Studios in the Los Angeles and San Fernando Valley market. Worked across messaging, audience selection, creative assets, and Meta Ads Manager campaign setup.", tags: ["Meta Ads Manager", "Facebook & Instagram", "Bilingual copywriting", "Audience targeting", "Paid social"], links: [{text:"Campaign & automation experience",href:"/ai-automation"}] },
+  { num: "03", category: "Animation & storytelling", title: "PSYCH! — original animated series", copy: "Created the PSYCH! science-fiction universe and released the animated first episode, Eternity, on YouTube. Developed the narrative world, characters, and episode scripts alongside a Next.js publishing platform with a reading archive, chronology, and spoiler-aware experience.", tags: ["Original writing", "AI-assisted animation", "Creative direction", "Worldbuilding", "Next.js", "Digital publishing"], links: [{text:"Watch Episode 1",href:"https://www.youtube.com/watch?v=vXAPT-oGbkA"},{text:"PSYCH! case study",href:"/work/psych-open-source"}] },
+  { num: "04", category: "Web & brand experience", title: "Creative meets implementation", copy: "Designed responsive websites, brand presentations, landing pages, and inquiry flows for ADGO Studios and Aurora Pool & Spa. Connected creative direction to website performance, accessibility, search visibility, and customer contact paths.", tags: ["Landing pages", "Brand design", "Astro", "Next.js", "Conversion paths", "Technical SEO"], links: [{text:"Aurora Pool & Spa",href:"https://aurora-pool-spa.adgostudios.workers.dev"},{text:"ADGO Studios",href:"https://adgostudios.com/"}] },
 ];
 
 const abilities = [
   ["Concept and script","Finding a clear angle, drafting a hook or story idea, using ChatGPT and Claude to iterate on messaging and structure."],
-  ["Visual generation","Higgsfield video and visual creation, reference-driven experiments, variations, consistency checks and selecting usable takes."],
-  ["Audio and editing","Exploring ElevenLabs for voice, Suno for music, and editing / assembly tools to shape generated clips into a coherent piece."],
-  ["Campaign-aware design","Thinking about placement, audience, call to action and the feedback loop between creative and Meta advertising."],
+  ["Visual production","Higgsfield image and video generation, scene development, art direction, motion, and selecting the strongest takes."],
+  ["Audio and editing","ElevenLabs voice, music and effects, HyperFrames scene composition, video assembly, sound design, and finishing."],
+  ["Campaign creative","Short-form hooks, platform formats, audience targeting, bilingual messaging, and calls to action for Meta campaigns."],
 ];
 
 export default function CreativePage() {
@@ -27,8 +27,8 @@ export default function CreativePage() {
       <div className="section-shell practice-hero">
         <Link className="practice-back" href="/">Portfolio</Link>
         <p className="practice-kicker">02 / Creative AI</p>
-        <h1>Ideas are easy.<br/><span>Making them real is the work.</span></h1>
-        <p className="practice-lead">I use generative AI to make ad creative, explore filmmaking ideas, and build the places where people experience that work. I like the overlap between storytelling, production tools, code and distribution.</p>
+        <h1>Creative ideas.<br/><span>Made for the screen.</span></h1>
+        <p className="practice-lead">I produce AI-assisted commercials, animation, and short-form digital content, bringing together storytelling, design, audio, motion graphics, and web technology.</p>
         <div className="practice-hero-links">
           <a href="https://adgostudios.com/" target="_blank" rel="noopener noreferrer">ADGO Studios website</a>
           <a href="https://psych-open-source.vercel.app" target="_blank" rel="noopener noreferrer">PSYCH! platform</a>
@@ -60,8 +60,8 @@ export default function CreativePage() {
         <div className="psych-film-copy">
           <p className="practice-kicker">Featured original film / PSYCH! Universe</p>
           <h2 id="psych-film-title">Episode 1. Eternity.</h2>
-          <p>My original science-fiction story, brought beyond the page as a released animated episode. I developed the story, characters and world, experimenting with AI-assisted visual storytelling and animation to bring an original narrative to screen.</p>
-          <p>It's a different kind of creative work from our commercial spots: one focused on writing, visual direction, worldbuilding and adapting a longer story for video. The project also has its own Next.js publishing platform and reference archive.</p>
+          <p>Created the PSYCH! science-fiction universe, wrote its first episode, Eternity, and brought the story to screen through AI-assisted animation, visual storytelling, and creative direction.</p>
+          <p>The project brings together original screen storytelling and a dedicated Next.js publishing experience, complete with episodes, story chronology, and a reader-friendly reference archive.</p>
           <div className="psych-film-links">
             <a href="https://www.youtube.com/watch?v=vXAPT-oGbkA" target="_blank" rel="noopener noreferrer">Watch Episode 1 on YouTube</a>
             <a href="https://www.tiktok.com/@thepsychuniverse" target="_blank" rel="noopener noreferrer">PSYCH! on TikTok</a>
@@ -76,9 +76,9 @@ export default function CreativePage() {
         <header className="creative-reel-heading">
           <div>
             <p className="practice-kicker">Selected video work / ADGO Studios</p>
-            <h2 id="creative-reel-title">See the work, not just the tools.</h2>
+            <h2 id="creative-reel-title">Selected commercial work.</h2>
           </div>
-          <p>Short-form experiments we made for our studio: motion graphics, animated product stories, comedy and social advertising. The businesses in the scripted ads are fictional.</p>
+          <p>Short-form ADGO Studios commercials spanning motion graphics, animation, comedy, product storytelling, and social advertising.</p>
         </header>
 
         <div className="creative-showreel">
@@ -91,7 +91,7 @@ export default function CreativePage() {
           <div className="creative-showreel-copy">
             <p className="practice-kicker">Studio showreel</p>
             <h3>A quick look at ADGO.</h3>
-            <p>Our public studio reel brings together selected creative work. It gives recruiters an immediate example before they explore the more recent, single-concept ads below.</p>
+            <p>A fast-paced look at ADGO Studios' video production, visual styles, and digital creative work.</p>
             <a className="practice-text-link" href="https://adgostudios.com/#reel" target="_blank" rel="noopener noreferrer">Watch on the ADGO website</a>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function CreativePage() {
             <span>October 2026 / Website ad series</span>
             <h3>Four ideas. Four different executions.</h3>
           </div>
-          <p>Produced using a combination of Higgsfield image and video tools, ElevenLabs audio, and HyperFrames editing and compositing. These are our own studio campaign concepts, not client testimonials.</p>
+          <p>Eight original ADGO Studios ad concepts produced with Higgsfield image and video tools, ElevenLabs audio, and HyperFrames editing and compositing.</p>
         </div>
         <div className="creative-video-grid">
           {[
@@ -130,11 +130,11 @@ export default function CreativePage() {
             </article>
           ))}
         </div>
-        <p className="creative-reel-footnote">October clips are hosted in ADGO's Google Drive. Playback outside the studio account depends on each file's sharing permissions. The older showreel above is served directly from our public website.</p>
+        <p className="creative-reel-footnote">October 2026 ADGO Studios creative portfolio · vertical social ad production · Higgsfield, ElevenLabs, and HyperFrames.</p>
       </section>
 
       <section className="practice-section section-shell">
-        <header className="practice-section-header"><p>Creative work</p><h2>Production, not just prompts</h2></header>
+        <header className="practice-section-header"><p>Creative work</p><h2>Video production & creative direction</h2></header>
         <div className="practice-case-list">
           {creativeWork.map((item)=><article className="practice-case" key={item.num}>
             <div className="practice-case-index"><span>{item.num}</span><small>{item.category}</small></div>
@@ -150,11 +150,10 @@ export default function CreativePage() {
 
       <section className="practice-contrast">
         <div className="section-shell practice-contrast-grid">
-          <div><p className="practice-kicker">Creative process</p><h2>From a brief to something people can watch.</h2></div>
+          <div><p className="practice-kicker">Creative process</p><h2>From concept to final cut.</h2></div>
           <div>
-            <p>My process mixes human judgment with AI production tools. The point is to arrive at material that actually communicates, not simply generate more material.</p>
+            <p>I take a creative brief through concept, script, visual development, audio, editing, and final delivery, using AI production tools to explore different directions and finish each piece.</p>
             <div className="practice-tool-grid practice-abilities">{abilities.map(([title,body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>
-            <p className="practice-note">Different projects use different tools. This is my creative toolkit and working approach, not a claim that every tool is integrated into one automated system.</p>
           </div>
         </div>
       </section>
@@ -162,8 +161,8 @@ export default function CreativePage() {
       <section className="practice-section section-shell">
         <header className="practice-section-header"><p>Tools & applications</p><h2>Creative production meets software</h2></header>
         <div className="practice-tool-grid">
-          <article><h3>AI generation</h3><p>Higgsfield · ChatGPT · Claude · ElevenLabs · Suno · image and video generation · prompt iteration</p></article>
-          <article><h3>Creative workflow</h3><p>Creative briefs · short-form concepts · ad variations · bilingual copy · reference images · hooks &amp; pacing · editing and sound design</p></article>
+          <article><h3>AI generation</h3><p>Higgsfield · Kling · Nano Banana Pro · ChatGPT · Claude · ElevenLabs · Suno · image & video generation</p></article>
+          <article><h3>Creative workflow</h3><p>Creative briefs · storyboards · HyperFrames · short-form commercials · bilingual copy · hooks &amp; pacing · editing · sound design</p></article>
           <article><h3>Publishing &amp; delivery</h3><p>Meta Ads Manager · Instagram · Facebook · Next.js · Astro · web design · landing pages · site deployment</p></article>
         </div>
         <div className="practice-linked-work"><h3>See the work</h3><div><Link href="/work/adgo-studios">ADGO Studios</Link><Link href="/work/psych-open-source">PSYCH! case study</Link><Link href="/work/aurora-pool-spa">Aurora website</Link></div></div>

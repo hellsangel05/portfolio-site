@@ -9,8 +9,8 @@ export default function Home() {
         <div>
           <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · Los Angeles, CA</p>
           <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
-          <p className="job-lead">I use AI-assisted development to build useful software, design websites, and connect the tools businesses run on. From idea to implementation, I like working across the whole process.</p>
-          <p className="job-sub">My projects span full-stack applications, business automation, creative tools, and a story-driven publishing platform.</p>
+          <p className="job-lead">I develop web applications, create modern business websites, and implement AI-powered workflows from concept through deployment. My work spans front-end development, APIs, automation, and creative production.</p>
+          <p className="job-sub">My portfolio includes shipped websites, full-stack applications, bilingual advertising campaigns, and original animated storytelling.</p>
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
@@ -25,7 +25,7 @@ export default function Home() {
             <p><span>03</span> CRM &amp; automation</p>
             <p><span>04</span> Creative web platforms</p>
           </div>
-          <p className="job-aside-end">I take projects from an idea to something people can use, then work through the details that make them reliable.</p>
+          <p className="job-aside-end">I handle implementation, integrations, testing, and the refinements that make products ready for users.</p>
         </aside>
       </section>
 
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="practice-pathways-heading">
           <p className="job-small-label">Where my work connects</p>
           <h2 id="practice-pathways-title">Software, marketing and creative production.</h2>
-          <p>I don't separate the code from the campaign or the creative from the customer journey. These two areas show the practical work behind my projects.</p>
+          <p>My work brings together web development, marketing technology, and content production—from the campaign and landing page to customer follow-up.</p>
         </div>
         <div className="practice-pathways-grid">
           <Link href="/ai-automation" className="practice-pathway-link">
@@ -53,7 +53,7 @@ export default function Home() {
           <Link href="/creative-ai" className="practice-pathway-link">
             <span>02 / Creative AI</span>
             <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
-            <p>Repeatable AI creative production, bilingual paid social and original projects like PSYCH!.</p>
+            <p>Higgsfield-powered commercials, bilingual ad creative, motion graphics, and original animation for PSYCH!.</p>
             <strong>Explore creative work</strong>
           </Link>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
       <section id="work" className="job-section section-shell">
         <header className="job-section-intro">
           <div><p className="job-small-label">Selected work</p><h2>Selected projects</h2></div>
-          <p>A selection of client work, business systems, and independent applications. Each case study explains the problem, implementation, and decisions behind it.</p>
+          <p>Client websites, business workflows, and independent applications, with case studies covering the goals, implementation, and technical decisions.</p>
         </header>
         <div className="job-project-grid">
           {featuredProjects.map((project, index) => (
@@ -106,7 +106,7 @@ export default function Home() {
         <div className="section-shell job-section">
           <header className="job-section-intro">
             <div><p className="job-small-label">What I can bring</p><h2>Skills & tools</h2></div>
-            <p>I work across code, creative AI tools, APIs, databases, and client-facing systems. I choose the tools that fit the problem, rather than treating any one stack as the answer.</p>
+            <p>Practical experience building interfaces, connecting APIs, deploying applications, running paid campaigns, and automating business workflows.</p>
           </header>
           <div className="job-skills">
             <article><h3>Web development</h3><p>Responsive sites, React and Next.js applications, APIs, hosting, debugging, and deployment.</p></article>
@@ -120,21 +120,21 @@ export default function Home() {
       <section id="experience" className="job-section section-shell">
         <header className="job-section-intro">
           <div><p className="job-small-label">Experience</p><h2>Websites, software, and client work</h2></div>
-          <p>I work on client websites and business systems through ADGO Studios, alongside independent projects that explore different technical problems.</p>
+          <p>I build client websites and business systems through ADGO Studios and develop independent software products and digital experiences.</p>
         </header>
         <div className="job-experience-list">
-          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded a web and creative studio with my cousin. Our work includes client websites, a paid bilingual Meta advertising campaign, Higgsfield ad-creative automation, GoHighLevel CRM and the Luna AI phone receptionist.</p></article>
+          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a bilingual Meta Ads campaign, developed Higgsfield-powered video commercials, configured GoHighLevel CRM workflows, and implemented the Luna AI phone receptionist.</p></article>
           <article><div><span>Software development</span><h3>Independent applications</h3></div><p>Designed and built web and mobile applications across music, sports, games, and publishing. I work with AI-assisted development tools, code, external APIs, testing, and deployment to turn ideas into working systems.</p></article>
         </div>
       </section>
 
       <section id="about" className="job-about">
         <div className="section-shell job-about-grid">
-          <div><p className="job-small-label">About</p><h2>I like understanding how things work.</h2></div>
+          <div><p className="job-small-label">About</p><h2>Curious by nature. Technical by practice.</h2></div>
           <div>
             <p>I'm based in the San Fernando Valley. I started building my own software projects, then began applying the same skills to local businesses through ADGO Studios.</p>
             <p>I enjoy learning a new framework, tracing a bug, connecting an API, or working through a customer's problem until there's a practical solution.</p>
-            <p>I'm especially interested in teams that embrace AI-assisted workflows and give people the freedom to build, experiment, and solve problems.</p>
+            <p>I'm interested in teams building practical software, intelligent workflows, digital products, and standout creative work.</p>
           </div>
         </div>
       </section>

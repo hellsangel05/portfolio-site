@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const builds = [
   { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
-  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, GoHighLevel workflows, intake forms, and AI receptionist configuration for a small creative studio." },
-  { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Next.js publishing site with reading routes, timeline, searchable reference material, and spoiler-aware progress." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, bilingual Meta advertising, Higgsfield video production, GoHighLevel lead workflows, and Luna AI phone receptionist." },
+  { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Original science-fiction universe with a published animated Episode 1 and a Next.js story platform, timeline, archives, and spoiler controls." },
   { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
 
@@ -21,9 +21,9 @@ const experience = [
     company: "ADGO Studios",
     dates: "2026 – present",
     bullets: [
-      "Work with a partner to plan and build websites and digital services for local businesses.",
+      "Design, develop, and deploy websites and digital workflows for local businesses, from requirements through launch.",
       "Configured GoHighLevel CRM workflows, website lead forms, consultation scheduling, Luna AI voice reception and hosting.",
-      "Helped launch ADGO’s bilingual paid Meta Ads campaign and develop an automated Higgsfield creative production workflow.",
+      "Launched bilingual Facebook and Instagram ads in Meta Ads Manager; produced short-form commercials using Higgsfield, ElevenLabs, and HyperFrames.",
       "Handle client conversations, technical problem solving, testing, and follow-up in English and Spanish.",
     ],
   },
@@ -54,7 +54,7 @@ export default function ResumePage() {
           <Link href="/" className="back-link"> Portfolio</Link>
           <p className="eyebrow">Résumé</p>
           <h1>Angel Gonzalez</h1>
-          <p className="resume-title">Web Development · Automation · Technical Support</p>
+          <p className="resume-title">Web Development · AI Automation · Creative Technology</p>
         </div>
         <div className="resume-contact">
           <p>San Fernando Valley · Los Angeles, CA</p>
@@ -70,7 +70,7 @@ export default function ResumePage() {
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Build websites and full-stack applications, run paid Meta advertising with a business partner, configure GoHighLevel lead workflows and AI voice reception, and create ad assets with Higgsfield. Interested in AI implementation, creative technology, web development and technical operations.</p>
+        <p>Web developer and creative technologist with hands-on experience in full-stack applications, client websites, Meta Ads Manager, GoHighLevel CRM automation, AI voice reception, and Higgsfield video production. Build and deploy practical digital products with Next.js, Astro, Supabase, Vercel, and Cloudflare.</p>
       </section>
 
       <section className="resume-block section-shell">
@@ -88,7 +88,7 @@ export default function ResumePage() {
       <section className="resume-block section-shell">
         <h2>Specialized work</h2>
         <p><Link href="/ai-automation">AI &amp; Automation</Link> — Meta campaigns, GoHighLevel CRM, lead capture, voice AI and technical implementation.</p>
-        <p><Link href="/creative-ai">Creative AI</Link> — Higgsfield ad production, bilingual social creative, AI video and original storytelling.</p>
+        <p><Link href="/creative-ai">Creative AI</Link> — Higgsfield commercials, ElevenLabs audio, short-form ad production, and published PSYCH! animation.</p>
       </section>
 
       <section className="resume-block section-shell">
@@ -106,7 +106,7 @@ export default function ResumePage() {
         <div>
           <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
           <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
-          <article><h3>Business technology</h3><p>GoHighLevel · CRM workflows · Meta Ads Manager · Meta Pixel · AI voice receptionist · Higgsfield · Creative automation · Bilingual campaigns</p></article>
+          <article><h3>Business technology</h3><p>GoHighLevel · CRM automation · Meta Ads Manager · Meta Pixel · Google Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames · Bilingual campaigns</p></article>
         </div>
       </section>
 

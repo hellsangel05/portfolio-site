@@ -40,7 +40,7 @@ export const projects: PortfolioProject[] = [
     summary: "A custom website for a Los Angeles pool service company, with service-specific pages, local coverage information, optimized photography, and clear ways to request a quote.",
     problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
     built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and integration points for GoHighLevel forms.",
-    challenge: "Turning real business requirements into a site that is quick to navigate and maintain, without overstating the client's services or publishing unapproved claims.",
+    challenge: "Organizing detailed services, service areas, photography, and contact options into a clear, fast-loading site for residential customers.",
     working: [
       "Mobile-friendly pages for services and contact",
       "Optimized media, descriptive metadata, and internal links",
@@ -49,7 +49,7 @@ export const projects: PortfolioProject[] = [
     ],
     decisions: [
       "Used Astro and static hosting to keep running costs down.",
-      "Avoided invented reviews, guarantees, and other unverifiable business claims.",
+      "Built service copy around verified business details and approved photography.",
       "Separated website content from CRM setup to make future updates easier."
     ],
     next: [
@@ -57,7 +57,7 @@ export const projects: PortfolioProject[] = [
       "Verify the live contact workflow and production domain.",
       "Set up search indexing and analytics after launch."
     ],
-    role: "ADGO Studios co-founder · Client discovery, web implementation, deployment planning, and CRM coordination",
+    role: "Web development · Client discovery, responsive UI, SEO, CRM integration, and deployment",
     tech: [
       "Astro",
       "TypeScript",
@@ -78,9 +78,9 @@ export const projects: PortfolioProject[] = [
     status: "Active studio",
     featured: true,
     positioning: "Web design and connected customer-inquiry workflows for local businesses.",
-    summary: "Co-founded a small studio and helped build its website, CRM setup, inquiry workflows, and an AI phone receptionist that can answer questions and offer appointments.",
+    summary: "Co-founded ADGO Studios and built its website, GoHighLevel CRM workflows, Luna AI phone receptionist, bilingual Meta advertising, and short-form video creative.",
     problem: "A small business can have a website, phone number, ads, and a CRM without having a clear path from the first inquiry to the next step.",
-    built: "The public studio website and hands-on work with GoHighLevel contact flows, an AI receptionist called Luna, client onboarding, creative production, and lead-capture workflows.",
+    built: "A public studio website, GoHighLevel lead workflows, appointment booking, Luna AI voice reception, bilingual Meta Ads, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
     challenge: "Getting the pieces to work together in ways that are practical for business owners, from an inquiry form to a booked call or human follow-up.",
     working: [
       "Public business website and service pages",
@@ -89,16 +89,16 @@ export const projects: PortfolioProject[] = [
       "Business outreach and client discovery in English and Spanish"
     ],
     decisions: [
-      "Started with customer problems rather than selling AI as a feature by itself.",
-      "Used existing CRM and voice platforms rather than building that infrastructure from scratch.",
-      "Kept client-facing communication and judgment with a real person."
+      "Structured digital services around lead capture, response time, and clear customer actions.",
+      "Configured GoHighLevel CRM and Voice AI around practical intake and scheduling requirements.",
+      "Designed human follow-up options alongside automated response and scheduling."
     ],
     next: [
       "Keep refining the contact and follow-up experience.",
       "Document results from client deployments.",
       "Develop clearer onboarding and maintenance processes."
     ],
-    role: "Co-founder · Web and workflow implementation, client discovery, testing, and operations alongside my partner",
+    role: "Co-founder · Website development, CRM and AI automation, paid advertising, creative production, client discovery, and testing",
     tech: [
       "Next.js",
       "Vercel",
@@ -106,7 +106,10 @@ export const projects: PortfolioProject[] = [
       "GoHighLevel",
       "Voice AI",
       "Web forms",
-      "Automation"
+      "Automation",
+      "Meta Ads Manager",
+      "Higgsfield",
+      "ElevenLabs"
     ],
     gallery: [],
     live: "https://adgostudios.com/",
@@ -132,7 +135,7 @@ export const projects: PortfolioProject[] = [
     decisions: [
       "Organized episodes and reference material as a consistent content structure.",
       "Separated story canon from documented historical details.",
-      "Designed spoiler handling around reading progress rather than blanket warnings."
+      "Linked spoiler visibility to each reader's episode progress."
     ],
     next: [
       "Expand reader features as the story grows.",
