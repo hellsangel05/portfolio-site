@@ -7,29 +7,39 @@ const siteUrl = "https://portfolio-site-green-xi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Angel Gonzalez — Applied AI Developer",
+    default: "Angel Gonzalez — Web Developer | AI & Automation",
     template: "%s — Angel Gonzalez",
   },
   description:
-    "Angel Gonzalez is an applied AI developer in Los Angeles who builds LLM pipelines, computer-vision features, and full-stack AI products.",
+    "Angel Gonzalez builds software, websites, and AI-powered workflows in Los Angeles.",
   keywords: [
-    "Angel Gonzalez", "applied AI developer", "AI engineer", "LLM applications",
-    "AI implementation", "computer vision", "full-stack developer", "Next.js",
-    "TypeScript", "Python", "Supabase", "voice AI", "AI automation",
+    "Angel Gonzalez",
+    "web developer",
+    "technical implementation",
+    "IT support",
+    "product engineer",
+    "AI-enabled applications",
+    "Meta Ads Manager",
+    "GoHighLevel",
+    "Higgsfield",
+    "AI creative production",
+    "marketing automation",
+    "rapid prototyping",
+    "full-stack developer",
   ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Angel Gonzalez",
-    title: "Angel Gonzalez — Applied AI Developer",
-    description: "Applied-AI products, LLM pipelines, computer vision, and AI automation by Angel Gonzalez.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Applied AI Developer" }],
+    title: "Angel Gonzalez — Web Developer | AI & Automation",
+    description: "Web development, creative technology, AI workflows, and client work by Angel Gonzalez.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Angel Gonzalez — Web Developer | AI & Automation" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angel Gonzalez — Applied AI Developer",
-    description: "Applied-AI products, LLM pipelines, computer vision, and AI automation by Angel Gonzalez.",
+    title: "Angel Gonzalez — Web Developer | AI & Automation",
+    description: "Websites, client work, creative platforms, and software projects by Angel Gonzalez.",
     images: ["/opengraph-image"],
   },
 };
@@ -55,8 +65,6 @@ const personSchema = {
   ],
   knowsAbout: [
     "AI application development",
-    "LLM pipelines",
-    "Computer vision",
     "Full-stack product development",
     "Rapid product prototyping",
     "Product strategy",
@@ -85,7 +93,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div id="main-content">{children}</div>
         <footer className="site-footer">
           <span>© 2026 Angel Gonzalez</span>
-          <span>Applied AI and full-stack development.</span>
+          <span>Web development and practical technology.</span>
           <a href="#main-content">Back to top</a>
         </footer>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />

@@ -9,37 +9,69 @@ export const metadata: Metadata = {
 };
 
 const builds = [
-  { title: "Civic Mirror", slug: "civic-mirror", copy: "Claude extraction pipeline that turns ballot pamphlets into Zod-validated, cited drafts with human review before publishing; bilingual Next.js and Supabase app with row-level security." },
-  { title: "Jump Trainer", slug: "jump-trainer", copy: "Python and MediaPipe engine that measures vertical jump from phone video using flight-time physics, confidence ranges, and clip rejection; Expo mobile app." },
-  { title: "Raidio", slug: "raidio", copy: "Next.js and Supabase radio network with AI-generated music and voice hosts; synchronized wall-clock playback and failure-tolerant generation." },
-  { title: "Co-Lab", slug: "co-lab", copy: "Idea network that routes posts with an LLM and links them with embeddings and vector search." },
+  { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, paid Meta advertising, Higgsfield video production, CRM automation, and Luna AI phone receptionist." },
+  { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Original science-fiction universe with a published animated Episode 1 and a Next.js story platform, timeline, archives, and spoiler controls." },
+  { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
 
 const experience = [
   {
-    title: "Co-founder · AI automation, web development & digital systems", company: "ADGO Studios",
+    title: "Co-founder · Web development & digital systems",
+    company: "ADGO Studios",
     dates: "2026 – present",
-    bullets: ["Configured the Luna AI phone receptionist, CRM lead management, forms, scheduling, and automated follow-up in GoHighLevel.", "Built and deployed responsive business websites and lead-capture experiences for local clients.", "Launched paid social campaigns in Meta Ads Manager and produced short-form advertising with Higgsfield, ElevenLabs, and HyperFrames.", "Managed client discovery, technical troubleshooting, testing, and implementation in English and Spanish."]
+    bullets: [
+      "Build and deploy responsive business websites and lead-capture experiences for local clients.",
+      "Configure CRM lead management, forms, scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
+      "Launch paid social campaigns in Meta Ads Manager and produce short-form advertising with Higgsfield, ElevenLabs, and HyperFrames.",
+      "Manage client discovery, technical troubleshooting, testing, and implementation."
+    ]
   },
   {
-    title: "Co-founder & full-stack engineer · Two-person team", company: "Applied-AI products",
-    dates: "2026 – present",
-    bullets: ["Design and build AI products end to end with a partner, working across product decisions, UX, backend, AI integration, and deployment.", "Ship LLM extraction with schema validation and human review, computer-vision measurement, generative audio, and embeddings-based search.", "Build with AI coding tools while owning architecture, testing, and product decisions."]
+    title: "Hardware Sales Associate",
+    company: "The Home Depot",
+    dates: "May 2025 – present",
+    bullets: [
+      "Help customers identify products and troubleshoot practical hardware, plumbing, and electrical questions.",
+      "Communicate technical options and product guidance in English and Spanish."
+    ]
   },
   {
-    title: "Hardware Sales Associate", company: "The Home Depot", dates: "May 2025 – present",
-    bullets: ["Help customers troubleshoot hardware, plumbing, and electrical product questions.", "Communicate technical options and product guidance in English and Spanish."]
+    title: "Manufacturing Technician",
+    company: "Chatsworth Products Incorporated",
+    dates: "Nov 2024 – May 2025",
+    bullets: [
+      "Assembled cabinets for computer and networking hardware; measured, drilled, pressed, finished, and fitted metal components.",
+      "Inspected products, repaired defects, and followed quality and safety procedures."
+    ]
   },
   {
-    title: "Manufacturing Technician", company: "Chatsworth Products Incorporated", dates: "Nov 2024 – May 2025",
-    bullets: ["Assembled cabinets for computer and networking hardware; measured, drilled, pressed, finished, and fitted metal components.", "Inspected products, repaired defects, and followed quality and safety procedures."]
+    title: "Pest Control Technician",
+    company: "Mosquito Squad",
+    dates: "May 2023 – October 2024",
+    bullets: [
+      "Delivered residential field services, maintained equipment and records, supported customers, and explained additional services.",
+      "Trained new hires on job procedures and customer service practices."
+    ]
+  },
+  {
+    title: "Solar Sales Canvasser",
+    company: "Green Power Network",
+    dates: "February 2023 – April 2023",
+    bullets: ["Prospected door to door, introduced homeowners to solar energy options, qualified leads, handled initial questions, and scheduled sales appointments."]
+  },
+  {
+    title: "Security Guard",
+    company: "City Private Security",
+    dates: "October 2018 – December 2022",
+    bullets: ["Patrolled commercial property, monitored activity, addressed store concerns, and prepared incident observations."]
+  },
+  {
+    title: "Customer Clerk",
+    company: "Food4Less",
+    dates: "October 2017 – April 2020",
+    bullets: ["Supported customer service, store operations, inventory organization, and training of new employees."]
   }
-];
-const earlierExperience = [
-  { company: "Mosquito Squad", title: "Pest Control Technician", dates: "May 2023 – Oct 2024", note: "Residential field service; trained new hires." },
-  { company: "Green Power Network", title: "Solar Sales Canvasser", dates: "Feb 2023 – Apr 2023", note: "Door-to-door outreach and appointment setting." },
-  { company: "City Private Security", title: "Security Guard", dates: "Oct 2018 – Dec 2022", note: "Commercial property patrol and incident reports." },
-  { company: "Food4Less", title: "Customer Clerk", dates: "Oct 2017 – Apr 2020", note: "Customer service, inventory, and training new employees." },
 ];
 
 export default function ResumePage() {
@@ -50,7 +82,7 @@ export default function ResumePage() {
           <Link href="/" className="back-link"> Portfolio</Link>
           <p className="eyebrow">Résumé</p>
           <h1>Angel Gonzalez</h1>
-          <p className="resume-title">Applied AI Development · Full-Stack Engineering · AI Automation</p>
+          <p className="resume-title">Web Development · CRM &amp; AI Automation · Creative Technology</p>
         </div>
         <div className="resume-contact">
           <p>San Fernando Valley · Los Angeles, CA</p>
@@ -66,11 +98,11 @@ export default function ResumePage() {
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Applied AI developer who designs and ships full-stack AI products: an LLM extraction pipeline with schema validation and human review, a computer-vision measurement engine, and a generative-audio platform. Also sets up AI phone reception, CRM automation, and websites for local businesses through ADGO Studios. Builds with Next.js, TypeScript, Python, Supabase, and the Claude and OpenAI APIs. Bilingual in English and Spanish.</p>
+        <p>Web developer and creative technologist experienced in full-stack applications, client websites, CRM automation, Meta Ads Manager, Voice AI, and Higgsfield-powered commercials. Build and deploy digital products using Next.js, Astro, Supabase, Vercel, and Cloudflare.</p>
       </section>
 
       <section className="resume-block section-shell">
-        <h2>AI projects</h2>
+        <h2>Relevant projects</h2>
         <div className="resume-products">
           {builds.map((project) => (
             <article key={project.slug}>
@@ -97,21 +129,12 @@ export default function ResumePage() {
         ))}
       </section>
 
-      <section className="resume-block section-shell">
-        <h2>Earlier experience</h2>
-        <div className="earlier-grid">
-          {earlierExperience.map((entry) => (
-            <article key={entry.company}><h3>{entry.company}</h3><p>{entry.title} · {entry.note}</p><span>{entry.dates}</span></article>
-          ))}
-        </div>
-      </section>
       <section className="resume-block resume-skills section-shell">
         <h2>Technical skills</h2>
         <div>
-          <article><h3>Applied AI</h3><p>Claude API · OpenAI API · Structured output and schema validation (Zod) · Embeddings and vector search · MediaPipe · NumPy · ElevenLabs · Voice AI</p></article>
-          <article><h3>Development</h3><p>TypeScript · JavaScript · Python · React · Next.js · Expo / React Native · FastAPI · Astro · GitHub · APIs</p></article>
-          <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Row-level security · Authentication · Vercel · Cloudflare · GitHub Actions</p></article>
-          <article><h3>Business technology</h3><p>CRM implementation (GoHighLevel) · Lead management · Workflow automation · Meta Ads Manager · Search Console · Higgsfield · HyperFrames</p></article>
+          <article><h3>Development</h3><p>JavaScript · TypeScript · React · Next.js · Astro · Python · GitHub · APIs · Responsive design</p></article>
+          <article><h3>Data and hosting</h3><p>Supabase · PostgreSQL · Authentication · Vercel · Cloudflare · Deployment and debugging</p></article>
+          <article><h3>Business technology</h3><p>CRM implementation (GoHighLevel) · Lead management · Workflow automation · Paid social advertising (Meta Ads Manager) · Search Console · Voice AI · Higgsfield · ElevenLabs · HyperFrames</p></article>
         </div>
       </section>
 

@@ -91,7 +91,7 @@ export default function CreativePage() {
           <div className="creative-showreel-copy">
             <p className="practice-kicker">Studio showreel</p>
             <h3>A quick look at ADGO.</h3>
-            <p>A fast-paced look at ADGO Studios&apos; video production, visual styles, and digital creative work.</p>
+            <p>A fast-paced look at ADGO Studios' video production, visual styles, and digital creative work.</p>
             <a className="practice-text-link" href="https://adgostudios.com/#reel" target="_blank" rel="noopener noreferrer">Watch on the ADGO website</a>
           </div>
         </div>

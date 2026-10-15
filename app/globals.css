@@ -689,9 +689,9 @@ ul { margin: 0; padding: 0; }
 .resume-products h3 { font-size: 2rem; letter-spacing: -.04em; }
 .resume-products p { color: #55564f; max-width: 35rem; }
 
-.resume-skills > div { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #c8c7c0; }
-.resume-skills article { padding: 2rem; border-right: 1px solid #c8c7c0; border-bottom: 1px solid #c8c7c0; }
-.resume-skills article:nth-child(even) { border-right: 0; }
+.resume-skills > div { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #c8c7c0; }
+.resume-skills article { padding: 2rem; border-right: 1px solid #c8c7c0; }
+.resume-skills article:last-child { border-right: 0; }
 .resume-skills h3 { font-size: 1.15rem; }
 .resume-skills p { color: #55564f; line-height: 1.8; }
 

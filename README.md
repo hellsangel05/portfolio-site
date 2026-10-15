@@ -1,8 +1,8 @@
-# Angel Gonzalez — applied AI developer
+# Angel Gonzalez — websites, applications & AI workflows
 
 [**Portfolio**](https://portfolio-site-green-xi.vercel.app) · [**AI & Automation**](https://portfolio-site-green-xi.vercel.app/ai-automation) · [**Creative AI**](https://portfolio-site-green-xi.vercel.app/creative-ai) · [**Résumé**](https://portfolio-site-green-xi.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
 
-I'm a Los Angeles–area applied AI developer. With a partner, I design and build AI products end to end: an LLM extraction pipeline with human review, a computer-vision measurement engine, generative radio, and an embeddings-based idea network. I also co-founded ADGO Studios, where I set up AI phone reception, CRM automation, and websites for local businesses.
+I'm a Los Angeles–area builder working across web development, AI-assisted software, automation, and creative tools. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
 
 ## Specialized experience
 

@@ -19,7 +19,6 @@ export type PortfolioProject = {
   github?: string;
   demoNote?: string;
   featured?: boolean;
-  group?: "client";
   demoAvailable?: boolean;
   demoVideo?: {
     src: string;
@@ -36,8 +35,7 @@ export const projects: PortfolioProject[] = [
     name: "Aurora Pool & Spa",
     category: "Client website · ADGO Studios",
     status: "Client review",
-    featured: false,
-    group: "client",
+    featured: true,
     positioning: "A service website for a Los Angeles pool company, built to make information and quote requests easier to find.",
     summary: "A custom website for a Los Angeles pool service company, with service-specific pages, local coverage information, optimized photography, and clear ways to request a quote.",
     problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
@@ -76,12 +74,11 @@ export const projects: PortfolioProject[] = [
   {
     slug: "adgo-studios",
     name: "ADGO Studios",
-    category: "AI reception, CRM and websites",
+    category: "Websites and automation",
     status: "Active studio",
-    featured: false,
-    group: "client",
+    featured: true,
     positioning: "Web design and connected customer-inquiry workflows for local businesses.",
-    summary: "Co-founded ADGO Studios and set up its Luna AI phone receptionist, CRM lead workflows, website, paid Meta advertising, and AI video creative for local businesses.",
+    summary: "Co-founded ADGO Studios and built its website, CRM workflows, Luna AI phone receptionist, paid Meta advertising, and short-form video creative.",
     problem: "A small business can have a website, phone number, ads, and a CRM without having a clear path from the first inquiry to the next step.",
     built: "A public studio website, CRM lead workflows, appointment booking, Luna AI voice reception, Meta Ads campaign setup, and creative production with Higgsfield, ElevenLabs, and HyperFrames.",
     challenge: "Getting the pieces to work together in ways that are practical for business owners, from an inquiry form to a booked call or human follow-up.",
@@ -101,7 +98,7 @@ export const projects: PortfolioProject[] = [
       "Document results from client deployments.",
       "Develop clearer onboarding and maintenance processes."
     ],
-    role: "Co-founder · I build the websites, set up the CRM workflows and Luna voice AI, run paid campaigns, and produce ad creative",
+    role: "Co-founder · Website development, CRM and AI automation, paid advertising, creative production, client discovery, and testing",
     tech: [
       "Next.js",
       "Vercel",
@@ -123,7 +120,7 @@ export const projects: PortfolioProject[] = [
     name: "PSYCH! Open Source",
     category: "Publishing platform",
     status: "Ongoing build",
-    featured: false,
+    featured: true,
     positioning: "A reading experience for an original fiction universe, with a timeline, reference archive, and spoiler controls.",
     summary: "Created a Next.js reading platform for an ongoing original story, with episode routes, character and event archives, chronology, and reader-aware spoiler controls.",
     problem: "An interconnected story becomes difficult to follow when the episodes, historical references, and timeline are scattered across documents.",
@@ -186,7 +183,7 @@ export const projects: PortfolioProject[] = [
       "Explore call-ins, community stations, and in-car listening concepts.",
       "Continue refining music-generation cost controls and station-owner workflows.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product direction, UX, the full-stack build, and the AI music and voice pipeline",
+    role: "Co-founder · Product direction, experience design, full-stack build, AI workflow integration",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "AI music", "ElevenLabs", "Stripe", "Vercel"],
     image: { src: "/projects/raidio-home.png", alt: "Raidio browse experience with a large station-creation hero and station artwork" },
     gallery: [
@@ -222,7 +219,7 @@ export const projects: PortfolioProject[] = [
       "Playtest the economy and tune pack, burn, and listing incentives.",
       "Refine the arena into a clear repeatable competition loop.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product systems, UX, economy design, and the full-stack build",
+    role: "Co-founder · Product systems, UX, full-stack build, economy design",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Storage", "Stripe", "Vercel"],
     image: { src: "/projects/snapdex-feed.png", alt: "Snapdex mobile prototype showing burn events, rarity tiers, cards, and navigation" },
     gallery: [
@@ -236,7 +233,7 @@ export const projects: PortfolioProject[] = [
     name: "Jump Trainer",
     category: "AI coaching + computer vision",
     status: "Built · Pre-launch",
-    featured: true,
+    featured: false,
     positioning: "A mobile vertical-jump coach that turns ordinary phone video into an honest measurement and training plan.",
     summary: "Jump Trainer measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, identifies the largest technique limiter, and produces a four-week plan.",
     problem: "Athletes can film themselves easily, but credible jump measurement usually requires specialized equipment or a trained coach. Low-quality video can also create a precise-looking number that is simply wrong.",
@@ -258,7 +255,7 @@ export const projects: PortfolioProject[] = [
       "Deploy and harden the video-analysis worker for live mobile testing.",
       "Iterate on coaching language after observing athletes use the full loop unaided.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product strategy, mobile UX, the Python analysis engine, and the full-stack build",
+    role: "Co-founder · Product strategy, mobile UX, analysis-system design, full-stack build",
     tech: ["Expo", "React Native", "TypeScript", "Python", "NumPy", "MediaPipe", "FastAPI", "Supabase"],
     image: { src: "/projects/jump-trainer-result.png", alt: "Jump Trainer result showing measured height, confidence, technique scores, and coaching feedback" },
     gallery: [
@@ -293,7 +290,7 @@ export const projects: PortfolioProject[] = [
       "Tune moderation and anti-brigading rules around real voting behavior.",
       "Measure whether Daily Battle and crown progression create a repeatable return loop.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product systems, community UX, competition design, and the full-stack build",
+    role: "Co-founder · Product systems, community UX, full-stack build, competition design",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Row Level Security", "Vercel"],
     gallery: [],
     live: "https://edit-battle.vercel.app",
@@ -302,11 +299,10 @@ export const projects: PortfolioProject[] = [
     slug: "civic-mirror",
     demoAvailable: false,
     name: "Civic Mirror",
-    category: "LLM extraction + civic tech",
+    category: "Civic technology",
     status: "Built · Pre-launch",
-    featured: true,
     positioning: "A bilingual LA County ballot guide that connects voter priorities to plain-language measure explanations.",
-    summary: "A Claude extraction pipeline turns dense ballot pamphlets into schema-validated, cited drafts that a person reviews before publishing. Voters take a short priorities quiz and get plain-language, source-backed explanations in English or Spanish.",
+    summary: "A short priorities quiz organizes local measures around what a voter cares about, then explains the likely alignment, tradeoffs, and source-backed reasoning in English or Spanish.",
     problem: "Local ballot measures are consequential but difficult to compare. Dense legal language, long pamphlets, and scattered arguments make it hard for voters to understand what a yes or no vote would actually do.",
     built: "A bilingual Next.js voter experience with a priorities quiz, ballot overview, measure pages, shareable summaries, and an admin review surface, plus a separate Claude ingestion pipeline that produces structured, cited drafts from pamphlet text.",
     challenge: "The difficult part is using model-generated extraction without presenting uncertain information as fact. English and Spanish need equal treatment, every material claim needs source support, and alignment scores need to explain their reasoning without telling someone how to vote.",
@@ -326,7 +322,7 @@ export const projects: PortfolioProject[] = [
       "Complete native-speaker review and accessibility testing for both languages.",
       "Tune alignment thresholds with real measures before preparing a public ballot dataset.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product strategy, civic UX, the Claude ingestion pipeline, and the full-stack build",
+    role: "Co-founder · Product strategy, civic UX, full-stack build, information-design system",
     tech: ["Next.js", "React", "TypeScript", "next-intl", "Supabase", "PostgreSQL", "Claude", "Zod", "Vercel"],
     gallery: [],
     live: "https://web-tau-drab-10.vercel.app",
@@ -338,7 +334,6 @@ export const projects: PortfolioProject[] = [
     name: "Co-Lab",
     category: "AI collaboration network",
     status: "Built · Pre-launch",
-    featured: true,
     positioning: "An anonymous idea network where AI routes, connects, and helps promising thoughts evolve.",
     summary: "A user drops one sharp thought. Co-Lab routes it to the right lab, embeds it into a semantic graph, opens a live thread, and lets people or the network’s AI Muse build on it.",
     problem: "Good ideas are often posted into feeds that reward immediacy, then disappear. Co-Lab is designed around relationships and evolution: what an idea connects to, how others extend it, and when it should resurface.",
@@ -360,7 +355,7 @@ export const projects: PortfolioProject[] = [
       "Tune moderation, ranking, and Muse intervention thresholds.",
       "Prepare the database-backed experience for a controlled beta.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product strategy, interaction design, the AI routing and embeddings system, and the full-stack build",
+    role: "Co-founder · Product strategy, interaction design, full-stack build, AI system design",
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "OpenAI", "Vector search", "React Flow"],
     image: { src: "/projects/colab-home.png", alt: "Co-Lab homepage with anonymous idea input, routing explanation, and live lab navigation" },
     gallery: [],
@@ -393,7 +388,7 @@ export const projects: PortfolioProject[] = [
       "Exercise the Supabase write path against a live project before launch.",
       "Test contribution and moderation incentives with a small local skate community.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across product design, map UX, the privacy model, and the full-stack build",
+    role: "Co-founder · Product design, map UX, full-stack build, privacy model",
     tech: ["Next.js", "React", "TypeScript", "Leaflet", "OpenStreetMap", "Supabase", "Vitest", "Playwright"],
     image: { src: "/projects/skateview.png", alt: "SkateView map of Los Angeles with condition pins, filters, and a scout line of skate spots" },
     gallery: [],
@@ -426,7 +421,7 @@ export const projects: PortfolioProject[] = [
       "Explore a dedicated always-on physical display.",
       "Continue performance and accessibility work across both renderers.",
     ],
-    role: "Co-founder & full-stack engineer · Two-person team, so I worked across the product concept, interaction design, simulation architecture, and the full-stack build",
+    role: "Co-founder · Product concept, interaction design, simulation architecture, full-stack build",
     tech: ["Next.js", "React", "TypeScript", "PixiJS", "Canvas2D", "Web Audio", "Local storage", "Vitest"],
     image: { src: "/projects/living-window-scene.png", alt: "Living Window paper-theatre village scene at dusk with villagers and animated atmosphere" },
     gallery: [],
@@ -438,13 +433,5 @@ export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
 
-function pick(slugs: string[]) {
-  return slugs.map((slug) => {
-    const project = getProject(slug);
-    if (!project) throw new Error(`Unknown project slug: ${slug}`);
-    return project;
-  });
-}
-export const featuredProjects = pick(["civic-mirror", "jump-trainer", "raidio", "co-lab"]);
-export const clientProjects = pick(["adgo-studios", "aurora-pool-spa"]);
-export const moreProjects = projects.filter((project) => !featuredProjects.includes(project) && !clientProjects.includes(project));
+export const featuredProjects = projects.filter((project) => project.featured);
+export const moreProjects = projects.filter((project) => !project.featured);
