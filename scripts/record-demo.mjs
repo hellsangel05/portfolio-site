@@ -8,7 +8,7 @@ const projects = {
   "aurora-pool-spa": ["https://aurora-pool-spa.adgostudios.workers.dev", ["Services", "scroll", "Contact", "scroll"]],
   "adgo-studios": ["https://adgostudios.com", ["scroll", "Services", "scroll", "Contact"]],
   "psych-open-source": ["https://psych-open-source.vercel.app", ["scroll", "Archive", "scroll", "Timeline"]],
-  raidio: ["https://raidio-ten.vercel.app", ["scroll", "Browse", "scroll", "Night Drive FM"]],
+  raidio: ["https://raidio-ten.vercel.app", ["scroll", "Browse", "scroll", "Night Drive FM", "Tune in live"]],
   snapdex: ["https://trading-card-app-two.vercel.app", ["scroll", "Start collecting", "scroll"]],
   "jump-trainer": ["https://apogee-web-three.vercel.app", ["scroll", "scroll"]],
   "edit-battle": ["https://edit-battle.vercel.app", ["Challenges", "scroll", "Ranks", "scroll"]],
@@ -33,6 +33,25 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 const video = page.video();
+await page.addInitScript(() => {
+  const installCursor = () => {
+    if (!document.body || document.getElementById("portfolio-demo-cursor")) return;
+    const cursor = document.createElement("div");
+    cursor.id = "portfolio-demo-cursor";
+    cursor.setAttribute("aria-hidden", "true");
+    cursor.style.cssText = "position:fixed;left:-50px;top:-50px;width:16px;height:16px;border:2px solid white;border-radius:50%;background:#a86bff88;box-shadow:0 0 0 3px #7d46e988;pointer-events:none;z-index:2147483647;transition:transform 100ms ease";
+    document.body.appendChild(cursor);
+    addEventListener("mousemove", (event) => {
+      cursor.style.left = (event.clientX - 8) + "px";
+      cursor.style.top = (event.clientY - 8) + "px";
+    }, { passive: true });
+    addEventListener("mousedown", () => cursor.style.transform = "scale(1.5)");
+    addEventListener("mouseup", () => cursor.style.transform = "scale(1)");
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", installCursor, { once: true });
+  else installCursor();
+});
+
 let ok = false;
 try {
   const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });
