@@ -2,6 +2,12 @@ name: Capture Raidio demo
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/portfolio-demo-capture
+    paths:
+      - .github/workflows/manual-portfolio-demo.yml
+      - scripts/record-demo.mjs
 
 permissions:
   contents: read
