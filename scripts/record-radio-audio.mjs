@@ -93,6 +93,9 @@ try {
   await secondaryContext.addInitScript(observeAudio);
   const second = await secondaryContext.newPage();
   await second.goto(stationUrl, { waitUntil: "domcontentloaded", timeout: 50000 });
+  // Mute only the comparison listener before tuning, so the recording contains
+  // one authentic music stream and not two competing copies.
+  await second.evaluate(() => (window.__radioAudioElements || []).forEach(a => { a.muted = true; }));
   await delay(2700);
   const tuneTwo = second.getByRole("button", { name: /tune in live/i }).first();
   if (await tuneTwo.count()) await tuneTwo.click();
