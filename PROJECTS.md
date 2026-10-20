@@ -30,3 +30,20 @@ Several prototypes rely on free Supabase databases that may be paused. A live we
 - [Trending Products Test Page](https://github.com/hellsangel05/Trending-Products-Test-Page)
 
 Private collaborative and experimental repositories remain private until their ownership, secrets and publishability have been reviewed.
+
+
+## Additional accessible repositories
+
+These repositories are part of the broader project history, but are not being publicly mirrored or represented as production-ready case studies:
+
+| Repository | Visibility / context |
+|---|---|
+| [portfolio-site](https://github.com/hellsangel05/portfolio-site) | Public source of this portfolio |
+| apogee-web | Private web companion for Jump Trainer |
+| snapdex-arena | Private Snapdex-related experiment |
+| wishreel | Private experiment; case study not yet written |
+| elemental-arena | Private collaborator repository; ownership review needed |
+| arcade-strikers | Private collaborator repository; ownership review needed |
+| adgo-website | Private collaborator-held source for ADGO's website |
+
+This index names all 23 repositories visible to my linked GitHub account at the time of writing, counting the cross-account collaborative projects that appear in my accessible repository list. Their descriptions and publishability should be reviewed before any source is made public.
