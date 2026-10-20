@@ -1,0 +1,12 @@
+name: Portfolio Demo Recorder
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Manual walkthrough capture is configured in scripts/record-demo.mjs'
