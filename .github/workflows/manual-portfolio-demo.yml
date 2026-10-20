@@ -1,4 +1,5 @@
-name: Portfolio Demo Recorder
+name: Capture Raidio demo
+
 on:
   workflow_dispatch:
 
@@ -6,7 +7,31 @@ permissions:
   contents: read
 
 jobs:
-  info:
+  record:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - run: echo 'Manual walkthrough capture is configured in scripts/record-demo.mjs'
+      - uses: actions/checkout@11bd71901bbe5b163ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Install browser recorder
+        run: |
+          npm ci
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Record genuine visitor journey
+        run: node scripts/record-demo.mjs raidio
+      - name: Encode video
+        run: |
+          ffmpeg -hide_banner -loglevel error -y -i demo-output/raidio.webm -vf "fps=24,format=yuv420p" -c:v libx264 -preset medium -crf 26 -movflags +faststart demo-output/raidio.mp4
+      - name: Save video and screenshot
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: raidio-demo
+          path: |
+            demo-output/raidio.mp4
+            demo-output/raidio.png
+          retention-days: 7
