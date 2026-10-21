@@ -71,6 +71,46 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         </section>
       ) : null}
 
+      {project.showcaseVideos?.length ? (
+        <section className="case-showcase section-shell" aria-labelledby={project.slug + "-showcase-title"}>
+          <header className="case-showcase-heading">
+            <div>
+              <p className="eyebrow">Raidio / Creative campaign</p>
+              <h2 id={project.slug + "-showcase-title"}>One product. Three ways to tell the story.</h2>
+            </div>
+            <p>Raidio is not another playlist generator. It brings together station creation, AI-assisted music, live hosts, and a shared broadcast. These films explore that same product from three angles: what it does, what you can create, and why tuning in feels different from pressing play.</p>
+          </header>
+          <div className="case-showcase-grid">
+            {project.showcaseVideos.map((video, index) => (
+              <article
+                className={"case-showcase-card" + (video.orientation === "portrait" ? " is-portrait" : "")}
+                key={video.src}
+              >
+                <div className="case-showcase-media" data-orientation={video.orientation}>
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={video.poster}
+                    aria-label={"Play " + video.title + " — Raidio"}
+                  >
+                    <source src={video.src} type="video/mp4" />
+                    Your browser does not support video playback. <a href={video.src}>Open the video.</a>
+                  </video>
+                </div>
+                <div className="case-showcase-copy">
+                  <div className="case-showcase-meta"><span>0{index + 1}</span><span>{video.label} · {video.runtime}</span></div>
+                  <h3>{video.title}</h3>
+                  <p>{video.description}</p>
+                  <a href={video.src} target="_blank" rel="noopener noreferrer">Open full video <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="case-showcase-note">The walkthrough above shows the product experience; these supporting films show the launch messaging, visual direction, and creative production behind Raidio.</p>
+        </section>
+      ) : null}
+
       <section className="case-overview section-shell" aria-label="Project overview">
         <div><span>Role</span><p>{project.role}</p></div>
         <div><span>Technology</span><p>{project.tech.join(" · ")}</p></div>
