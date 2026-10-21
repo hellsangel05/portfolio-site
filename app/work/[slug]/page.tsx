@@ -32,7 +32,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
   if (!project) notFound();
 
   return (
-    <main className="case-page">
+    <main className={"case-page" + (project.slug === "raidio" ? " raidio-case" : "")}>
       <header className="case-hero section-shell">
         <Link href="/#work" className="back-link"> All work</Link>
         <div className="case-title-row">
@@ -42,6 +42,13 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           </div>
           <p>{project.positioning}</p>
         </div>
+        {project.slug === "raidio" ? (
+          <div className="raidio-hero-status" aria-label="Raidio product and creative case study">
+            <span><i aria-hidden="true" /> Live-radio product</span>
+            <span>Design / Engineering / Creative</span>
+            <span>AI music + shared listening</span>
+          </div>
+        ) : null}
         {project.image ? (
           <div className="case-hero-media">
             <ProjectMedia project={project} priority sizes="100vw" />
@@ -52,15 +59,16 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
       {project.demoVideo ? (
         <section className="case-demo section-shell" aria-label={`${project.name} product demo`}>
           <div className="case-demo-heading">
-            <p className="eyebrow">Product walkthrough</p>
-            <h2>See it in motion.</h2>
+            <p className="eyebrow">{project.slug === "raidio" ? "01 / The real product" : "Product walkthrough"}</p>
+            <h2>{project.slug === "raidio" ? "From idea to on air." : "See it in motion."}</h2>
+            {project.slug === "raidio" ? <p className="raidio-demo-intro">A guided look inside Raidio: browse stations, hear one live broadcast together, and create a station with its own sound and AI host.</p> : null}
           </div>
           <div
             className="case-demo-frame"
             data-orientation={project.demoVideo.orientation ?? "portrait"}
           >
             <video controls playsInline preload="metadata" poster={project.demoVideo.poster}>
-              <source src={project.demoVideo.src} />
+              <source src={project.demoVideo.src} type="video/mp4" />
               {project.demoVideo.captions ? (
                 <track kind="captions" src={project.demoVideo.captions} srcLang="en" label="English" default />
               ) : null}
@@ -75,10 +83,10 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <section className="case-showcase section-shell" aria-labelledby={project.slug + "-showcase-title"}>
           <header className="case-showcase-heading">
             <div>
-              <p className="eyebrow">Raidio / Creative campaign</p>
-              <h2 id={project.slug + "-showcase-title"}>One product. Three ways to tell the story.</h2>
+              <p className="eyebrow">02 / The creative campaign</p>
+              <h2 id={project.slug + "-showcase-title"}>More than a playlist. More than a product demo.</h2>
             </div>
-            <p>Raidio is not another playlist generator. It brings together station creation, AI-assisted music, live hosts, and a shared broadcast. These films explore that same product from three angles: what it does, what you can create, and why tuning in feels different from pressing play.</p>
+            <p>Three distinct promo films, one shared identity. Interface-first storytelling, a creator-focused brand film, and a punchy social spot all circle back to the idea that Raidio is already playing. Watch each film here without leaving the page.</p>
           </header>
           <div className="case-showcase-grid">
             {project.showcaseVideos.map((video, index) => (
@@ -87,6 +95,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                 key={video.src}
               >
                 <div className="case-showcase-media" data-orientation={video.orientation}>
+                  <div className="case-showcase-media-label" aria-hidden="true"><span>RAIDIO / {video.orientation === "portrait" ? "VERTICAL FILM" : "CAMPAIGN FILM"}</span><span>{video.runtime}</span></div>
                   <video
                     controls
                     playsInline
@@ -95,19 +104,19 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                     aria-label={"Play " + video.title + " — Raidio"}
                   >
                     <source src={video.src} type="video/mp4" />
-                    Your browser does not support video playback. <a href={video.src}>Open the video.</a>
+                    Your browser does not support embedded video playback.
                   </video>
                 </div>
                 <div className="case-showcase-copy">
                   <div className="case-showcase-meta"><span>0{index + 1}</span><span>{video.label} · {video.runtime}</span></div>
                   <h3>{video.title}</h3>
                   <p>{video.description}</p>
-                  <a href={video.src} target="_blank" rel="noopener noreferrer">Open full video <span aria-hidden="true">↗</span></a>
+                  
                 </div>
               </article>
             ))}
           </div>
-          <p className="case-showcase-note">The walkthrough above shows the product experience; these supporting films show the launch messaging, visual direction, and creative production behind Raidio.</p>
+          <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded films · Authentic frames from the videos · Product, brand and social creative in one case study.</p>
         </section>
       ) : null}
 
