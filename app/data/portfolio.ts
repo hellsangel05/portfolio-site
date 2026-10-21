@@ -157,7 +157,13 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "raidio",
-    demoAvailable: false,
+    demoAvailable: true,
+    demoVideo: {
+      src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/09e1d174-12e9-4419-9cd4-a4c1ed40b96b.mp4",
+      poster: "/projects/raidio-home.png",
+      orientation: "landscape",
+      caption: "A one-minute product walkthrough showing station creation, shared live listening, and the AI-powered production workflow.",
+    },
     name: "Raidio",
     category: "AI media platform",
     status: "Built · Pre-launch",
