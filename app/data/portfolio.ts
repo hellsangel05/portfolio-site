@@ -27,6 +27,15 @@ export type PortfolioProject = {
     caption?: string;
     orientation?: "portrait" | "landscape";
   };
+  showcaseVideos?: {
+    title: string;
+    label: string;
+    runtime: string;
+    description: string;
+    src: string;
+    poster: string;
+    orientation: "portrait" | "landscape";
+  }[];
 };
 
 export const projects: PortfolioProject[] = [
@@ -158,6 +167,35 @@ export const projects: PortfolioProject[] = [
   {
     slug: "raidio",
     demoAvailable: true,
+    showcaseVideos: [
+      {
+        title: "A radio station, built your way",
+        label: "Product promo",
+        runtime: "0:42",
+        description: "A screen-led tour from browsing live stations to naming a station, shaping the opening set, choosing a host, and sharing a link. The side-by-side listeners show the central idea: one live broadcast, shared by everyone tuned in.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/0d4e27e0-f164-40dc-a68f-30c774fd883f.mp4",
+        poster: "/projects/raidio-station.png",
+        orientation: "landscape",
+      },
+      {
+        title: "Own the Airwaves",
+        label: "Creator-focused brand film",
+        runtime: "0:36",
+        description: "A visual pitch for station ownership: give your station an identity, make AI-assisted music, and take the mic yourself or choose an AI host. It closes on the difference between a personal playlist and a station everyone can join.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/b218557c-34cc-46ec-bc93-4e2589438ffb.mp4",
+        poster: "/media/raidio/own-airwaves-poster.svg",
+        orientation: "landscape",
+      },
+      {
+        title: "Don't Press Play. Tune In.",
+        label: "Vertical social campaign",
+        runtime: "0:38",
+        description: "A mobile-first spot built around Raidio's always-on idea. The message is deliberately different from on-demand music: the station is already playing. Find your frequency, join the broadcast, and listen together without restarting it.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/7b8ccfb0-67f7-40dd-8c07-6be9d6996b2e.mp4",
+        poster: "/media/raidio/dont-press-play-poster.svg",
+        orientation: "portrait",
+      },
+    ],
     demoVideo: {
       src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/d7047a0a-53e8-4a2b-b1bc-1a92d537ad3b.mp4",
       poster: "/projects/raidio-home.png",
