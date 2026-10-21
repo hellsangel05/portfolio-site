@@ -1591,3 +1591,143 @@ body { font-family: var(--sans); }
 .psych-film-links a:hover { border-color:#bef275; }
 .psych-film-copy .psych-film-caption { font-size:.76rem; color:#8ea6c4; line-height:1.7; margin-top:1.5rem; }
 @media(max-width:900px) { .psych-film-feature{grid-template-columns:1fr;} }
+
+/* Raidio: curated product and creative campaign showcase */
+.case-showcase {
+  padding-block: clamp(4rem, 8vw, 8rem);
+  border-top: 1px solid var(--line);
+}
+.case-showcase-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, .7fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: end;
+}
+.case-showcase-heading h2 {
+  max-width: 13ch;
+  margin: 1rem 0 0;
+  font-size: clamp(2.7rem, 5.6vw, 6rem);
+  line-height: .97;
+  letter-spacing: -.066em;
+}
+.case-showcase-heading > p {
+  max-width: 38rem;
+  margin: 0 0 .25rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.case-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: clamp(2.5rem, 5vw, 5rem);
+}
+.case-showcase-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.case-showcase-media {
+  min-width: 0;
+  background: #05090b;
+  aspect-ratio: 16 / 9;
+}
+.case-showcase-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.case-showcase-copy {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+.case-showcase-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .65rem;
+  color: var(--accent);
+  font: 700 .65rem var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.case-showcase-meta span:last-child { color: var(--muted); }
+.case-showcase-copy h3 {
+  margin: 1.4rem 0 .9rem;
+  font-size: clamp(1.8rem, 2.7vw, 3rem);
+  line-height: 1.07;
+  letter-spacing: -.045em;
+}
+.case-showcase-copy p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.case-showcase-copy a {
+  display: inline-flex;
+  gap: .5rem;
+  margin-top: 1.75rem;
+  padding-bottom: .25rem;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  font-size: .83rem;
+  font-weight: 700;
+}
+.case-showcase-card.is-portrait {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(260px, .53fr) 1fr;
+  align-items: center;
+}
+.case-showcase-card.is-portrait .case-showcase-media {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  padding: 1.5rem;
+}
+.case-showcase-card.is-portrait .case-showcase-media video {
+  width: auto;
+  max-width: 100%;
+  max-height: 590px;
+  aspect-ratio: 9 / 16;
+}
+.case-showcase-card.is-portrait .case-showcase-copy {
+  padding: clamp(1.75rem, 5vw, 5rem);
+}
+.case-showcase-card.is-portrait .case-showcase-copy h3 {
+  max-width: 15ch;
+  font-size: clamp(2.4rem, 4.7vw, 5rem);
+}
+.case-showcase-note {
+  max-width: 65rem;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: .83rem;
+}
+@media (max-width: 800px) {
+  .case-showcase-heading,
+  .case-showcase-grid { grid-template-columns: 1fr; }
+  .case-showcase-heading { align-items: start; }
+  .case-showcase-card.is-portrait {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+  .case-showcase-card.is-portrait .case-showcase-media {
+    height: auto;
+    min-height: 470px;
+    padding: 1.5rem;
+  }
+  .case-showcase-card.is-portrait .case-showcase-media video {
+    max-height: 560px;
+  }
+  .case-showcase-card.is-portrait .case-showcase-copy h3 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+}
