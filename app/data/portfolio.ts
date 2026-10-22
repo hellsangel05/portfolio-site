@@ -127,19 +127,48 @@ export const projects: PortfolioProject[] = [
   {
     slug: "psych-open-source",
     name: "PSYCH! Open Source",
-    category: "Publishing platform",
-    status: "Ongoing build",
+    category: "Original sci-fi universe · Interactive publishing",
+    status: "Ongoing series & platform",
     featured: true,
-    positioning: "A reading experience for an original fiction universe, with a timeline, reference archive, and spoiler controls.",
-    summary: "Created a Next.js reading platform for an ongoing original story, with episode routes, character and event archives, chronology, and reader-aware spoiler controls.",
+    positioning: "An original science-fiction universe told through episodes, animated trailers, character dossiers, and a spoiler-aware reading platform.",
+    summary: "Created the PSYCH! original sci-fi universe, its animated promotional films, and a custom platform for reading episodes, exploring character dossiers, and following the story's chronology.",
+    demoAvailable: true,
+    demoVideo: {
+      src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/ed8d35ca-573c-4fb1-b46d-b9112c738bf7.mp4",
+      poster: "/media/psych/psych-trailer.svg",
+      orientation: "landscape",
+      caption: "PSYCH! cinematic trailer · 0:51. An introduction to the experiment, the unsettling world, and the mystery at the center of the story.",
+    },
+    showcaseVideos: [
+      {
+        title: "The experiment changed everything.",
+        label: "Story & character promo",
+        runtime: "0:52",
+        description: "Set in 1947, this story-focused film teases the experiment, the blast, and the people who emerge changed. The montage introduces the characters and their psychological powers without asking viewers to read the full backstory first.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/87cbdaf4-668f-431a-b65b-d8cbd2354154.mp4",
+        poster: "/media/psych/psych-story-promo.svg",
+        orientation: "landscape",
+      },
+      {
+        title: "The universe is open.",
+        label: "Publishing platform tour",
+        runtime: "0:58",
+        description: "A guided introduction to the PSYCH! website: read the original episodes, explore character files, track historical events on the timeline, and use spoiler-aware reading tools. This is the product and engineering side of the same creative universe.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/cc2ba568-2f37-418d-93b9-000b9de2063f.mp4",
+        poster: "/media/psych/psych-platform-promo.svg",
+        orientation: "landscape",
+      },
+    ],
+    image: { src: "/media/psych/psych-trailer.svg", alt: "PSYCH! science-fiction cinematic cover, featuring an eclipse and a 1947 classified-file motif" },
     problem: "An interconnected story becomes difficult to follow when the episodes, historical references, and timeline are scattered across documents.",
-    built: "A web platform with organized reading routes, an archive of story concepts and historical anchors, a timeline, reading progress, and a spoiler-control system backed by local state and Supabase.",
+    built: "A narrative universe with character-led episodes, cinematic promotional videos, and a Next.js publishing site: episode routes, concept art, historical-reference archive, chronology, reading progress, and spoiler-aware content backed by local state and Supabase.",
     challenge: "Designing a system that can expose useful context without accidentally revealing later story developments—and clearly separating fiction from real historical sources.",
     working: [
       "Episode and season reading pages",
       "Reference archive and timeline",
       "Reader progress and spoiler-aware display",
-      "Supabase content tables and access rules"
+      "Supabase content tables and access rules",
+      "Original story and campaign films with cinematic visuals"
     ],
     decisions: [
       "Organized episodes and reference material as a consistent content structure.",
@@ -151,18 +180,19 @@ export const projects: PortfolioProject[] = [
       "Improve publishing and contributor workflows.",
       "Continue testing the reader experience."
     ],
-    role: "Creator · Writing, product design, content modeling, implementation, and testing",
+    role: "Creator · Original writing, worldbuilding, cinematic creative direction, AI-assisted video production, product design, full-stack implementation, and testing",
     tech: [
       "Next.js",
       "React",
       "TypeScript",
       "Supabase",
       "PostgreSQL",
-      "Content systems"
+      "Content systems",
+      "Creative direction",
+      "AI video production"
     ],
     gallery: [],
     live: "https://psych-open-source.vercel.app",
-    demoAvailable: false,
   },
   {
     slug: "raidio",
