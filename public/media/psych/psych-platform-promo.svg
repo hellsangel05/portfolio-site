@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="PSYCH! web reading platform promo with archive and episode interface">
+<defs><linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#131826"/><stop offset="1" stop-color="#252637"/></linearGradient><linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d96264"/><stop offset="1" stop-color="#743a4b"/></linearGradient></defs>
+<rect width="1280" height="720" fill="url(#base)"/><path d="M0 0L700 0L420 720H0" fill="#191d2c"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="65" y="100" fill="#ed8d81" font-size="20" font-weight="800" letter-spacing="6">A UNIVERSE YOU CAN EXPLORE</text>
+<text x="62" y="245" fill="#fff6ef" font-size="123" font-weight="900" letter-spacing="-9">PSYCH<tspan fill="#ed8d81">!</tspan></text>
+<text x="67" y="338" fill="#fff6ef" font-size="40" font-weight="800">READ THE EPISODES.</text>
+<text x="67" y="393" fill="#fff6ef" font-size="40" font-weight="800">FOLLOW THE FILES.</text>
+<text x="67" y="587" fill="#c5c3c8" font-size="22">Original fiction meets interactive publishing.</text>
+<text x="67" y="635" fill="#ed8d81" font-size="18" letter-spacing="5">STORY / ARCHIVE / TIMELINE</text>
+</g>
+<rect x="735" y="96" width="480" height="515" rx="16" fill="#090d15" stroke="#8c5a62" stroke-opacity=".7"/>
+<path d="M735 112Q735 96 751 96H1199Q1215 96 1215 112V152H735z" fill="#202334"/>
+<g fill="#d3d1cd"><circle cx="757" cy="123" r="6" fill="#e37678"/><circle cx="776" cy="123" r="6" fill="#e7bb83"/><circle cx="795" cy="123" r="6" fill="#739a88"/></g>
+<g font-family="Arial,Helvetica,sans-serif"><text x="757" y="189" fill="#e38b89" font-size="17" letter-spacing="4">THE PSYCH! ARCHIVE</text>
+<text x="758" y="243" fill="#f4f2ef" font-size="32" font-weight="800">THE FILES ARE OPEN.</text></g>
+<rect x="759" y="268" width="432" height="2" fill="#713f48"/>
+<rect x="757" y="289" width="205" height="129" rx="6" fill="url(#red)"/><path d="M809 395l50-83 49 83" fill="none" stroke="#ffcfbc" stroke-opacity=".65" stroke-width="3"/>
+<rect x="974" y="289" width="217" height="129" rx="6" fill="#202c39"/><circle cx="1082" cy="353" r="40" fill="none" stroke="#d4b6ba"/><path d="M1082 310V398M1039 353H1125" stroke="#d4b6ba" stroke-width="2"/>
+<rect x="758" y="440" width="432" height="127" rx="6" fill="#141b28" stroke="#4b3943"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#e7dce0"><text x="779" y="475">EPISODES</text><text x="779" y="504">CHARACTERS</text><text x="779" y="533">TIMELINE</text><text x="987" y="475" fill="#d18c8f">01 / SEASON ONE</text><text x="987" y="504" fill="#d18c8f">OPEN DOSSIERS</text><text x="987" y="533" fill="#d18c8f">1947 → PRESENT</text></g>
+</svg>
