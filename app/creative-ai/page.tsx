@@ -61,11 +61,11 @@ export default function CreativePage() {
           <p className="practice-kicker">Featured original film / PSYCH! Universe</p>
           <h2 id="psych-film-title">Episode 1. Eternity.</h2>
           <p>Created the PSYCH! science-fiction universe, wrote its first episode, Eternity, and brought the story to screen through AI-assisted animation, visual storytelling, and creative direction.</p>
-          <p>The project brings together original screen storytelling and a dedicated Next.js publishing experience, complete with episodes, story chronology, and a reader-friendly reference archive.</p>
+          <p>The project brings together original screen storytelling, new cinematic and character-focused promo films, and a dedicated Next.js publishing experience with episodes, story chronology, and a reader-friendly reference archive.</p>
           <div className="psych-film-links">
             <a href="https://www.youtube.com/watch?v=vXAPT-oGbkA" target="_blank" rel="noopener noreferrer">Watch Episode 1 on YouTube</a>
             <a href="https://www.tiktok.com/@thepsychuniverse" target="_blank" rel="noopener noreferrer">PSYCH! on TikTok</a>
-            <Link href="/work/psych-open-source">Read the project case study</Link>
+            <Link href="/work/psych-open-source">Watch PSYCH! trailer + two new films</Link>
             <a href="https://psych-open-source.vercel.app/read/season-1/eternity" target="_blank" rel="noopener noreferrer">Read Episode 1</a>
           </div>
           <p className="psych-film-caption">Episode 1 is embedded from the official @thepsychuniverse YouTube upload. You can watch here or open the original video on YouTube.</p>
