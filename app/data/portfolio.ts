@@ -41,6 +41,33 @@ export type PortfolioProject = {
 export const projects: PortfolioProject[] = [
   {
     slug: "aurora-pool-spa",
+    demoVideo: {
+      src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/153a8f69-0a3c-488f-80a9-8ad9253fa944.mp4",
+      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/54885559-b979-42a3-b2a0-7fdee04c71c2.jpg",
+      orientation: "landscape",
+      caption: "Website redesign in motion · 0:44. A narrated walkthrough of Aurora's service experience, visual presentation, and path from discovery to requesting a quote.",
+    },
+    showcaseVideos: [
+      {
+        title: "The real work behind the brand",
+        label: "Client footage & photography",
+        runtime: "0:36",
+        description: "Aurora's own pool-service photos and on-site visuals take center stage. The film puts real work and the people behind the business in front of prospective customers, instead of relying on generic contractor imagery.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/a71f956e-56d9-4008-a9a9-2e96a44e1f69.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/1068c2e3-1554-44ae-802e-12ab5ff43ea1.jpg",
+        orientation: "landscape",
+      },
+      {
+        title: "Beyond the website",
+        label: "Services, CRM & local search",
+        runtime: "0:46",
+        description: "The broader ADGO Studios service story: clear service pages, quote-request forms, a connected CRM, and search-friendly structure. The video explains the work around the website without claiming guaranteed search rankings or lead results.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/08a5a408-eb93-4d89-a9d7-af97abb73323.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/87723c70-d54e-406a-8c6a-a82d9d50e5c9.jpg",
+        orientation: "landscape",
+      },
+    ],
+    image: { src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/54885559-b979-42a3-b2a0-7fdee04c71c2.jpg", alt: "Actual frame from Aurora website promo showing the redesigned pool-service website" },
     name: "Aurora Pool & Spa",
     category: "Client website · ADGO Studios",
     status: "Client review",
@@ -48,13 +75,14 @@ export const projects: PortfolioProject[] = [
     positioning: "A service website for a Los Angeles pool company, built to make information and quote requests easier to find.",
     summary: "A custom website for a Los Angeles pool service company, with service-specific pages, local coverage information, optimized photography, and clear ways to request a quote.",
     problem: "A pool service company needs to clearly explain its services, service area, and contact options without relying only on referrals and social media.",
-    built: "An Astro-based website with responsive pages, service details, location coverage, image optimization, on-page SEO, and CRM form integration.",
+    built: "An Astro-based website with responsive service pages, real client photography, location coverage, optimized media, on-page SEO, and CRM form integration, supported by three short videos that explain the website, showcase the business, and communicate the broader service workflow.",
     challenge: "Organizing detailed services, service areas, photography, and contact options into a clear, fast-loading site for residential customers.",
     working: [
       "Mobile-friendly pages for services and contact",
       "Optimized media, descriptive metadata, and internal links",
       "Call and text links with a contact workflow",
-      "CRM form integration and scheduling"
+      "CRM form integration and scheduling",
+      "Three short client-showcase and service explainer videos"
     ],
     decisions: [
       "Used Astro and static hosting to keep running costs down.",
@@ -66,7 +94,7 @@ export const projects: PortfolioProject[] = [
       "Verify the live contact workflow and production domain.",
       "Set up search indexing and analytics after launch."
     ],
-    role: "Web development · Client discovery, responsive UI, SEO, CRM integration, and deployment",
+    role: "ADGO Studios client work · Discovery, responsive website, real-asset content integration, video creative, local SEO structure, CRM integration, and deployment",
     tech: [
       "Astro",
       "TypeScript",
@@ -75,7 +103,10 @@ export const projects: PortfolioProject[] = [
       "GoHighLevel",
       "SEO"
     ],
-    gallery: [],
+    gallery: [
+      { src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/1068c2e3-1554-44ae-802e-12ab5ff43ea1.jpg", alt: "Still from Aurora's real client footage promo with authentic pool-service media" },
+      { src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/87723c70-d54e-406a-8c6a-a82d9d50e5c9.jpg", alt: "Still from Aurora services promo highlighting quote requests and business workflows" },
+    ],
     live: "https://aurora-pool-spa.adgostudios.workers.dev",
     demoAvailable: true,
     demoNote: "Client website in review; final launch and form verification are coordinated with the business.",
