@@ -19,6 +19,8 @@ The Creative AI portfolio features **PSYCH! Episode 1 — Eternity**, an origina
 
 The [Creative AI page](https://portfolio-site-green-xi.vercel.app/creative-ai) includes our public ADGO showreel and four October 2026 ADGO commercial concepts: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (text-message comedy), and The Infomercial (retro commercial featuring the Luna AI receptionist). Portfolio-ready H.264/AAC exports and posters are hosted under `public/media/adgo/`, with native HTML video controls and direct MP4 links. Original high-resolution masters remain in the ADGO Google Drive. The commercials feature fictional businesses.
 
+[**Complete project directory**](PROJECTS.md) · [**Automated demo recording guide**](docs/demo-capture.md)
+
 ## Selected projects
 
 | Project | Live site | Case study | Notes |
