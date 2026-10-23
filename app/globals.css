@@ -2071,3 +2071,139 @@ body { font-family: var(--sans); }
 @media (prefers-reduced-motion: reduce) {
   .psych-case .case-showcase-card { transition: none; }
 }
+
+
+/* Aurora Pool & Spa: real-client case study; covers are captured video frames */
+.aurora-case {
+  --aurora-aqua: #9bdfe4;
+  --aurora-blue: #17617a;
+  --aurora-line: rgba(167,224,231,.22);
+  background: #091720;
+  color: #edf9fb;
+}
+.aurora-case .case-hero {
+  background: radial-gradient(ellipse at 84% 7%, rgba(90,182,197,.16), transparent 42%),
+              radial-gradient(ellipse at 9% 77%, rgba(36,99,127,.13), transparent 44%);
+}
+.aurora-case .case-title-row h1 {
+  font-weight: 800;
+  letter-spacing: -.079em;
+}
+.aurora-case .case-title-row > p { color: #d3e6e9; }
+.aurora-case .case-hero .eyebrow { color: var(--aurora-aqua); }
+.aurora-case-hero-status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .9rem 1.6rem;
+  border-block: 1px solid var(--aurora-line);
+  padding: 1.2rem 0;
+  margin-top: clamp(2.3rem,4.5vw,4.5rem);
+  color: #b0cbd2;
+  font: 700 .67rem var(--mono);
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+.aurora-case-hero-status span:first-child { color: var(--aurora-aqua); }
+.aurora-case .case-hero-media {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(150,218,228,.32);
+  border-radius: 10px;
+  background: #041015;
+  overflow: hidden;
+  box-shadow: 0 26px 66px rgba(0,0,0,.35);
+}
+.aurora-case .case-hero-media img { object-fit: cover; }
+.aurora-case .case-demo {
+  border-top: 1px solid var(--aurora-line);
+  background: radial-gradient(ellipse at 2% 38%, rgba(100,206,218,.05), transparent 43%);
+}
+.aurora-case .case-demo-heading .eyebrow,
+.aurora-case .case-showcase-heading .eyebrow { color: var(--aurora-aqua); }
+.aurora-case .case-demo-heading h2 { max-width: 10ch; }
+.aurora-demo-intro {
+  max-width: 34ch;
+  margin-top: 1.6rem;
+  color: #bdd5da;
+  line-height: 1.75;
+}
+.aurora-case .case-demo-frame {
+  overflow: hidden;
+  border: 1px solid rgba(151,225,232,.38);
+  border-radius: 9px;
+  box-shadow: 0 22px 58px rgba(0,0,0,.35);
+}
+.aurora-case .case-demo-caption { color: #acc6cc; font-size: .86rem; }
+.aurora-case .case-showcase {
+  border-top: 1px solid var(--aurora-line);
+  background: radial-gradient(ellipse at 95% 63%, rgba(94,191,205,.065), transparent 42%);
+}
+.aurora-case .case-showcase-heading h2 { max-width: 15ch; }
+.aurora-case .case-showcase-heading > p { color: #b9d0d6; }
+.aurora-case .case-showcase-grid { gap: clamp(1rem,2.5vw,2rem); }
+.aurora-case .case-showcase-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--aurora-line);
+  background: #10232c;
+  box-shadow: 0 15px 42px rgba(0,0,0,.23);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.aurora-case .case-showcase-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(151,225,232,.55);
+}
+.aurora-case .case-showcase-media {
+  position: relative;
+  background: #040f14;
+  border-bottom: 1px solid var(--aurora-line);
+}
+.aurora-case .case-showcase-media-label {
+  position: absolute;
+  z-index: 2;
+  top: .75rem;
+  left: .75rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .7rem 1rem;
+  max-width: calc(100% - 1.5rem);
+  padding: .45rem .65rem;
+  background: rgba(4,18,25,.85);
+  border: 1px solid rgba(151,225,232,.4);
+  border-radius: 4px;
+  color: #d1eff2;
+  font: 700 .62rem var(--mono);
+  letter-spacing: .06em;
+  pointer-events: none;
+}
+.aurora-case .case-showcase-media-label span:last-child { color: var(--aurora-aqua); }
+.aurora-case .case-showcase-copy { padding: clamp(1.5rem,3vw,2.7rem); }
+.aurora-case .case-showcase-copy h3 { color: #eefafb; }
+.aurora-case .case-showcase-copy p { color: #b9cbd3; }
+.aurora-case .case-showcase-meta { color: var(--aurora-aqua); }
+.aurora-case .case-showcase-meta span:last-child { color: #aac6cc; }
+.aurora-case .case-showcase-note {
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  max-width: none;
+  border-top: 1px solid var(--aurora-line);
+  color: #afcad1;
+  line-height: 1.7;
+}
+.aurora-case .case-showcase-note span { color: var(--aurora-aqua); }
+.aurora-case .case-overview { border-top: 1px solid var(--aurora-line); }
+.aurora-case .case-overview > div,
+.aurora-case .case-story,
+.aurora-case .case-story-content article,
+.aurora-case .case-details article,
+.aurora-case .case-gallery { border-color: var(--aurora-line); }
+.aurora-case .case-story-index { color: var(--aurora-aqua); }
+.aurora-case .case-gallery-image { background: #041018; }
+.aurora-case .case-gallery-image img { object-fit: contain; }
+@media (max-width:800px) {
+ .aurora-case .case-hero-media { aspect-ratio:16/10; }
+ .aurora-case .case-showcase-media-label { top:.55rem;left:.55rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .aurora-case .case-showcase-card { transition:none; }
+}
