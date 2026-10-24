@@ -2207,3 +2207,67 @@ body { font-family: var(--sans); }
 @media (prefers-reduced-motion: reduce) {
  .aurora-case .case-showcase-card { transition:none; }
 }
+
+
+/* PSYCH! — full episode on the project page */
+.psych-episode {
+  padding-block: clamp(4.5rem, 8vw, 9rem);
+  background: radial-gradient(ellipse at 85% 20%, rgba(235,139,128,.085), transparent 45%), #0d111b;
+  border-top: 1px solid var(--psych-line);
+}
+.psych-episode-header {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(250px,.55fr);
+  gap: clamp(2rem,7vw,7rem);
+  align-items: end;
+  margin-bottom: clamp(2rem,4vw,4rem);
+}
+.psych-episode-header .eyebrow { color: var(--psych-red); }
+.psych-episode-header h2 {
+  margin: 1rem 0 0;
+  font-size: clamp(3rem,7vw,7.5rem);
+  letter-spacing: -.08em;
+  line-height: .95;
+}
+.psych-episode-header > p {
+  color: #c5bfcc;
+  max-width: 44ch;
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+.psych-episode-player {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  background: #05070b;
+  overflow: hidden;
+  border: 1px solid rgba(235,139,128,.42);
+  border-radius: 8px;
+  box-shadow: 0 20px 70px rgba(0,0,0,.4);
+}
+.psych-episode-player iframe {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.psych-episode-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--psych-line);
+  color: #bdb4c4;
+  font: 700 .69rem var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .075em;
+}
+.psych-episode-footer span:first-child { color: var(--psych-red); }
+@media (max-width:800px) {
+  .psych-episode-header { grid-template-columns: 1fr; }
+  .psych-episode-header h2 { font-size: clamp(3rem,11vw,5rem); }
+}
