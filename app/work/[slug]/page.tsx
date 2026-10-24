@@ -100,10 +100,10 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           <header className="case-showcase-heading">
             <div>
               <p className="eyebrow">{project.slug === "psych-open-source" ? "02 / Story and interactive universe" : project.slug === "aurora-pool-spa" ? "02 / The client and the services" : "02 / The creative campaign"}</p>
-              <h2 id={project.slug + "-showcase-title"}>{project.slug === "psych-open-source" ? "One universe. Two ways in." : project.slug === "aurora-pool-spa" ? "Real work. Real footage. A complete digital presence." : "More than a playlist. More than a product demo."}</h2>
+              <h2 id={project.slug + "-showcase-title"}>{project.slug === "psych-open-source" ? "Explore the universe, one file at a time." : project.slug === "aurora-pool-spa" ? "Real work. Real footage. A complete digital presence." : "More than a playlist. More than a product demo."}</h2>
             </div>
             {project.slug === "psych-open-source" ? (
-              <p>The universe extends beyond the trailer. First, meet the people caught in a mysterious experiment. Then open the digital archive built to follow their stories: episodes, dossiers, history, timeline, and spoiler controls. Both films play directly here.</p>
+              <p>The universe extends beyond the trailer. Meet the people caught in a mysterious experiment, explore its growing archive, and watch a shorter introduction to the world and website. The films connect the characters and events to the reading experience. All three play right here.</p>
             ) : project.slug === "aurora-pool-spa" ? (
               <p>Two more angles on the same client engagement: Aurora's actual pool-service footage and a short overview of the website, lead forms, CRM, and local search structure. Both films are embedded here, with thumbnails taken directly from the videos.</p>
             ) : (
@@ -117,7 +117,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                 key={video.src}
               >
                 <div className="case-showcase-media" data-orientation={video.orientation}>
-                  <div className="case-showcase-media-label" aria-hidden="true"><span>{project.slug === "psych-open-source" ? "PSYCH! / " + (index === 0 ? "STORY FILM" : "DIGITAL ARCHIVE") : project.slug === "aurora-pool-spa" ? "AURORA / " + (index === 0 ? "REAL CLIENT MEDIA" : "SERVICE WORKFLOWS") : "RAIDIO / " + (video.orientation === "portrait" ? "VERTICAL FILM" : "CAMPAIGN FILM")}</span><span>{video.runtime}</span></div>
+                  <div className="case-showcase-media-label" aria-hidden="true"><span>{project.slug === "psych-open-source" ? "PSYCH! / " + (index === 0 ? "STORY FILM" : index === 1 ? "PLATFORM TOUR" : "WORLD TEASER") : project.slug === "aurora-pool-spa" ? "AURORA / " + (index === 0 ? "REAL CLIENT MEDIA" : "SERVICE WORKFLOWS") : "RAIDIO / " + (video.orientation === "portrait" ? "VERTICAL FILM" : "CAMPAIGN FILM")}</span><span>{video.runtime}</span></div>
                   <video
                     controls
                     playsInline
@@ -139,12 +139,38 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             ))}
           </div>
           {project.slug === "psych-open-source" ? (
-            <p className="case-showcase-note"><span aria-hidden="true">●</span> Three embedded PSYCH! films · Original storytelling and digital experience design · One connected universe.</p>
+            <p className="case-showcase-note"><span aria-hidden="true">●</span> Four PSYCH! films, each with a real video-frame thumbnail · Original storytelling and interactive publishing.</p>
           ) : project.slug === "aurora-pool-spa" ? (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Three embedded Aurora videos · Every preview image is an actual frame from its video · Website and client storytelling in one case study.</p>
           ) : (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded films · Authentic frames from the videos · Product, brand and social creative in one case study.</p>
           )}
+        </section>
+      ) : null}
+
+      {project.slug === "psych-open-source" ? (
+        <section className="psych-episode section-shell" aria-labelledby="psych-episode-title">
+          <div className="psych-episode-header">
+            <div>
+              <p className="eyebrow">03 / Original animation</p>
+              <h2 id="psych-episode-title">Episode 1. Eternity.</h2>
+            </div>
+            <p>The story goes beyond its trailers. Watch the first animated episode of PSYCH!, then explore the writing, character files, and chronology on the publishing platform.</p>
+          </div>
+          <div className="psych-episode-player">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/vXAPT-oGbkA"
+              title="PSYCH! Episode 1 — Eternity, original animated episode"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <div className="psych-episode-footer">
+            <span>SEASON 01 / ETERNITY</span>
+            <span>Original animated episode · Embedded from YouTube</span>
+          </div>
         </section>
       ) : null}
 
