@@ -79,7 +79,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             {project.slug === "psych-open-source" ? <p className="psych-demo-intro">An original science-fiction mystery beginning with a classified experiment in 1947. The trailer sets the mood; the character film and interactive archive below take you deeper.</p> : null}
             {project.slug === "aurora-pool-spa" ? <p className="aurora-demo-intro">A real local client project: an updated pool-service website, original jobsite visuals, and connected customer-inquiry workflows. Watch the walkthrough, then explore the two supporting films.</p> : null}
             {project.slug === "edit-battle" ? <p>Follow the Edit Battle experience in this smooth-zoom platform film. Three additional clips below showcase the competition through vertical social promos and a landscape brand video.</p> : null}
-            {project.slug === "co-lab" ? <p>Meet Co-Lab, where unfinished thoughts find the right lab and connect with other ideas. This product film opens the case study, with a deeper platform tour and a vertical social promo below.</p> : null}
+            {project.slug === "co-lab" ? <p>Meet Co-Lab, where unfinished thoughts find the right lab and connect with other ideas. This product film opens the case study, with four more Co-Lab videos below: platform tours, the original promo, and a vertical social spot.</p> : null}
           </div>
           <div
             className="case-demo-frame"
@@ -111,7 +111,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             ) : project.slug === "edit-battle" ? (
               <p>Four original Edit Battle videos, one place to watch them all. The smooth platform tour leads into two vertical spots made for social feeds and a landscape showcase. Each plays right here, with a thumbnail captured directly from its own footage.</p>
             ) : project.slug === "co-lab" ? (
-              <p>Explore the real Co-Lab interface in a longer walkthrough, then see the idea in a mobile-first TikTok spot. These videos play right on the page, with thumbnails captured from each original video.</p>
+              <p>Explore the real Co-Lab interface through two additional platform films, revisit the first Co-Lab promo, and watch the mobile-first TikTok spot. All five videos play here with thumbnails captured from their original footage.</p>
             ) : (
               <p>Three distinct promo films, one shared identity. Interface-first storytelling, a creator-focused brand film, and a punchy social spot all circle back to the idea that Raidio is already playing. Watch each film here without leaving the page.</p>
             )}
@@ -151,7 +151,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           ) : project.slug === "edit-battle" ? (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded Edit Battle videos · Original video-frame thumbnails · Two vertical and two landscape films.</p>
           ) : project.slug === "co-lab" ? (
-            <p className="case-showcase-note"><span aria-hidden="true">●</span> Three embedded Co-Lab videos so far · Real frames from each film · More campaign videos coming.</p>
+            <p className="case-showcase-note"><span aria-hidden="true">●</span> Five embedded Co-Lab films · Original frame thumbnails · Four landscape videos and one vertical social promo.</p>
           ) : (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded films · Authentic frames from the videos · Product, brand and social creative in one case study.</p>
           )}
