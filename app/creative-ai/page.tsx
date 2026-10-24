@@ -105,10 +105,10 @@ export default function CreativePage() {
         </div>
         <div className="creative-video-grid">
           {[
-            { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",slug:"the-build",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
-            { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",slug:"handmade-clay",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
-            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",slug:"mijo-chat",label:"Social storytelling",title:"Mijo Chat",description:"A text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
-            { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",slug:"the-infomercial",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
+            { id:"1Y5FjdIn7plyqcm9LD65oNUgQ7Xa1dm0K",slug:"the-build",poster:"https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/5cb95929-5aeb-4952-932c-cb221249c81c.jpg",label:"Motion graphics",title:"The Build",description:"A florist website moves from brief to wireframe, code, animated layers and launch. A concise example of visualizing a development process." },
+            { id:"1J_zu3LhzoQ2UNKNpqvV8yq_0bAGsIKZM",slug:"handmade-clay",poster:"https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/233d2c5f-9e7c-4518-bb02-b098177f2d0a.jpg",label:"Claymation",title:"Handmade Clay",description:"A dog groomer's storefront and booking experience are told through a tactile clay world. Strong visual direction and a distinct animation style." },
+            { id:"1jkCzOCV6YEoXZ8joDbJAPqDTh9wGeu7F",slug:"mijo-chat",poster:"https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/f6a9e453-2347-485e-bc0d-34b17bd4a3cd.jpg",label:"Social storytelling",title:"Mijo Chat",description:"A text-message comedy about a bakery owner who needs a website. The narrative works through timing, on-screen copy and a simple punchline." },
+            { id:"1aBTj-Pc4XLO3iXYIwXlm2LWULjGQQsTG",slug:"the-infomercial",poster:"https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/039d343e-8a32-4c8f-a425-1acdb649a05e.jpg",label:"Retro commercial",title:"The Infomercial",description:"A late-night infomercial parody featuring deliberately dated web design, voiceover and an appearance by our AI receptionist, Luna." },
           ].map((clip) => (
             <article className="creative-video-card" key={clip.id}>
               <div className="creative-video-player">
@@ -116,7 +116,7 @@ export default function CreativePage() {
                   controls
                   playsInline
                   preload="none"
-                  poster={"/media/adgo/" + clip.slug + ".jpg"}
+                  poster={clip.poster}
                   aria-label={clip.title + " — ADGO Studios video"}
                 >
                   <source src={"/media/adgo/" + clip.slug + ".mp4"} type="video/mp4" />
