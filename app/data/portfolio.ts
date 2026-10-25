@@ -33,7 +33,7 @@ export type PortfolioProject = {
     runtime: string;
     description: string;
     src: string;
-    poster: string;
+    poster?: string;
     orientation: "portrait" | "landscape";
   }[];
 };
@@ -344,7 +344,38 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "jump-trainer",
-    demoAvailable: false,
+    demoAvailable: true,
+    demoVideo: {
+      src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/378c9b76-f596-4a91-9961-99aa5e830af3.mp4",
+      orientation: "landscape",
+      caption: "Jump Trainer product showcase · 0:54. Real athlete footage, motion analysis, jump measurement, and the app experience.",
+    },
+    showcaseVideos: [
+      {
+        title: "One jump. A smarter way to train.",
+        label: "Product promo",
+        runtime: "0:32",
+        description: "A concise introduction to Jump Trainer: set up your phone, record a jump, and turn the footage into measurement and coaching feedback.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c6f8ecd0-f22a-4cff-87c9-71783a188b12.mp4",
+        orientation: "landscape",
+      },
+      {
+        title: "Behind the measurement.",
+        label: "Motion-analysis showcase",
+        runtime: "0:54",
+        description: "An alternate product showcase focused on the movement-analysis visuals and feedback experience, with pose tracking and flight-time graphics.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/e3cb784f-1be2-4ad7-b934-091b19cfbb3b.mp4",
+        orientation: "landscape",
+      },
+      {
+        title: "Think you can jump? Prove it.",
+        label: "Vertical TikTok promo",
+        runtime: "0:26",
+        description: "A short vertical campaign designed for social feeds, introducing the challenge of measuring and improving your vertical jump.",
+        src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c8d95a86-0efc-4244-940e-9015b39099d4.mp4",
+        orientation: "portrait",
+      },
+    ],
     name: "Jump Trainer",
     category: "AI coaching + computer vision",
     status: "Built · Pre-launch",
