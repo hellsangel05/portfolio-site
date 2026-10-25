@@ -87,7 +87,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             data-orientation={project.demoVideo.orientation ?? "portrait"}
           >
             <video controls playsInline preload="metadata" poster={project.demoVideo.poster}>
-              <source src={project.demoVideo.src + (project.slug === "jump-trainer" ? "#t=3" : "")} type="video/mp4" />
+              <source src={project.demoVideo.src} type="video/mp4" />
               {project.demoVideo.captions ? (
                 <track kind="captions" src={project.demoVideo.captions} srcLang="en" label="English" default />
               ) : null}
@@ -134,7 +134,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                     poster={video.poster}
                     aria-label={"Play " + video.title + " — " + project.name}
                   >
-                    <source src={video.src + (project.slug === "jump-trainer" ? "#t=3" : "")} type="video/mp4" />
+                    <source src={video.src} type="video/mp4" />
                     Your browser does not support embedded video playback.
                   </video>
                 </div>
