@@ -347,6 +347,7 @@ export const projects: PortfolioProject[] = [
     demoAvailable: true,
     demoVideo: {
       src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/378c9b76-f596-4a91-9961-99aa5e830af3.mp4",
+      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/7f9cd807-6bfc-48c5-a6a7-dff25dc3ec75.jpg",
       orientation: "landscape",
       caption: "Jump Trainer product showcase · 0:54. Real athlete footage, motion analysis, jump measurement, and the app experience.",
     },
@@ -357,6 +358,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:32",
         description: "A concise introduction to Jump Trainer: set up your phone, record a jump, and turn the footage into measurement and coaching feedback.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c6f8ecd0-f22a-4cff-87c9-71783a188b12.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/20d90cfc-6a85-4d61-9459-3d7d54e74260.jpg",
         orientation: "landscape",
       },
       {
@@ -365,6 +367,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:54",
         description: "An alternate product showcase focused on the movement-analysis visuals and feedback experience, with pose tracking and flight-time graphics.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/e3cb784f-1be2-4ad7-b934-091b19cfbb3b.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/17819708-91ce-49c4-9ac4-ee7c057128ee.jpg",
         orientation: "landscape",
       },
       {
@@ -373,6 +376,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:26",
         description: "A short vertical campaign designed for social feeds, introducing the challenge of measuring and improving your vertical jump.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c8d95a86-0efc-4244-940e-9015b39099d4.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/9f5755a0-3537-4022-90ea-85bca821ee4c.jpg",
         orientation: "portrait",
       },
     ],
