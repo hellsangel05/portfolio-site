@@ -73,20 +73,21 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
       {project.demoVideo ? (
         <section className="case-demo section-shell" aria-label={`${project.name} product demo`}>
           <div className="case-demo-heading">
-            <p className="eyebrow">{project.slug === "raidio" ? "01 / The real product" : project.slug === "psych-open-source" ? "01 / The cinematic trailer" : project.slug === "aurora-pool-spa" ? "01 / Client website in motion" : project.slug === "edit-battle" ? "01 / Product in motion" : project.slug === "co-lab" ? "01 / Meet Co-Lab" : "Product walkthrough"}</p>
-            <h2>{project.slug === "raidio" ? "From idea to on air." : project.slug === "psych-open-source" ? "What did the blast awaken?" : project.slug === "aurora-pool-spa" ? "Built for the business behind the water." : project.slug === "edit-battle" ? "Every edit deserves a stage." : project.slug === "co-lab" ? "Every great idea starts unfinished." : "See it in motion."}</h2>
+            <p className="eyebrow">{project.slug === "raidio" ? "01 / The real product" : project.slug === "psych-open-source" ? "01 / The cinematic trailer" : project.slug === "aurora-pool-spa" ? "01 / Client website in motion" : project.slug === "edit-battle" ? "01 / Product in motion" : project.slug === "co-lab" ? "01 / Meet Co-Lab" : project.slug === "jump-trainer" ? "01 / The product in motion" : "Product walkthrough"}</p>
+            <h2>{project.slug === "raidio" ? "From idea to on air." : project.slug === "psych-open-source" ? "What did the blast awaken?" : project.slug === "aurora-pool-spa" ? "Built for the business behind the water." : project.slug === "edit-battle" ? "Every edit deserves a stage." : project.slug === "co-lab" ? "Every great idea starts unfinished." : project.slug === "jump-trainer" ? "Every jump tells a story." : "See it in motion."}</h2>
             {project.slug === "raidio" ? <p className="raidio-demo-intro">A guided look inside Raidio: browse stations, hear one live broadcast together, and create a station with its own sound and AI host.</p> : null}
             {project.slug === "psych-open-source" ? <p className="psych-demo-intro">An original science-fiction mystery beginning with a classified experiment in 1947. The trailer sets the mood; the character film and interactive archive below take you deeper.</p> : null}
             {project.slug === "aurora-pool-spa" ? <p className="aurora-demo-intro">A real local client project: an updated pool-service website, original jobsite visuals, and connected customer-inquiry workflows. Watch the walkthrough, then explore the two supporting films.</p> : null}
             {project.slug === "edit-battle" ? <p>Follow the Edit Battle experience in this smooth-zoom platform film. Three additional clips below showcase the competition through vertical social promos and a landscape brand video.</p> : null}
             {project.slug === "co-lab" ? <p>Meet Co-Lab, where unfinished thoughts find the right lab and connect with other ideas. This product film opens the case study, with four more Co-Lab videos below: platform tours, the original promo, and a vertical social spot.</p> : null}
+            {project.slug === "jump-trainer" ? <p>Real jump footage meets motion analysis and coaching feedback. Start with the athlete-led showcase, then explore a shorter product promo, an alternate analysis edit, and a vertical social film below.</p> : null}
           </div>
           <div
             className="case-demo-frame"
             data-orientation={project.demoVideo.orientation ?? "portrait"}
           >
             <video controls playsInline preload="metadata" poster={project.demoVideo.poster}>
-              <source src={project.demoVideo.src} type="video/mp4" />
+              <source src={project.demoVideo.src + (project.slug === "jump-trainer" ? "#t=3" : "")} type="video/mp4" />
               {project.demoVideo.captions ? (
                 <track kind="captions" src={project.demoVideo.captions} srcLang="en" label="English" default />
               ) : null}
@@ -101,8 +102,8 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         <section className="case-showcase section-shell" aria-labelledby={project.slug + "-showcase-title"}>
           <header className="case-showcase-heading">
             <div>
-              <p className="eyebrow">{project.slug === "psych-open-source" ? "02 / Story and interactive universe" : project.slug === "aurora-pool-spa" ? "02 / The client and the services" : project.slug === "edit-battle" ? "02 / Campaign and platform films" : project.slug === "co-lab" ? "02 / Platform and social campaign" : "02 / The creative campaign"}</p>
-              <h2 id={project.slug + "-showcase-title"}>{project.slug === "psych-open-source" ? "Explore the universe, one file at a time." : project.slug === "aurora-pool-spa" ? "Real work. Real footage. A complete digital presence." : project.slug === "edit-battle" ? "Create. Compete. Take the crown." : project.slug === "co-lab" ? "Ideas grow better together." : "More than a playlist. More than a product demo."}</h2>
+              <p className="eyebrow">{project.slug === "psych-open-source" ? "02 / Story and interactive universe" : project.slug === "aurora-pool-spa" ? "02 / The client and the services" : project.slug === "edit-battle" ? "02 / Campaign and platform films" : project.slug === "co-lab" ? "02 / Platform and social campaign" : project.slug === "jump-trainer" ? "02 / Product and social films" : "02 / The creative campaign"}</p>
+              <h2 id={project.slug + "-showcase-title"}>{project.slug === "psych-open-source" ? "Explore the universe, one file at a time." : project.slug === "aurora-pool-spa" ? "Real work. Real footage. A complete digital presence." : project.slug === "edit-battle" ? "Create. Compete. Take the crown." : project.slug === "co-lab" ? "Ideas grow better together." : project.slug === "jump-trainer" ? "Film it. Measure it. Improve it." : "More than a playlist. More than a product demo."}</h2>
             </div>
             {project.slug === "psych-open-source" ? (
               <p>The universe extends beyond the trailer. Meet the people caught in a mysterious experiment, explore its growing archive, and watch a shorter introduction to the world and website. The films connect the characters and events to the reading experience. All three play right here.</p>
@@ -112,6 +113,8 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
               <p>Four original Edit Battle videos, one place to watch them all. The smooth platform tour leads into two vertical spots made for social feeds and a landscape showcase. Each plays right here, with a thumbnail captured directly from its own footage.</p>
             ) : project.slug === "co-lab" ? (
               <p>Explore the real Co-Lab interface through two additional platform films, revisit the first Co-Lab promo, and watch the mobile-first TikTok spot. All five videos play here with thumbnails captured from their original footage.</p>
+            ) : project.slug === "jump-trainer" ? (
+              <p>Three more views of Jump Trainer: a punchy product introduction, an alternate motion-analysis showcase, and a TikTok-ready vertical edit. Each clip plays in the page and uses its own footage as the preview frame.</p>
             ) : (
               <p>Three distinct promo films, one shared identity. Interface-first storytelling, a creator-focused brand film, and a punchy social spot all circle back to the idea that Raidio is already playing. Watch each film here without leaving the page.</p>
             )}
@@ -123,7 +126,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                 key={video.src}
               >
                 <div className="case-showcase-media" data-orientation={video.orientation}>
-                  <div className="case-showcase-media-label" aria-hidden="true"><span>{project.slug === "psych-open-source" ? "PSYCH! / " + (index === 0 ? "STORY FILM" : index === 1 ? "PLATFORM TOUR" : "WORLD TEASER") : project.slug === "aurora-pool-spa" ? "AURORA / " + (index === 0 ? "REAL CLIENT MEDIA" : "SERVICE WORKFLOWS") : project.slug === "edit-battle" ? "EDIT BATTLE / " + (video.orientation === "portrait" ? "VERTICAL PROMO" : "PLATFORM FILM") : project.slug === "co-lab" ? "CO-LAB / " + (video.orientation === "portrait" ? "SOCIAL FILM" : "PLATFORM TOUR") : "RAIDIO / " + (video.orientation === "portrait" ? "VERTICAL FILM" : "CAMPAIGN FILM")}</span><span>{video.runtime}</span></div>
+                  <div className="case-showcase-media-label" aria-hidden="true"><span>{project.slug === "psych-open-source" ? "PSYCH! / " + (index === 0 ? "STORY FILM" : index === 1 ? "PLATFORM TOUR" : "WORLD TEASER") : project.slug === "aurora-pool-spa" ? "AURORA / " + (index === 0 ? "REAL CLIENT MEDIA" : "SERVICE WORKFLOWS") : project.slug === "edit-battle" ? "EDIT BATTLE / " + (video.orientation === "portrait" ? "VERTICAL PROMO" : "PLATFORM FILM") : project.slug === "co-lab" ? "CO-LAB / " + (video.orientation === "portrait" ? "SOCIAL FILM" : "PLATFORM TOUR") : project.slug === "jump-trainer" ? "JUMP TRAINER / " + (video.orientation === "portrait" ? "SOCIAL FILM" : "PRODUCT FILM") : "RAIDIO / " + (video.orientation === "portrait" ? "VERTICAL FILM" : "CAMPAIGN FILM")}</span><span>{video.runtime}</span></div>
                   <video
                     controls
                     playsInline
@@ -131,7 +134,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                     poster={video.poster}
                     aria-label={"Play " + video.title + " — " + project.name}
                   >
-                    <source src={video.src} type="video/mp4" />
+                    <source src={video.src + (project.slug === "jump-trainer" ? "#t=3" : "")} type="video/mp4" />
                     Your browser does not support embedded video playback.
                   </video>
                 </div>
@@ -152,6 +155,8 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded Edit Battle videos · Original video-frame thumbnails · Two vertical and two landscape films.</p>
           ) : project.slug === "co-lab" ? (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Five embedded Co-Lab films · Original frame thumbnails · Four landscape videos and one vertical social promo.</p>
+          ) : project.slug === "jump-trainer" ? (
+            <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded Jump Trainer videos · Video-frame previews · Three landscape films and one vertical TikTok spot.</p>
           ) : (
             <p className="case-showcase-note"><span aria-hidden="true">●</span> Four embedded films · Authentic frames from the videos · Product, brand and social creative in one case study.</p>
           )}
