@@ -599,7 +599,7 @@ export const projects: PortfolioProject[] = [
     demoAvailable: true,
     demoVideo: {
       src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/1ef05fe3-977c-473f-a5c1-f83eaa30622f.mp4",
-      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/6ced98af-d29c-49eb-bdcc-83b4dd61a6d4.webp",
+      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c3e9d18d-b70b-451e-aa56-63e43aa9fee9.webp",
       orientation: "landscape",
       caption: "SkateView field film · 0:31. Real skate footage meets the spot-finding experience: discover the scene, check conditions, and get out skating.",
     },
@@ -610,7 +610,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:30",
         description: "The session-focused story of arriving at a spot, finding out the conditions have changed, and using SkateView to scout what still works.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/34f4c13c-2b89-4aa3-b61a-313da21a7367.mp4",
-        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/a12fc5b5-7887-4526-b24a-4fa2844947ba.webp",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/57fb1c80-dc87-44ca-97ab-01412f2f624e.webp",
         orientation: "landscape",
       },
       {
@@ -619,7 +619,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:32",
         description: "A map-led SkateView walkthrough showing skate spots, features, spot details, condition scores, and the tools for building a session line.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/a2b18ddd-f03d-4ad8-a88d-405ce74491ba.mp4",
-        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/f924e199-0d19-4df8-af86-02de87fee336.webp",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c48e3f7f-73ee-4889-bce2-c4eb62734522.webp",
         orientation: "landscape",
       },
       {
@@ -628,7 +628,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:34",
         description: "A phone-first social cut demonstrating the spot map, ledge and rail filters, condition information, and community submissions.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/658e2fcd-3106-467e-91d7-a746913160d2.mp4",
-        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/cecaf5d4-6de6-4dc2-9e03-2ba219c36e12.webp",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/c52f7960-38be-4a45-86b6-6195cc4f19bb.webp",
         orientation: "portrait",
       },
     ],
