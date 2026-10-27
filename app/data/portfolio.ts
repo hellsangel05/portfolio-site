@@ -116,6 +116,7 @@ export const projects: PortfolioProject[] = [
     demoAvailable: true,
     demoVideo: {
       src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/845ec165-f8f1-411d-a48f-00754ac963f6.mp4",
+      poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/bf9e873e-d99a-460f-a895-6739f1f36143.jpg",
       orientation: "landscape",
       caption: "ADGO Studios widescreen showreel · 0:56. A studio overview of web design, digital creative, and customer-facing business workflows.",
     },
@@ -126,6 +127,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:39",
         description: "A polished overview of ADGO Studios, from showcasing real website and client work to presenting lead capture and digital marketing services.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/0ae20c39-e1dd-4a33-b4d2-0e1183016dd6.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/bcaed9d9-c6d8-4f60-971a-1175c70af935.jpg",
         orientation: "landscape",
       },
       {
@@ -134,6 +136,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:56",
         description: "The mobile-first edit of the studio showreel, combining business storytelling, website projects, and service demonstrations for a social audience.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/bdf4c731-d550-49ad-8fbf-c62e16f9d0a7.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/26a9a5bb-eab5-40c7-a094-aaff9b878b84.jpg",
         orientation: "portrait",
       },
       {
@@ -142,6 +145,7 @@ export const projects: PortfolioProject[] = [
         runtime: "0:38",
         description: "A portrait-format ADGO brand spot covering real client visuals, website presentation, and ways customers can reach a local business.",
         src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/44e2fbd0-c697-4b88-9fc4-d5e4c2ea0f68.mp4",
+        poster: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/1795e8d3-ae7e-4e5a-9c87-fd89ae520761.jpg",
         orientation: "portrait",
       },
     ],
@@ -183,6 +187,7 @@ export const projects: PortfolioProject[] = [
       "Higgsfield",
       "ElevenLabs"
     ],
+    image: { src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/bf9e873e-d99a-460f-a895-6739f1f36143.jpg", alt: "Frame from the ADGO Studios widescreen showreel featuring a real client website project" },
     gallery: [],
     live: "https://adgostudios.com/",
     demoAvailable: true,
