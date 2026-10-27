@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ProjectMedia } from "./components/ProjectMedia";
 import { featuredProjects, moreProjects } from "./data/portfolio";
@@ -37,16 +38,26 @@ export default function Home() {
         </div>
         <div className="practice-pathways-grid">
           <Link href="/ai-automation" className="practice-pathway-link">
-            <span>AI &amp; Automation</span>
-            <h3>Paid social. CRM workflows. AI reception. Websites.</h3>
-            <p>Paid campaigns, lead intake, CRM setup, connected tools and implementation work.</p>
-            <strong>Explore automation work</strong>
+            <div className="practice-pathway-media">
+              <Image src="/media/automation/journey.jpg" alt="adgostudios.com with its AI chat assistant and GoHighLevel booking calendar" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            </div>
+            <div className="practice-pathway-body">
+              <span>AI &amp; Automation</span>
+              <h3>Paid social. CRM workflows. AI reception. Websites.</h3>
+              <p>Paid campaigns, lead intake, CRM setup, the Luna AI receptionist, and the websites that connect them.</p>
+              <strong>Explore automation work</strong>
+            </div>
           </Link>
           <Link href="/creative-ai" className="practice-pathway-link">
-            <span>Creative AI</span>
-            <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
-            <p>Higgsfield-powered commercials, ad creative, motion graphics, and original animation for PSYCH!.</p>
-            <strong>Explore creative work</strong>
+            <div className="practice-pathway-media">
+              <Image src="/media/automation/creative-styles.jpg" alt="Four ADGO Studios ads in claymation, motion graphics, text-message and retro infomercial styles" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            </div>
+            <div className="practice-pathway-body">
+              <span>Creative AI</span>
+              <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
+              <p>Higgsfield-powered commercials, ad creative, motion graphics, and original animation for PSYCH!.</p>
+              <strong>Explore creative work</strong>
+            </div>
           </Link>
         </div>
       </section>
