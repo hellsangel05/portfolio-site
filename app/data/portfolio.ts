@@ -190,7 +190,6 @@ export const projects: PortfolioProject[] = [
     image: { src: "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNtAUz/bf9e873e-d99a-460f-a895-6739f1f36143.jpg", alt: "Frame from the ADGO Studios widescreen showreel featuring a real client website project" },
     gallery: [],
     live: "https://adgostudios.com/",
-    demoAvailable: true,
   },
   {
     slug: "psych-open-source",
