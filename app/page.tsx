@@ -10,7 +10,6 @@ export default function Home() {
           <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · Los Angeles, CA</p>
           <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
           <p className="job-lead">I develop web applications, create modern business websites, and implement AI-powered workflows from concept through deployment. My work spans front-end development, APIs, automation, and creative production.</p>
-          <p className="job-sub">My portfolio includes shipped websites, full-stack applications, paid social advertising, and original animated storytelling.</p>
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
@@ -20,20 +19,13 @@ export default function Home() {
         <aside className="job-hero-aside" aria-label="Work areas">
           <p className="job-small-label">What I work on</p>
           <div className="job-aside-list">
-            <p><span>01</span> Client websites</p>
-            <p><span>02</span> Full-stack apps</p>
-            <p><span>03</span> CRM &amp; automation</p>
-            <p><span>04</span> Creative web platforms</p>
+            <p>Client websites</p>
+            <p>Full-stack apps</p>
+            <p>CRM &amp; automation</p>
+            <p>Creative web platforms</p>
           </div>
           <p className="job-aside-end">I handle implementation, integrations, testing, and the refinements that make products ready for users.</p>
         </aside>
-      </section>
-
-      <section className="job-band">
-        <div className="section-shell">
-          <span>My approach</span>
-          <p>Build the interface. Connect the systems. Test the result. Improve what matters.</p>
-        </div>
       </section>
 
 
@@ -45,13 +37,13 @@ export default function Home() {
         </div>
         <div className="practice-pathways-grid">
           <Link href="/ai-automation" className="practice-pathway-link">
-            <span>01 / AI &amp; Automation</span>
+            <span>AI &amp; Automation</span>
             <h3>Paid social. CRM workflows. AI reception. Websites.</h3>
             <p>Paid campaigns, lead intake, CRM setup, connected tools and implementation work.</p>
             <strong>Explore automation work</strong>
           </Link>
           <Link href="/creative-ai" className="practice-pathway-link">
-            <span>02 / Creative AI</span>
+            <span>Creative AI</span>
             <h3>Higgsfield. Ad creative. Storytelling. Video.</h3>
             <p>Higgsfield-powered commercials, ad creative, motion graphics, and original animation for PSYCH!.</p>
             <strong>Explore creative work</strong>
@@ -62,16 +54,14 @@ export default function Home() {
       <section id="work" className="job-section section-shell">
         <header className="job-section-intro">
           <div><p className="job-small-label">Selected work</p><h2>Selected projects</h2></div>
-          <p>Client websites, business workflows, and independent applications, with case studies covering the goals, implementation, and technical decisions.</p>
+          <p>Client websites, business systems, and independent products.</p>
         </header>
         <div className="job-project-grid">
           {featuredProjects.map((project, index) => (
             <article className={"job-project-card job-card-" + index} key={project.slug}>
               <Link href={"/work/" + project.slug} className="job-project-art" aria-label={"Read about " + project.name}>
-                {project.image
-                  ? <ProjectMedia project={project} priority={index === 0} sizes="(max-width: 700px) 100vw, 50vw" />
-                  : <div className="job-project-art-text"><span>{project.category}</span><strong>{project.name}</strong><small>Project / 0{index + 1}</small></div>}
-            </Link>
+                <ProjectMedia project={project} priority={index === 0} sizes="(max-width: 700px) 100vw, 50vw" />
+              </Link>
               <div className="job-project-info">
                 <div className="job-project-meta"><span>{project.category}</span></div>
                 <h3><Link href={"/work/" + project.slug}>{project.name}</Link></h3>
@@ -91,12 +81,18 @@ export default function Home() {
           <div><p className="job-small-label">More work</p><h2 id="job-more-title">Other projects</h2></div>
           <p>Applications across music, sports, games, collaboration, and civic information.</p>
         </header>
-        <div className="job-other-projects">
+        <div className="job-other-grid">
           {moreProjects.map(project => (
-            <article key={project.slug}>
-              <div><span>{project.category}</span><h3><Link href={"/work/" + project.slug}>{project.name}</Link></h3></div>
-              <p>{project.positioning}</p>
-              <div className="job-more-links"><Link href={"/work/" + project.slug}>Case study</Link>{project.live ? <a href={project.live} target="_blank" rel="noopener noreferrer">Visit website</a> : null}</div>
+            <article className="job-other-card" key={project.slug}>
+              <Link href={"/work/" + project.slug} className="job-other-art" aria-label={"Read about " + project.name}>
+                <ProjectMedia project={project} sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 25vw" />
+              </Link>
+              <div className="job-other-info">
+                <span>{project.category}</span>
+                <h3><Link href={"/work/" + project.slug}>{project.name}</Link></h3>
+                <p>{project.positioning}</p>
+                <div className="job-more-links"><Link href={"/work/" + project.slug}>Case study</Link>{project.live ? <a href={project.live} target="_blank" rel="noopener noreferrer">Visit website</a> : null}</div>
+              </div>
             </article>
           ))}
         </div>

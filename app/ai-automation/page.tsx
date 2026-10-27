@@ -26,7 +26,7 @@ export default function AutomationPage() {
     <main className="practice-page">
       <div className="section-shell practice-hero">
         <Link className="practice-back" href="/">Portfolio</Link>
-        <p className="practice-kicker">01 / AI & Automation</p>
+        <p className="practice-kicker">AI & Automation</p>
         <h1>Business problems.<br/><span>Working systems.</span></h1>
         <p className="practice-lead">I develop websites, launch digital campaigns, and connect CRM and AI tools into customer-facing workflows. My work covers the details from first inquiry to follow-up, booking, and technical delivery.</p>
         <div className="practice-hero-links">
@@ -48,7 +48,7 @@ export default function AutomationPage() {
         <div className="practice-case-list">
           {systems.map((item) => (
             <article className="practice-case" key={item.number}>
-              <div className="practice-case-index"><span>{item.number}</span><small>{item.area}</small></div>
+              <div className="practice-case-index"><small>{item.area}</small></div>
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>

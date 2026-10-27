@@ -26,7 +26,7 @@ export default function CreativePage() {
     <main className="practice-page creative-practice">
       <div className="section-shell practice-hero">
         <Link className="practice-back" href="/">Portfolio</Link>
-        <p className="practice-kicker">02 / Creative AI</p>
+        <p className="practice-kicker">Creative AI</p>
         <h1>Creative ideas.<br/><span>Made for the screen.</span></h1>
         <p className="practice-lead">I produce AI-assisted commercials, animation, and short-form digital content, bringing together storytelling, design, audio, motion graphics, and web technology.</p>
         <div className="practice-hero-links">
@@ -55,27 +55,25 @@ export default function CreativePage() {
               allowFullScreen
             />
           </div>
-          <div className="psych-film-media-label"><span>ORIGINAL ANIMATED EPISODE</span><span>SEASON 01 / ETERNITY</span></div>
         </div>
         <div className="psych-film-copy">
-          <p className="practice-kicker">Featured original film / PSYCH! Universe</p>
+          <p className="practice-kicker">Original animation · PSYCH!</p>
           <h2 id="psych-film-title">Episode 1. Eternity.</h2>
           <p>Created the PSYCH! science-fiction universe, wrote its first episode, Eternity, and brought the story to screen through AI-assisted animation, visual storytelling, and creative direction.</p>
-          <p>The project brings together original screen storytelling, new cinematic and character-focused promo films, and a dedicated Next.js publishing experience with episodes, story chronology, and a reader-friendly reference archive.</p>
+          <p>The series also lives on a Next.js publishing platform with the written episodes, a story chronology, and a reference archive.</p>
           <div className="psych-film-links">
             <a href="https://www.youtube.com/watch?v=vXAPT-oGbkA" target="_blank" rel="noopener noreferrer">Watch Episode 1 on YouTube</a>
             <a href="https://www.tiktok.com/@thepsychuniverse" target="_blank" rel="noopener noreferrer">PSYCH! on TikTok</a>
-            <Link href="/work/psych-open-source">Watch PSYCH! trailer + two new films</Link>
+            <Link href="/work/psych-open-source">PSYCH! case study</Link>
             <a href="https://psych-open-source.vercel.app/read/season-1/eternity" target="_blank" rel="noopener noreferrer">Read Episode 1</a>
           </div>
-          <p className="psych-film-caption">Episode 1 is embedded from the official @thepsychuniverse YouTube upload. You can watch here or open the original video on YouTube.</p>
         </div>
       </section>
 
       <section className="creative-reel-section section-shell" aria-labelledby="creative-reel-title">
         <header className="creative-reel-heading">
           <div>
-            <p className="practice-kicker">Selected video work / ADGO Studios</p>
+            <p className="practice-kicker">ADGO Studios</p>
             <h2 id="creative-reel-title">Selected commercial work.</h2>
           </div>
           <p>Short-form ADGO Studios commercials spanning motion graphics, animation, comedy, product storytelling, and social advertising.</p>
@@ -98,10 +96,10 @@ export default function CreativePage() {
 
         <div className="creative-recent-heading">
           <div>
-            <span>October 2026 / Website ad series</span>
-            <h3>Four ideas. Four different executions.</h3>
+            <span>Website ad series · October 2026</span>
+            <h3>One offer, four styles.</h3>
           </div>
-          <p>Eight original ADGO Studios ad concepts produced with Higgsfield image and video tools, ElevenLabs audio, and HyperFrames editing and compositing.</p>
+          <p>Vertical ads for ADGO&apos;s web design service, produced with Higgsfield image and video tools, ElevenLabs audio, and HyperFrames for editing and compositing. The businesses featured are fictional.</p>
         </div>
         <div className="creative-video-grid">
           {[
@@ -132,14 +130,13 @@ export default function CreativePage() {
             </article>
           ))}
         </div>
-        <p className="creative-reel-footnote">October 2026 ADGO Studios creative portfolio · vertical social ad production · Higgsfield, ElevenLabs, and HyperFrames.</p>
       </section>
 
       <section className="practice-section section-shell">
         <header className="practice-section-header"><p>Creative work</p><h2>Video production & creative direction</h2></header>
         <div className="practice-case-list">
           {creativeWork.map((item)=><article className="practice-case" key={item.num}>
-            <div className="practice-case-index"><span>{item.num}</span><small>{item.category}</small></div>
+            <div className="practice-case-index"><small>{item.category}</small></div>
             <div>
               <h3>{item.title}</h3>
               <p>{item.copy}</p>
