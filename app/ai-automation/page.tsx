@@ -36,7 +36,7 @@ const systems: {
   {
     area: "CRM and intake",
     title: "CRM implementation, lead capture & scheduling",
-    detail: "Configured GoHighLevel to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently, including the separate SMS consent required for text follow-up.",
+    detail: "Implemented CRM lead intake to capture website inquiries, organize contact records, send follow-up notifications, and connect consultation calendars. Designed the intake experience around the information a business needs to respond efficiently, including the separate SMS consent required for text follow-up.",
     evidence: ["CRM configuration (GoHighLevel)", "Contact & lead management", "Lead capture forms", "SMS consent & opt-in", "Calendar / appointment booking", "Automated acknowledgments"],
     image: {
       src: "/media/automation/crm-intake.jpg",
@@ -80,7 +80,7 @@ const systems: {
 const steps = [
   ["Reach someone.", "Build the message and creative in Meta Ads Manager, with a clear offer and relevant audience."],
   ["Give them somewhere to go.", "A mobile-friendly landing page explains the service and presents a straightforward action."],
-  ["Capture the request.", "A GoHighLevel form collects useful information for the next step."],
+  ["Capture the request.", "A CRM-connected form collects useful information for the next step."],
   ["Respond and schedule.", "CRM workflows, a booking calendar, or the AI receptionist route the inquiry."],
   ["Check the handoff.", "Test the experience, review tracking, and fix where customers get stuck."],
 ];

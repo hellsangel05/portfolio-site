@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-const siteUrl = "https://portfolio-site-green-xi.vercel.app";
+const siteUrl = "https://angel-gonzalez-dev.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -55,9 +55,10 @@ const personSchema = {
   "@type": "Person",
   name: "Angel Gonzalez",
   url: siteUrl,
-  jobTitle: "Web Developer | AI & Automation",
+  jobTitle: "Web Developer & Creative Technologist",
   email: "gonzalezangel0510@yahoo.com",
-  address: { "@type": "PostalAddress", addressLocality: "Los Angeles", addressRegion: "CA" },
+  telephone: "+1-818-447-0902",
+  address: { "@type": "PostalAddress", addressLocality: "San Fernando", addressRegion: "CA", postalCode: "91340" },
   sameAs: ["https://github.com/hellsangel05"],
   worksFor: [
     { "@type": "Organization", name: "ADGO Ventures" },

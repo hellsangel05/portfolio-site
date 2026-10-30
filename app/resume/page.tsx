@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const builds = [
-  { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM integration points." },
-  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, paid Meta advertising, Higgsfield video production, CRM automation, and Luna AI phone receptionist." },
+  { title: "Aurora Pool & Spa", slug: "aurora-pool-spa", copy: "Client website using Astro: service pages, mobile layouts, optimized photos, contact options, and CRM-connected contact paths." },
+  { title: "ADGO Studios", slug: "adgo-studios", copy: "Business website, paid Meta advertising, Higgsfield video production, CRM implementation, workflow automation, and Luna AI phone reception." },
   { title: "PSYCH! Open Source", slug: "psych-open-source", copy: "Original science-fiction universe with a published animated Episode 1 and a Next.js story platform, timeline, archives, and spoiler controls." },
   { title: "Raidio", slug: "raidio", copy: "Full-stack radio application using Next.js and Supabase, including shared-playhead playback, station scheduling, and AI-generated audio workflows." },
 ];
@@ -28,7 +28,7 @@ const experience = [
     ]
   },
   {
-    title: "Hardware Sales Associate",
+    title: "Hardware Sales Associate (part-time)",
     company: "The Home Depot",
     dates: "May 2025 – present",
     bullets: [
@@ -85,20 +85,23 @@ export default function ResumePage() {
           <p className="resume-title">Web Development · CRM &amp; AI Automation · Creative Technology</p>
         </div>
         <div className="resume-contact">
-          <p>San Fernando Valley · Los Angeles, CA</p>
+          <p>San Fernando Valley, CA 91340</p>
+          <a href="tel:+18184470902">(818) 447-0902</a>
           <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
-          <a href="https://portfolio-site-green-xi.vercel.app" target="_blank" rel="noreferrer">Portfolio </a>
+          <a href="https://angel-gonzalez-dev.vercel.app/" target="_blank" rel="noreferrer">Portfolio </a>
           <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>
           <div className="resume-downloads">
-            <a className="button button-primary" href="/angel-gonzalez-resume.pdf" download>Download PDF</a>
+            <a className="button button-primary" href="/angel-gonzalez-developer-resume.pdf" download>Web development PDF</a>
+            <a className="button button-secondary" href="/angel-gonzalez-automation-resume.pdf" download>CRM &amp; AI implementation PDF</a>
             <PrintButton />
           </div>
+          <p>Available immediately · No visa sponsorship required</p>
         </div>
       </header>
 
       <section className="resume-summary section-shell">
         <div className="resume-section-label">Summary</div>
-        <p>Web developer and creative technologist experienced in full-stack applications, client websites, CRM automation, Meta Ads Manager, Voice AI, and Higgsfield-powered commercials. Build and deploy digital products using Next.js, Astro, Supabase, Vercel, and Cloudflare.</p>
+        <p>Web developer and creative technologist building client websites, full-stack applications, CRM implementations, and voice AI with appointment scheduling. Work spans requirements, implementation, integrations, testing, deployment, and AI-assisted creative production.</p>
       </section>
 
       <section className="resume-block section-shell">

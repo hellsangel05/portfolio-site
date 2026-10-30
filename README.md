@@ -1,14 +1,14 @@
 # Angel Gonzalez — websites, applications & AI workflows
 
-[**Portfolio**](https://portfolio-site-green-xi.vercel.app) · [**AI & Automation**](https://portfolio-site-green-xi.vercel.app/ai-automation) · [**Creative AI**](https://portfolio-site-green-xi.vercel.app/creative-ai) · [**Résumé**](https://portfolio-site-green-xi.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
+[**Portfolio**](https://angel-gonzalez-dev.vercel.app/) · [**AI & Automation**](https://angel-gonzalez-dev.vercel.app/ai-automation) · [**Creative AI**](https://angel-gonzalez-dev.vercel.app/creative-ai) · [**Résumé**](https://angel-gonzalez-dev.vercel.app/resume) · [**Contact**](mailto:gonzalezangel0510@yahoo.com)
 
-I'm a Los Angeles–area builder working across web development, AI-assisted software, automation, and creative tools. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
+I'm a web developer and creative technologist based in the San Fernando Valley, working across applications, CRM implementation, voice AI, workflow automation, and AI-assisted creative production. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
 
 ## Specialized experience
 
 - **Paid media:** Launched a Facebook and Instagram advertising campaign in Meta Ads Manager for ADGO Studios, including targeting, ad creative, and campaign setup.
-- **Marketing automation:** GoHighLevel CRM, website forms, automated acknowledgments, calendar bookings, AI receptionist Luna, Meta Pixel setup and landing pages.
-- **Creative AI:** Automated Higgsfield ad production workflow for ADGO, AI creative concepting, ad variations, ElevenLabs and Suno experiments, short-form videos and the PSYCH! project.
+- **CRM implementation and workflow automation:** Lead intake, contact management, automated acknowledgments, appointment scheduling, Luna voice AI, and website integration. Supporting platform: GoHighLevel.
+- **AI-assisted creative production:** Commercial concepts, scripts, generated visuals, voice, editing, and short-form videos using Higgsfield, ElevenLabs, and HyperFrames, alongside the PSYCH! publishing and animation project.
 - **Technical work:** Next.js, Astro, TypeScript, React, Cloudflare, Vercel, Supabase, GitHub, client-site delivery and debugging.
 
 ## PSYCH! animated episode
@@ -17,25 +17,25 @@ The Creative AI portfolio features **PSYCH! Episode 1 — Eternity**, an origina
 
 ## Featured creative examples
 
-The [Creative AI page](https://portfolio-site-green-xi.vercel.app/creative-ai) includes our public ADGO showreel and four October 2026 ADGO commercial concepts: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (text-message comedy), and The Infomercial (retro commercial featuring the Luna AI receptionist). Portfolio-ready H.264/AAC exports and posters are hosted under `public/media/adgo/`, with native HTML video controls and direct MP4 links. Original high-resolution masters remain in the ADGO Google Drive. The commercials feature fictional businesses.
+The [Creative AI page](https://angel-gonzalez-dev.vercel.app/creative-ai) includes our public ADGO showreel and four October 2026 ADGO commercial concepts: The Build (motion graphics), Handmade Clay (clay animation), Mijo Chat (text-message comedy), and The Infomercial (retro commercial featuring the Luna AI receptionist). Portfolio-ready H.264/AAC exports and posters are hosted under `public/media/adgo/`, with native HTML video controls and direct MP4 links. Original high-resolution masters remain in the ADGO Google Drive. The commercials feature fictional businesses.
 
 ## Selected projects
 
 | Project | Live site | Case study | Notes |
 | --- | --- | --- | --- |
-| Aurora Pool & Spa | [Client site](https://aurora-pool-spa.adgostudios.workers.dev) | [View](https://portfolio-site-green-xi.vercel.app/work/aurora-pool-spa) | One example of our ADGO Studios client work; source is in the private ADGO Studios organization repo |
-| ADGO Studios | [Website](https://adgostudios.com) | [View](https://portfolio-site-green-xi.vercel.app/work/adgo-studios) | Web, CRM and voice-agent projects; code is held across collaborator repositories |
-| PSYCH! Open Source | [Website](https://psych-open-source.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/psych-open-source) | Original fiction world and spoiler-aware reading platform |
-| Raidio | [Website](https://raidio-ten.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/raidio) | AI-powered audio and shared playback |
-| Snapdex | [Website](https://trading-card-app-two.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/snapdex) | Photo trading-card application |
-| Jump Trainer | [Website](https://apogee-web-three.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/jump-trainer) | Video analysis and training |
-| Edit Battle | [Website](https://edit-battle.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/edit-battle) | Creative editing competitions |
-| Civic Mirror | [Website](https://web-tau-drab-10.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/civic-mirror) | [Public repository](https://github.com/hellsangel05/civic-mirror) |
-| Co-Lab | [Website](https://colab-orpin.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/co-lab) | Collaborative idea network |
-| SkateView | [Website](https://skateview-app.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/skateview) | Community skate spot mapping |
-| Living Window | [Website](https://living-window-app-orcin.vercel.app) | [View](https://portfolio-site-green-xi.vercel.app/work/living-window) | Persistent generative art |
+| Aurora Pool & Spa | [Client site](https://aurora-pool-spa.adgostudios.workers.dev) | [View](https://angel-gonzalez-dev.vercel.app/work/aurora-pool-spa) | One example of our ADGO Studios client work; source is in the private ADGO Studios organization repo |
+| ADGO Studios | [Website](https://adgostudios.com) | [View](https://angel-gonzalez-dev.vercel.app/work/adgo-studios) | Web, CRM and voice-agent projects; code is held across collaborator repositories |
+| PSYCH! Open Source | [Website](https://psych-open-source.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/psych-open-source) | Original fiction world and spoiler-aware reading platform |
+| Raidio | [Website](https://raidio-ten.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/raidio) | AI-powered audio and shared playback |
+| Snapdex | [Website](https://trading-card-app-two.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/snapdex) | Photo trading-card application |
+| Jump Trainer | [Website](https://apogee-web-three.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/jump-trainer) | Video analysis and training |
+| Edit Battle | [Website](https://edit-battle.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/edit-battle) | Creative editing competitions |
+| Civic Mirror | [Website](https://web-tau-drab-10.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/civic-mirror) | [Public repository](https://github.com/hellsangel05/civic-mirror) |
+| Co-Lab | [Website](https://colab-orpin.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/co-lab) | Collaborative idea network |
+| SkateView | [Website](https://skateview-app.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/skateview) | Community skate spot mapping |
+| Living Window | [Website](https://living-window-app-orcin.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/living-window) | Persistent generative art |
 
-**About the code:** Most app repositories already exist under my GitHub account, but they are private. Aurora is held in the ADGO Studios account, and some business work is in collaborator repositories. I don't publish client source code, unreleased IP, or credentials without review and permission. A website link is not a guarantee that its optional database-backed features are available at every moment.
+Application and client repositories remain private. The case studies document features, implementation choices, and my contribution.
 
 ## This portfolio's source code
 
@@ -54,6 +54,11 @@ npm install
 npm run dev
 ```
 
-For a production check, run `npm run build` and `npm run lint`.
+For a production check, run `npm run build`.
 
-This repository intentionally contains no private API keys or client credentials. Project descriptions distinguish what was built from traction or results; they do not invent user counts, revenue, or testimonials.
+### Resume downloads
+
+- [Web development and creative technology](https://angel-gonzalez-dev.vercel.app/angel-gonzalez-developer-resume.pdf)
+- [CRM, AI implementation, and technical operations](https://angel-gonzalez-dev.vercel.app/angel-gonzalez-automation-resume.pdf)
+
+Regenerate both versions with `python3 scripts/generate_resume_pdf.py` (ReportLab and DejaVu Sans required). The original PDF path remains an alias of the developer version.

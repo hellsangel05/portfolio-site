@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "./data/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://portfolio-site-green-xi.vercel.app";
+  const baseUrl = "https://angel-gonzalez-dev.vercel.app";
   return [
     { url: baseUrl, changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/resume`, changeFrequency: "monthly", priority: 0.8 },

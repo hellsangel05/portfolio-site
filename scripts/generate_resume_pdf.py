@@ -1,54 +1,110 @@
-"""Generate the portfolio's focused, ATS-friendly one-page PDF resume."""
+"""Generate two consistent, ATS-friendly resumes and the legacy download alias."""
 from pathlib import Path
+from shutil import copyfile
 import sys
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, HRFlowable
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
-out=Path(sys.argv[1] if len(sys.argv)>1 else 'public/angel-gonzalez-resume.pdf')
-out.parent.mkdir(parents=True,exist_ok=True)
-blue=colors.HexColor('#2053B6');dark=colors.HexColor('#172A45');ink=colors.HexColor('#293A50');muted=colors.HexColor('#56657B')
-s={
- 'name':ParagraphStyle('name',fontName='Helvetica-Bold',fontSize=21,leading=23,textColor=dark,spaceAfter=3),
- 'tag':ParagraphStyle('tag',fontName='Helvetica-Bold',fontSize=9.1,leading=12,textColor=blue,spaceAfter=4),
- 'contact':ParagraphStyle('contact',fontName='Helvetica',fontSize=8.4,leading=11,textColor=muted,spaceAfter=2),
- 'section':ParagraphStyle('section',fontName='Helvetica-Bold',fontSize=9.2,leading=11.4,textColor=blue,spaceBefore=8,spaceAfter=4),
- 'body':ParagraphStyle('body',fontName='Helvetica',fontSize=8.55,leading=12.2,textColor=ink,spaceAfter=2.5),
- 'role':ParagraphStyle('role',fontName='Helvetica-Bold',fontSize=8.75,leading=12,textColor=dark,spaceBefore=4,spaceAfter=2),
- 'bullet':ParagraphStyle('bullet',fontName='Helvetica',fontSize=8.3,leading=11.5,leftIndent=10,firstLineIndent=-8,textColor=ink,spaceAfter=2),
- 'small':ParagraphStyle('small',fontName='Helvetica',fontSize=8.2,leading=11.4,textColor=ink,spaceAfter=2)
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+
+font_dir = Path('/usr/share/fonts/truetype/dejavu')
+pdfmetrics.registerFont(TTFont('ResumeSans', str(font_dir / 'DejaVuSans.ttf')))
+pdfmetrics.registerFont(TTFont('ResumeSans-Bold', str(font_dir / 'DejaVuSans-Bold.ttf')))
+pdfmetrics.registerFontFamily('ResumeSans', normal='ResumeSans', bold='ResumeSans-Bold')
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'public'
+OUT.mkdir(parents=True, exist_ok=True)
+BLUE = colors.HexColor('#2053B6')
+INK = colors.HexColor('#24364C')
+styles = {
+    'name': ParagraphStyle('name', fontName='Helvetica-Bold', fontSize=23, leading=25, textColor=INK, spaceAfter=4),
+    'tag': ParagraphStyle('tag', fontName='Helvetica-Bold', fontSize=10, leading=13, textColor=BLUE, spaceAfter=5),
+    'contact': ParagraphStyle('contact', fontName='Helvetica', fontSize=9, leading=12, textColor=INK, spaceAfter=2),
+    'section': ParagraphStyle('section', fontName='Helvetica-Bold', fontSize=9.5, leading=12, textColor=BLUE, spaceBefore=7, spaceAfter=4),
+    'body': ParagraphStyle('body', fontName='Helvetica', fontSize=9.3, leading=12.4, textColor=INK, spaceAfter=2.5),
+    'role': ParagraphStyle('role', fontName='Helvetica-Bold', fontSize=9.3, leading=12.4, textColor=INK, spaceBefore=4, spaceAfter=2, keepWithNext=True),
+    'bullet': ParagraphStyle('bullet', fontName='Helvetica', fontSize=9.3, leading=12.4, textColor=INK, leftIndent=9, firstLineIndent=-8, spaceAfter=2),
 }
-def p(x,sty='body'):return Paragraph(x,s[sty])
-blocks=[
- p('Angel Gonzalez','name'),
- p('Web Development  |  CRM &amp; AI Automation  |  Creative Technology','tag'),
- p('San Fernando Valley, Los Angeles, CA  |  gonzalezangel0510@yahoo.com','contact'),
- p('portfolio-site-green-xi.vercel.app  |  github.com/hellsangel05','contact'),
- Spacer(1,4),HRFlowable(width='100%',thickness=.8,color=colors.HexColor('#B7C8E0')),
- p('PROFESSIONAL SUMMARY','section'),
- p('Developer and creative technologist with experience building websites and applications, configuring CRM and voice AI workflows, producing digital advertising, and troubleshooting technical systems. Background in precision manufacturing, field service, and customer-facing roles.'),
- p('CORE SKILLS','section'),
- p('<b>Development:</b> Next.js, React, TypeScript, JavaScript, Astro, Python, APIs, Supabase, PostgreSQL, GitHub, Vercel, Cloudflare','small'),
- p('<b>CRM &amp; marketing automation:</b> Lead capture, contact management, pipelines, scheduling, follow-ups, GoHighLevel, Voice AI','small'),
- p('<b>Paid social &amp; creative:</b> Meta Ads Manager, audience targeting, ad creative, Higgsfield, ElevenLabs, HyperFrames, video production','small'),
- p('PROJECT &amp; PROFESSIONAL EXPERIENCE','section'),
- p('ADGO Studios  |  Co-founder, Web Development &amp; Digital Systems  |  2026 - Present','role'),
- p('- Built business websites and lead-capture experiences, including an Astro/Cloudflare project for Aurora Pool &amp; Spa.','bullet'),
- p('- Configured CRM forms, scheduling, follow-up workflows, and Luna AI phone receptionist in GoHighLevel.','bullet'),
- p('- Launched paid social advertising using Meta Ads Manager; created short-form videos with Higgsfield, ElevenLabs, and HyperFrames.','bullet'),
- p('Independent Developer &amp; Creative Producer','role'),
- p('- Built application projects using Next.js and Supabase, including Raidio, Snapdex, and Jump Trainer. Created PSYCH!, an original fiction platform and released animated Episode 1.','bullet'),
- p('The Home Depot  |  Hardware Sales Associate  |  May 2025 - Present','role'),
- p('- Help customers troubleshoot hardware, plumbing, and electrical product questions; communicate technical solutions in English and Spanish.','bullet'),
- p('Chatsworth Products Inc.  |  Manufacturing Technician  |  Nov 2024 - May 2025','role'),
- p('- Assembled cabinets for computer/network hardware; measured, drilled, pressed and finished metal components to specification. Inspected units, repaired defects, and followed quality and safety procedures.','bullet'),
- p('Mosquito Squad  |  Pest Control Technician  |  May 2023 - Oct 2024','role'),
- p('- Delivered residential field services, maintained equipment and service records, supported customers, upsold services, and trained new hires.','bullet'),
- p('ADDITIONAL EXPERIENCE','section'),
- p('<b>Green Power Network:</b> Solar Canvasser (Feb-Apr 2023) - door-to-door homeowner outreach, qualifying solar prospects, generating leads, and setting sales appointments','small'),
- p('<b>City Private Security:</b> Security Guard (Oct 2018-Dec 2022) &nbsp; | &nbsp; <b>Food4Less:</b> Customer Clerk (Oct 2017-Apr 2020)','small'),
- p('<b>Sylmar Recreation Center:</b> Volunteer (2013-2016)','small'),
- p('EDUCATION','section'),p('Granada Hills Charter High School  |  High School Diploma, 2016','small')
-]
-SimpleDocTemplate(str(out),pagesize=letter,leftMargin=43,rightMargin=43,topMargin=31,bottomMargin=28,title='Angel Gonzalez | Web Development, CRM & Creative Technology',author='Angel Gonzalez',pageCompression=1).build(blocks)
-print(out)
+
+for style in styles.values():
+    style.fontName = 'ResumeSans-Bold' if style.fontName.endswith('-Bold') else 'ResumeSans'
+
+def p(text, style='body'):
+    return Paragraph(text, styles[style])
+
+def header(title):
+    return [p('Angel Gonzalez', 'name'), p(title, 'tag'),
+        p('San Fernando Valley, CA 91340 | <link href="tel:+18184470902">(818) 447-0902</link> | English / Spanish', 'contact'),
+        p('<link href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</link> | <link href="https://angel-gonzalez-dev.vercel.app/">angel-gonzalez-dev.vercel.app</link>', 'contact'),
+        p('<link href="https://github.com/hellsangel05">github.com/hellsangel05</link> | Available immediately | No visa sponsorship required', 'contact'),
+        Spacer(1, 4), HRFlowable(width='100%', thickness=.7, color=colors.HexColor('#B7C8E0'))]
+
+def employment():
+    return [p('ADDITIONAL PROFESSIONAL EXPERIENCE', 'section'),
+        p('The Home Depot | Hardware Sales Associate (part-time) | May 2025 - Present', 'role'),
+        p('Troubleshoot hardware, plumbing, and electrical product questions; explain options in English and Spanish.'),
+        p('Chatsworth Products Incorporated | Manufacturing Technician | Nov 2024 - May 2025', 'role'),
+        p('Assembled computer/network hardware cabinets; inspected components, repaired defects, and followed specifications.'),
+        p('Mosquito Squad | Pest Control Technician | May 2023 - Oct 2024', 'role'),
+        p('Delivered field services, maintained equipment and records, supported customers, and trained new hires.'),
+        p('<b>Green Power Network:</b> Solar Sales Canvasser | Feb - Apr 2023', 'contact'),
+        p('<b>City Private Security:</b> Security Guard | Oct 2018 - Dec 2022', 'contact'),
+        p('<b>Food4Less:</b> Customer Clerk | Oct 2017 - Apr 2020', 'contact'),
+        p('EDUCATION &amp; COMMUNITY', 'section'),
+        p('Granada Hills Charter High School | High school diploma, 2016', 'contact'),
+        p('Sylmar Recreation Center | Volunteer | Jun 2013 - May 2016', 'contact')]
+
+common_role = p('ADGO Studios | Co-founder, Web Development &amp; Digital Systems | 2026 - Present', 'role')
+developer = header('Web Developer &amp; Creative Technologist | Applications &amp; Digital Production') + [
+    p('SUMMARY', 'section'),
+    p('Web developer and creative technologist building client websites, full-stack applications, and AI-enabled business workflows. Work spans requirements, implementation, integrations, testing, deployment, and AI-assisted creative production.'),
+    p('TECHNICAL SKILLS', 'section'),
+    p('<b>Development:</b> JavaScript, TypeScript, React, Next.js, Astro, Python, APIs, responsive design', 'contact'),
+    p('<b>Data &amp; delivery:</b> Supabase, PostgreSQL, authentication, GitHub, Vercel, Cloudflare, debugging', 'contact'),
+    p('<b>AI &amp; systems:</b> AI-assisted development, CRM implementation, voice AI, ChatGPT, Claude, ElevenLabs', 'contact'),
+    p('RELEVANT EXPERIENCE', 'section'), common_role,
+    p('- Build and deploy responsive business websites and lead-intake experiences; handle discovery, integrations, testing, and client feedback.', 'bullet'),
+    p('- Configure CRM forms, appointment scheduling, follow-up workflows, and the Luna AI receptionist. Produce advertising creative using Higgsfield, ElevenLabs, and HyperFrames.', 'bullet'),
+    p('SELECTED INDEPENDENT &amp; CLIENT PROJECTS', 'section'),
+    p('Raidio | Next.js, TypeScript, Supabase, PostgreSQL', 'role'),
+    p('Built an AI radio application with station programming, synchronized shared-playhead listening, generated audio workflows, and separate draft and published station rundowns.'),
+    p('Jump Trainer | Python, NumPy, MediaPipe, WebAssembly', 'role'),
+    p('Developed on-device jump-video analysis using pose tracking, takeoff and landing detection, flight-time physics, and confidence scoring. Video processing stays in the browser.'),
+    p('Aurora Pool &amp; Spa | Astro, TypeScript, Cloudflare', 'role'),
+    p('Delivered responsive service pages, local coverage information, optimized client photography, and CRM-connected contact paths through ADGO Studios.'),
+    p('PSYCH! | Next.js, Supabase, AI-assisted animation', 'role'),
+    p('Created an original science-fiction universe, built its episode-reading platform with a timeline and spoiler controls, and released an animated first episode.'),
+] + employment()
+
+automation = header('CRM &amp; AI Implementation | Workflow Automation &amp; Technical Operations') + [
+    p('SUMMARY', 'section'),
+    p('Web developer and technical implementer connecting websites, CRM lead intake, appointment scheduling, automated follow-up, and voice AI through ADGO Studios. Bring hands-on configuration, conversation testing, technical troubleshooting, and bilingual customer communication.'),
+    p('CORE SKILLS', 'section'),
+    p('<b>Business systems:</b> CRM implementation, contact pipelines, lead capture, scheduling, workflow automation', 'contact'),
+    p('<b>Technical:</b> JavaScript, TypeScript, APIs, web forms, Next.js, Astro, Supabase, Vercel, Cloudflare', 'contact'),
+    p('<b>Supporting tools:</b> GoHighLevel, ChatGPT, Claude, Meta Ads Manager, Higgsfield, ElevenLabs, HyperFrames', 'contact'),
+    p('RELEVANT EXPERIENCE', 'section'), common_role,
+    p('- Implement CRM lead capture, contact records, consultation calendars, acknowledgments, and follow-up workflows; connect business websites and inquiry forms.', 'bullet'),
+    p('- Configure Luna AI phone reception with a business knowledge base, service-question handling, lead qualification, and appointment options. Develop call-handling logic and test responses.', 'bullet'),
+    p('- Handle client discovery, communication, integrations, and troubleshooting. Launch paid Meta advertising and deliver AI-assisted short-form creative.', 'bullet'),
+    p('SELECTED IMPLEMENTATION PROJECTS', 'section'),
+    p('Luna AI receptionist | Voice AI &amp; appointment scheduling', 'role'),
+    p('Configured customer-facing phone reception around service questions, lead qualification, booking options, and human follow-up. Tested conversations against business information.'),
+    p('ADGO Studios &amp; Aurora | CRM intake &amp; customer workflows', 'role'),
+    p('Implemented website inquiry paths, contact management, booking options, and automated responses. Designed separate transactional and marketing SMS consent choices.'),
+    p('Web &amp; creative delivery | Astro, Next.js, Cloudflare, AI production tools', 'role'),
+    p('Built client-facing websites and service pages, integrated business tools, and produced advertising assets that connect campaign messaging to customer contact paths.'),
+] + employment()
+
+for name, title, blocks in [
+    ('angel-gonzalez-developer-resume.pdf', 'Angel Gonzalez | Web Development & Creative Technology', developer),
+    ('angel-gonzalez-automation-resume.pdf', 'Angel Gonzalez | CRM & AI Implementation', automation),
+]:
+    target = OUT / name
+    SimpleDocTemplate(str(target), pagesize=letter, leftMargin=39, rightMargin=39, topMargin=27, bottomMargin=27,
+        title=title, author='Angel Gonzalez', pageCompression=1).build(blocks)
+    print(target)
+copyfile(OUT / 'angel-gonzalez-developer-resume.pdf', OUT / 'angel-gonzalez-resume.pdf')

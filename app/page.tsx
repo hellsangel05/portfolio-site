@@ -8,7 +8,7 @@ export default function Home() {
     <main className="job-home">
       <section className="job-hero section-shell" aria-labelledby="job-intro">
         <div>
-          <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · Los Angeles, CA</p>
+          <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · San Fernando Valley, CA</p>
           <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
           <p className="job-lead">I develop web applications, create modern business websites, and implement AI-powered workflows from concept through deployment. My work spans front-end development, APIs, automation, and creative production.</p>
           <div className="job-actions">
@@ -149,9 +149,10 @@ export default function Home() {
       <section id="contact" className="job-section job-contact section-shell">
         <p className="job-small-label">Contact</p>
         <h2>Let's talk.</h2>
-        <p>Open to web development, technical implementation, AI workflows, creative technology, and related roles in Los Angeles or remote.</p>
+        <p>Available immediately for web development, CRM and AI implementation, technical operations, and creative technology roles. Based in the San Fernando Valley; open to nearby, Los Angeles, and remote opportunities.</p>
         <div className="job-actions">
           <a className="button button-primary" href="mailto:gonzalezangel0510@yahoo.com">Email me </a>
+          <a className="job-simple-link" href="tel:+18184470902">(818) 447-0902</a>
           <Link className="button button-secondary" href="/resume">View résumé</Link>
           <a className="job-simple-link" href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>
         </div>
