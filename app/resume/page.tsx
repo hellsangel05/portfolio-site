@@ -19,7 +19,7 @@ const experience = [
   {
     title: "Co-founder · Web development & digital systems",
     company: "ADGO Studios",
-    dates: "2026 – present",
+    dates: "Jan 2026 – present",
     bullets: [
       "Build and deploy responsive business websites and lead-capture experiences for local clients.",
       "Configure CRM lead management, forms, scheduling, automated follow-up, and Luna AI phone reception using GoHighLevel.",
@@ -90,6 +90,7 @@ export default function ResumePage() {
           <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
           <a href="https://angel-gonzalez-dev.vercel.app/" target="_blank" rel="noreferrer">Portfolio </a>
           <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>
+          <a href="https://www.linkedin.com/in/angel-gonzalez-85b621229/" target="_blank" rel="noreferrer">LinkedIn </a>
           <div className="resume-downloads">
             <a className="button button-primary" href="/angel-gonzalez-developer-resume.pdf" download>Web development PDF</a>
             <a className="button button-secondary" href="/angel-gonzalez-automation-resume.pdf" download>CRM &amp; AI implementation PDF</a>

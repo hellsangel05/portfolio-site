@@ -23,10 +23,10 @@ styles = {
     'name': ParagraphStyle('name', fontName='Helvetica-Bold', fontSize=23, leading=25, textColor=INK, spaceAfter=4),
     'tag': ParagraphStyle('tag', fontName='Helvetica-Bold', fontSize=10, leading=13, textColor=BLUE, spaceAfter=5),
     'contact': ParagraphStyle('contact', fontName='Helvetica', fontSize=9, leading=12, textColor=INK, spaceAfter=2),
-    'section': ParagraphStyle('section', fontName='Helvetica-Bold', fontSize=9.5, leading=12, textColor=BLUE, spaceBefore=7, spaceAfter=4),
-    'body': ParagraphStyle('body', fontName='Helvetica', fontSize=9.3, leading=12.4, textColor=INK, spaceAfter=2.5),
-    'role': ParagraphStyle('role', fontName='Helvetica-Bold', fontSize=9.3, leading=12.4, textColor=INK, spaceBefore=4, spaceAfter=2, keepWithNext=True),
-    'bullet': ParagraphStyle('bullet', fontName='Helvetica', fontSize=9.3, leading=12.4, textColor=INK, leftIndent=9, firstLineIndent=-8, spaceAfter=2),
+    'section': ParagraphStyle('section', fontName='Helvetica-Bold', fontSize=9.5, leading=12, textColor=BLUE, spaceBefore=6, spaceAfter=4),
+    'body': ParagraphStyle('body', fontName='Helvetica', fontSize=9.3, leading=12, textColor=INK, spaceAfter=2),
+    'role': ParagraphStyle('role', fontName='Helvetica-Bold', fontSize=9.3, leading=12, textColor=INK, spaceBefore=4, spaceAfter=2, keepWithNext=True),
+    'bullet': ParagraphStyle('bullet', fontName='Helvetica', fontSize=9.3, leading=12, textColor=INK, leftIndent=9, firstLineIndent=-8, spaceAfter=2),
 }
 
 for style in styles.values():
@@ -39,7 +39,8 @@ def header(title):
     return [p('Angel Gonzalez', 'name'), p(title, 'tag'),
         p('San Fernando Valley, CA 91340 | <link href="tel:+18184470902">(818) 447-0902</link> | English / Spanish', 'contact'),
         p('<link href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</link> | <link href="https://angel-gonzalez-dev.vercel.app/">angel-gonzalez-dev.vercel.app</link>', 'contact'),
-        p('<link href="https://github.com/hellsangel05">github.com/hellsangel05</link> | Available immediately | No visa sponsorship required', 'contact'),
+        p('<link href="https://github.com/hellsangel05">github.com/hellsangel05</link> | <link href="https://www.linkedin.com/in/angel-gonzalez-85b621229/">linkedin.com/in/angel-gonzalez-85b621229</link>', 'contact'),
+        p('Available immediately | No visa sponsorship required', 'contact'),
         Spacer(1, 4), HRFlowable(width='100%', thickness=.7, color=colors.HexColor('#B7C8E0'))]
 
 def employment():
@@ -57,7 +58,7 @@ def employment():
         p('Granada Hills Charter High School | High school diploma, 2016', 'contact'),
         p('Sylmar Recreation Center | Volunteer | Jun 2013 - May 2016', 'contact')]
 
-common_role = p('ADGO Studios | Co-founder, Web Development &amp; Digital Systems | 2026 - Present', 'role')
+common_role = p('ADGO Studios | Co-founder, Web Development &amp; Digital Systems | Jan 2026 - Present', 'role')
 developer = header('Web Developer &amp; Creative Technologist | Applications &amp; Digital Production') + [
     p('SUMMARY', 'section'),
     p('Web developer and creative technologist building client websites, full-stack applications, and AI-enabled business workflows. Work spans requirements, implementation, integrations, testing, deployment, and AI-assisted creative production.'),
