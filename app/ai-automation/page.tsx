@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   title: "AI & Automation | Web, CRM, Paid Media",
   description: "Hands-on work by Angel Gonzalez across Meta Ads Manager, CRM implementation, Voice AI, web development and customer workflow automation.",
   alternates: { canonical: "/ai-automation" },
+  openGraph: {
+    type: "website",
+    url: "/ai-automation",
+    siteName: "Angel Gonzalez",
+    title: "CRM, Voice AI & Workflow Implementation — Angel Gonzalez",
+    description: "Lead intake, appointment scheduling, voice AI, CRM implementation, and connected business websites.",
+    images: [{ url: "/media/automation/luna.jpg", alt: "Voice AI and connected customer intake work" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CRM, Voice AI & Workflow Implementation — Angel Gonzalez",
+    description: "Lead intake, appointment scheduling, voice AI, CRM implementation, and connected business websites.",
+    images: ["/media/automation/luna.jpg"],
+  },
 };
 
 type SystemLink = { text: string; href: string };

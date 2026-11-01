@@ -20,9 +20,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: project.positioning,
     alternates: { canonical: `/work/${project.slug}` },
     openGraph: {
+      type: "website",
+      url: `/work/${project.slug}`,
+      siteName: "Angel Gonzalez",
       title: `${project.name} — Case study`,
       description: project.positioning,
       images: [{ url: project.image.src, alt: project.image.alt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} — Case study`,
+      description: project.positioning,
+      images: [project.image.src],
     },
   };
 }

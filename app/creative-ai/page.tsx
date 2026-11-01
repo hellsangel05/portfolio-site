@@ -5,6 +5,20 @@ export const metadata: Metadata = {
   title: "Creative AI | Video, Advertising & Storytelling",
   description: "Angel Gonzalez's AI creative work with Higgsfield, Meta ad production, short-form content, voice and sound tools, and the PSYCH! storytelling platform.",
   alternates: { canonical: "/creative-ai" },
+  openGraph: {
+    type: "website",
+    url: "/creative-ai",
+    siteName: "Angel Gonzalez",
+    title: "AI-Assisted Creative Production — Angel Gonzalez",
+    description: "Commercials, short-form advertising, original animation, voice, motion graphics, and digital publishing.",
+    images: [{ url: "/media/automation/paid-social.jpg", alt: "ADGO Studios short-form advertising creative" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-Assisted Creative Production — Angel Gonzalez",
+    description: "Commercials, short-form advertising, original animation, voice, motion graphics, and digital publishing.",
+    images: ["/media/automation/paid-social.jpg"],
+  },
 };
 
 const creativeWork = [
