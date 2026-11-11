@@ -1,0 +1,59 @@
+name: Record Raidio with real browser audio
+
+on:
+  push:
+    branches:
+      - feature/portfolio-demo-capture
+    paths:
+      - scripts/record-radio-audio.mjs
+      - .github/workflows/record-radio-audio.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Install Chromium and audio/video dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg pulseaudio xvfb
+          npm ci
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start virtual audio monitor
+        run: |
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=demo_sink sink_properties=device.description=RaidoDemo
+          pactl set-default-sink demo_sink
+          pactl list short sources
+      - name: Capture real station playback and two-browser test
+        run: xvfb-run -a -s "-screen 0 1366x768x24" node scripts/record-radio-audio.mjs
+        env:
+          PULSE_SINK: demo_sink
+      - name: Combine real video and recorded system audio
+        run: |
+          ffmpeg -hide_banner -loglevel error -y \
+            -i demo-output/audio-v2/radio-screen.webm \
+            -i demo-output/audio-v2/browser-audio.wav \
+            -c:v libx264 -preset medium -crf 23 \
+            -c:a aac -b:a 192k -movflags +faststart \
+            -shortest demo-output/audio-v2/raidio-live-audio.mp4
+          ffmpeg -hide_banner -i demo-output/audio-v2/raidio-live-audio.mp4 -af volumedetect -vn -f null - 2>&1 | grep -E 'max_volume|mean_volume'
+          ffprobe -v error -show_entries stream=codec_type,codec_name,duration -of json demo-output/audio-v2/raidio-live-audio.mp4
+      - name: Save MP4, evidence and frames for review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: raidio-real-audio-capture
+          path: demo-output/audio-v2/
+          retention-days: 7
