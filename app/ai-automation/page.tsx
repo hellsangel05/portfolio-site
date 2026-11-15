@@ -177,7 +177,7 @@ export default function AutomationPage() {
       <section className="practice-contact section-shell">
         <p>Web development / AI implementation / technical operations</p>
         <h2>Let&apos;s build something useful.</h2>
-        <div><a className="button button-primary" href="mailto:gonzalezangel0510@yahoo.com">Email me</a><Link className="button button-secondary" href="/resume">Résumé</Link></div>
+        <div><a className="button button-primary" href="mailto:adgpublishings@gmail.com">Email me</a><Link className="button button-secondary" href="/resume">Résumé</Link></div>
       </section>
     </main>
   );

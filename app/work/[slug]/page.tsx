@@ -141,7 +141,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
         </Link>
         <div className="case-next-actions">
           <Link href="/#work" className="button button-secondary">All projects</Link>
-          <a href="mailto:gonzalezangel0510@yahoo.com" className="button button-secondary">Contact Angel</a>
+          <a href="mailto:adgpublishings@gmail.com" className="button button-secondary">Contact Angel</a>
         </div>
       </nav>
     </main>

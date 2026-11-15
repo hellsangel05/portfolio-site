@@ -56,7 +56,7 @@ const personSchema = {
   name: "Angel Gonzalez",
   url: siteUrl,
   jobTitle: "Web Developer & Creative Technologist",
-  email: "gonzalezangel0510@yahoo.com",
+  email: "adgpublishings@gmail.com",
   telephone: "+1-818-447-0902",
   address: { "@type": "PostalAddress", addressLocality: "San Fernando", addressRegion: "CA", postalCode: "91340" },
   sameAs: ["https://github.com/hellsangel05"],

@@ -151,7 +151,7 @@ export default function Home() {
         <h2>Let's talk.</h2>
         <p>Available immediately for web development, CRM and AI implementation, technical operations, and creative technology roles. Based in the San Fernando Valley; open to nearby, Los Angeles, and remote opportunities.</p>
         <div className="job-actions">
-          <a className="button button-primary" href="mailto:gonzalezangel0510@yahoo.com">Email me </a>
+          <a className="button button-primary" href="mailto:adgpublishings@gmail.com">Email me </a>
           <a className="job-simple-link" href="tel:+18184470902">(818) 447-0902</a>
           <Link className="button button-secondary" href="/resume">View résumé</Link>
           <a className="job-simple-link" href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>

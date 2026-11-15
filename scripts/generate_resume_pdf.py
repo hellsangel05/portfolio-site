@@ -38,7 +38,7 @@ def p(text, style='body'):
 def header(title):
     return [p('Angel Gonzalez', 'name'), p(title, 'tag'),
         p('San Fernando Valley, CA 91340 | <link href="tel:+18184470902">(818) 447-0902</link> | English / Spanish', 'contact'),
-        p('<link href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</link> | <link href="https://angel-gonzalez-dev.vercel.app/">angel-gonzalez-dev.vercel.app</link>', 'contact'),
+        p('<link href="mailto:adgpublishings@gmail.com">adgpublishings@gmail.com</link> | <link href="https://angel-gonzalez-dev.vercel.app/">angel-gonzalez-dev.vercel.app</link>', 'contact'),
         p('<link href="https://github.com/hellsangel05">github.com/hellsangel05</link> | <link href="https://www.linkedin.com/in/angel-gonzalez-85b621229/">linkedin.com/in/angel-gonzalez-85b621229</link>', 'contact'),
         p('Available immediately | No visa sponsorship required', 'contact'),
         Spacer(1, 4), HRFlowable(width='100%', thickness=.7, color=colors.HexColor('#B7C8E0'))]

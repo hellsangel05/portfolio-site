@@ -87,7 +87,7 @@ export default function ResumePage() {
         <div className="resume-contact">
           <p>San Fernando Valley, CA 91340</p>
           <a href="tel:+18184470902">(818) 447-0902</a>
-          <a href="mailto:gonzalezangel0510@yahoo.com">gonzalezangel0510@yahoo.com</a>
+          <a href="mailto:adgpublishings@gmail.com">adgpublishings@gmail.com</a>
           <a href="https://angel-gonzalez-dev.vercel.app/" target="_blank" rel="noreferrer">Portfolio </a>
           <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer">GitHub </a>
           <a href="https://www.linkedin.com/in/angel-gonzalez-85b621229/" target="_blank" rel="noreferrer">LinkedIn </a>
