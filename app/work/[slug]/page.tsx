@@ -80,6 +80,12 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
           <p className="case-film-meta">{film.format}{film.runtime ? ` · ${film.runtime}` : ""}</p>
           <h2 id="case-film-title">{film.title}</h2>
           <p>{film.description}</p>
+          {film.youtube && (
+            <p>
+              <a href={`https://www.youtube.com/watch?v=${film.youtube}`} target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              {films.length > 0 && <> · <a href="#case-films-title">Watch the hosted project films</a></>}
+            </p>
+          )}
         </div>
       </section>
 
