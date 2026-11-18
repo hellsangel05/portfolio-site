@@ -2,7 +2,7 @@
 
 [**Portfolio**](https://angel-gonzalez-dev.vercel.app/) · [**AI & Automation**](https://angel-gonzalez-dev.vercel.app/ai-automation) · [**Creative AI**](https://angel-gonzalez-dev.vercel.app/creative-ai) · [**Résumé**](https://angel-gonzalez-dev.vercel.app/resume) · [**Contact**](mailto:adgpublishings@gmail.com)
 
-I'm a web developer and creative technologist based in the San Fernando Valley, working across applications, CRM implementation, voice AI, workflow automation, and AI-assisted creative production. I co-founded ADGO Studios to build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
+I'm a web developer and creative technologist based in the San Fernando Valley, working across applications, CRM implementation, voice AI, workflow automation, and AI-assisted creative production. Through ADGO Studios, I build websites and practical digital workflows for businesses, alongside independent apps and an original publishing platform.
 
 ## Specialized experience
 
@@ -23,7 +23,7 @@ The [Creative AI page](https://angel-gonzalez-dev.vercel.app/creative-ai) includ
 
 | Project | Live site | Case study | Notes |
 | --- | --- | --- | --- |
-| Aurora Pool & Spa | [Client site](https://aurora-pool-spa.adgostudios.workers.dev) | [View](https://angel-gonzalez-dev.vercel.app/work/aurora-pool-spa) | One example of our ADGO Studios client work; source is in the private ADGO Studios organization repo |
+| Aurora Pool & Spa | [Client site](https://aurorapoolspa.com) | [View](https://angel-gonzalez-dev.vercel.app/work/aurora-pool-spa) | One example of our ADGO Studios client work; source is in the private ADGO Studios organization repo |
 | ADGO Studios | [Website](https://adgostudios.com) | [View](https://angel-gonzalez-dev.vercel.app/work/adgo-studios) | Web, CRM and voice-agent projects; code is held across collaborator repositories |
 | PSYCH! Open Source | [Website](https://psych-open-source.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/psych-open-source) | Original fiction world and spoiler-aware reading platform |
 | Raidio | [Website](https://raidio-ten.vercel.app) | [View](https://angel-gonzalez-dev.vercel.app/work/raidio) | AI-powered audio and shared playback |

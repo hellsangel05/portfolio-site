@@ -10,7 +10,7 @@ export default function Home() {
         <div>
           <p className="job-kicker"><span className="job-status-dot" /> Angel Gonzalez · San Fernando Valley, CA</p>
           <h1 id="job-intro">I build <em>software, websites, and AI workflows.</em></h1>
-          <p className="job-lead">I develop web applications, create modern business websites, and implement AI-powered workflows from concept through deployment. My work spans front-end development, APIs, automation, and creative production.</p>
+          <p className="job-lead">I built a pool service website with CRM-connected quote requests, configured an AI receptionist for appointment scheduling, and developed a radio app that keeps listeners in sync. I work in English and Spanish.</p>
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
@@ -29,6 +29,31 @@ export default function Home() {
         </aside>
       </section>
 
+
+      <section id="work" className="job-section section-shell">
+        <header className="job-section-intro">
+          <div><p className="job-small-label">Selected work</p><h2>Selected projects</h2></div>
+          <p>Client websites, business systems, and independent products.</p>
+        </header>
+        <div className="job-project-grid">
+          {featuredProjects.map((project, index) => (
+            <article className={"job-project-card job-card-" + index} key={project.slug}>
+              <Link href={"/work/" + project.slug} className="job-project-art" aria-label={"Read about " + project.name}>
+                <ProjectMedia project={project} priority={index === 0} sizes="(max-width: 700px) 100vw, 50vw" />
+              </Link>
+              <div className="job-project-info">
+                <div className="job-project-meta"><span>{project.category}</span></div>
+                <h3><Link href={"/work/" + project.slug}>{project.name}</Link></h3>
+                <p>{project.summary}</p>
+                <div className="job-project-links">
+                  <Link href={"/work/" + project.slug}>Case study</Link>
+                  {project.live ? <a href={project.live} target="_blank" rel="noopener noreferrer">Visit website</a> : null}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="practice-pathways section-shell" aria-labelledby="practice-pathways-title">
         <div className="practice-pathways-heading">
@@ -59,31 +84,6 @@ export default function Home() {
               <strong>Explore creative work</strong>
             </div>
           </Link>
-        </div>
-      </section>
-
-      <section id="work" className="job-section section-shell">
-        <header className="job-section-intro">
-          <div><p className="job-small-label">Selected work</p><h2>Selected projects</h2></div>
-          <p>Client websites, business systems, and independent products.</p>
-        </header>
-        <div className="job-project-grid">
-          {featuredProjects.map((project, index) => (
-            <article className={"job-project-card job-card-" + index} key={project.slug}>
-              <Link href={"/work/" + project.slug} className="job-project-art" aria-label={"Read about " + project.name}>
-                <ProjectMedia project={project} priority={index === 0} sizes="(max-width: 700px) 100vw, 50vw" />
-              </Link>
-              <div className="job-project-info">
-                <div className="job-project-meta"><span>{project.category}</span></div>
-                <h3><Link href={"/work/" + project.slug}>{project.name}</Link></h3>
-                <p>{project.summary}</p>
-                <div className="job-project-links">
-                  <Link href={"/work/" + project.slug}>Case study</Link>
-                  {project.live ? <a href={project.live} target="_blank" rel="noopener noreferrer">Visit website</a> : null}
-                </div>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -130,7 +130,7 @@ export default function Home() {
           <p>I build client websites and business systems through ADGO Studios and develop independent software products and digital experiences.</p>
         </header>
         <div className="job-experience-list">
-          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Co-founded ADGO Studios and built business websites, launched a Meta Ads campaign, developed Higgsfield-powered video commercials, implemented CRM workflows, and configured the Luna AI phone receptionist.</p></article>
+          <article><div><span>Client projects</span><h3>ADGO Studios</h3></div><p>Built business websites, launched a Meta Ads campaign, developed Higgsfield-powered video commercials, implemented CRM workflows, and configured the Luna AI phone receptionist.</p></article>
           <article><div><span>Software development</span><h3>Independent applications</h3></div><p>Designed and built web and mobile applications across music, sports, games, and publishing. I work with AI-assisted development tools, code, external APIs, testing, and deployment to turn ideas into working systems.</p></article>
         </div>
       </section>

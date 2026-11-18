@@ -58,7 +58,7 @@ def employment():
         p('Granada Hills Charter High School | High school diploma, 2016', 'contact'),
         p('Sylmar Recreation Center | Volunteer | Jun 2013 - May 2016', 'contact')]
 
-common_role = p('ADGO Studios | Co-founder, Web Development &amp; Digital Systems | Jan 2026 - Present', 'role')
+common_role = p('ADGO Studios | Web Development &amp; CRM Implementation | Jan 2026 - Present', 'role')
 developer = header('Web Developer &amp; Creative Technologist | Applications &amp; Digital Production') + [
     p('SUMMARY', 'section'),
     p('Web developer and creative technologist building client websites, full-stack applications, and AI-enabled business workflows. Work spans requirements, implementation, integrations, testing, deployment, and AI-assisted creative production.'),

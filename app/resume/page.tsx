@@ -17,7 +17,7 @@ const builds = [
 
 const experience = [
   {
-    title: "Co-founder · Web development & digital systems",
+    title: "Web Development & CRM Implementation",
     company: "ADGO Studios",
     dates: "Jan 2026 – present",
     bullets: [
