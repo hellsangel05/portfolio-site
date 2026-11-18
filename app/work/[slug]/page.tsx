@@ -69,9 +69,10 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
             </div>
           ) : null}
         </dl>
+        <p className="case-visitor-guide">{project.visitorGuide}</p>
       </header>
 
-      <section className="case-film section-shell" data-orientation={film.orientation} aria-labelledby="case-film-title">
+      <section id="walkthrough" className="case-film section-shell" data-orientation={film.orientation} aria-labelledby="case-film-title">
         <div className="case-film-frame" data-orientation={film.orientation}>
           <FilmPlayer film={film} label={`${film.title} — ${project.name}`} />
         </div>

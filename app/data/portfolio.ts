@@ -20,6 +20,7 @@ export type PortfolioProject = {
   accent: string;
   featured?: boolean;
   positioning: string;
+  visitorGuide: string;
   summary: string;
   problem: string;
   built: string;
@@ -41,6 +42,7 @@ const CDN = "https://d2ol7oe51mr4n9.cloudfront.net/user_3AsbGPQTONXkPUOluZU5lDNt
 export const projects: PortfolioProject[] = [
   {
     slug: "aurora-pool-spa",
+    visitorGuide: "Open Monthly pool service, then follow the quote link to see the CRM form.",
     name: "Aurora Pool & Spa",
     category: "Client website · ADGO Studios",
     status: "Client website delivered",
@@ -95,6 +97,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "raidio",
+    visitorGuide: "Open Night Drive FM and select Tune in live. Share the station link to compare the same broadcast in a second window.",
     name: "Raidio",
     category: "AI media platform",
     status: "Independent application",
@@ -157,6 +160,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "adgo-studios",
+    visitorGuide: "Open Request a quote to see the intake form, or Book a Call to see available times.",
     name: "ADGO Studios",
     category: "Websites and automation",
     status: "Active studio",
@@ -210,6 +214,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "psych-open-source",
+    visitorGuide: "Start with Eternity, then open the timeline to see how spoiler protection works.",
     name: "PSYCH! Open Source",
     category: "Original sci-fi universe · Interactive publishing",
     status: "Ongoing series & platform",
@@ -270,6 +275,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "snapdex",
+    visitorGuide: "Choose Open a sample pack, select Small Pack, and tap a card to reveal it. The guest showcase uses sample cards.",
     name: "Snapdex",
     category: "Creator economy · Game",
     status: "Independent application",
@@ -322,11 +328,12 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "jump-trainer",
+    visitorGuide: "Bring a side-view clip of one jump, or play How it measures below to see the analysis workflow.",
     name: "Jump Trainer",
     category: "Computer vision · Sports",
     status: "Independent application",
     accent: "#6fe3a6",
-    positioning: "A vertical-jump coach that turns ordinary phone video into an honest measurement and training plan.",
+    positioning: "An on-device video analyzer that estimates jump height, reports confidence, and shows takeoff and landing frames.",
     summary: "Jump Trainer measures takeoff and landing from video, calculates jump height from flight-time physics, scores confidence, and identifies the biggest technique limiter, all on the user's phone.",
     problem: "Athletes can film themselves easily, but credible jump measurement usually requires specialized equipment or a trained coach. Low-quality video can also create a precise-looking number that is simply wrong.",
     built: "A mobile-first web app that analyzes jump video entirely on the device: MediaPipe pose tracking plus the original Python physics engine, now running in the browser through Pyodide and WebAssembly. The project began as an Expo app backed by a Python analysis service; the on-device build removes the upload, the server, and the per-jump cost.",
@@ -383,6 +390,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "edit-battle",
+    visitorGuide: "Browse the challenges and edits. The films below show the competition when the live boards are unavailable.",
     name: "Edit Battle",
     category: "Creator community",
     status: "Independent application",
@@ -435,11 +443,12 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "civic-mirror",
+    visitorGuide: "Try the values quiz, open a measure, then switch to Spanish. The public guide covers the November 2024 ballot.",
     name: "Civic Mirror",
     category: "Civic technology",
     status: "Independent application",
     accent: "#5fe0cf",
-    positioning: "A bilingual LA County ballot guide that connects voter priorities to plain-language measure explanations.",
+    positioning: "A bilingual guide to the November 2024 LA County ballot, with a values quiz and plain-language measure explanations.",
     summary: "A short priorities quiz organizes local measures around what a voter cares about, then explains the likely alignment, tradeoffs, and source-backed reasoning in English or Spanish.",
     problem: "Local ballot measures are consequential but difficult to compare. Dense legal language, long pamphlets, and scattered arguments make it hard for voters to understand what a yes or no vote would actually do.",
     built: "A bilingual Next.js voter experience with a priorities quiz, ballot overview, measure pages, shareable summaries, and an admin review surface, plus a separate Claude ingestion pipeline that produces structured, cited drafts from pamphlet text.",
@@ -488,6 +497,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "co-lab",
+    visitorGuide: "Choose Explore to browse anonymously. The walkthrough below shows an idea being routed without requiring you to publish one.",
     name: "Co-Lab",
     category: "AI collaboration network",
     status: "Independent application",
@@ -540,6 +550,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "skateview",
+    visitorGuide: "Filter the map to Rails, then open Arts District flat rail to see condition, risk, and pin precision.",
     name: "SkateView",
     category: "Community mapping",
     status: "Independent application",
@@ -601,6 +612,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "living-window",
+    visitorGuide: "Choose Explore silently, then Chronicle to see what has changed in the village.",
     name: "Living Window",
     category: "Creative technology",
     status: "Independent application",

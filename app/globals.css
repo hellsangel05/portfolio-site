@@ -1618,3 +1618,6 @@ body { font-family: var(--sans); }
 .practice-pathway-body p { color: #c3cde0; max-width: 37rem; margin: 0; }
 .practice-pathway-body strong { margin-top: auto; padding-top: 1.5rem; color: var(--accent); font-size: .9rem; }
 @media (prefers-reduced-motion: reduce) { .practice-pathway-media img { transition: none; } }
+
+.case-visitor-guide { max-width: 70ch; margin: 1rem 0 0; line-height: 1.6; }
+#walkthrough { scroll-margin-top: 5rem; }

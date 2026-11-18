@@ -14,6 +14,7 @@ export default function Home() {
           <div className="job-actions">
             <Link className="button button-primary" href="#work">Explore my work </Link>
             <Link className="button button-secondary" href="/resume">View résumé</Link>
+            <Link href="/ai-automation" className="job-simple-link">AI &amp; automation</Link>
             <a href="https://github.com/hellsangel05" target="_blank" rel="noreferrer" className="job-simple-link">GitHub </a>
           </div>
         </div>
